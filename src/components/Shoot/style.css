@@ -1,0 +1,25 @@
+.shooter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.shooter img {
+  width: 15vw;
+  height: 15vw;
+}
+
+.targetContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.targetContainer img {
+  width: 50vw;
+  height: 50vw;
+}

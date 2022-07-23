@@ -5,7 +5,7 @@ import Header from './header';
 import Home from '../routes/home';
 import Audio from '../routes/audioRoute';
 import Etc from '../routes/etcRoute';
-
+import Shoot from '../routes/shootRoute';
 
 const App = () => (
   <div id="app">
@@ -14,6 +14,7 @@ const App = () => (
       <Home path="/" />
       <Audio path="/audioRoute" />
       <Etc path="/etcRoute" />
+      <Shoot path="/shootRoute" />
     </Router>
   </div>
 )

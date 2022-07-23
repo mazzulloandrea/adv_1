@@ -7,6 +7,7 @@ const Home = () => (
     <p>This is the Home component.</p>
     <button onclick={() => route('/etcRoute')}>Gioca a Etc</button>
     <button onclick={() => route('/audioRoute')}>Ascolta</button>
+    <button onclick={() => route('/shootRoute')}>Spara</button>
   </div>
 );
 
