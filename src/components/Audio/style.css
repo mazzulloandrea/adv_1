@@ -1,0 +1,46 @@
+.circle {
+  background: green;
+  width: 55vw;
+  height: 55vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slideOff {
+  from {
+    top: 0
+  }
+
+  to {
+    top: 50vw;
+  }
+}
+
+.cirle.slideOff {
+  animation-name: slideOff;
+  animation-duration: 1s;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15vw 0 15vw 23vw;
+  border-color: transparent transparent transparent #007bff;
+  margin-left: 6vw;
+}
+
+.bars {
+  width: 18vw;
+  height: 28vw;
+  border-left: 5vw solid #ffffff;
+  border-right: 5vw solid #ffffff;
+}
