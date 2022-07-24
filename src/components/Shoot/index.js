@@ -28,7 +28,6 @@ function Shoot() {
   const [counter, setCounter] = useState(stub.shooCount);
 
   useEffect(() => {
-    console.log('[')
     const mirinoStyle = document.getElementById("mirino").style;
     const { width, height } = stub.mirino;
     mirinoStyle.width = `${width}vw`;
