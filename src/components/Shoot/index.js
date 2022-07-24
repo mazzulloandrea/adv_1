@@ -2,26 +2,49 @@ import { useState, useEffect, useRef } from 'preact/hooks';
 import targetImg from '../../assets/images/index.jpg';
 import style from './style.css';
 
+const shuffle = (array) => {
+  let currentIndex = array.length, randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+const stub = {
+  colpi: 1,
+  jolly: 1, // compaiono dentro il mirino
+  movimenti: 5,
+  shooCount: 3,
+  delayTime: 1000,
+  target: {
+    x1: 40,
+    x2: 80,
+    y1: 30,
+    y2: 60,
+  },
+  mirino: {
+    width: 15,
+    height: 15,
+  }
+};
+
+const Rand = (x) => Math.floor(Math.random() * x);
+
+const newArrayFn = (x) => new Array(x)
+
 function Shoot() {
-  const stub = {
-    colpi: 1,
-    jolly: 1, // compaiono dentro il mirino
-    movimenti: 10,
-    shooCount: 3,
-    delayTime: 1000,
-    target: {
-      x1: 40,
-      x2: 80,
-      y1: 30,
-      y2: 60,
-    },
-    mirino: {
-      width: 15,
-      height: 15,
-    }
-  };
-  const Rand = (x) => Math.floor(Math.random() * x);
-  const AnimationList = new Array(stub.movimenti);
+  // const AnimationList = new Array(stub.movimenti);
+  const [animationList, setAnimationList] = useState("init")
   const [enable, setEnable] = useState(true);
   const [successList, setSuccess] = useState([]);
   const targetRef = useRef(null);
@@ -37,45 +60,59 @@ function Shoot() {
     const { x1, x2, y1, y2 } = stub.target;
     target.style.width = `${x2 - x1}vw`;
     target.style.height = `${y2 - y1}vh`;
-    generate();
-    startAnimation(AnimationList[0].x, AnimationList[0].y);
-    AnimationList.shift();
+    setAnimationList(generate());
   }, []);
 
   useEffect(() => {
-    // console.log('counter -1', counter);
+    if (animationList === "init") return;
+    if (!animationList.length) {
+      console.log('finito');
+      console.log('risultato e animazione');
+      console.log(successList);
+    } else {
+      startAnimation(animationList[0].x, animationList[0].y);
+    }
+  }, [animationList]);
+
+  useEffect(() => {
+    // animazione ad ogni colpo effettuato
+    if (counter !== stub.shooCount)
+      console.log('animazione', successList);
   }, [counter]);
 
   const generate = () => {
     const { colpi, movimenti } = stub;
+    const turnOrder = newArrayFn();
     for (let i = 0; i < colpi; i++) {
-      AnimationList[i] = generateCoord(true);
+      turnOrder[i] = generateCoord(true);
     }
     for (let i = colpi; i < movimenti; i++) {
-      AnimationList[i] = generateCoord(false);
+      turnOrder[i] = generateCoord(false);
     }
     // shuffle 
-    return shuffle(AnimationList);
+    return shuffle(turnOrder);
   }
 
   const generateCoord = (shooted) => {
-    let coordX = Rand(100);
-    let coordY = Rand(100);
+    const x = 100 - stub.mirino.width;
+    const y = 100 - stub.mirino.height;
+    let coordX = Rand(x);
+    let coordY = Rand(y);
     const { x1, x2, y1, y2 } = stub.target;
 
     if (shooted) {
       while (coordX < x1 || coordX > x2) {
-        coordX = Rand(100);
+        coordX = Rand(x);
       };
       while (coordY < y1 || coordY > y2) {
-        coordY = Rand(100);
+        coordY = Rand(y);
       }
     } else {
-      while (coordX > x1 && coordX < x2) {
-        coordX = Rand(100);
+      while (coordX < 0 && coordX > x1 && coordX < x2) {
+        coordX = Rand(x);
       };
-      while (coordY > y1 && coordY < y2) {
-        coordY = Rand(100);
+      while (coordY < 0 && coordY > y1 && coordY < y2) {
+        coordY = Rand(y);
       }
     }
     return {
@@ -84,45 +121,26 @@ function Shoot() {
     }
   }
 
-  const shuffle = (array) => {
-    let currentIndex = array.length, randomIndex;
 
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-
-    return array;
-  }
 
   const startAnimation = (x2, y2) => {
     const elem = document.getElementById("mirino");
 
-    // if (id) clearInterval(id);
     const id = setInterval(() => frame(x2, y2), 45);
 
     function frame(x2, y2) {
-      // console.log(elem.getBoundingClientRect());
       let x1 = parseInt(elem.style.left) || 0;
       let y1 = parseInt(elem.style.top) || 0;
-      if (x1 === x2 || y1 === y2) {
+      if (x1 === x2 && y1 === y2) {
         clearInterval(id);
-        if (AnimationList.length) {
-          startAnimation(AnimationList[0].x, AnimationList[0].y);
-          AnimationList.shift();
-          // decrementMovements(movements - 1);
-          stub.movimenti--;
+        if (animationList.length) {
+          // startAnimation(AnimationList[0].x, AnimationList[0].y);
+          // AnimationList.shift();
+          setAnimationList(animationList.slice(1, animationList.length))
         }
       } else {
-        const X = x1 > x2 ? x1 - 1 : x1 + 1;
-        const Y = y1 > y2 ? y1 - 1 : y1 + 1;
+        const X = x1 > x2 ? x1 - 1 : x1 === x2 ? x1 : x1 + 1;
+        const Y = y1 > y2 ? y1 - 1 : y1 === y2 ? y1 : y1 + 1;
         elem.style.left = `${X}vw`;
         elem.style.top = `${Y}vh`;
       }
@@ -158,15 +176,16 @@ function Shoot() {
 
   return (
     <div id="delay" class={style.overlay}>
-      <div id="a"></div>
+      <div>{successList.map(el => (
+        <span>{el ? ' success' : ' fallimento'}</span>
+      ))}</div>
+
       <div id="mirino" class={style.shooter} onclick={(evt) => verifyShoot(evt)}>
+        <div id="jolly" class="inside_mirino"></div>
       </div>
       <div class={style.targetContainer}>
         <img id="target" src={targetImg} alt="" ref={targetRef} />
       </div>
-      <div>{successList.map(el => (
-        <span>{el ? ' success' : ' fallimento'}</span>
-      ))}</div>
     </div >
   )
 }

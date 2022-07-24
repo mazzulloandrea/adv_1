@@ -1,9 +1,15 @@
 .overlay {
   background: white;
+  background: transparent;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .delay {
   background: red;
+  pointer-events: none;
+  touch-action: none;
 }
 
 .shooter {
@@ -11,8 +17,8 @@
   top: 0;
   left: 0;
   z-index: 999;
-  width: 15vw;
-  height: 15vw;
+  /* width: 15vw; */
+  /* height: 15vw; */
   border: 3px solid black;
   border-radius: 100%;
 }
@@ -21,6 +27,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  /*- header con i risultati */
   display: flex;
   align-items: center;
   justify-content: center;
