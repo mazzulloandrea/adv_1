@@ -106,7 +106,7 @@ function Shoot() {
   const startAnimation = (x2, y2) => {
     const elem = document.getElementById("mirino");
 
-    clearInterval(id);
+    if (id) clearInterval(id);
     const id = setInterval(() => frame(x2, y2), 45);
 
     function frame(x2, y2) {
