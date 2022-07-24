@@ -44,7 +44,6 @@ function Etc({ MaxCounter = 5 }) {
   }, [animationEnd]);
 
   useEffect(() => {
-    // console.log('useEffect [counterDrawTimes]');
     if (counterDrawTimes) {
       if (chart) {
         setUserClickedCounter(0);

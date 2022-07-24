@@ -1,13 +1,25 @@
+.overlay {
+  background: white;
+}
+
+.delay {
+  background: red;
+}
+
 .shooter {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
+  width: 15vw;
+  height: 15vw;
+  border: 3px solid black;
+  border-radius: 100%;
 }
 
 .shooter img {
-  width: 15vw;
-  height: 15vw;
+  /* width: 15vw;
+  height: 15vw; */
 }
 
 .targetContainer {
@@ -20,6 +32,6 @@
 }
 
 .targetContainer img {
-  width: 50vw;
-  height: 50vw;
+  /* width: 50vw;
+  height: 50vw; */
 }
