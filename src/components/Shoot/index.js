@@ -43,7 +43,7 @@ function Shoot() {
   }, []);
 
   useEffect(() => {
-    console.log('counter -1', counter);
+    // console.log('counter -1', counter);
   }, [counter]);
 
   const generate = () => {
