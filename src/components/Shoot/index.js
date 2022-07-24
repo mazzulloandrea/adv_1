@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'preact/hooks';
-import viewfinder from '../../assets/images/viewfinder.png';
 import targetImg from '../../assets/images/index.jpg';
 import style from './style.css';
 
@@ -39,7 +38,6 @@ function Shoot() {
     const { x1, x2, y1, y2 } = stub.target;
     target.style.width = `${x2 - x1}vw`;
     target.style.height = `${y2 - y1}vh`;
-    // setTarget(target.getBoundingClientRect());
     generate();
     startAnimation(AnimationList[0].x, AnimationList[0].y);
     AnimationList.shift();
@@ -133,8 +131,6 @@ function Shoot() {
   }
 
   const verifyShoot = (evt) => {
-    // console.log(evt);
-
     if (!enable || !counter) {
       evt.preventDefault();
       return false;
@@ -165,7 +161,6 @@ function Shoot() {
     <div id="delay" class={style.overlay}>
       <div id="a"></div>
       <div id="mirino" class={style.shooter} onclick={(evt) => verifyShoot(evt)}>
-        {/* <img src={viewfinder} alt="" /> */}
       </div>
       <div class={style.targetContainer}>
         <img id="target" src={targetImg} alt="" ref={targetRef} />
@@ -175,46 +170,6 @@ function Shoot() {
       ))}</div>
     </div >
   )
-
-  // const Rand = (x) => Math.floor(Math.random() * x);
-  // const AnimationList = new Array(stub.movimenti);
-  // const [enable, setEnable] = useState(true);
-  // const [successList, setSuccess] = useState([]);
-  // const [target, setTarget] = useState();
-
-  // useEffect(() => {
-  //   const mirinoStyle = document.getElementById("mirino").style;
-  //   const { width, height } = stub.mirino;
-  //   mirinoStyle.width = `${width}vw`;
-  //   mirinoStyle.height = `${height}vw`;
-  //   // console.log(mirinoStyle);
-  //   const target = document.getElementById("target");
-  //   const { x1, x2, y1, y2 } = stub.target;
-  //   target.style.width = `${x2 - x1}vw`;
-  //   target.style.height = `${y2 - y1}vh`;
-  //   setTarget(target.getBoundingClientRect());
-
-  //   generate();
-  //   startAnimation(AnimationList[0].x, AnimationList[0].y);
-  //   AnimationList.shift();
-  //   // decrementMovements(movements - 1);
-  //   stub.movimenti--;
-  // }, []);
-
-  // return (
-  //   <div id="delay" class={style.overlay}>
-  //     <div id="a"></div>
-  //     <div id="mirino" class={style.shooter} onclick={(evt) => verifyShoot(evt)}>
-  //       {/* <img src={viewfinder} alt="" /> */}
-  //     </div>
-  //     <div class={style.targetContainer}>
-  //       <img id="target" src={targetImg} alt="" />
-  //     </div>
-  //     <div>{successList.map(el => (
-  //       <span>{el ? ' success' : ' fallimento'}</span>
-  //     ))}</div>
-  //   </div >
-  // )
 }
 
 export default Shoot;
