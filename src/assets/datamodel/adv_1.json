@@ -23,6 +23,10 @@
         {
           "frase": "se vuoi tagliare la legna",
           "gioco": "shoot"
+        },
+        {
+          "frase": "se usare le tue abilità",
+          "gioco": "cassaforte"
         }
       ],
       "shoot": {
@@ -30,6 +34,10 @@
         "fallimento": "3"
       },
       "text": {
+        "successo": "2",
+        "fallimento": "3"
+      },
+      "cassaforte": {
         "successo": "2",
         "fallimento": "3"
       }

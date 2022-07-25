@@ -4,14 +4,17 @@ import Audio from '/components/Audio/index';
 import Etc from '/components/Etc/index';
 import Shoot from '/components/Shoot/index';
 import Risposte from '../Risposte/index';
+import Cassaforte from '../Cassaforte/index';
+
 
 const config = {
   "audio": 0,
   "risposte": 1,
   "etc": 2,
   "shoot": 3,
-  "text": 4,
-  "quiz": 5,
+  "cassaforte": 4,
+  "text": 5,
+  "quiz": 6,
 }
 
 const getGameId = (name) => Object.values(config);
@@ -19,7 +22,7 @@ const getGameId = (name) => Object.values(config);
 const Layout = () => {
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState(1);
-  const [actualComponent, setActualComponent] = useState("audio");
+  const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
 
 
   useEffect(() => {
@@ -29,6 +32,7 @@ const Layout = () => {
   useEffect(() => {
     // change paragraph
     console.log('actual paragraph is', actual);
+    setActualComponent("audio");
     // inizia nuovo capitolo -> audio
   }, [actual]);
 
@@ -55,16 +59,10 @@ const Layout = () => {
           setActual(newCap);
           setActualComponent('audio')
         }} />)
-      // case "text":
-      //   return (<Text data={actualCap[actualComponent]} onend={(newCap) => {
-      //     setActual(newCap);
-      //     setActualComponent('audio')
-      //   }} />)
-      // case "quiz":
-      //   return (<Quiz data={actualCap[actualComponent]} onend={(newCap) => {
-      //     setActual(newCap);
-      //     setActualComponent('audio')
-      //   }} />)
+      case "cassaforte":
+        return (
+          <Cassaforte data={actualCap[actualComponent]} onend={(newCap) => setActual(newCap)} />
+        );
     }
   }
 
@@ -74,4 +72,5 @@ const Layout = () => {
       {whichComponent()}
     </div>)
 }
+
 export default Layout;
