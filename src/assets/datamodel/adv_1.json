@@ -1,5 +1,16 @@
 {
   "name": "",
+  "png": {
+    "pg": {
+      "nome": "Philidor",
+      "eta": "16"
+    },
+    "familiari": {
+      "sorella": {
+        "nome": ""
+      }
+    }
+  },
   "version": "",
   "author": "",
   "datetime": "",
@@ -12,12 +23,12 @@
     "1": {
       "titolo": "Capitilo 1",
       "audio": {
-        "src": "/assets/audio/Test10.ogg",
+        "src": "/assets/audio/test3.ogg",
         "interrompe": ""
       },
       "risposte": [
         {
-          "frase": "Se vuois alavre tua sorella?",
+          "frase": "Se vuoi salvare tua sorella?",
           "gioco": "text"
         },
         {
@@ -35,7 +46,26 @@
       },
       "text": {
         "successo": "2",
-        "fallimento": "3"
+        "fallimento": "3",
+        "tipo": "domanda",
+        "domande": [
+          "Qual'è il tuo nome?",
+          "Quanti anni hai",
+          "Come si chiama tua sorella?"
+        ],
+        "risposte": [
+          [
+            "Philidor",
+            "Filidor"
+          ],
+          [
+            16
+          ],
+          [
+            "aldsfjksfk",
+            "jlhbjl"
+          ]
+        ]
       },
       "cassaforte": {
         "successo": "2",
