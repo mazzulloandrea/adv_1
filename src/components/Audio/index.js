@@ -6,7 +6,7 @@ import Test10 from '../../assets/audio/Test10.ogg';
 import style from './style.css';
 import animation from './animation.css';
 
-function Audio() {
+function Audio({ data, onend }) {
   useEffect(() => {
     return () => {
       // animation to slide off
@@ -44,7 +44,8 @@ function Audio() {
     document.getElementById("2").style.left = '33.3vw';
     document.getElementById("3").style.left = '66.6vw';
     document.getElementById('overlay').classList.toggle(animation.show);
-    setTimeout(() => route('/'), 750);
+    // setTimeout(() => route('/'), 750);
+    setTimeout(() => onend(), 750);
   }
 
   // const routeChange = () => {
@@ -63,7 +64,8 @@ function Audio() {
           onended={(evt) => audioEnd(evt)}
           onplaying={() => setPlay(true)}
         >
-          <source src={Test10} type="audio/ogg" />
+          {/* <source src={Test10} type="audio/ogg" /> */}
+          <source src={data.src} type="audio/ogg" />
           Your browser does not support the audio tag.
         </audio>
       </div>

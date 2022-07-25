@@ -24,7 +24,7 @@ const stub = {
   colpi: 1,
   jolly: 1, // compaiono dentro il mirino
   movimenti: 5,
-  shooCount: 3,
+  shootCount: 3,
   delayTime: 1000,
   target: {
     x1: 40,
@@ -42,24 +42,26 @@ const Rand = (x) => Math.floor(Math.random() * x);
 
 const newArrayFn = (x) => new Array(x)
 
-function Shoot() {
+function Shoot({ data, onend }) {
+  const { successo, fallimento, params = stub } = data;
+  const { shootCount, mirino, target, colpi, movimenti, delayTime } = params;
   // const AnimationList = new Array(stub.movimenti);
   const [animationList, setAnimationList] = useState("init")
   const [enable, setEnable] = useState(true);
   const [successList, setSuccess] = useState([]);
   const targetRef = useRef(null);
-  const [counter, setCounter] = useState(stub.shooCount);
+  const [counter, setCounter] = useState(shootCount);
 
   useEffect(() => {
     const mirinoStyle = document.getElementById("mirino").style;
-    const { width, height } = stub.mirino;
+    const { width, height } = mirino;
     mirinoStyle.width = `${width}vw`;
     mirinoStyle.height = `${height}vw`;
 
-    const target = document.getElementById("target");
-    const { x1, x2, y1, y2 } = stub.target;
-    target.style.width = `${x2 - x1}vw`;
-    target.style.height = `${y2 - y1}vh`;
+    const targetImg = document.getElementById("target");
+    const { x1, x2, y1, y2 } = target;
+    targetImg.style.width = `${x2 - x1}vw`;
+    targetImg.style.height = `${y2 - y1}vh`;
     setAnimationList(generate());
   }, []);
 
@@ -69,6 +71,9 @@ function Shoot() {
       console.log('finito');
       console.log('risultato e animazione');
       console.log(successList);
+      if (successList.filter(el => el).length > (successList.length / 2)) {
+        onend(successo)
+      } else onend(fallimento);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }
@@ -76,12 +81,12 @@ function Shoot() {
 
   useEffect(() => {
     // animazione ad ogni colpo effettuato
-    if (counter !== stub.shooCount)
+    if (counter !== shootCount)
       console.log('animazione', successList);
   }, [counter]);
 
   const generate = () => {
-    const { colpi, movimenti } = stub;
+    // const { colpi, movimenti } = params;
     const turnOrder = newArrayFn();
     for (let i = 0; i < colpi; i++) {
       turnOrder[i] = generateCoord(true);
@@ -94,11 +99,11 @@ function Shoot() {
   }
 
   const generateCoord = (shooted) => {
-    const x = 100 - stub.mirino.width;
-    const y = 100 - stub.mirino.height;
+    const x = 100 - mirino.width;
+    const y = 100 - mirino.height;
     let coordX = Rand(x);
     let coordY = Rand(y);
-    const { x1, x2, y1, y2 } = stub.target;
+    const { x1, x2, y1, y2 } = target;
 
     if (shooted) {
       while (coordX < x1 || coordX > x2) {
@@ -170,7 +175,7 @@ function Shoot() {
       setTimeout(() => {
         document.getElementById("delay").classList.toggle(style.delay);
         setEnable(true)
-      }, stub.delayTime);
+      }, delayTime);
     }
   }
 
