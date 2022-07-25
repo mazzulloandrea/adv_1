@@ -1,0 +1,92 @@
+{
+  "name": "",
+  "version": "",
+  "author": "",
+  "datetime": "",
+  "difficolta": {
+    "1": "facile",
+    "2": "difficile",
+    "3": "esperto"
+  },
+  "capitoli": {
+    "1": {
+      "titolo": "Capitilo 1",
+      "audio": {
+        "src": "/assets/audio/Test10.ogg",
+        "interrompe": ""
+      },
+      "risposte": [
+        {
+          "frase": "Se vuois alavre tua sorella?",
+          "gioco": "text"
+        },
+        {
+          "frase": "se vuoi tagliare la legna",
+          "gioco": "shoot"
+        }
+      ],
+      "shoot": {
+        "successo": "2",
+        "fallimento": "3"
+      },
+      "text": {
+        "successo": "2",
+        "fallimento": "3"
+      }
+    },
+    "2": {
+      "titolo": "Capitilo 2",
+      "audio": {
+        "src": "/assets/audio/Test10.ogg",
+        "interrompe": ""
+      },
+      "prosegue": [
+        {
+          "frase": "Se vuois alavre tua sorella?",
+          "gioco": {
+            "nome": "text",
+            "difficolta": "1"
+          },
+          "successo": "2",
+          "fallimento": "3"
+        },
+        {
+          "frase": "se vuoi tagliare la elgna",
+          "gioco": {
+            "nome": "shoot",
+            "difficolta": "1"
+          },
+          "successo": "cap 45",
+          "fallimento": "cao 45"
+        }
+      ]
+    },
+    "3": {
+      "titolo": "Capitilo 3",
+      "audio": {
+        "src": "/assets/audio/Test10.ogg",
+        "interrompe": ""
+      },
+      "prosegue": [
+        {
+          "frase": "Se vuois alavre tua sorella?",
+          "gioco": {
+            "nome": "text",
+            "difficolta": "1"
+          },
+          "successo": "2",
+          "fallimento": "3"
+        },
+        {
+          "frase": "se vuoi tagliare la elgna",
+          "gioco": {
+            "nome": "shoot",
+            "difficolta": "1"
+          },
+          "successo": "cap 45",
+          "fallimento": "cao 45"
+        }
+      ]
+    }
+  }
+}
