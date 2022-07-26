@@ -28,6 +28,24 @@ const Layout = () => {
   const [actual, setActual] = useState(1);
   const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
   const [feedback, setFeedback] = useState(null);
+  const [orientation, setOrientation] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('orientationchange', (evt) => {
+      const angle = evt.target.screen.orientation.angle;
+      if (angle === 90 || angle === 270) {
+        setOrientation(1); // landscape
+      } else {
+        setOrientation(0); // portrait
+      }
+    })
+    console.log('screen', screen);
+
+  }, []);
+
+  useEffect(() => {
+    console.log('orientation effect', orientation)
+  }, [orientation]);
 
   useEffect(() => {
     console.log('story', story)
@@ -63,7 +81,7 @@ const Layout = () => {
     console.log('new render Wich component', actualComponent);
     switch (actualComponent) {
       case "audio":
-        return (<Audio data={actualCap.audio} onend={() => setActualComponent("risposte")} />);
+        return (<Audio data={actualCap.audio} onend={() => setActualComponent("risposte")} orientation={orientation} />);
       case "risposte":
         return (<Risposte data={actualCap.risposte} onend={(gioco) => {
           setActualComponent(gioco)
@@ -89,7 +107,7 @@ const Layout = () => {
       {feedback === "false" && <Feedback onend={() => {
         onendFeedback(false);
       }} />}
-      <h1>Titolo capitolo {actual}</h1>
+      <h1>{actual}</h1>
       {whichComponent()}
     </div>)
 }
