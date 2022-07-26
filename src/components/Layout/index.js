@@ -37,10 +37,11 @@ const Layout = () => {
   }, [actual]);
 
   useEffect(() => {
+    // animazione // suoni etc feedback!!
   }, [actualComponent]);
 
   useEffect(() => {
-    // console.log('fedback value ', feedback);
+    console.log('ffedback value ', feedback);
   }, [feedback]);
 
   const setNewCap = (feedbackResult) => {

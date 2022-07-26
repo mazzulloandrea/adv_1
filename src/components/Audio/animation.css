@@ -1,15 +1,3 @@
-/* $teal: #8ba3b9; */
-
-/* *,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html {
-  overflow: hidden;
-} */
-
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -38,19 +26,6 @@ html {
   transform: scale(0, 1) translate3d(0, 0, 0);
   transform-origin: 100% 100%;
   transition: transform 0.5s ease-in-out;
-  /* 
-  light: #8ba3b9;
-  $dark: mix(black, #8ba3b9, 5%);
-
-  @for $x from 1 through 10 {
-    &:nth-of-type(#{$x}) {
-      left: ($x - 1) * 10vw;
-      background: linear-gradient(to right, #8ba3b9 0%, #8ba3b9 100%);
-      transition-delay: 0.05s * $x;
-    }
-
-    $light: #8ba3b9;
-    $dark: mix(black, #8ba3b9, ($x * 5%)); */
 }
 
 .overlay .bar:first-of-type {

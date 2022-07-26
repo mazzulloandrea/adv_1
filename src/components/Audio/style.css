@@ -1,3 +1,13 @@
+@keyframes slideOff {
+  from {
+    top: 0
+  }
+
+  to {
+    top: 50vw;
+  }
+}
+
 .circle {
   background: green;
   width: 55vw;
@@ -12,16 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@keyframes slideOff {
-  from {
-    top: 0
-  }
-
-  to {
-    top: 50vw;
-  }
 }
 
 .cirle.slideOff {

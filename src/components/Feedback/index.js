@@ -3,7 +3,7 @@ import Ok from '/assets/images/ok.jpeg';
 
 function Feedback({ onend }) {
   return (
-    <div class={style.animation} onanimationend={() => {
+    <div class={style.animationContainer} onanimationend={() => {
       onend();
     }}>
       <img src={Ok} alt="" />

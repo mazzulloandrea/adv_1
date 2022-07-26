@@ -1,8 +1,75 @@
+@charset "UTF-8";
+
 :root {
   --glass-color: #919EB3;
   --frame-color: #C19875;
   --sand-color: #EDD0AA;
-  /* --duration: "15s"; */
+}
+
+
+@keyframes lowertopsand {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: translateY(80px);
+  }
+}
+
+
+@keyframes raisemound {
+  0% {
+    transform: translate(-50%, 80px);
+    width: 180px;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    width: 50px;
+  }
+}
+
+@keyframes raisebottomsand {
+  0% {
+    transform: translate(-50%, 80px);
+    boder-radius: 0;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    border-radius: 50% 50% 0 0;
+  }
+}
+
+
+@keyframes fadedrip {
+  0% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes drip {
+  0% {
+    transform: translateY(-150px);
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(30px);
+  }
 }
 
 .box {
@@ -14,7 +81,6 @@
   width: 180px;
   height: 300px;
 }
-
 
 .frame {
   position: absolute;
@@ -41,7 +107,7 @@
   height: 80px;
   bottom: 0;
   background: var(--sand-color);
-  animation: 15s lowerTopSand 1;
+  animation: 15s lowertopsand 1;
   animation-duration: var(--duration);
 }
 
@@ -57,18 +123,6 @@
       white 0deg,
       transparent 90deg,
       white 180deg);
-}
-
-
-
-@keyframes lowerTopSand {
-  0% {
-    transform: none;
-  }
-
-  100% {
-    transform: translateY(80px);
-  }
 }
 
 .bottom {
@@ -91,7 +145,7 @@
   height: 80px;
   bottom: 0;
   background: var(--sand-color);
-  animation: 15s raiseBottomSand 1;
+  animation: 15s raisebottomsand 1;
   animation-duration: var(--duration);
 }
 
@@ -105,34 +159,9 @@
   height: 50px;
   border-radius: 50%;
   background: var(--sand-color);
-  animation: raiseMound 15s 1;
+  animation: raisemound 15s 1;
   animation-duration: var(--duration);
 }
-
-@keyframes raiseMound {
-  0% {
-    transform: translate(-50%, 80px);
-    width: 180px;
-  }
-
-  100% {
-    transform: translateX(-50%);
-    width: 50px;
-  }
-}
-
-@keyframes raiseBottomSand {
-  0% {
-    transform: translate(-50%, 80px);
-    boder-radius: 0;
-  }
-
-  100% {
-    transform: translateX(-50%);
-    border-radius: 50% 50% 0 0;
-  }
-}
-
 
 /* Drip through to bottom */
 .drip {
@@ -143,24 +172,8 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-
   border-top: 10px solid var(--sand-color);
-
-  animation: fadeDrip 5s 1;
-}
-
-@keyframes fadeDrip {
-  0% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+  animation: fadedrip 5s 1;
 }
 
 .drip::before {
@@ -175,21 +188,6 @@
       transparent 5px,
       transparent 10px);
   animation: drip 15s 1;
-}
-
-@keyframes drip {
-  0% {
-    transform: translateY(-150px);
-    opacity: 1;
-  }
-
-  99% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(30px);
-  }
 }
 
 .glass {

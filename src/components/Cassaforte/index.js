@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import circularProgressBar from './circularProgressBar.css';
 import switchCheckox from './switch.css';
-import sand from './sand.css';
 import determinateVictory from '../utils';
 
 const stub = { successo: '', fallimento: '', params: {} }
@@ -41,7 +40,7 @@ function Cassaforte({ data = stub, onend }) {
     <div>
       <h1>combinazione 1-12-1200 30% false 3</h1>
       <div>
-        {viewSand ?
+        {/* {viewSand ?
           <div class={sand.box}>
             <div class={sand.frame}>
               <div class={sand.top}></div>
@@ -56,7 +55,7 @@ function Cassaforte({ data = stub, onend }) {
             </div>
           </div> :
           <div>{successList.map(el => <div>el</div>)}</div>
-        }
+        } */}
       </div>
       <div id="progressBar" class={circularProgressBar.circle}>
         <div class={circularProgressBar.inner}>{progress}%</div>
