@@ -21,27 +21,23 @@
   },
   "capitoli": {
     "1": {
-      "titolo": "Capitilo 1",
+      "titolo": "Introduzione",
       "audio": {
-        "src": "/assets/audio/test3.ogg",
+        "src": "/assets/audio/cap1.ogg",
         "interrompe": ""
       },
       "risposte": [
         {
-          "frase": "Se vuoi salvare tua sorella?",
+          "frase": "Vuoi scoprire chi ti sta cercando chiedendo telepaticamente a tua sorella?",
           "gioco": "text"
         },
         {
-          "frase": "se vuoi tagliare la legna",
-          "gioco": "shoot"
-        },
-        {
-          "frase": "se usare le tue abilità",
-          "gioco": "cassaforte"
-        },
-        {
-          "frase": "etc",
+          "frase": "Preferisci scappare nel vicino campo di grano?",
           "gioco": "etc"
+        },
+        {
+          "frase": "Se invce torni indietro fino in falegnameria",
+          "gioco": null
         }
       ],
       "shoot": {
@@ -51,30 +47,25 @@
       "text": {
         "successo": "2",
         "fallimento": "3",
-        "tipo": "domanda",
-        "durata": "3",
+        "durata": "30",
         "domande": [
           "Qual'è il tuo nome?",
-          "Quanti anni hai",
+          "Quanti anni ha tua sorella",
           "Come si chiama tua sorella?"
         ],
         "risposte": [
           [
-            "Philidor",
-            "Filidor"
+            "Pantelion",
+            "Phantelion"
           ],
           [
-            16
+            14
           ],
           [
-            "lea",
-            "ciao"
+            "Carcadena",
+            "Carcadaena"
           ]
         ]
-      },
-      "cassaforte": {
-        "successo": "2",
-        "fallimento": "3"
       },
       "etc": {
         "successo": "2",

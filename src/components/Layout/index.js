@@ -18,6 +18,9 @@ const config = {
   "quiz": 6,
 }
 
+// stub
+Storia.capitoli["1"].audio.src = "/assets/audio/test3.ogg";
+
 const getGameId = (name) => Object.values(config);
 
 const Layout = () => {
