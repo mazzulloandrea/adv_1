@@ -36,7 +36,11 @@
           "gioco": "etc"
         },
         {
-          "frase": "Se invce torni indietro fino in falegnameria",
+          "frase": "Se invece torni indietro fino in falegnameria",
+          "gioco": null
+        },
+        {
+          "frase": "Se invece torni indietro fino in falegnameria",
           "gioco": null
         }
       ],

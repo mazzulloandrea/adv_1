@@ -4,7 +4,7 @@ import style from './style.css';
 
 const Header = ({ title }) => (
   <header class={style.header}>
-    <h1>{title}</h1>
+    <h1 class={style.nomargin}>{title}</h1>
 
   </header>
 );
