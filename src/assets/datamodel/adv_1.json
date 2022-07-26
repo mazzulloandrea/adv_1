@@ -48,6 +48,7 @@
         "successo": "2",
         "fallimento": "3",
         "tipo": "domanda",
+        "durata": "15",
         "domande": [
           "Qual'è il tuo nome?",
           "Quanti anni hai",
@@ -62,8 +63,8 @@
             16
           ],
           [
-            "aldsfjksfk",
-            "jlhbjl"
+            "lea",
+            "ciao"
           ]
         ]
       },

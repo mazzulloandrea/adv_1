@@ -5,7 +5,7 @@ import Etc from '/components/Etc/index';
 import Shoot from '/components/Shoot/index';
 import Risposte from '../Risposte/index';
 import Cassaforte from '../Cassaforte/index';
-
+import Text from '../Text/index';
 
 const config = {
   "audio": 0,
@@ -22,7 +22,7 @@ const getGameId = (name) => Object.values(config);
 const Layout = () => {
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState(1);
-  const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
+  const [actualComponent, setActualComponent] = useState("text"); //useState("audio");
 
 
   useEffect(() => {
@@ -40,6 +40,11 @@ const Layout = () => {
     // animazione // suoni etc feedback!!
   }, [actualComponent]);
 
+  const setNewCap = (newCap) => {
+    setActual(newCap);
+    setActualComponent('audio');
+  };
+
   const whichComponent = () => {
     const actualCap = story["capitoli"][actual];
     switch (actualComponent) {
@@ -50,19 +55,15 @@ const Layout = () => {
           setActualComponent(gioco)
         }} />);
       case "etc":
-        return (<Etc data={actualCap[actualComponent]} onend={(newCap) => {
-          setActual(newCap);
-          setActualComponent('audio')
-        }} />)
+        return (<Etc data={actualCap[actualComponent]} onend={(newCap) => setNewCap(newCap)} />)
       case "shoot":
-        return (<Shoot data={actualCap[actualComponent]} onend={(newCap) => {
-          setActual(newCap);
-          setActualComponent('audio')
-        }} />)
+        return (<Shoot data={actualCap[actualComponent]} onend={(newCap) => setNewCap(newCap)} />)
       case "cassaforte":
-        return (
-          <Cassaforte data={actualCap[actualComponent]} onend={(newCap) => setActual(newCap)} />
-        );
+        return (<Cassaforte data={actualCap[actualComponent]} onend={(newCap) => setNewCap(newCap)} />);
+      case "text":
+        return (<Text data={actualCap[actualComponent]} onend={(newCap) => setNewCap(newCap)} />);
+      default:
+        return;
     }
   }
 
