@@ -1,3 +1,17 @@
+.top {
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+}
+
+.spiega {
+  width: 70%;
+}
+
+.clessidraContainer {
+  width: 30%;
+}
+
 .responseContainer {
   display: flex;
   align-items: center;
