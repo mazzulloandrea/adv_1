@@ -23,7 +23,7 @@ const getGameId = (name) => Object.values(config);
 const Layout = () => {
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState(1);
-  const [actualComponent, setActualComponent] = useState("text"); //useState("audio");
+  const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
   const [feedback, setFeedback] = useState(null);
 
   useEffect(() => {
