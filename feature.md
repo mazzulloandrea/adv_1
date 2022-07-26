@@ -2,7 +2,7 @@ Giochi:
 Etc-Coordina i battiti: cliccare su di un cuore seguendo l’elettrocardiogramma https://www.chartjs.org/docs/latest/
 Shoot-colpire il bersaglio: con il periscopio/accelerometro colpire il nemico
 Text-scrivere la parola corretta su oggetti/nomi/luoghi raccontati
-D-scassinare: spostare vari scroller, progress bar , switch, toggle (checkbox) e select nei posti indicati (molto se mplficato rispetto all’idea iniziale. Qui è dove conta di più il CSS /Immagini)
+cassaforte-scassinare: spostare vari scroller, progress bar , switch, toggle (checkbox) e select nei posti indicati (molto se mplficato rispetto all’idea iniziale. Qui è dove conta di più il CSS /Immagini)
 Text-scrivere la soluzione dell’enigma
 ??-(Tipo find it) scoprire dettagli da una immagine (schizzi fatti a mano)
 C-trova l'intruso (parole e oggetti)

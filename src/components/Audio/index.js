@@ -40,7 +40,7 @@ function Audio({ data, onend }) {
   }
 
   const audioEnd = (event) => {
-    console.log(event);
+    // console.log(event);
     document.getElementById("2").style.left = '33.3vw';
     document.getElementById("3").style.left = '66.6vw';
     document.getElementById('overlay').classList.toggle(animation.show);

@@ -3,8 +3,9 @@ import { useEffect, useState } from 'preact/hooks';
 import { html } from 'htm/preact';
 import Chart from 'chart.js/auto';
 import generate from './data';
+import determinateVictory from '../utils';
 
-function Etc({ MaxCounter = 5 }) {
+function Etc({ data, onend, MaxCounter = 1 }) {
   const MaxPicchi = 3;
   const MaxPoint = 50;
   const totalDuration = 4000;
@@ -27,7 +28,7 @@ function Etc({ MaxCounter = 5 }) {
       // console.log(state);
       generated;
     });
-    console.log(chartData);
+    // console.log(chartData);
   }, []);
 
   useEffect(() => {
@@ -50,23 +51,27 @@ function Etc({ MaxCounter = 5 }) {
         chart.destroy();
       }
       const generated = generate(MaxPicchi, MaxPoint);
-      console.log('generated ', generated.peaks);
+      // console.log('generated ', generated.peaks);
       setChartData(state => generated);
       const ctx = document.getElementById('myChart').getContext("2d");
       const newChart = new Chart(ctx, config(generated.data));
       setChart(newChart);
       setUserClickedCounter(0);
-
+      if (counterDrawTimes === 0) {
+        console.log('finito');
+      }
       setTimeout(() => {
         setCounterDrawTimes(counterDrawTimes - 1);
       }, totalDuration + 500);
+    } else {
+      onend(determinateVictory(successList));
     }
   }, [counterDrawTimes]);
 
 
   const animation = {
     onComplete: () => {
-      console.log('onComplete');
+      // console.log('onComplete');
       setAnimationEnd(true);
     },
     x: {
@@ -98,7 +103,6 @@ function Etc({ MaxCounter = 5 }) {
   };
 
   const config = (data) => {
-    console.log('config');
     return {
       type: 'line',
       data: {
@@ -133,7 +137,7 @@ function Etc({ MaxCounter = 5 }) {
   return (
     <div>
       <button onclick={() => {
-        setUserClickedCounter(state => userClickedCounter + 1);
+        setUserClickedCounter(userClickedCounter + 1);
       }}>Click me {userClickedCounter}</button>
       <div>{successList.map(el => (
         <span>{el ? ' success' : ' fallimento'}</span>

@@ -3,7 +3,7 @@ import { useEffect } from 'preact/hooks';
 import sand from './style.css';
 
 function Clessidra({ duration, onend }) {
-  console.log('clessidra');
+  // console.log('clessidra');
   useEffect(() => {
     // .top:before
     // .bottom: before
@@ -20,6 +20,7 @@ function Clessidra({ duration, onend }) {
           <div class={sand.bottom}>
             <div class={sand.drip}></div>
             <div class={sand.blob} onanimationend={() => {
+              console.log('clessidra animation end');
               onend()
             }}></div>
             <div class={sand.glass}></div>

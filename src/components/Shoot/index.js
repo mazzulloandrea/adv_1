@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'preact/hooks';
 import targetImg from '../../assets/images/index.jpg';
 import style from './style.css';
+import determinateVictory from '../utils';
 
 const shuffle = (array) => {
   let currentIndex = array.length, randomIndex;
@@ -68,12 +69,13 @@ function Shoot({ data, onend }) {
   useEffect(() => {
     if (animationList === "init") return;
     if (!animationList.length) {
-      console.log('finito');
-      console.log('risultato e animazione');
-      console.log(successList);
-      if (successList.filter(el => el).length > (successList.length / 2)) {
-        onend(successo)
-      } else onend(fallimento);
+      onend(determinateVictory(successList));
+      // console.log('finito');
+      // console.log('risultato e animazione');
+      // console.log(successList);
+      // if (successList.filter(el => el).length > (successList.length / 2)) {
+      //   onend(successo)
+      // } else onend(fallimento);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }
@@ -81,8 +83,8 @@ function Shoot({ data, onend }) {
 
   useEffect(() => {
     // animazione ad ogni colpo effettuato
-    if (counter !== shootCount)
-      console.log('animazione', successList);
+    // if (counter !== shootCount)
+    // console.log('animazione', successList);
   }, [counter]);
 
   const generate = () => {

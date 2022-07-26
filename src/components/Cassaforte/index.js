@@ -6,7 +6,7 @@ import determinateVictory from '../utils';
 
 const stub = { successo: '', fallimento: '', params: {} }
 function Cassaforte({ data = stub, onend }) {
-  const { successo, fallimento, params } = data;
+  // const { successo, fallimento, params } = data;
   const [viewSand, setViewSand] = useState(true);
   //memorizzo lo stato di ogni component
   const [progress, setProgress] = useState(Math.floor(Math.random() * 100));
@@ -28,7 +28,7 @@ function Cassaforte({ data = stub, onend }) {
   useEffect(() => {
     if (!successList) return;
     // vinto o perso
-    onend(determinateVictory(successList) ? successo : fallimento)
+    onend(determinateVictory(successList));
   }, [successList]);
 
   const createSuccessList = () => {

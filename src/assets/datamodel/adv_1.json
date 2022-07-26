@@ -38,6 +38,10 @@
         {
           "frase": "se usare le tue abilità",
           "gioco": "cassaforte"
+        },
+        {
+          "frase": "etc",
+          "gioco": "etc"
         }
       ],
       "shoot": {
@@ -48,7 +52,7 @@
         "successo": "2",
         "fallimento": "3",
         "tipo": "domanda",
-        "durata": "15",
+        "durata": "3",
         "domande": [
           "Qual'è il tuo nome?",
           "Quanti anni hai",
@@ -69,6 +73,10 @@
         ]
       },
       "cassaforte": {
+        "successo": "2",
+        "fallimento": "3"
+      },
+      "etc": {
         "successo": "2",
         "fallimento": "3"
       }
