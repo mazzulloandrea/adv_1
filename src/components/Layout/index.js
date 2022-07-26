@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import Storia from '../../assets/datamodel/adv_1.json';
+import Header from '/components/Header/index';
 import Audio from '/components/Audio/index';
 import Etc from '/components/Etc/index';
 import Shoot from '/components/Shoot/index';
@@ -107,7 +108,7 @@ const Layout = () => {
       {feedback === "false" && <Feedback onend={() => {
         onendFeedback(false);
       }} />}
-      <h1>{actual}</h1>
+      <Header title={story["capitoli"][actual].titolo} />
       {whichComponent()}
     </div>)
 }
