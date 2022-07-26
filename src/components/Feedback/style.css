@@ -12,9 +12,8 @@
   }
 }
 
-.animationContainer {
-  animation: ingresso 3s;
-
+.feedbackContainer {
+  background: white;
   position: absolute;
   top: 0;
   right: 0;
@@ -23,7 +22,16 @@
   margin: auto;
 }
 
+.animationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ingresso 3s;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 .animationContainer img {
-  width: 100%;
-  height: auto;
+  max-height: 30vh;
 }

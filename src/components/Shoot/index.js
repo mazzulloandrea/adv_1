@@ -46,7 +46,6 @@ const newArrayFn = (x) => new Array(x)
 function Shoot({ data, onend }) {
   const { successo, fallimento, params = stub } = data;
   const { shootCount, mirino, target, colpi, movimenti, delayTime } = params;
-  // const AnimationList = new Array(stub.movimenti);
   const [animationList, setAnimationList] = useState("init")
   const [enable, setEnable] = useState(true);
   const [successList, setSuccess] = useState([]);
@@ -69,13 +68,8 @@ function Shoot({ data, onend }) {
   useEffect(() => {
     if (animationList === "init") return;
     if (!animationList.length) {
-      onend(determinateVictory(successList));
-      // console.log('finito');
-      // console.log('risultato e animazione');
-      // console.log(successList);
-      // if (successList.filter(el => el).length > (successList.length / 2)) {
-      //   onend(successo)
-      // } else onend(fallimento);
+      const result = determinateVictory(successList);
+      onend(result, result ? successo : fallimento);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }

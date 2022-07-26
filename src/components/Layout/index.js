@@ -28,9 +28,9 @@ Storia.capitoli["1"].audio.src = "/assets/audio/test3.ogg";
 
 const Layout = () => {
   const [story, setStory] = useState(Storia);
-  const [actual, setActual] = useState(1);
+  const [actual, setActual] = useState({ cap: "1" }); // { cap: 1, gioco: "text", successo: true/false}
   const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
-  const [feedback, setFeedback] = useState(null);
+  const [isFeedbackOk, setIsFeedbackOk] = useState(false);
   const [orientation, setOrientation] = useState(0);
 
   useEffect(() => {
@@ -55,8 +55,7 @@ const Layout = () => {
 
   useEffect(() => {
     // change paragraph
-    setActualComponent("audio");
-    // inizia nuovo capitolo -> audio
+    // !!!salvare nello storage ogni volta
   }, [actual]);
 
   useEffect(() => {
@@ -64,14 +63,22 @@ const Layout = () => {
   }, [actualComponent]);
 
   useEffect(() => {
-    // console.log('feedback value ', feedback);
-  }, [feedback]);
+    // console.log('isFeedbackOk value ', isFeedbackOk);
+  }, [isFeedbackOk]);
 
-  const setNewCap = (feedbackResult) => {
-    setFeedback(feedbackResult ? "true" : "false");
+  const setNewCap = (feedbackResult, newCap) => {
+    setActual({ cap: newCap });
+    setIsFeedbackOk(feedbackResult);
+    setActualComponent("feedback");
   };
 
+  const onendFeedback = () => {
+    // setIsFeedbackOk(false);
+    setActualComponent('audio');
+  }
+
   const toggleTransition = (gioco) => {
+    setActual({ ...actual, gioco });
     document.getElementById("2").style.left = '33.3vw';
     document.getElementById("3").style.left = '66.6vw';
     document.getElementById('overlay').classList.toggle(animation.show);
@@ -80,36 +87,32 @@ const Layout = () => {
     }, 750);
   }
 
-  const onendFeedback = (succ) => {
-    const nextCap = story["capitoli"][actual][actualComponent];
-    setActual(feedback ? nextCap.successo : nextCap.fallimento);
-    setActualComponent('audio');
-    setFeedback(null)
-  }
-
   const transitionEnd = () => {
     console.log('transition end quella barre blu')
   }
 
   const whichComponent = () => {
-    const actualCap = story["capitoli"][actual];
+    const actualCap = story["capitoli"][actual.cap];
     // console.log('new render Wich component', actualComponent);
     switch (actualComponent) {
       case "audio":
         return (<Audio data={actualCap.audio} onend={() => setActualComponent("risposte")} orientation={orientation} />);
       case "risposte":
         return (<Risposte data={actualCap.risposte} onend={(gioco) => {
-          setActualComponent('transition');
+          setActualComponent(null); // ?????
           toggleTransition(gioco);
+          // qui doop aver scelto la risposta ho già le info sul gioco e sui capitolo successivi
         }} />);
       case "etc":
-        return (<Etc data={actualCap[actualComponent]} onend={(feedbackResult) => setNewCap(feedbackResult)} />)
+        return (<Etc data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />)
       case "shoot":
-        return (<Shoot data={actualCap[actualComponent]} onend={(feedbackResult) => setNewCap(feedbackResult)} />)
+        return (<Shoot data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />)
       case "cassaforte":
-        return (<Cassaforte data={actualCap[actualComponent]} onend={(feedbackResult) => setNewCap(feedbackResult)} />);
+        return (<Cassaforte data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case "text":
-        return (<Text data={actualCap[actualComponent]} onend={(feedbackResult) => setNewCap(feedbackResult)} />);
+        return (<Text data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
+      case 'feedback':
+        return (<Feedback isSuccessImage={isFeedbackOk} onend={() => onendFeedback()} />)
       default:
         return;
     }
@@ -120,13 +123,7 @@ const Layout = () => {
       <div id="1" class={animation.bar} />
       <div id="2" class={animation.bar} />
       <div id="3" class={animation.bar} />
-      {feedback === "true" && <Feedback onend={() => {
-        onendFeedback(true);
-      }} />}
-      {feedback === "false" && <Feedback onend={() => {
-        onendFeedback(false);
-      }} />}
-      <Header title={story["capitoli"][actual].titolo} />
+      <Header title={story["capitoli"][actual.cap].titolo} />
       <div class={style.wrapper}>
         {whichComponent()}
       </div>

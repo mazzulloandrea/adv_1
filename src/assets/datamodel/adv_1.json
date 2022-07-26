@@ -37,21 +37,18 @@
         },
         {
           "frase": "Se invece torni indietro fino in falegnameria",
-          "gioco": null
+          "gioco": null,
+          "next": "4"
         },
         {
           "frase": "Se invece torni indietro fino in falegnameria",
           "gioco": null
         }
       ],
-      "shoot": {
-        "successo": "2",
-        "fallimento": "3"
-      },
       "text": {
         "successo": "2",
         "fallimento": "3",
-        "durata": "100",
+        "durata": "5",
         "domande": [
           "Qual'è il tuo nome?",
           "Quanti anni ha tua sorella",
@@ -59,15 +56,15 @@
         ],
         "risposte": [
           [
-            "Pantelion",
-            "Phantelion"
+            "pantelion",
+            "phantelion"
           ],
           [
             14
           ],
           [
-            "Carcadena",
-            "Carcadaena"
+            "carcadena",
+            "carcadaena"
           ]
         ]
       },

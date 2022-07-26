@@ -43,8 +43,7 @@
 
 .progress {
   margin: 2vh;
-  width: 92vw;
-  max-width: 500px;
+  width: calc(100vw - 4vh - 6px);
   border: 3px solid bisque;
   height: 30px;
 }

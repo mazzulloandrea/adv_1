@@ -4,7 +4,7 @@ import Clessidra from '../Clessidra/index';
 import style from './style.css';
 
 function Text({ data, onend }) {
-  const { domande, durata, risposte } = data;
+  const { domande, durata, risposte, successo, fallimento } = data;
   const [domanda, setDomanda] = useState(null);
   const [risposta, setRisposta] = useState('');
   const [viewSand, setViewSand] = useState(true);
@@ -30,20 +30,16 @@ function Text({ data, onend }) {
     if (domanda === null) {
       return;
     }
-    if (risposte[domanda].includes(risposta.toLowerCase())) {
-      onend(true);
-    } else {
-      onend(false);
-    }
+    const result = risposte[domanda].includes(risposta.toLowerCase())
+    onend(result, result ? successo : fallimento);
   }
 
   return (
     <div>
-      {viewSand ? <Clessidra class={style.clessidraContainer} duration={durata} onend={() => {
+      {viewSand && <Clessidra class={style.clessidraContainer} duration={durata} onend={() => {
         setViewSand(false);
-      }} /> : <div>esito</div>}
-      <div class={style.spiega}>Spiega / punteggio</div>
-
+      }} />}
+      {/* <div class={style.spiega}>Spiega / punteggio</div> */}
 
       <div class={style.domanda}>{domande[domanda]}</div>
       <div class={style.responseContainer}>

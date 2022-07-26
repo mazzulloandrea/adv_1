@@ -6,6 +6,7 @@ import generate from './data';
 import determinateVictory from '../utils';
 
 function Etc({ data, onend, MaxCounter = 1 }) {
+  const { successo, fallimento } = data;
   const MaxPicchi = 3;
   const MaxPoint = 50;
   const totalDuration = 4000;
@@ -64,7 +65,8 @@ function Etc({ data, onend, MaxCounter = 1 }) {
         setCounterDrawTimes(counterDrawTimes - 1);
       }, totalDuration + 500);
     } else {
-      onend(determinateVictory(successList));
+      const result = determinateVictory(successList);
+      onend(result, result ? successo : fallimento);
     }
   }, [counterDrawTimes]);
 

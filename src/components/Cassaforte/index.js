@@ -27,7 +27,8 @@ function Cassaforte({ data = stub, onend }) {
   useEffect(() => {
     if (!successList) return;
     // vinto o perso
-    onend(determinateVictory(successList));
+    const result = determinateVictory(successList);
+    onend(result, result ? successo : fallimento);
   }, [successList]);
 
   const createSuccessList = () => {
