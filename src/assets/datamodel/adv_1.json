@@ -51,7 +51,7 @@
       "text": {
         "successo": "2",
         "fallimento": "3",
-        "durata": "10",
+        "durata": "100",
         "domande": [
           "Qual'è il tuo nome?",
           "Quanti anni ha tua sorella",

@@ -45,7 +45,7 @@ function Text({ data, onend }) {
       <div class={style.spiega}>Spiega / punteggio</div>
 
 
-      <div>domanda: {domande[domanda]}</div>
+      <div class={style.domanda}>{domande[domanda]}</div>
       <div class={style.responseContainer}>
         <input
           value={risposta}
