@@ -39,8 +39,6 @@ function Text({ data, onend }) {
       {viewSand && <Clessidra class={style.clessidraContainer} duration={durata} onend={() => {
         setViewSand(false);
       }} />}
-      {/* <div class={style.spiega}>Spiega / punteggio</div> */}
-
       <div class={style.domanda}>{domande[domanda]}</div>
       <div class={style.responseContainer}>
         <input

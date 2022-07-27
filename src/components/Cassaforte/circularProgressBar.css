@@ -1,8 +1,7 @@
 .circle {
   position: relative;
-  width: 40vw;
-  height: 40vw;
-  margin: 0.5rem;
+  width: 20vw;
+  height: 20vw;
   border-radius: 50%;
   background: #FFCDB2;
   overflow: hidden;
@@ -19,8 +18,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30vw;
-  height: 30vw;
+  width: 15vw;
+  height: 15vw;
   background: #000;
   border-radius: 50%;
   font-size: 1.85em;
@@ -42,4 +41,17 @@
   color: red;
   position: absolute;
   margin-left: 18vw;
+}
+
+@media only screen and (orientation: portrait) {
+
+  .circle {
+    width: 40vw;
+    height: 40vw
+  }
+
+  .inner {
+    width: 30vw;
+    height: 30vw;
+  }
 }
