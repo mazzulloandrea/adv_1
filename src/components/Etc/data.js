@@ -1,6 +1,6 @@
 
 
-function _candidates(howMany = 0, maxPoint = 50) {
+function _candidates(howMany = 0, maxPoint = 100) {
   const externalLimit = 5;
   const diffFromMax = 7;
   let candidates = [];
@@ -22,9 +22,9 @@ function _candidates(howMany = 0, maxPoint = 50) {
   return candidates;
 };
 
-function generate(maxPicchi, maxPoint = 50) {
+function generate(maxPicchi, maxPoint = 100) {
   const data = [];
-  const maxIncrement = 100;
+  const maxIncrement = 50;
   let prev = 0;
 
   const howManyPicchi = Math.floor(Math.random() * (maxPicchi + 1));

@@ -1,16 +1,19 @@
-import { h, Component } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { html } from 'htm/preact';
+import heart from '/assets/images/heart.jpeg';
+import successIcon from '/assets/images/success.png';
+import failureIcon from '/assets/images/failure.png';
 import Chart from 'chart.js/auto';
 import generate from './data';
 import determinateVictory from '../utils';
+import style from './style.css';
 
-function Etc({ data, onend, MaxCounter = 1 }) {
+
+function Etc({ data, onend, MaxCounter = 10, MaxPicchi = 5, orientation = 0 }) {
   const { successo, fallimento } = data;
-  const MaxPicchi = 3;
-  const MaxPoint = 50;
+  // const MaxPicchi = 5; // c'è un max oltre il quale si inchioda
+  const MaxPoint = 100;
   const totalDuration = 4000;
-  const delayBetweenPoints = totalDuration / 50; //data.length;
+  const delayBetweenPoints = (totalDuration / MaxPoint) * 0.6; //data.length;
   const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
 
   const [chartData, setChartData] = useState([])
@@ -21,19 +24,29 @@ function Etc({ data, onend, MaxCounter = 1 }) {
   const [successList, setSuccess] = useState([]);
   const [userClickedCounter, setUserClickedCounter] = useState(0);
 
+  const [graphOrientation, setOrientation] = useState(orientation);
+
   useEffect(() => {
-    // console.log('first');
-    // console.log('useEffect []');
-    const generated = generate(MaxPicchi, MaxPoint)
+    const generated = generate(MaxPicchi, MaxPoint);
     setChartData(state => {
-      // console.log(state);
       generated;
     });
-    // console.log(chartData);
   }, []);
 
   useEffect(() => {
-    // console.log('useEffect [animationEnd]');
+    console.log('orientattion change', graphOrientation);
+    if (chart) {
+      chart.helpers.each(Chart.instances, function (instance) {
+        // If the responsive flag is set in the chart instance config
+        // Cascade the resize event down to the chart.
+        if (instance.options.responsive) {
+          instance.resize(instance.render, true);
+        }
+      });
+    }
+  }, [graphOrientation]);
+
+  useEffect(() => {
     if (animationEnd && chartData.peaks !== undefined) {
       console.log(`vediamo se ho vinto - picchi = ${chartData.peaks}, userClickedCounter =${userClickedCounter}`);
       if (chartData.peaks === userClickedCounter) {
@@ -52,15 +65,14 @@ function Etc({ data, onend, MaxCounter = 1 }) {
         chart.destroy();
       }
       const generated = generate(MaxPicchi, MaxPoint);
-      // console.log('generated ', generated.peaks);
       setChartData(state => generated);
       const ctx = document.getElementById('myChart').getContext("2d");
       const newChart = new Chart(ctx, config(generated.data));
       setChart(newChart);
       setUserClickedCounter(0);
-      if (counterDrawTimes === 0) {
-        console.log('finito');
-      }
+      // if (counterDrawTimes === 0) {
+      //   console.log('finito');
+      // }
       setTimeout(() => {
         setCounterDrawTimes(counterDrawTimes - 1);
       }, totalDuration + 500);
@@ -70,10 +82,8 @@ function Etc({ data, onend, MaxCounter = 1 }) {
     }
   }, [counterDrawTimes]);
 
-
   const animation = {
     onComplete: () => {
-      // console.log('onComplete');
       setAnimationEnd(true);
     },
     x: {
@@ -110,9 +120,9 @@ function Etc({ data, onend, MaxCounter = 1 }) {
       data: {
         datasets: [{
           borderColor: 'green',
-          borderWidth: 1,
+          borderWidth: 3,
           radius: 0,
-          data: data, //generate(MaxPicchi, MaxPoint).data,
+          data: data,
         }]
       },
       options: {
@@ -121,15 +131,18 @@ function Etc({ data, onend, MaxCounter = 1 }) {
           intersect: false
         },
         plugins: {
-          legend: false
+          legend: false,
+          tooltip: {
+            enabled: false
+          }
         },
         scales: {
           x: {
             type: 'linear'
           },
           y: {
-            min: -50,
-            max: 150,
+            min: -20,
+            max: 60,
           }
         }
       }
@@ -138,13 +151,20 @@ function Etc({ data, onend, MaxCounter = 1 }) {
 
   return (
     <div>
-      <button onclick={() => {
-        setUserClickedCounter(userClickedCounter + 1);
-      }}>Click me {userClickedCounter}</button>
-      <div>{successList.map(el => (
-        <span>{el ? ' success' : ' fallimento'}</span>
-      ))}</div>
-      <canvas id="myChart" width="400" height="400"></canvas>
+      <div class={style.header}>
+        <div class={style.spiega}>Premi sul cuore come indicato dal grafico</div>
+        <div class={style.pulseContainer}>
+          <img class={style.pulseHard} src={heart} alt="" onclick={() => {
+            setUserClickedCounter(userClickedCounter + 1);
+          }} />
+        </div>
+        <div class={style.feedbackContainer}>{successList.map(el => (
+          <img class={style.feedback} src={el ? successIcon : failureIcon} />
+        ))}</div>
+      </div>
+      <div class={style.canvasContainer}>
+        <canvas id="myChart" width="0" height="0"></canvas>
+      </div>
     </div>
 
   );

@@ -42,7 +42,7 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     })
-    // console.log('screen', screen);
+    console.log('screen', screen);
   }, []);
 
   useEffect(() => {
@@ -73,17 +73,17 @@ const Layout = () => {
   };
 
   const onendFeedback = () => {
-    // setIsFeedbackOk(false);
     setActualComponent('audio');
   }
 
-  const toggleTransition = (gioco) => {
+  const toggleTransition = (gioco, cb = () => { }) => {
     setActual({ ...actual, gioco });
     document.getElementById("2").style.left = '33.3vw';
     document.getElementById("3").style.left = '66.6vw';
     document.getElementById('overlay').classList.toggle(animation.show);
     setTimeout(() => {
       setActualComponent(gioco);
+      cb();
     }, 750);
   }
 
@@ -104,7 +104,7 @@ const Layout = () => {
           // qui doop aver scelto la risposta ho già le info sul gioco e sui capitolo successivi
         }} />);
       case "etc":
-        return (<Etc data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />)
+        return (<Etc data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} orientation={orientation} />)
       case "shoot":
         return (<Shoot data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />)
       case "cassaforte":

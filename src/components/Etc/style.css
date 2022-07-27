@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  margin-bottom: 4vh;
+  width: 100%;
+}
+
+.spiega {
+  width: 40%;
+  padding: 0 2vw;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.pulseContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh 0;
+  width: 20%;
+}
+
+.feedbackContainer {
+  width: 40%;
+}
+
+.feedback {
+  width: 4vw;
+  height: auto;
+  margin-right: 2vw;
+}
+
+
+.pulseHard {
+  animation: 0.3s pulse;
+  animation-iteration-count: infinite;
+  width: 10vw;
+}
+
+.pulseMedium {
+  animation: 0.8s pulse;
+  animation-iteration-count: infinite;
+  width: 10vw;
+}
+
+.pulseLight {
+  animation: 1.4s pulse;
+  animation-iteration-count: infinite;
+  width: 10vw;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.5);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  65% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.canvasContainer {
+  position: relative;
+  width: 90vw;
+  margin: 0 auto;
+  height: 60vh;
+}
+
+.canvasContainer canvas {
+  background: white;
+}
