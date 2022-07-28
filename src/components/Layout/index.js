@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import Storia from '../../assets/datamodel/adv_1.json';
 // import Header from '../Header/index';
+import Intestazione from '../Intestazione/index';
 import Audio from '../Audio/index';
 import Etc from '../Etc/index';
 import Shoot from '../Shoot/index';
@@ -123,7 +124,7 @@ const Layout = () => {
       <div id="1" class={animation.bar} />
       <div id="2" class={animation.bar} />
       <div id="3" class={animation.bar} />
-      {/* <Header title={story["capitoli"][actual.cap].titolo} /> */}
+      <Intestazione title={story["capitoli"][actual.cap].titolo} />
       <div class={style.wrapper}>
         {whichComponent()}
       </div>
