@@ -29,7 +29,7 @@
       "risposte": [
         {
           "frase": "Vuoi scoprire chi ti sta cercando chiedendo telepaticamente a tua sorella?",
-          "gioco": "text"
+          "gioco": "gioco9"
         },
         {
           "frase": "Preferisci scappare nel vicino campo di grano?",
@@ -107,6 +107,16 @@
         "fallimento": "2"
       },
       "shoot": {
+        "successo": "3",
+        "fallimento": "2"
+      },
+      "gioco9": {
+        "combinazione": [
+          "arancione",
+          "azzurro",
+          "verde",
+          "viola"
+        ],
         "successo": "3",
         "fallimento": "2"
       }

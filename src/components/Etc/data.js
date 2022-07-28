@@ -1,7 +1,7 @@
 
 
 function _candidates(howMany = 0, maxPoint = 100) {
-  const externalLimit = 5;
+  const externalLimit = 10;
   const diffFromMax = 7;
   let candidates = [];
   while (howMany !== candidates.length) {

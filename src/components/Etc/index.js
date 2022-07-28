@@ -4,7 +4,7 @@ import successIcon from '/assets/images/success.png';
 import failureIcon from '/assets/images/failure.png';
 import Chart from 'chart.js/auto';
 import generate from './data';
-import determinateVictory from '../utils';
+import { determinateVictory } from '../utils';
 import style from './style.css';
 
 
@@ -13,7 +13,7 @@ function Etc({ data, onend, MaxCounter = 10, MaxPicchi = 5, orientation = 0 }) {
   // const MaxPicchi = 5; // c'è un max oltre il quale si inchioda
   const MaxPoint = 100;
   const totalDuration = 4000;
-  const delayBetweenPoints = (totalDuration / MaxPoint) * 0.6; //data.length;
+  const delayBetweenPoints = (totalDuration / MaxPoint) * 0.5; //data.length;
   const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
 
   const [chartData, setChartData] = useState([])

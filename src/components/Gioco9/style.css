@@ -1,0 +1,118 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* height: 80vh; */
+}
+
+.header {
+  height: 20vh;
+  min-height: 20vh;
+}
+
+.gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.clessidraContainer {
+  height: 8vh;
+}
+
+.subHeader {
+  height: 12vh;
+  width: 90vw;
+  margin: 0 5vw;
+  position: relative;
+}
+
+.subHeader>div {
+  /* width: 45vw; */
+}
+
+.spiega {
+  display: flex;
+  align-items: flex-start;
+}
+
+.discoverList {
+  padding-left: 5vw;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 12vh;
+  width: 30vw;
+}
+
+.discoverElement {
+  width: 30vw;
+  text-align: left;
+  margin-right: 5vw;
+  padding-right: 3vw;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+@media screen and (orientation: landscape) {
+  .discoverElement {
+    width: 18vw;
+  }
+}
+
+.game {
+  width: 15vh;
+  height: 15vh;
+  margin: 1vh;
+  box-sizing: border-box;
+  border: 1px solid;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.miniGameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 5vw;
+}
+
+.miniGame {
+  width: 3vh;
+  height: 3vh;
+  box-sizing: border-box;
+  border: 1px solid;
+  color: white;
+  display: -ms-flexbox;
+  /* display: flex; */
+  -ms-flex-align: center;
+  /* align-items: center; */
+  -ms-flex-pack: center;
+  /* justify-content: center; */
+  /* font-size: 2em; */
+  float: right;
+}
+
+.delete {
+  display: none;
+}
+
+@media screen and (orientation: landscape) {
+  .game {
+    width: 15vw;
+    height: 15vw;
+    margin: 1vw;
+  }
+}

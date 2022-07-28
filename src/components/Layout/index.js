@@ -8,6 +8,7 @@ import Shoot from '../Shoot/index';
 import Risposte from '../Risposte/index';
 import Cassaforte from '../Cassaforte/index';
 import Text from '../Text/index';
+import Gioco9 from '../Gioco9';
 import Feedback from '../Feedback/index';
 import animation from './animation.css';
 import style from './style.css';
@@ -20,6 +21,7 @@ const config = {
   "cassaforte": 4,
   "text": 5,
   "quiz": 6,
+  "gioco9": 7,
 }
 
 // stub
@@ -112,6 +114,8 @@ const Layout = () => {
         return (<Cassaforte data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case "text":
         return (<Text data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
+      case 'gioco9':
+        return (<Gioco9 data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case 'feedback':
         return (<Feedback isSuccessImage={isFeedbackOk} onend={() => onendFeedback()} />)
       default:

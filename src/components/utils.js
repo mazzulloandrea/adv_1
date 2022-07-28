@@ -7,4 +7,56 @@ const determinateVictory = (successList) => {
   return successList.filter(el => el).length > (successList.length / 2);
 }
 
-export default determinateVictory;
+
+const shuffle = (array) => {
+  let currentIndex = array.length, randomIndex;
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+
+const rgbToHex = (rgb) => {
+  var hexDigits = new Array
+    ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
+  // Function to convert rgb color to hex format
+  function rgb2hex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+  }
+  function hex(x) {
+    return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+  }
+  return rgb2hex(rgb);
+}
+
+const paletteColors = {
+  nero: '#000000',
+  grigio: '#808080',
+  marrone: '#964b00',
+  // blue: '#0000FF',
+  viola: '#9f2b68',
+  red: '#ff0000',
+  arancione: '#ffa500',
+  // yellow: '#FFD500',
+  rosa: '#ffb6c1',
+  azzurro: '#add8e6',
+  verde: '#008000'
+}
+
+export {
+  determinateVictory,
+  shuffle,
+  rgbToHex,
+  paletteColors,
+};
