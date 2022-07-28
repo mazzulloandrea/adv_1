@@ -5,7 +5,6 @@ import determinateVictory from '../utils';
 
 const shuffle = (array) => {
   let currentIndex = array.length, randomIndex;
-
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
 
@@ -69,7 +68,7 @@ function Shoot({ data, onend }) {
     if (animationList === "init") return;
     if (!animationList.length) {
       const result = determinateVictory(successList);
-      onend(result, result ? successo : fallimento);
+      // onend(result, result ? successo : fallimento);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }
@@ -121,8 +120,6 @@ function Shoot({ data, onend }) {
       y: coordY,
     }
   }
-
-
 
   const startAnimation = (x2, y2) => {
     const elem = document.getElementById("mirino");

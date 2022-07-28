@@ -105,6 +105,10 @@
         ],
         "successo": "3",
         "fallimento": "2"
+      },
+      "shoot": {
+        "successo": "3",
+        "fallimento": "2"
       }
     },
     "2": {

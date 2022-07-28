@@ -6,7 +6,7 @@ import Clessidra from '/components/Clessidra/index';
 import style from './style.css';
 import increment from '/assets/images/increment.jpeg';
 import decrement from '/assets/images/decrement.png';
-// const stub = { successo: '', fallimento: '', params: {} }
+
 function Cassaforte({ data, onend }) {
   const { successo, fallimento, combinazione, durata } = data;
   const [viewSand, setViewSand] = useState(true);
@@ -16,8 +16,6 @@ function Cassaforte({ data, onend }) {
   const [selectValue, setSelectValue] = useState();
   const [progress, setProgress] = useState(Math.floor(Math.random() * 100));
   const [switchValue, setSwitchValue] = useState(Math.random() < 0.5);
-
-  // const [successList, setSuccessList] = useState();
 
   useEffect(() => {
     document.getElementById('progressBar').style.backgroundImage = `conic-gradient(#B5838D ${progress}%, #FFCDB2 0`;
@@ -32,27 +30,14 @@ function Cassaforte({ data, onend }) {
 
   useEffect(() => { console.log('select', selectValue) }, [selectValue])
 
-  // useEffect(() => {
-  //   if (!successList) return;
-  //   // vinto o perso
-  //   const result = determinateVictory(successList);
-  //   onend(result, result ? successo : fallimento);
-  // }, [successList]);
-
-  // const createSuccessList = () => {
-  //   // confronta tra data ed i vari stati
-  //   console.log(progress, switchValue, datetimeValue, selectValue);
-  //   setSuccessList([true, false, true, true]);
-  // }
-
   const verifica = () => {
     console.log(datetimeValue, selectValue, progress, switchValue);
-    // if (datetimeValue.split('-').reverse().join('-') === combinazione[0].giusto &&
-    //   selectValue === combinazione[1].giusto &&
-    //   progress === combinazione[2].giusto &&
-    //   switchValue === combinazione[3].giusto
-    // ) return onend(true, successo);
-    // return onend(false, fallimento);
+    if (datetimeValue.split('-').reverse().join('-') === combinazione[0].giusto &&
+      selectValue === combinazione[1].giusto &&
+      progress === combinazione[2].giusto &&
+      switchValue === combinazione[3].giusto
+    ) return onend(true, successo);
+    return onend(false, fallimento);
   }
 
   const getCombinazione = () => combinazione.map(el => el.giusto).join('    ');
