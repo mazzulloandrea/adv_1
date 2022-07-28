@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import circularProgressBar from './circularProgressBar.css';
 import switchCheckox from './switch.css';
-import determinateVictory from '../utils';
-import Clessidra from '/components/Clessidra/index';
+import Clessidra from '../Clessidra/index';
 import style from './style.css';
 import increment from '/assets/images/increment.jpeg';
 import decrement from '/assets/images/decrement.png';
