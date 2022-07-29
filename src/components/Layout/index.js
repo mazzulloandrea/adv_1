@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'preact/hooks';
 import Storia from '../../assets/datamodel/adv_1.json';
 // import Header from '../Header/index';
-import Intestazione from '../Intestazione/index';
-import Audio from '../Audio/index';
-import Etc from '../Etc/index';
-import Shoot from '../Shoot/index';
-import Risposte from '../Risposte/index';
-import Cassaforte from '../Cassaforte/index';
-import Text from '../Text/index';
+import Intestazione from '../Intestazione';
+import Audio from '../Audio';
+import Etc from '../Etc';
+import Shoot from '../Shoot';
+import Risposte from '../Risposte';
+import Cassaforte from '../Cassaforte';
+import Text from '../Text';
 import Gioco9 from '../Gioco9';
+import Blur from '../Blur';
 import Feedback from '../Feedback/index';
 import animation from './animation.css';
 import style from './style.css';
@@ -118,6 +119,8 @@ const Layout = () => {
         return (<Gioco9 data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case 'feedback':
         return (<Feedback isSuccessImage={isFeedbackOk} onend={() => onendFeedback()} />)
+      case "blur":
+        return (<Blur />);
       default:
         return;
     }

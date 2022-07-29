@@ -2,9 +2,10 @@
 import { useEffect, useState } from 'preact/hooks';
 import Clessidra from '../Clessidra/index';
 import style from './style.css';
+import blurStyle from './blurStyle.css';
 
 function Text({ data, onend }) {
-  const { domande, durata, risposte, successo, fallimento } = data;
+  const { domande, durata, risposte, successo, fallimento, image } = data;
   const [domanda, setDomanda] = useState(null);
   const [risposta, setRisposta] = useState('');
   const [viewSand, setViewSand] = useState(true);
@@ -40,6 +41,13 @@ function Text({ data, onend }) {
         setViewSand(false);
       }} />}
       <div class={style.domanda}>{domande[domanda]}</div>
+      {image && (
+        <div class={blurStyle.focus}>
+          <div class={blurStyle.focusMask}>
+            <div class={blurStyle.focusMaskInner}><img src={image} /></div>
+          </div>
+        </div>
+      )}
       <div class={style.responseContainer}>
         <input
           value={risposta}

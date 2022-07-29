@@ -29,7 +29,7 @@
       "risposte": [
         {
           "frase": "Vuoi scoprire chi ti sta cercando chiedendo telepaticamente a tua sorella?",
-          "gioco": "gioco9"
+          "gioco": "text"
         },
         {
           "frase": "Preferisci scappare nel vicino campo di grano?",
@@ -49,10 +49,12 @@
         "successo": "2",
         "fallimento": "3",
         "durata": "5",
+        "image": "/assets/images/bottle.jpg",
         "domande": [
           "Qual'è il tuo nome?",
           "Quanti anni ha tua sorella",
-          "Come si chiama tua sorella?"
+          "Come si chiama tua sorella?",
+          "Cosa è?"
         ],
         "risposte": [
           [
@@ -65,6 +67,9 @@
           [
             "carcadena",
             "carcadaena"
+          ],
+          [
+            "bottiglia"
           ]
         ]
       },

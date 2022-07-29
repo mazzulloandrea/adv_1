@@ -42,7 +42,7 @@ function Gioco9({ data = stub, durata = 10, onend }) {
 
   const verify = () => {
     if (combinazione.length != colorsClicked.length) {
-      onend(false, fallimento)
+      // onend(false, fallimento)
     };
     let result = true;
     for (let i = 0; i < combinazione.length; i++) {
@@ -51,7 +51,7 @@ function Gioco9({ data = stub, durata = 10, onend }) {
       console.log(paletteColors[combinazione[i]]);
       if (paletteColors[combinazione[i]] !== colorsClicked[i]) result = false;
     };
-    onend(result, result ? successo : fallimento);
+    // onend(result, result ? successo : fallimento);
   };
 
   return (
