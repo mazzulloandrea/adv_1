@@ -61,25 +61,3 @@
 .focusMaskInner {
   animation: mask-inner-move 0.5s linear 2 alternate;
 }
-
-.credits {
-  color: white;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 200;
-  letter-spacing: 0.05rem;
-  font-style: italic;
-  text-align: center;
-}
-
-.credits a {
-  color: white;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-.credits a:hover {
-  text-decoration: underline;
-}

@@ -51,7 +51,7 @@ function Shoot({ data, onend }) {
     if (animationList === "init") return;
     if (!animationList.length) {
       const result = determinateVictory(successList);
-      // onend(result, result ? successo : fallimento);
+      onend(result, result ? successo : fallimento);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }

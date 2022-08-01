@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
-import Storia from '../../assets/datamodel/adv_1.json';
+import Storia from '/datamodel/index.js';
 // import Header from '../Header/index';
 import Intestazione from '../Intestazione';
 import Audio from '../Audio';
@@ -9,7 +9,6 @@ import Risposte from '../Risposte';
 import Cassaforte from '../Cassaforte';
 import Text from '../Text';
 import Gioco9 from '../Gioco9';
-import Blur from '../Blur';
 import Feedback from '../Feedback/index';
 import animation from './animation.css';
 import style from './style.css';
@@ -26,13 +25,13 @@ const config = {
 }
 
 // stub
-Storia.capitoli["1"].audio.src = "/assets/audio/test3.ogg";
+// Storia['cap0'].audio.src = "/assets/audio/test3.ogg";
 
 // const getGameId = (name) => Object.values(config);
 
 const Layout = () => {
   const [story, setStory] = useState(Storia);
-  const [actual, setActual] = useState({ cap: "1" }); // { cap: 1, gioco: "text", successo: true/false}
+  const [actual, setActual] = useState({ cap: "cap0" }); // { cap: 1, gioco: "text", successo: true/false}
   const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
   const [isFeedbackOk, setIsFeedbackOk] = useState(false);
   const [orientation, setOrientation] = useState(0);
@@ -70,6 +69,10 @@ const Layout = () => {
     // console.log('isFeedbackOk value ', isFeedbackOk);
   }, [isFeedbackOk]);
 
+  const handleOnEndAudio = () => {
+    setActualComponent("risposte");
+  };
+
   const setNewCap = (feedbackResult, newCap) => {
     setActual({ cap: newCap });
     setIsFeedbackOk(feedbackResult);
@@ -96,11 +99,11 @@ const Layout = () => {
   }
 
   const whichComponent = () => {
-    const actualCap = story["capitoli"][actual.cap];
-    // console.log('new render Wich component', actualComponent);
+    const actualCap = story[actual.cap];
+    console.log('new render Wich component', actualComponent);
     switch (actualComponent) {
       case "audio":
-        return (<Audio data={actualCap.audio} onend={() => setActualComponent("risposte")} orientation={orientation} />);
+        return (<Audio data={actualCap.audio} onend={() => handleOnEndAudio()} orientation={orientation} />);
       case "risposte":
         return (<Risposte data={actualCap.risposte} onend={(gioco) => {
           setActualComponent(null); // ?????
@@ -119,8 +122,6 @@ const Layout = () => {
         return (<Gioco9 data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case 'feedback':
         return (<Feedback isSuccessImage={isFeedbackOk} onend={() => onendFeedback()} />)
-      case "blur":
-        return (<Blur />);
       default:
         return;
     }
@@ -131,7 +132,7 @@ const Layout = () => {
       <div id="1" class={animation.bar} />
       <div id="2" class={animation.bar} />
       <div id="3" class={animation.bar} />
-      <Intestazione title={story["capitoli"][actual.cap].titolo} />
+      <Intestazione title={story[actual.cap].titolo} />
       <div class={style.wrapper}>
         {whichComponent()}
       </div>
