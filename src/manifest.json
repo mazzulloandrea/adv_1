@@ -16,6 +16,30 @@
       "src": "/assets/icons/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "/assets/icons/dice-six-faces-one.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice-six-faces-two.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice-six-faces-three.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice-six-faces-four.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice-six-faces-five.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice-six-faces-six.svg",
+      "type": "image/svg"
     }
   ]
 }

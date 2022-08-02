@@ -10,6 +10,7 @@ import Cassaforte from '../Cassaforte';
 import Text from '../Text';
 import Gioco9 from '../Gioco9';
 import Feedback from '../Feedback/index';
+import Dice from '../Dice';
 import animation from './animation.css';
 import style from './style.css';
 
@@ -22,6 +23,7 @@ const config = {
   "text": 5,
   "quiz": 6,
   "gioco9": 7,
+  "dice": 8,
 }
 
 // stub
@@ -32,7 +34,7 @@ const config = {
 const Layout = () => {
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState({ cap: "cap0" }); // { cap: 1, gioco: "text", successo: true/false}
-  const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
+  const [actualComponent, setActualComponent] = useState("dice"); //useState("audio");
   const [isFeedbackOk, setIsFeedbackOk] = useState(false);
   const [orientation, setOrientation] = useState(0);
 
@@ -120,6 +122,8 @@ const Layout = () => {
         return (<Text data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case 'gioco9':
         return (<Gioco9 data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
+      case "dice":
+        return (<Dice data={{ successo: '34', fallimento: '2' }} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case 'feedback':
         return (<Feedback isSuccessImage={isFeedbackOk} onend={() => onendFeedback()} />)
       default:
