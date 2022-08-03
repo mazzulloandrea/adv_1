@@ -29,7 +29,7 @@ const config = {
 const Layout = () => {
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState({ cap: "cap0" }); // { cap: 1, gioco: "text", successo: true/false}
-  const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
+  const [actualComponent, setActualComponent] = useState("dice"); //useState("audio");
   const [isFeedbackOk, setIsFeedbackOk] = useState(false);
   const [orientation, setOrientation] = useState(0);
   const [abilita, setAbilita] = useState(

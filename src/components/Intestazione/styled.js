@@ -8,6 +8,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: lightblue;
 `;
 
 export const Abilita = styled.div`

@@ -137,12 +137,12 @@ function Dice({ data, caratteristiche, onend }) {
   function getCubeFace() {
     return html`
     <${Fragment}>
-      <${Face1}><img src=${icon1} /></ />
-        <${Face2}><img src=${icon2} /></ />
-          <${Face3}><img src=${icon3} /></ />
-            <${Face4}><img src=${icon4} /></ />
-              <${Face5}><img src=${icon5} /></ />
-                <${Face6}><img src=${icon6} /></ />
+      <${Face1}><${icon1} /></ />
+        <${Face2}><${icon2} /></ />
+          <${Face3}><${icon3} /></ />
+            <${Face4}><${icon4} /></ />
+              <${Face5}><${icon5} /></ />
+                <${Face6}><${icon6} /></ />
                   </ />
     `;
   }
@@ -167,7 +167,7 @@ function Dice({ data, caratteristiche, onend }) {
     let i = new Array(counter).fill(0);
     return html`${i.map(el => 
     html`
-    <${DiceRemaining} src=${dice} />`)}`;
+    <${DiceRemaining}><${dice} /><//>`)}`;
   }
 
   function getResult() {

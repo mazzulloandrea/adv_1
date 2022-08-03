@@ -1,5 +1,4 @@
 import { html } from 'htm/preact';
-import style from './style.css';
 import Cuore from '../../assets/icons/cuore.svg';
 import { Header, Abilita, Title, Zaino, Cuori, AbilitaContainer } from './styled.js';
 

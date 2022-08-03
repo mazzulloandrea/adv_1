@@ -152,7 +152,7 @@ export const Tentativi = styled.div`
   height: 10vh;
 `;
 
-export const DiceRemaining = styled.img`
+export const DiceRemaining = styled.div`
   width: 10vw;
   margin: 0 1vw;
   @media only screen and (orientation: landscape) {
