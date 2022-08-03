@@ -10,6 +10,8 @@ import icon5 from '../../assets/icons/dice-six-faces-five.svg';
 import icon6 from '../../assets/icons/dice-six-faces-six.svg';
 import {
   Page,
+  Area1,
+  Area2,
   DiceArea,
   AbilitaSection,
   Type,
@@ -189,33 +191,37 @@ function Dice({ data, caratteristiche, onend }) {
 
   return html`
     <${Page}>
-      <${DiceArea}>
-        <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
-          <${Type}>Corpo</ />
-          <${Bonus}>${corpo}</ />
-          <${Scene}>${getCube(1)}</ />
+      <${Area1}>
+        <${DiceArea}>
+          <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
+            <${Type}>Corpo<//>
+            <${Bonus}>${corpo}<//>
+            <${Scene}>${getCube(1)}<//>
+          <//>
+          <${AbilitaSection} disabled=${!abilita.includes('mente')}>
+            <${Type}>Mente<//>
+            <${Bonus}>${mente}<//>
+            <${Scene}>${getCube(2)}<//>
+          <//>
+          <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
+            <${Type}>Spirito<//>
+            <${Bonus}>${spirito}<//>
+            <${Scene}>${getCube(3)}<//>
+          <//>
         <//>
-        <${AbilitaSection} disabled=${!abilita.includes('mente')}>
-          <${Type}>Mente</ />
-          <${Bonus}>${mente}</ />
-          <${Scene}>${getCube(2)}</ />
-        <//>
-        <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
-          <${Type}>Spirito</ />
-          <${Bonus}>${spirito}</ />
-          <${Scene}>${getCube(3)}</ />
-        <//>
-      <//>
-      <${Tentativi}>
-        Lanci rimasti ${getRemainingDice()}
-      </ />
-      <${Risultato}>
-        <${Obiettivo}>Supera ${obiettivo}<//>
-        <${ActualResult}>
-          ${getResult()}
+        <${Tentativi}>
+          Lanci rimasti ${getRemainingDice()}
         <//>
       <//>
-      <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>
+      <${Area2}>
+        <${Risultato}>
+          <${Obiettivo}>Supera ${obiettivo}<//>
+          <${ActualResult}>
+            ${getResult()}
+          <//>
+        <//>
+        <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>
+      <//>
     <//>
   `;
 }
