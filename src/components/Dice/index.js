@@ -1,32 +1,81 @@
-import { h } from 'preact';
-
+import { Fragment, h } from 'preact';
+import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
-import diceStyle from './style.css'; //'./dice.css';
+import dice from '../../assets/icons/dice.svg';
 import icon1 from '../../assets/icons/dice-six-faces-one.svg';
 import icon2 from '../../assets/icons/dice-six-faces-two.svg';
 import icon3 from '../../assets/icons/dice-six-faces-three.svg';
 import icon4 from '../../assets/icons/dice-six-faces-four.svg';
 import icon5 from '../../assets/icons/dice-six-faces-five.svg';
 import icon6 from '../../assets/icons/dice-six-faces-six.svg';
+import {
+  Page,
+  DiceArea,
+  AbilitaSection,
+  Type,
+  Bonus,
+  Scene,
+  Cube,
+  RollContainer,
+  Face1, Face2, Face3, Face4, Face5, Face6,
+  Button,
+  Tentativi,
+  DiceRemaining,
+  Risultato,
+  ActualResult,
+  Obiettivo,
+  Prosegui,
+} from './styled';
 
-function Dice() {
-  const [diceValue, setDiceValue] = useState(1);
-  const [cube, setCube] = useState();
+function Dice({ data, caratteristiche, onend }) {
+  const { corpo, mente, spirito, vita } = caratteristiche;
+  const { successo, fallimento, abilita, obiettivo } = data;
+  const [counter, setCounter] = useState(6);
+  const [cube1, setCube1] = useState();
+  const [diceValue1, setDiceValue1] = useState(1);
+  const [cube2, setCube2] = useState();
+  const [diceValue2, setDiceValue2] = useState(1);
+  const [cube3, setCube3] = useState();
+  const [diceValue3, setDiceValue3] = useState(1);
 
   useEffect(() => {
-    if (!cube) {
-      const _cube = document.getElementById("cube");
-      setCube(_cube);
+    let _cube;
+    if (!cube1) {
+      _cube = document.getElementById("cube1");
+      setCube1(_cube);
+    }
+    if (!cube2) {
+      _cube = document.getElementById("cube2");
+      setCube2(_cube);
+    }
+    if (!cube3) {
+      _cube = document.getElementById("cube3");
+      setCube3(_cube);
     }
   }, []);
 
-  useEffect(() => { }, [diceValue]);
+  useEffect(() => { }, [counter]);
+  useEffect(() => { }, [diceValue1]);
+  useEffect(() => { }, [diceValue2]);
+  useEffect(() => { }, [diceValue3]);
 
   useEffect(() => {
-    if (cube) {
-      rollDice();
+    if (cube1) {
+      rollDice(1);
     }
-  }, [cube]);
+  }, [cube1]);
+
+  useEffect(() => {
+    if (cube2) {
+      rollDice(2);
+    }
+  }, [cube2]);
+
+  useEffect(() => {
+    if (cube3) {
+      rollDice(3);
+    }
+  }, [cube3]);
 
   function getRandomInt(min = 1, max = 7) {
     min = Math.ceil(min);
@@ -34,45 +83,141 @@ function Dice() {
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
-  function rollDice() {
-    let randNum = getRandomInt(1, 7)
-    setDiceValue(randNum);
-    switch (randNum) {
+  function rollDice(whichCube) {
+    let randNum = getRandomInt(1, 7);
+    let _cube;
+    let rotationType = randNum;
+    if (whichCube === 1) {
+      _cube = cube1;
+      if (randNum === diceValue1) rotationType = 7;
+      setDiceValue1(randNum);
+    } else if (whichCube === 2) {
+      _cube = cube2;
+      if (randNum === diceValue2) rotationType = 7;
+      setDiceValue2(randNum);
+    } else {
+      _cube = cube3;
+      if (randNum === diceValue3) rotationType = 7;
+      setDiceValue3(randNum);
+    }
+    switch (rotationType) {
       case 1:
-        cube.style.transform = `translateZ(-100px) rotateY(${getRandomInt(1, 4) * 360}deg)`;
+        _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg)`;
         break;
       case 2:
-        cube.style.transform = `translateZ(-100px) rotateY(${getRandomInt(1, 4) * -180}deg)`;
+        _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) + 90}deg)`;
         break;
       case 3:
-        cube.style.transform = `translateZ(-100px) rotateY(${getRandomInt(1, 4) * -90}deg)`
+        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 90}deg)`
         break;
       case 4:
-        cube.style.transform = `translateZ(-100px) rotateY(${getRandomInt(1, 4) * -90}deg)`
+        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) + 90}deg)`
         break;
       case 5:
-        cube.style.transform = `translateZ(-100px) rotateX(${getRandomInt(1, 4) * -90}deg)`
+        _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) - 90}deg)`
         break;
-      // case 6:
+      case 6:
+        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 180}deg)`;
+        break;
       default:
-        cube.style.transform = `translateZ(-100px) rotateX(${getRandomInt(1, 4) * 90}deg)`;
+        // case same number
+        const isX = _cube.style.transform.split('X(');
+        if (isX.length === 2) {
+          const newValue = parseInt(isX[1]) + 360;
+          _cube.style.transform = `rotateX(${newValue}deg)`;
+        } else {
+          const newValue = parseInt(_cube.style.transform.split('Y(')[1]) + 360;
+          _cube.style.transform = `rotateY(${newValue}deg)`;
+        }
     }
   }
 
-  return (
-    <div class={diceStyle.scene}>
-      <div id="cube" class={diceStyle.cube}>
-        <div class={diceStyle.cube__face1 + ' ' + diceStyle.tr1}><img src={icon1} /></div>
-        <div class={diceStyle.cube__face2 + ' ' + diceStyle.tr2}><img src={icon2} /></div>
-        <div class={diceStyle.cube__face3 + ' ' + diceStyle.tr3}><img src={icon3} /></div>
-        <div class={diceStyle.cube__face4 + ' ' + diceStyle.tr4}><img src={icon4} /></div>
-        <div class={diceStyle.cube__face5 + ' ' + diceStyle.tr5}><img src={icon5} /></div>
-        <div class={diceStyle.cube__face6 + ' ' + diceStyle.tr6}><img src={icon6} /></div>
-      </div>
+  function getCubeFace() {
+    return html`
+    <${Fragment}>
+      <${Face1}><img src=${icon1} /></ />
+        <${Face2}><img src=${icon2} /></ />
+          <${Face3}><img src=${icon3} /></ />
+            <${Face4}><img src=${icon4} /></ />
+              <${Face5}><img src=${icon5} /></ />
+                <${Face6}><img src=${icon6} /></ />
+                  </ />
+    `;
+  }
+  
+  function getCube(index) {
+    return html`
+      <${RollContainer}>
+        <${Cube} id=${`cube${index}`} isDisabled=${!counter}>
+          ${getCubeFace()}
+          </ />
+          <${Button} isdisabled=${!counter} onClick=${() => {
+          setCounter(counter - 1);
+          rollDice(index)
+          }}
+            >Roll
+            </ />
+            </ />
+    `;
+  }
 
-      <button class={diceStyle.rollBtn} onclick={() => rollDice()}>Roll the Dice</button>
-    </div>
-  )
+  function getRemainingDice() {
+    let i = new Array(counter).fill(0);
+    return html`${i.map(el => 
+    html`
+    <${DiceRemaining} src=${dice} />`)}`;
+  }
+
+  function getResult() {
+    let result = 0;
+    if (abilita.includes('corpo')) {
+      result += corpo + diceValue1;
+    }
+    if (abilita.includes('mente')) {
+      result += mente + diceValue2;
+    }
+    if (abilita.includes('spirito')) {
+      result += spirito + diceValue3;
+    }
+    return result;
+  }
+  
+  function prosegui() {
+    if(getResult() > obiettivo) return onend(true, successo);
+    else return onend(false, fallimento);
+  }
+
+  return html`
+    <${Page}>
+      <${DiceArea}>
+        <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
+          <${Type}>Corpo</ />
+          <${Bonus}>${corpo}</ />
+          <${Scene}>${getCube(1)}</ />
+        <//>
+        <${AbilitaSection} disabled=${!abilita.includes('mente')}>
+          <${Type}>Mente</ />
+          <${Bonus}>${mente}</ />
+          <${Scene}>${getCube(2)}</ />
+        <//>
+        <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
+          <${Type}>Spirito</ />
+          <${Bonus}>${spirito}</ />
+          <${Scene}>${getCube(3)}</ />
+        <//>
+      <//>
+      <${Tentativi}>
+        Lanci rimasti ${getRemainingDice()}
+      </ />
+      <${Risultato}>
+        <${Obiettivo}>Supera ${obiettivo}<//>
+        <${ActualResult}>
+          ${getResult()}
+        <//>
+      <//>
+      <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>
+    <//>
+  `;
 }
 
 export default Dice;

@@ -123,7 +123,10 @@ const Layout = () => {
       case 'gioco9':
         return (<Gioco9 data={actualCap[actualComponent]} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case "dice":
-        return (<Dice data={{ successo: '34', fallimento: '2' }} onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
+        return (<Dice
+          data={{ successo: 'cap03', fallimento: 'cap02', abilita: ['corpo', 'spirito'], obiettivo: 14 }}
+          caratteristiche={{ corpo: 2, mente: 5, spirito: 0, vita: 4 }}
+          onend={(feedbackResult, nextCap) => setNewCap(feedbackResult, nextCap)} />);
       case 'feedback':
         return (<Feedback isSuccessImage={isFeedbackOk} onend={() => onendFeedback()} />)
       default:
