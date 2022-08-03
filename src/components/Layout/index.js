@@ -26,17 +26,18 @@ const config = {
   "dice": 8,
 }
 
-// stub
-// Storia['cap0'].audio.src = "/assets/audio/test3.ogg";
-
-// const getGameId = (name) => Object.values(config);
-
 const Layout = () => {
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState({ cap: "cap0" }); // { cap: 1, gioco: "text", successo: true/false}
-  const [actualComponent, setActualComponent] = useState("dice"); //useState("audio");
+  const [actualComponent, setActualComponent] = useState("audio"); //useState("audio");
   const [isFeedbackOk, setIsFeedbackOk] = useState(false);
   const [orientation, setOrientation] = useState(0);
+  const [abilita, setAbilita] = useState(
+    {
+      corpo: 0, mente: 0, spirito: 0, vita: 4,
+      zaino: [{ nome: 'corda' }, { nome: 'accetta' }, { nome: 'coperta' }, { nome: 'razione' }]
+    }
+  );
 
   useEffect(() => {
     window.addEventListener('orientationchange', (evt) => {
@@ -139,7 +140,7 @@ const Layout = () => {
       <div id="1" class={animation.bar} />
       <div id="2" class={animation.bar} />
       <div id="3" class={animation.bar} />
-      <Intestazione title={story[actual.cap].titolo} />
+      <Intestazione abilita={abilita} title={story[actual.cap].titolo} />
       <div class={style.wrapper}>
         {whichComponent()}
       </div>
