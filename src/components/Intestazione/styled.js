@@ -26,7 +26,7 @@ export const Abilita = styled.div`
 `;
 
 export const Title = styled.div`
-  width: 50vw;
+  width: ${props => props.moreWidth ? '70vw' : '50vw'};
   padding-top: 0;
   padding-bottom: 0;
   margin-top: 0;

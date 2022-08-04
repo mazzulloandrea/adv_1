@@ -1,3 +1,4 @@
+import a from './a.js';
 import cap0 from './cap0.js';
 
 import cap01 from './cap01.js';
@@ -17,6 +18,7 @@ import cap10 from './cap10.js';
 
 
 export default {
+  a,
   cap0,
   cap01,
   cap02,

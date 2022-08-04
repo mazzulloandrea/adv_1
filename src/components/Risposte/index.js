@@ -16,7 +16,7 @@ const Risposte = ({ data, onend }) => {
       {data.map((el) => (
         <div
           class={style.response}
-          onclick={() => onend(el.gioco)}
+          onclick={() => onend(el.gioco, el.next, el.abilita)}
           onanimationend={(el) => animationEnd(el)}
         >{el.frase}</div>
       ))}

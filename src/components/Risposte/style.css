@@ -20,6 +20,7 @@
 
 .container div:nth-child(1) {
   background: pink;
+  margin-top: 1vh;
 }
 
 .container div:nth-child(2) {

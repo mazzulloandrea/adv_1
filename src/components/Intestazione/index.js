@@ -2,7 +2,7 @@ import { html } from 'htm/preact';
 import Cuore from '../../assets/icons/cuore.svg';
 import { Header, Abilita, Title, Zaino, Cuori, AbilitaContainer } from './styled.js';
 
-const Intestazione = ({ abilita, title }) => {
+const Intestazione = ({ abilita = {}, title = '' }) => {
   const { corpo, mente, spirito, vita, zaino } = abilita;
 
   function getAbilita() {
@@ -42,16 +42,15 @@ const Intestazione = ({ abilita, title }) => {
 
   return html`
     <${Header}>
-      <${Abilita}>
+      ${!!corpo && html`<${Abilita}>
         ${getAbilita()}
         ${getVita()}
-        </ />
-    
-        <${Title}>${title}</ />
-          <${Zaino}>${getZaino()}</ />
-    
+        </ />`
+      }
+        <${Title} moreWidth=${!corpo}>${title}</ />
+          ${zaino && html`<${Zaino}>${getZaino()}</ />`}
             </ />
-  `
+    `
 };
 
 export default Intestazione;
