@@ -1,6 +1,6 @@
 export default {
-  "titolo": "Denred",
-  "frase": "Soddisfatto del tuo lavoro, accatasti gli ultimi ciocchi; poi ti fermi, ti rilassi, chiudi gli occhi e ti concentri su tua sorella genella: i suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. Puoi comunicarle poche parole",
+  "titolo": "Introduzione",
+  "frase": "Soddisfatto del tuo lavoro, accatasti gli ultimi ciocchi; poi ti fermi, ti rilassi, chiudi gli occhi e ti concentri su tua sorella genella: i suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. Puoi comunicarle solo poche parole",
   "audio": {
     "src": "/assets/audio/cap0.m4a",
     "interrompe": ""
@@ -12,8 +12,8 @@ export default {
     }
   ],
   "text": {
-    "successo": "cap02",
-    "fallimento": "cap03",
+    "successo": "a2",
+    "fallimento": "a3",
     "durata": "20",
     "domande": [
       "Come ti chiami?",
