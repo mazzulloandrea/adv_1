@@ -5,19 +5,22 @@ export default {
       "frase": "Corpo",
       "abilita": "corpo",
       "next": "cap0",
-      "gioco": "audio"
+      "gioco": "audio",
+      "icon": "corpo"
     },
     {
       "frase": "Mente",
       "abilita": "mente",
       "next": "cap0",
-      "gioco": "audio"
+      "gioco": "audio",
+      "icon": "mente"
     },
     {
       "frase": "Spirito",
       "abilita": "spirito",
       "next": "cap0",
-      "gioco": "audio"
+      "gioco": "audio",
+      "icon": "spirito"
     }
   ],
 }

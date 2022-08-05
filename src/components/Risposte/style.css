@@ -57,3 +57,14 @@
 .visible {
   opacity: 1;
 }
+
+.iconContainer {
+  background: transparent !important;
+}
+
+.iconContainer>svg {
+  width: auto;
+  height: 8vh;
+  background: transparent !important;
+  margin-left: 10vw;
+}

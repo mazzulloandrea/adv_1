@@ -10,10 +10,10 @@ import { determinateVictory } from '../utils';
 import style from './style.css';
 
 
-function Etc({ data, onend, MaxCounter = 10, MaxPicchi = 5, orientation = 0 }) {
+function Etc({ data, onend, MaxCounter = 5, MaxPicchi = 4, orientation = 0 }) {
   const { successo, fallimento } = data;
   // const MaxPicchi = 5; // c'è un max oltre il quale si inchioda
-  const MaxPoint = 100;
+  const MaxPoint = 80;
   const totalDuration = 4000;
   const delayBetweenPoints = (totalDuration / MaxPoint) * 0.5; //data.length;
   const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;

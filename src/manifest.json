@@ -18,27 +18,63 @@
       "sizes": "512x512"
     },
     {
-      "src": "/assets/icons/dice-six-faces-one.svg",
+      "src": "/assets/icons/caratteristiche/corpo.svg",
       "type": "image/svg"
     },
     {
-      "src": "/assets/icons/dice-six-faces-two.svg",
+      "src": "/assets/icons/caratteristiche/mente.svg",
       "type": "image/svg"
     },
     {
-      "src": "/assets/icons/dice-six-faces-three.svg",
+      "src": "/assets/icons/caratteristiche/spirito.svg",
       "type": "image/svg"
     },
     {
-      "src": "/assets/icons/dice-six-faces-four.svg",
+      "src": "/assets/icons/caratteristiche/vita.svg",
       "type": "image/svg"
     },
     {
-      "src": "/assets/icons/dice-six-faces-five.svg",
+      "src": "/assets/icons/dice/dice.svg",
       "type": "image/svg"
     },
     {
-      "src": "/assets/icons/dice-six-faces-six.svg",
+      "src": "/assets/icons/dice/dice1.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice/dice2.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice/dice3.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice/dice4.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice/dice5.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/dice/dice6.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/gioco9/listOrdered.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/intro/next.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/risposte/directions.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "/assets/icons/text/question.svg",
       "type": "image/svg"
     }
   ]

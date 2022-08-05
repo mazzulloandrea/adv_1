@@ -1,26 +1,33 @@
 import { html } from 'htm/preact';
 import Cuore from '../../assets/icons/caratteristiche/cuore.svg';
-import { Header, Abilita, Title, Zaino, Cuori, AbilitaContainer } from './styled.js';
+import TitleIcon from '../TitleIcon';
+import { Header, Abilita, AbilitaIconContainer, Caratteristica, Title, IconContainer, Zaino, Cuori, AbilitaContainer } from './styled.js';
 
-const Intestazione = ({ abilita = {}, title = '' }) => {
+const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
   const { corpo, mente, spirito, vita, zaino } = abilita;
 
   function getAbilita() {
     return html`
     <${AbilitaContainer}>
-      <div>
-        <div>C</div>
-        <div>${corpo}</div>
-      </div>
-      <div>
-        <div>M</div>
-        <div>${mente}</div>
-      </div>
-      <div>
-        <div>S</div>
-        <div>${spirito}</div>
-      </div>
-      </ />`
+      <${Caratteristica}>
+        <${AbilitaIconContainer}>
+          <${TitleIcon} type=${"corpo"} />
+          </ />
+          <div>${corpo}</div>
+          </ />
+          <${Caratteristica}>
+            <${AbilitaIconContainer}>
+              <${TitleIcon} type=${"mente"} />
+              </ />
+              <div>${mente}</div>
+              </ />
+              <${Caratteristica}>
+                <${AbilitaIconContainer}>
+                  <${TitleIcon} type=${"spirito"} />
+                  </ />
+                  <div>${spirito}</div>
+                  </ />
+                  </ />`
   };
 
   function getVita() {
@@ -40,15 +47,22 @@ const Intestazione = ({ abilita = {}, title = '' }) => {
     `
   }
 
+  function getTitle() {
+    if (actualComponent === 'audio') return html`<${Title}>${title}</ />`;
+    return html`<${IconContainer}>
+  <${TitleIcon} type=${actualComponent} />
+  </ />`
+  }
+
   return html`
     <${Header}>
       <${Abilita}>
         ${getAbilita()}
         ${getVita()}
         </ />
-        <${Title} moreWidth=${!corpo}>${title}</ />
-          ${zaino && html`<${Zaino}>${getZaino()}</ />`}
-            </ />
+        ${getTitle()}
+        ${zaino && html`<${Zaino}>${getZaino()}</ />`}
+          </ />
     `
 };
 

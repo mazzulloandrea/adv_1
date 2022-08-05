@@ -6,7 +6,7 @@ export const Header = styled.div`
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   background: lightblue;
 `;
@@ -25,6 +25,17 @@ export const Abilita = styled.div`
   }
 `;
 
+export const Caratteristica = styled.div`
+  margin-right: 1vw;
+`;
+
+export const AbilitaIconContainer = styled.div`
+  width: 4vw;
+  @media only screen and (orientation: landscape) {
+    width: 2vw;
+  }
+`;
+
 export const Title = styled.div`
   width: ${props => props.moreWidth ? '70vw' : '50vw'};
   padding-top: 0;
@@ -33,6 +44,16 @@ export const Title = styled.div`
   margin-bottom: 0;
   font-size: 1.5em;
   font-weight: 500;
+`;
+
+export const IconContainer = styled.div`
+  > svg {
+    width: auto;
+    height: 10vh;
+    @media only screen and (orientation: landscape) {  
+      height: 8vh;
+    }
+  }
 `;
 
 export const Zaino = styled.div`
@@ -58,6 +79,10 @@ export const Zaino = styled.div`
 export const Cuori = styled.div`
    svg {
     width: 4vw;
+    margin-right: 1vw;
+    @media only screen and (orientation: landscape) {
+      width: 2vw;
+    }
    }
 `;
 

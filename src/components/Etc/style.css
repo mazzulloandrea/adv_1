@@ -34,13 +34,13 @@
 
 
 .pulseHard {
-  animation: 0.3s pulse;
+  animation: 0.5s pulse;
   animation-iteration-count: infinite;
   width: 10vw;
 }
 
 .pulseMedium {
-  animation: 0.8s pulse;
+  animation: 1s pulse;
   animation-iteration-count: infinite;
   width: 10vw;
 }
