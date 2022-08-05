@@ -8,29 +8,14 @@ export default {
   "risposte": [
     {
       "frase": "Spacchi la legna pensando a Denred",
-      "gioco": "shoot",
+      "gioco": "dice",
     }
   ],
-  "shoot": {
+  "dice": {
     "successo": "cap01",
     "fallimento": "cap02",
-    "durata": "10",
-    "params": {
-      "colpi": 1,
-      "jolly": 1,
-      "movimenti": 15,
-      "shootCount": 3,
-      "delayTime": 1000,
-      "target": {
-        "x1": 40,
-        "x2": 80,
-        "y1": 30,
-        "y2": 60
-      },
-      "mirino": {
-        "width": 15,
-        "height": 15
-      }
-    }
+    "obiettivo": 14,
+    "abilita": ["corpo", "mente", "spirito"],
+    "lanci": 6
   }
 }

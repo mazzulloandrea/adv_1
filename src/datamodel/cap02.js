@@ -8,7 +8,7 @@ export default {
   "risposte": [
     {
       "frase": "Pensando al vecchio ritorni verso casa prima che cali il sole",
-      "gioco": null,
+      "gioco": "audio",
       "next": "cap1"
     }
   ]

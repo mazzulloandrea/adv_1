@@ -4,17 +4,20 @@ export default {
     {
       "frase": "Corpo",
       "abilita": "corpo",
-      "next": "cap0"
+      "next": "cap0",
+      "gioco": "audio"
     },
     {
       "frase": "Mente",
       "abilita": "mente",
-      "next": "cap0"
+      "next": "cap0",
+      "gioco": "audio"
     },
     {
       "frase": "Spirito",
       "abilita": "spirito",
-      "next": "cap0"
+      "next": "cap0",
+      "gioco": "audio"
     }
   ],
 }

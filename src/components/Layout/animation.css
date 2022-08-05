@@ -10,6 +10,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .overlay.show .bar {
@@ -19,7 +20,7 @@
 
 .overlay .bar {
   position: absolute;
-  width: 33.3vw;
+  width: 34vw;
   background: #8ba3b9;
   top: 0;
   bottom: 0;

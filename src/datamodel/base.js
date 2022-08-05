@@ -8,17 +8,25 @@ export default {
   "risposte": [
     {
       "frase": "se vuoi fare questa cosa clicca qui",
-      "gioco": null ||
+      "gioco": "audio" ||
+        "dice" ||
+        "text" ||
         "etc" ||
         "shoot" ||
         "cassaforte" ||
-        "text" ||
         "quiz" ||
-        "gioco9"
-      "next": "cap0" -> "in caso di null su gioco"
+        "gioco9" 
+      "next": "cap0" -> "in caso di audio su gioco"
     }
   ],
   "gioco": "nome del gioco da fare",
+  "dice": {
+    "successo": "2",
+    "fallimento": "3",
+    "obiettivo": 14, // numero da raggiungere con il lancio dei dadi
+    "abilita": ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
+    "lanci": 6 // quanti lanci col dado
+  },
   "next": "cap30", // si usa quando dopo l'audio si passa ad un altro audio
   "text": {
     "successo": "2",

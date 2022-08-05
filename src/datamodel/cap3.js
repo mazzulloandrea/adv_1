@@ -16,7 +16,9 @@ export default {
     },
     {
       "frase": "Se vuoi andare verso i soldati",
-      "gioco": null
+      "gioco": "audio",
+      "next": "cap4"
+
     }
   ],
   "etc": {

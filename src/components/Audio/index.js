@@ -1,10 +1,7 @@
 import { h } from 'preact';
+import { html } from 'htm/preact';
 import { useState, useEffect } from 'preact/hooks';
-import { route } from 'preact-router';
-import Test from '../../assets/audio/test.ogg';
-import Test10 from '../../assets/audio/Test10.ogg';
 import style from './style.css';
-// import animation from './animation.css';
 
 function Audio({ data, onend, orientation }) {
   const [play, setPlay] = useState(false);
@@ -30,27 +27,22 @@ function Audio({ data, onend, orientation }) {
   }
 
   const audioEnd = (event) => {
-    // document.getElementById("2").style.left = '33.3vw';
-    // document.getElementById("3").style.left = '66.6vw';
-    // document.getElementById('overlay').classList.toggle(animation.show);
     setTimeout(() => onend(), 750);
   }
 
-  return (
+  return html`
     <div>
-      <div id="player" class={style.circle} onclick={() => managePlayer()} >
-        <div id="stoppable" class={play ? style.bars : style.triangle} />
-        <audio id="audio" autoplay class={style.play}
-          onended={(evt) => audioEnd(evt)}
-          onplaying={() => setPlay(true)}
-        >
-          {/* <source src={Test10} type="audio/ogg" /> */}
-          <source src={data.src} type="audio/ogg" />
+      <div id="player" class=${style.circle} onclick=${() => managePlayer()} >
+        <div id="stoppable" class=${play ? style.bars : style.triangle} />
+        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
+          onplaying=${() => setPlay(true)}
+          >
+          <source src=${data.src} type="audio/ogg" />
           Your browser does not support the audio tag.
         </audio>
       </div>
-    </div >
-  )
+    </div>
+  `
 }
 
 export default Audio;

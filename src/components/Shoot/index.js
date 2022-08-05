@@ -1,3 +1,5 @@
+import { h } from 'preact';
+import { html } from 'htm/preact';
 import { useState, useEffect, useRef } from 'preact/hooks';
 import targetImg from '../../assets/images/index.jpg';
 import style from './style.css';
@@ -51,7 +53,7 @@ function Shoot({ data, onend }) {
     if (animationList === "init") return;
     if (!animationList.length) {
       const result = determinateVictory(successList);
-      onend(result, result ? successo : fallimento);
+      onend(result ? successo : fallimento);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }
@@ -155,20 +157,21 @@ function Shoot({ data, onend }) {
     }
   }
 
-  return (
-    <div id="delay" class={style.overlay}>
-      <div>{successList.map(el => (
-        <span>{el ? ' success' : ' fallimento'}</span>
-      ))}</div>
-
-      <div id="mirino" class={style.shooter} onclick={(evt) => verifyShoot(evt)}>
+  return html`
+    <div id="delay" class=${style.overlay}>
+      <div>
+        ${successList.map(el => html`
+        <span>${el ? ' success' : ' fallimento'}</span>
+        `)}
+      </div>
+      <div id="mirino" class=${style.shooter} onclick=${(evt)=> verifyShoot(evt)}>
         <div id="jolly" class="inside_mirino"></div>
       </div>
-      <div class={style.targetContainer}>
-        <img id="target" src={targetImg} alt="" ref={targetRef} />
+      <div class=${style.targetContainer}>
+        <img id="target" src=${targetImg} alt="" ref=${targetRef} />
       </div>
-    </div >
-  )
+    </div>
+  `
 }
 
 export default Shoot;

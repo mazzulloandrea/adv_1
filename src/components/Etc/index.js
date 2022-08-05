@@ -1,3 +1,5 @@
+import { h } from 'preact';
+import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import heart from '/assets/images/heart.jpeg';
 import successIcon from '/assets/images/success.png';
@@ -78,7 +80,7 @@ function Etc({ data, onend, MaxCounter = 10, MaxPicchi = 5, orientation = 0 }) {
       }, totalDuration + 500);
     } else {
       const result = determinateVictory(successList);
-      onend(result, result ? successo : fallimento);
+      onend(result ? successo : fallimento);
     }
   }, [counterDrawTimes]);
 
@@ -149,25 +151,26 @@ function Etc({ data, onend, MaxCounter = 10, MaxPicchi = 5, orientation = 0 }) {
     }
   }
 
-  return (
+  return html`
     <div>
-      <div class={style.header}>
-        <div class={style.spiega}>Premi sul cuore come indicato dal grafico</div>
-        <div class={style.pulseContainer}>
-          <img class={style.pulseHard} src={heart} alt="" onclick={() => {
-            setUserClickedCounter(userClickedCounter + 1);
+      <div class=${style.header}>
+        <div class=${style.spiega}>Premi sul cuore come indicato dal grafico</div>
+        <div class=${style.pulseContainer}>
+          <img class=${style.pulseHard} src=${heart} alt="" onclick=${()=> {
+          setUserClickedCounter(userClickedCounter + 1);
           }} />
         </div>
-        <div class={style.feedbackContainer}>{successList.map(el => (
-          <img class={style.feedback} src={el ? successIcon : failureIcon} />
-        ))}</div>
+        <div class=${style.feedbackContainer}>${successList.map(el => 
+          html`
+            <img class=${style.feedback} src=${el ? successIcon : failureIcon} />
+          `
+        )}</div>
       </div>
-      <div class={style.canvasContainer}>
+      <div class=${style.canvasContainer}>
         <canvas id="myChart" width="0" height="0"></canvas>
       </div>
     </div>
-
-  );
+  `
 }
 
 export default Etc;

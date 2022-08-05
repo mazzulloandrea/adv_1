@@ -1,3 +1,5 @@
+import { h } from 'preact';
+import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import circularProgressBar from './circularProgressBar.css';
 import switchCheckox from './switch.css';
@@ -35,62 +37,63 @@ function Cassaforte({ data, onend }) {
       selectValue === combinazione[1].giusto &&
       progress === combinazione[2].giusto &&
       switchValue === combinazione[3].giusto
-    ) return onend(true, successo);
-    return onend(false, fallimento);
+    ) return onend(successo);
+    return onend(fallimento);
   }
 
   const getCombinazione = () => combinazione.map(el => el.giusto).join('    ');
 
   const getOptions = () => combinazione.filter(el => el["select"])[0].select;
 
-  return (
+  return html`
     <div>
-      <div class={style.header}>
-        {viewSand && <Clessidra class={style.clessidraContainer} duration={durata} onend={() => {
-          setViewSand(false);
-        }} />}
-        <div class={style.spiega}>combinazione: {getCombinazione()}</div>
+      <div class=${style.header}>
+        ${viewSand && html`<${Clessidra} 
+          class=${style.clessidraContainer} 
+          duration=${durata} onend=${() => {
+            setViewSand(false);
+          }} 
+        />`}
+        <div class=${style.spiega}>combinazione: ${getCombinazione()}</div>
       </div>
-      <div class={style.widgetContainer}>
-        <div class={style.widget}>
-          <input type="date" onchange={(evt) => {
-            console.log(evt.target.value);
+      <div class=${style.widgetContainer}>
+        <div class=${style.widget}>
+          <input type="date" onchange=${(evt) => {
+            // console.log(evt.target.value);
             setDatetimeValue(evt.target.value);
-          }
-          } />
+          }} />
         </div>
-        <div class={style.widget}>
-          <select onchange={(evt) => {
+        <div class=${style.widget}>
+          <select onchange=${(evt) => {
             setSelectValue(evt.target.value);
-          }}>{getOptions().map(opt => <option key={opt} value={opt}>{opt}</option>)
+          }}>${getOptions().map(opt => html`<option key=${opt} value=${opt}>${opt}</option>`)
             }
           </select>
         </div>
-        <div class={style.widget}>
-          <div class={style.comands}>
-            <div class={circularProgressBar.increment} onclick={() => setProgress(progress < 100 ? progress + 1 : 0)}>
-              <img src={increment} />
+        <div class=${style.widget}>
+          <div class=${style.comands}>
+            <div class=${circularProgressBar.increment} onclick=${() => setProgress(progress < 100 ? progress + 1 : 0)}>
+              <img src=${increment} />
             </div>
-            <div class={circularProgressBar.decrement} onclick={() => setProgress(progress > 0 ? progress - 1 : 100)}>
-              <img src={decrement} />
+            <div class=${circularProgressBar.decrement} onclick=${() => setProgress(progress > 0 ? progress - 1 : 100)}>
+              <img src=${decrement} />
             </div>
           </div>
-          <div id="progressBar" class={circularProgressBar.circle}>
-            <div class={circularProgressBar.inner}>{progress}</div>
+          <div id="progressBar" class=${circularProgressBar.circle}>
+            <div class=${circularProgressBar.inner}>${progress}</div>
           </div>
         </div>
-        <div class={style.widget}>
-          <div class={switchCheckox.item}>
-            <div class={switchCheckox.toggle}>
-              <input type="checkbox" id="pill4" checked={switchValue} name="check" onchange={(evt) => setSwitchValue(evt.target.checked)} />
+        <div class=${style.widget}>
+          <div class=${switchCheckox.item}>
+            <div class=${switchCheckox.toggle}>
+              <input type="checkbox" id="pill4" checked=${switchValue} name="check" onchange=${(evt) => setSwitchValue(evt.target.checked)} />
               <label for="pill4"></label>
             </div>
           </div>
         </div >
       </div>
-
     </div >
-  )
+  `
 }
 
 export default Cassaforte;

@@ -8,7 +8,7 @@ export default {
   "risposte": [
     {
       "frase": "Ti passa il dolore al ginocchio e ritorni verso casa pensando al vecchio",
-      "gioco": null,
+      "gioco": "audio",
       "next": "cap1"
     }
   ]

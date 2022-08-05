@@ -1,4 +1,6 @@
 
+import { h } from 'preact';
+import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import Clessidra from '../Clessidra/index';
 import style from './style.css';
@@ -32,33 +34,26 @@ function Text({ data, onend }) {
       return;
     }
     const result = risposte[domanda].includes(risposta.toLowerCase())
-    onend(result, result ? successo : fallimento);
+    onend(result ? successo : fallimento);
   }
 
-  return (
+  return html`
     <div>
-      {viewSand && <Clessidra class={style.clessidraContainer} duration={durata} onend={() => {
-        setViewSand(false);
-      }} />}
-      <div class={style.domanda}>{domande[domanda]}</div>
-      {image && (
-        <div class={blurStyle.focus}>
-          <div class={blurStyle.focusMask}>
-            <div class={blurStyle.focusMaskInner}><img src={image} /></div>
+      ${viewSand && html`<${Clessidra} class=${style.clessidraContainer} duration=${durata} onend=${()=> setViewSand(false)}
+        />`}
+        <div class=${style.domanda}>${domande[domanda]}</div>
+        ${image && html`
+        <div class=${blurStyle.focus}>
+          <div class=${blurStyle.focusMask}>
+            <div class=${blurStyle.focusMaskInner}><img src=${image} /></div>
           </div>
         </div>
-      )}
-      <div class={style.responseContainer}>
-        <input
-          value={risposta}
-          class={style.pin}
-          maxlength="10"
-          oninput={(evt) => {
-            setRisposta(evt.target.value);
-          }} />
-      </div>
+        `}
+        <div class=${style.responseContainer}>
+          <input value=${risposta} class=${style.pin} maxlength="10" oninput=${(evt) => setRisposta(evt.target.value)} />
+        </div>
     </div>
-  )
+  `
 }
 
 export default Text;

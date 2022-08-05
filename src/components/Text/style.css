@@ -22,11 +22,10 @@
 
 .domanda {
   text-align: center;
-  font-size: 4vh;
   margin-top: 5vh;
   font-size: 2rem;
   padding: 0 0.5rem;
-  color: white;
+  color: black;
 }
 
 .responseContainer {
@@ -44,10 +43,10 @@
   background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 15ch 2px no-repeat;
   font: 4ch droid sans mono, consolas, monospace;
   letter-spacing: 0.5ch;
-  color: white;
+  color: black;
 }
 
 .pin:focus {
   outline: none;
-  color: white;
+  color: black;
 }

@@ -1,3 +1,5 @@
+import { h } from 'preact';
+import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
 import { shuffle, rgbToHex, paletteColors } from '../utils';
@@ -42,56 +44,51 @@ function Gioco9({ data = stub, durata = 10, onend }) {
 
   const verify = () => {
     if (combinazione.length != colorsClicked.length) {
-      // onend(false, fallimento)
+      onend(fallimento)
     };
     let result = true;
     for (let i = 0; i < combinazione.length; i++) {
-      console.log(paletteColors);
-      console.log(combinazione[i]);
-      console.log(paletteColors[combinazione[i]]);
       if (paletteColors[combinazione[i]] !== colorsClicked[i]) result = false;
     };
-    // onend(result, result ? successo : fallimento);
+    onend(result ? successo : fallimento);
   };
 
-  return (
-    <div class={style.wrapper}>
-      <div class={style.header}>
-        <div class={style.clessidraContainer}>
-          {viewSand && <Clessidra duration={durata} onend={() => {
-            setViewSand(false);
-          }} />}
+  return html`
+    <div class=${style.wrapper}>
+      <div class=${style.header}>
+        <div class=${style.clessidraContainer}>
+          ${viewSand && html`<${Clessidra} duration=${durata} onend=${()=> setViewSand(false)}
+            />`}
         </div>
-        <div class={style.subHeader}>
-          <div class={style.spiega}>
-            <ol class={style.discoverList}>
-              {combinazione.map((el, i) => (
-                <li class={style.discoverElement}>
-                  <span>{el}</span>
-                  {colorsClicked[i] && <div class={style.miniGame} style={{ backgroundColor: colorsClicked[i] }} />}
-                </li>
-              ))}
+        <div class=${style.subHeader}>
+          <div class=${style.spiega}>
+            <ol class=${style.discoverList}>
+              ${combinazione.map((el, i) => html`
+              <li class=${style.discoverElement}>
+                <span>${el}</span>
+                ${colorsClicked[i] && html`
+                <div class=${style.miniGame} style=${{ backgroundColor: colorsClicked[i] }} />
+                `}
+              </li>`
+              )}
             </ol>
           </div>
-
         </div>
       </div>
-      <div id="gameContainer" class={style.gameContainer}>
-        {giochi.map(g =>
-          <div
-            class={style.game}
-            onclick={(evt) => {
-              const color = rgbToHex(evt.target.style.backgroundColor);
-              setColorsClicked(colorsClicked.concat(color));
-              evt.target.classList.toggle(style.delete);
-            }}
+      <div id="gameContainer" class=${style.gameContainer}>
+        ${giochi.map(g => html`
+        <div class=${style.game} onclick=${(evt)=> {
+            const color = rgbToHex(evt.target.style.backgroundColor);
+            setColorsClicked(colorsClicked.concat(color));
+            evt.target.classList.toggle(style.delete);
+          }}
           >
-            {g}
-          </div>
-        )}
+          ${g}
+        </div>
+        `)}
       </div>
-    </div >
-  )
+    </div>
+    `
 }
 
 export default Gioco9;

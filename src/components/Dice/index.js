@@ -1,13 +1,13 @@
 import { Fragment, h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
-import dice from '../../assets/icons/dice.svg';
-import icon1 from '../../assets/icons/dice-six-faces-one.svg';
-import icon2 from '../../assets/icons/dice-six-faces-two.svg';
-import icon3 from '../../assets/icons/dice-six-faces-three.svg';
-import icon4 from '../../assets/icons/dice-six-faces-four.svg';
-import icon5 from '../../assets/icons/dice-six-faces-five.svg';
-import icon6 from '../../assets/icons/dice-six-faces-six.svg';
+import dice from '../../assets/icons/dice/dice.svg';
+import icon1 from '../../assets/icons/dice/dice1.svg';
+import icon2 from '../../assets/icons/dice/dice2.svg';
+import icon3 from '../../assets/icons/dice/dice3.svg';
+import icon4 from '../../assets/icons/dice/dice4.svg';
+import icon5 from '../../assets/icons/dice/dice5.svg';
+import icon6 from '../../assets/icons/dice/dice6.svg';
 import {
   Page,
   Area1,
@@ -31,8 +31,8 @@ import {
 
 function Dice({ data, caratteristiche, onend }) {
   const { corpo, mente, spirito, vita } = caratteristiche;
-  const { successo, fallimento, abilita, obiettivo } = data;
-  const [counter, setCounter] = useState(6);
+  const { successo, fallimento, abilita, obiettivo,lanci } = data;
+  const [counter, setCounter] = useState(lanci);
   const [cube1, setCube1] = useState();
   const [diceValue1, setDiceValue1] = useState(1);
   const [cube2, setCube2] = useState();
@@ -185,8 +185,8 @@ function Dice({ data, caratteristiche, onend }) {
   }
   
   function prosegui() {
-    if(getResult() > obiettivo) return onend(true, successo);
-    else return onend(false, fallimento);
+    if(getResult() > obiettivo) return onend(successo);
+    else return onend(fallimento);
   }
 
   return html`

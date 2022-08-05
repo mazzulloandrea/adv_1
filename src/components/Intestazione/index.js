@@ -1,5 +1,5 @@
 import { html } from 'htm/preact';
-import Cuore from '../../assets/icons/cuore.svg';
+import Cuore from '../../assets/icons/caratteristiche/cuore.svg';
 import { Header, Abilita, Title, Zaino, Cuori, AbilitaContainer } from './styled.js';
 
 const Intestazione = ({ abilita = {}, title = '' }) => {
@@ -42,11 +42,10 @@ const Intestazione = ({ abilita = {}, title = '' }) => {
 
   return html`
     <${Header}>
-      ${!!corpo && html`<${Abilita}>
+      <${Abilita}>
         ${getAbilita()}
         ${getVita()}
-        </ />`
-      }
+        </ />
         <${Title} moreWidth=${!corpo}>${title}</ />
           ${zaino && html`<${Zaino}>${getZaino()}</ />`}
             </ />
