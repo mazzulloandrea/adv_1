@@ -20,6 +20,12 @@ import directions from '../../assets/icons/risposte/directions.svg';
 
 import question from '../../assets/icons/text/question.svg';
 
+import etc from '../../assets/icons/etc/etc.svg';
+
+import shoot from '../../assets/icons/shoot/shoot.svg';
+
+import cassaforte from '../../assets/icons/cassaforte/cassaforte.svg';
+
 import { h } from 'preact';
 import { html } from 'htm/preact';
 
@@ -48,6 +54,18 @@ function TitleIcon({ type }) {
     case 'cuore':
       icon = cuore;
       break;
+    case 'etc':
+      icon = etc;
+      break;
+    case 'shoot':
+      icon = shoot;
+      break;
+    case 'cassaforte':
+      icon = cassaforte;
+      break;
+    case 'gioco9':
+      icon = listOrdered;
+      break;
     default:
       break;
   }
@@ -60,7 +78,7 @@ function TitleIcon({ type }) {
 
 export default TitleIcon;
 
-// // mancano le icone per etc, shoot,cassaforte
+// // mancano le icone per, shoot,cassaforte
 // export default {
 //   caratteristiche: {
 //     corpo,

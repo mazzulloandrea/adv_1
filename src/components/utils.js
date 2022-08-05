@@ -44,14 +44,24 @@ const paletteColors = {
   nero: '#000000',
   grigio: '#808080',
   marrone: '#964b00',
-  // blue: '#0000FF',
   viola: '#9f2b68',
   red: '#ff0000',
   arancione: '#ffa500',
-  // yellow: '#FFD500',
   rosa: '#ffb6c1',
   azzurro: '#add8e6',
   verde: '#008000'
+}
+
+const directionsDataset = {
+  'N': 'Nord',
+  'S': 'Sud',
+  'O': 'Ovest',
+  'E': 'Est',
+  'NO': 'Nord-Ovest',
+  'NE': 'Nord-Est',
+  'SO': 'Sud-Ovest',
+  'SE': 'Sud-Est',
+  'X': 'S.O.S.'
 }
 
 export {
@@ -59,4 +69,5 @@ export {
   shuffle,
   rgbToHex,
   paletteColors,
+  directionsDataset,
 };

@@ -1,9 +1,10 @@
-import a from './a.js';
-import cap0 from './cap0.js';
+import _0 from './0.js';
 
-import cap01 from './cap01.js';
-import cap02 from './cap02.js';
-import cap03 from './cap03.js';
+import a from './a.js';
+import a0 from './a0.js';
+import a1 from './a1.js';
+import a2 from './a2.js';
+import a3 from './a3.js';
 
 import cap1 from './cap1.js';
 import cap2 from './cap2.js';
@@ -18,11 +19,12 @@ import cap10 from './cap10.js';
 
 
 export default {
+  _0,
   a,
-  cap0,
-  cap01,
-  cap02,
-  cap03,
+  a0,
+  a1,
+  a2,
+  a3,
   cap1,
   cap2,
   cap3,

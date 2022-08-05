@@ -8,7 +8,7 @@ export default {
   "risposte": [
     {
       "frase": "Spacchi la legna pensando a Denred",
-      "gioco": "dice",
+      "gioco": "gioco9",
     }
   ],
   "dice": {
@@ -17,5 +17,15 @@ export default {
     "obiettivo": 14,
     "abilita": ["corpo", "mente", "spirito"],
     "lanci": 6
+  },
+  "gioco9": {
+    "combinazione": [
+      "nord",
+      "nord-est"
+    ],
+    "type": "directions",
+    "durata": "10",
+    "successo": "cap20",
+    "fallimento": "cap21"
   }
 }

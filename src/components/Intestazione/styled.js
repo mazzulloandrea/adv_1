@@ -49,10 +49,7 @@ export const Title = styled.div`
 export const IconContainer = styled.div`
   > svg {
     width: auto;
-    height: 10vh;
-    @media only screen and (orientation: landscape) {  
-      height: 8vh;
-    }
+    height: 8vh;
   }
 `;
 

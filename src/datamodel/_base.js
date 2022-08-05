@@ -128,6 +128,7 @@ export default {
       "azzurro",
       "verde",
       "viola"
-    ]
+    ],
+    "tipo": "directions" || "colors"
   }
 }

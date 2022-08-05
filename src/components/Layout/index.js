@@ -82,9 +82,8 @@ const Layout = () => {
     // animazione // suoni etc feedback!!
   }, [actualComponent]);
 
-
   useEffect(() => {
-    console.log(abilita);
+    // console.log(abilita);
   }, [abilita]);
 
   const onEndAudio = () => {
@@ -101,6 +100,7 @@ const Layout = () => {
 
   // rinominare con onGameEnd
   const setNewCap = (nextCap) => {
+    console.log('actual cap ', nextCap);
     toggleTransition("audio", nextCap);
   };
 
@@ -125,7 +125,7 @@ const Layout = () => {
 
   const whichComponent = () => {
     const actualCap = story[actual.cap];
-    console.log('new render Wich component', actualComponent);
+    // console.log('new render Wich component', actualComponent);
     const data = actualCap[actualComponent];
     switch (actualComponent) {
       case "audio":
@@ -163,7 +163,7 @@ const Layout = () => {
       <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo} actualComponent=${actualComponent} />`}
       ${!actual
       ? html`<${Intro} onend=${()=> {
-        setActual({ cap: '0' });
+        setActual({ cap: '_0' });
         setActualComponent('risposte');
         }} />`
         : html`<div class=${style.wrapper}>
