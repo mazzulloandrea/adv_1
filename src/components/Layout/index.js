@@ -127,46 +127,48 @@ const Layout = () => {
     const actualCap = story[actual.cap];
     // console.log('new render Wich component', actualComponent);
     const data = actualCap[actualComponent];
+    console.log(data);
     switch (actualComponent) {
       case "audio":
-        return html`<${Audio} data=${data} onend=${()=> onEndAudio()} orientation=${orientation} />`;
+        return html`<${Audio} data=${data} onend=${() => onEndAudio()} orientation=${orientation} />`;
       case "risposte":
-        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita)=> onEndRisposte(gioco,
-          nextCap, newAbilita)}
+        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita) => onEndRisposte(gioco,
+  nextCap, newAbilita)}
   />`;
       case "etc":
-        return html`<${Etc} data=${data} onend=${(nextCap) => setNewCap(nextCap)}
+        return html`<${Etc} data=${data} onend=${(nextCap)=> setNewCap(nextCap)}
   orientation=${orientation} />`;
       case "shoot":
-        return html`<${Shoot} data=${data} onend=${(nextCap)=> setNewCap(nextCap)} />`;
+        return html`<${Shoot} data=${data} onend=${(nextCap) => setNewCap(nextCap)} />`;
       case "cassaforte":
-        return html`<${Cassaforte} data=${data} onend=${(nextCap)=> setNewCap(nextCap)}
+        return html`<${Cassaforte} data=${data} onend=${(nextCap) => setNewCap(nextCap)}
   />`;
       case "text":
-        return html`<${Text} data=${data} onend=${(nextCap)=> setNewCap(nextCap)} />`;
+        return html`<${Text} data=${data} onend=${(nextCap) => setNewCap(nextCap)} />`;
       case 'gioco9':
-        return html`<${Gioco9} data=${data} onend=${(nextCap)=> setNewCap(nextCap)} />`;
+        return html`<${Gioco9} data=${data} onend=${(nextCap) => setNewCap(nextCap)} />`;
       case "dice":
-        return html`<${Dice} data=${data} caratteristiche=${abilita} onend=${(nextCap) =>
-        setNewCap(nextCap)} />`;
+        return html`<${Dice} data=${data} caratteristiche=${abilita} onend=${(nextCap)=>
+    setNewCap(nextCap)} />`;
       default:
         return;
     }
   }
 
   return html`
-    <div id="overlay" class=${animation.overlay} onanimationend=${() => transitionEnd()}>
+    <div id="overlay" class=${animation.overlay} onanimationend=${()=> transitionEnd()}>
       <div id="1" class=${animation.bar} />
       <div id="2" class=${animation.bar} />
       <div id="3" class=${animation.bar} />
       ${actual && html`
       <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo} actualComponent=${actualComponent} />`}
       ${!actual
-      ? html`<${Intro} onend=${()=> {
-        setActual({ cap: '_0' });
+      ? html`<${Intro} onend=${() => {
+        // setActual({ cap: '_0' });
+        setActual({ cap: 'cap1' });
         setActualComponent('risposte');
-        }} />`
-        : html`<div class=${style.wrapper}>
+      }} />`
+      : html`<div class=${style.wrapper}>
           ${whichComponent()}
         </div>`
       }

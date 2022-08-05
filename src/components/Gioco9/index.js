@@ -41,7 +41,7 @@ function Gioco9({ data, durata = 10, onend }) {
 
   const verify = () => {
     if (combinazione.length != colorsClicked.length) {
-      onend(fallimento)
+      onend(fallimento);
     };
     let result = true;
     for (let i = 0; i < combinazione.length; i++) {

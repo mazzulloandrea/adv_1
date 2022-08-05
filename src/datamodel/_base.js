@@ -59,9 +59,8 @@ export default {
   "etc": {
     "successo": "cap2",
     "fallimento": "cap3",
-    "durata": "5",
-    "MaxCounter": 10 - default
-      "MaxPicchi": 5  - default
+    "MaxCounter": 5,
+    "MaxPicchi": 3 / 4
   },
   "shoot": {
     "successo": "cap3",
@@ -129,6 +128,6 @@ export default {
       "verde",
       "viola"
     ],
-    "tipo": "directions" || "colors"
+    "type": "directions" || "colors"
   }
 }

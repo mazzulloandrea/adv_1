@@ -4,6 +4,7 @@
   align-items: center;
   margin-bottom: 4vh;
   width: 100%;
+  margin-top: 4vh;
 }
 
 .spiega {
@@ -26,37 +27,46 @@
   width: 40%;
 }
 
+
 .feedback {
   width: 4vw;
   height: auto;
   margin-right: 2vw;
 }
 
-
-.pulseHard {
-  animation: 0.5s pulse;
-  animation-iteration-count: infinite;
+.heartContainer {
   width: 10vw;
 }
 
-.pulseMedium {
+.pulseHard {
+  animation: 0.2s pulse;
+  animation-iteration-count: 2;
+}
+
+/* .pulseMedium {
   animation: 1s pulse;
-  animation-iteration-count: infinite;
-  width: 10vw;
+  animation-iteration-count: 2;
 }
 
 .pulseLight {
   animation: 1.4s pulse;
-  animation-iteration-count: infinite;
-  width: 10vw;
-}
+  animation-iteration-count: 2;
+} */
 
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
 
-  35% {
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+  /* 35% {
     transform: scale(1.5);
   }
 
@@ -70,7 +80,8 @@
 
   100% {
     transform: scale(1);
-  }
+  } */
+
 }
 
 

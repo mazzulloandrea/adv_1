@@ -1,20 +1,20 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
-import heart from '/assets/images/heart.jpeg';
-import successIcon from '/assets/images/success.png';
-import failureIcon from '/assets/images/failure.png';
+// import heart from '/assets/images/heart.jpeg';
+import heart from '/assets/icons/etc/heart.svg';
+import successIcon from '/assets/icons/etc/ok.svg';
+import failureIcon from '/assets/icons/etc/ko.svg';
 import Chart from 'chart.js/auto';
 import generate from './data';
 import { determinateVictory } from '../utils';
 import style from './style.css';
 
 
-function Etc({ data, onend, MaxCounter = 5, MaxPicchi = 4, orientation = 0 }) {
-  const { successo, fallimento } = data;
-  // const MaxPicchi = 5; // c'è un max oltre il quale si inchioda
+function Etc({ data, onend, orientation = 0 }) {
+  const { successo, fallimento, MaxCounter, MaxPicchi , durata} = data;
   const MaxPoint = 80;
-  const totalDuration = 4000;
+  const totalDuration = durata || 5000;
   const delayBetweenPoints = (totalDuration / MaxPoint) * 0.5; //data.length;
   const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
 
@@ -72,9 +72,6 @@ function Etc({ data, onend, MaxCounter = 5, MaxPicchi = 4, orientation = 0 }) {
       const newChart = new Chart(ctx, config(generated.data));
       setChart(newChart);
       setUserClickedCounter(0);
-      // if (counterDrawTimes === 0) {
-      //   console.log('finito');
-      // }
       setTimeout(() => {
         setCounterDrawTimes(counterDrawTimes - 1);
       }, totalDuration + 500);
@@ -155,16 +152,22 @@ function Etc({ data, onend, MaxCounter = 5, MaxPicchi = 4, orientation = 0 }) {
     <div>
       <div class=${style.header}>
         <div class=${style.spiega}>Premi sul cuore come indicato dal grafico</div>
-        <div class=${style.pulseContainer}>
-          <img class=${style.pulseHard} src=${heart} alt="" onclick=${()=> {
-          setUserClickedCounter(userClickedCounter + 1);
-          }} />
+        <div class=${style.pulseContainer}>          
+          <div class=${style.heartContainer}
+            onclick=${(evt)=> {
+              evt.currentTarget.classList.add(style.pulseHard);
+              setUserClickedCounter(userClickedCounter + 1);
+            }}
+            onanimationend=${(evt) => evt.currentTarget.classList.remove(style.pulseHard)}
+          >
+            <${heart} />
+          </div> 
         </div>
-        <div class=${style.feedbackContainer}>${successList.map(el => 
-          html`
-            <img class=${style.feedback} src=${el ? successIcon : failureIcon} />
-          `
-        )}</div>
+        <div class=${style.feedbackContainer}>
+          ${successList.map(el => 
+            el ? html`<${successIcon} class=${style.feedback} />` : html`<${failureIcon} class=${style.feedback} />`
+          )}
+        </div>
       </div>
       <div class=${style.canvasContainer}>
         <canvas id="myChart" width="0" height="0"></canvas>

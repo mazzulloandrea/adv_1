@@ -1,6 +1,8 @@
 export default {
   "titolo": "Soldati",
-  "frase": "Sei arrivato all'angolo con il campo di grano, con fusti alti 2 metri, quando senti un bruciore al ginocchio e la voce di Carcadena nella tua mente <<Ci sono i soldati, scappa!>>",
+  "frase": `
+    Sei arrivato all'angolo con il campo di grano, alto circa 2 metri, 
+    quando senti un fortissimo bruciore al ginocchio e la voce di Carcadena nella tua mente <<Ci sono i soldati, presto scappa!>>`,
   "audio": {
     "src": "/assets/audio/cap0.m4a",
     "interrompe": ""
@@ -15,7 +17,7 @@ export default {
       "gioco": "etc"
     },
     {
-      "frase": "Torni indietro fino in falegnameria",
+      "frase": "Torni di corsa indietro fino in falegnameria",
       "gioco": "gioco9"
     },
     {
@@ -53,9 +55,11 @@ export default {
     ]
   },
   "etc": {
-    "durata": "10",
     "successo": "cap10",
-    "fallimento": "cap11"
+    "fallimento": "cap11",
+    "MaxCounter": 5,
+    "MaxPicchi": 3,
+    "durata": 5000
   },
   "gioco9": {
     "combinazione": [
@@ -63,8 +67,10 @@ export default {
       "nord-est",
       "est",
       "nord-ovest",
-      "est",
-      "sud-ovest"
+      "sud",
+      "sud-ovest",
+      "X",
+      "ovest"
     ],
     "dataset": [
       "N",
@@ -77,7 +83,7 @@ export default {
       "NO",
       "X"
     ],
-    "tipo": "bussola",
+    "type": "directions",
     "durata": "10",
     "successo": "cap20",
     "fallimento": "cap21"

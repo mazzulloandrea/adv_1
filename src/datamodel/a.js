@@ -1,6 +1,8 @@
 export default {
   "titolo": "Introduzione",
-  "frase": "<<chop efx ...Bastardo! Ignobile! <chop efx> te la farò pagare ah si se te la farò pagare <chop efx> >> Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred",
+  "frase": `
+    <<chop efx ...Bastardo! Te la farò pagare! ah si se te la farò pagare <chop efx> >> 
+    Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred`,
   "audio": {
     "src": "/assets/audio/cap0.m4a",
     "interrompe": ""
@@ -8,7 +10,7 @@ export default {
   "risposte": [
     {
       "frase": "Spacchi la legna pensando a Denred",
-      "gioco": "gioco9",
+      "gioco": "dice",
     }
   ],
   "dice": {
@@ -17,15 +19,5 @@ export default {
     "obiettivo": 14,
     "abilita": ["corpo", "mente", "spirito"],
     "lanci": 6
-  },
-  "gioco9": {
-    "combinazione": [
-      "nord",
-      "nord-est"
-    ],
-    "type": "directions",
-    "durata": "10",
-    "successo": "cap20",
-    "fallimento": "cap21"
   }
 }

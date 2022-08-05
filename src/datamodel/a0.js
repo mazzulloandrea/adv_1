@@ -1,6 +1,11 @@
 export default {
   "titolo": "Introduzione",
-  "frase": "Soddisfatto del tuo lavoro, accatasti gli ultimi ciocchi; poi ti fermi, ti rilassi, chiudi gli occhi e ti concentri su tua sorella genella: i suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. Puoi comunicarle solo poche parole",
+  "frase": `
+    Soddisfatto del tuo lavoro, accatasti gli ultimi ciocchi; 
+    poi ti fermi, ti rilassi, chiudi gli occhi e ti concentri su tua sorella gemella: 
+    i suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. 
+    Sai che puoi comunicarle solo poche parole
+  `,
   "audio": {
     "src": "/assets/audio/cap0.m4a",
     "interrompe": ""
