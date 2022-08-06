@@ -1,5 +1,5 @@
 {
-  "name": "adv_1_preact",
+  "name": "La gemma verde - 1",
   "short_name": "La gemma verde - 1",
   "start_url": "/",
   "display": "standalone",
@@ -7,11 +7,6 @@
   "background_color": "#fff",
   "theme_color": "#673ab8",
   "icons": [
-    {
-      "src": "/assets/icons/android-chrome-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
     {
       "src": "/assets/icons/android-chrome-512x512.png",
       "type": "image/png",
