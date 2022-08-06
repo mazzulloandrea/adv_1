@@ -5,7 +5,7 @@ export default {
     La voce di Carcadena entra nella tua mente <<Sono dal vecchio, sta morendo...>>. 
     Carcadena è molto più brava di te ad usare il potere, riesce a farlo più volte e più a lungo`,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/a2.mp3",
     "interrompe": ""
   },
   "risposte": [

@@ -4,7 +4,7 @@ export default {
     <<chop efx ...Bastardo! Te la farò pagare! ah si se te la farò pagare <chop efx> >> 
     Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred`,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/a.mp3",
     "interrompe": ""
   },
   "risposte": [

@@ -7,7 +7,7 @@ export default {
     Sai che puoi comunicarle solo poche parole
   `,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/a0.mp3",
     "interrompe": ""
   },
   "risposte": [

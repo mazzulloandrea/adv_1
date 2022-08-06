@@ -1,8 +1,11 @@
 export default {
   "titolo": "L'arrivo dei soldati",
-  "frase": "Il ginocchio aumenta il dolore e non riesci a concenrtati abbastanza. Scegli cosa fare",
+  "frase": `
+    Provi a concentrarti, ma nonostante ti sforzi per controllarlo il bruciore al ginocchio diviene isopportabile.
+    Il tuo cuore e i tuoi pensieri sono troppo agitati per usare il potere.
+    Scegli cosa fare`,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap3.mp3",
     "interrompe": ""
   },
   "risposte": [

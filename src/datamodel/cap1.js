@@ -2,9 +2,10 @@ export default {
   "titolo": "Soldati",
   "frase": `
     Sei arrivato all'angolo con il campo di grano, alto circa 2 metri, 
-    quando senti un fortissimo bruciore al ginocchio e la voce di Carcadena nella tua mente <<Ci sono i soldati, presto scappa!>>`,
+    quando senti un fortissimo bruciore al ginocchio 
+    e la voce di Carcadena nella tua mente <<Ci sono i soldati, presto scappa!>>`,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap1.mp3",
     "interrompe": ""
   },
   "risposte": [

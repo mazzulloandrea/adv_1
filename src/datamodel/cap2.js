@@ -1,8 +1,10 @@
 export default {
   "titolo": "L'arrivo dei soldati",
-  "frase": "Ti concentri sulla falce di Carcadena mentre nel ginocchio aumenta il dolore. Sai che puoi dire poche parole, scegli bene cosa comunicare a Carcadena",
+  "frase": `
+    Ti concentri sulla voglia a forma di falce sulla spalla di Carcadena mentre nel tuo ginocchio destro aumenta il dolore. 
+    Sai che puoi dire poche parole, scegli bene cosa chiedere a tua sorella`,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap2.mp3",
     "interrompe": ""
   },
   "risposte": [

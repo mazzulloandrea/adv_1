@@ -6,7 +6,7 @@ export default {
     i suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. 
     Sai che puoi comunicarle solo poche parole`,
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/a1.mp3",
     "interrompe": ""
   },
   "risposte": [
