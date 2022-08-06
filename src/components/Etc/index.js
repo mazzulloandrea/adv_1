@@ -77,7 +77,7 @@ function Etc({ data, onend, orientation = 0 }) {
       }, totalDuration + 500);
     } else {
       const result = determinateVictory(successList);
-      // onend(result ? successo : fallimento);
+      onend(result ? successo : fallimento);
     }
   }, [counterDrawTimes]);
 

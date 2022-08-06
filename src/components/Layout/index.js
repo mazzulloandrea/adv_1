@@ -46,8 +46,8 @@ const initialAbilita = {
   corpo: 0, mente: 0, spirito: 0, vita: 4,
   zaino: []
 }
-// const initialcap = '_0';
-const initialcap = 'cap1';
+const initialcap = '_0';
+// const initialcap = 'cap1';
 
 const Layout = () => {
   const [story, setStory] = useState(Storia);
