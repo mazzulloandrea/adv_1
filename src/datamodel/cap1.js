@@ -18,7 +18,7 @@ export default {
       "gioco": "etc"
     },
     {
-      "frase": "Torni di corsa indietro fino in falegnameria",
+      "frase": "Torni di corsa indietro in falegnameria",
       "gioco": "gioco9"
     },
     {
