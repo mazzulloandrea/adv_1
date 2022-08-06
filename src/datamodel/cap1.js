@@ -68,21 +68,6 @@ export default {
       "nord-est",
       "est",
       "nord-ovest",
-      "sud",
-      "sud-ovest",
-      "X",
-      "ovest"
-    ],
-    "dataset": [
-      "N",
-      "NE",
-      "E",
-      "SE",
-      "S",
-      "SO",
-      "O",
-      "NO",
-      "X"
     ],
     "type": "directions",
     "durata": "10",
