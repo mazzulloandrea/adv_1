@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Soldati",
+  "titolo": "L'arrivo dei soldati",
   "frase": `
     Sei arrivato all'angolo con il campo di grano, alto circa 2 metri, 
     quando senti un fortissimo bruciore al ginocchio 
@@ -22,9 +22,9 @@ export default {
       "gioco": "gioco9"
     },
     {
-      "frase": "Se vuoi andare verso i soldati",
+      "frase": "Se vuoi comunque andare verso la fattoria",
       "gioco": "audio",
-      "next": "cap4"
+      "next": "cap7"
     }
   ],
   "text": {

@@ -11,7 +11,7 @@ export default {
   },
   "risposte": [
     {
-      "frase": "Ti passa il dolore al ginocchio e ritorni verso casa pensando al vecchio",
+      "frase": "Ti passa il dolore al ginocchio e, prima che cali il sole, ritorni verso casa pensando al vecchio",
       "gioco": "audio",
       "next": "cap1"
     }

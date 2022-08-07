@@ -32,7 +32,7 @@ const config = {
 
 /**
  * Il flusso base prevede
- * Audio -> risposte
+ * Audio -> risposte || gioco
  * Risposte -> transizione a 3 finestre
  * Transizione -> setActualComponent(gioco)
  * Wich gioco -> carica componente e gioca
@@ -89,7 +89,14 @@ const Layout = () => {
   }, [abilita]);
 
   const onEndAudio = () => {
-    setActualComponent("risposte");
+    if (actualCap.risposte) {
+      setActualComponent("risposte");
+    } else if (actualCap.gioco) {
+      setActualComponent(actualCap.gioco);
+      if (actualCap.next) {
+        setActual(actualCap.next);
+      }
+    }
   };
 
   const onEndRisposte = (gioco, nextCap, newAbilita) => {

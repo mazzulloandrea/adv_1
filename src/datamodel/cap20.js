@@ -1,9 +1,11 @@
 export default {
-  "titolo": "Resa",
+  "titolo": "Nel grano",
   "frase": `
-    Svoltato l'angolo con il mulino, ti ritrovi davanti Denred con 2 soldati "Eccolo è lui".
-    Tuo fratellastro sta aiutando i soldati e questa 
-    è l'ennesima dimostrazione di quanto sia crudele.
+    Le fiamme divampano sempre più e prima che te ne rendi conto devi scappare prima di rimanere intrappolato.
+    Uscendo dal campo ti ritrovi a pochi passi un soldato che grida la tua presenza; subito viene circodanto da 
+    un altro soldato e da tuo fratello Denred.
+    Che bastardo li sta aiutando.
+      ------- da qui copia audio cap7
     "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
     4 ragazzi che conosci bene: Aaron, _____ ,______ e ______
@@ -17,7 +19,7 @@ export default {
   `,
 
   "audio": {
-    // "src": "/assets/audio/cap7.mp3",
+    // "src": "/assets/audio/cap20.mp3", //copia parte audio 7
     "src": "/assets/audio/cap0.m4a",
     "interrompe": "",
   },

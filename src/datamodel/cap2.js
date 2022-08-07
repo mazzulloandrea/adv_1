@@ -10,17 +10,17 @@ export default {
   "risposte": [
     {
       "frase": "Quanti soldati sono?",
-      "gioco": null,
+      "gioco": "audio",
       "next": "cap4"
     },
     {
       "frase": "Stai bene?",
-      "gioco": null,
+      "gioco": "audio",
       "next": "cap5"
     },
     {
       "frase": "Il vecchio?",
-      "gioco": null,
+      "gioco": "audio",
       "next": "cap6"
     }
   ]

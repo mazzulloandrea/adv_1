@@ -2,7 +2,7 @@ import cap1 from './cap1.js';
 
 export default {
   "titolo": "L'arrivo dei soldati",
-  "frase": "<<Sono legata, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
+  "frase": "<<Sono legata insieme ad altri, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
   "audio": {
     "src": "/assets/audio/cap0.m4a",
     "interrompe": ""
