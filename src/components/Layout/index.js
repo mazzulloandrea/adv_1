@@ -13,6 +13,7 @@ import Gioco9 from '../Gioco9';
 import Dice from '../Dice';
 import Intro from '../Intro';
 import Ferita from '../Ferita'
+import Morte from '../Morte'; 
 import animation from './animation.css';
 // import TitleIcon from '../TitleIcon'
 // import IR from '../../assets/icons/risposte/directions.svg';
@@ -88,9 +89,6 @@ const Layout = () => {
 
   useEffect(() => {
     // console.log(abilita);
-    if (abilita && abilita.vita === 0) {
-      alert('morto');
-    }
   }, [abilita]);
 
   const onEndAudio = () => {
@@ -117,7 +115,6 @@ const Layout = () => {
     setAbilita(Object.assign({ ...abilita }, { vita: abilita.vita - 1 }));
   }
 
-  // rinominare con onGameEnd
   const onGameEnd = (nextCap, feedback) => {
     console.log('actual cap ', nextCap);
     toggleTransition("audio", nextCap, feedback);
@@ -155,7 +152,12 @@ const Layout = () => {
       abilita = ${JSON.stringify(abilita)}
     `);
     const data = actualCap[actualComponent];
+    if(abilita && abilita.vita === 0) {
+      return html`<${Morte} />`;
+    }
     switch (actualComponent) {
+      // case "morte":
+      //   return html`<${Morte} />`;
       case "audio":
         return html`<${Audio} data=${data} onend=${()=> onEndAudio()} orientation=${orientation} />`;
       case "risposte":
@@ -196,7 +198,6 @@ const Layout = () => {
           ? html`<${Intro} onend=${() => {
             setActual({ cap: initialcap });
             setActualComponent('risposte');
-            // setActualComponent('ferita');
           }} />`
           : html`<div class=${style.wrapper}>
               ${whichComponent()}

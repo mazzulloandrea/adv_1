@@ -1,0 +1,31 @@
+.wrapper {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+}
+
+.wrapper>svg {
+  width: 60%;
+  height: auto;
+}
+
+.text {
+  padding: 0 20vw;
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+
+
+.reset {
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+}
