@@ -32,12 +32,13 @@ function Audio({ data, onend, orientation }) {
 
   return html`
     <div>
-      <div id="player" class=${style.circle} onclick=${() => managePlayer()} >
+      <div id="player" class=${style.circle} onclick=${()=> managePlayer()} >
         <div id="stoppable" class=${play ? style.bars : style.triangle} />
-        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
+        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
-          <source src=${data.src} type="audio/ogg" />
+          <!-- <source src=${data.src} type="audio/ogg" /> -->
+          <source src=${'/assets/audio/cap0.m4a'} type="audio/mp3" />
           Your browser does not support the audio tag.
         </audio>
       </div>

@@ -135,9 +135,8 @@ const Layout = () => {
 
   const whichComponent = () => {
     const actualCap = story[actual.cap];
-    // console.log('new render Wich component', actualComponent);
+    console.log(`actual cap = ${actual.cap}, component = ${actualComponent}`);
     const data = actualCap[actualComponent];
-    console.log(data);
     switch (actualComponent) {
       case "audio":
         return html`<${Audio} data=${data} onend=${() => onEndAudio()} orientation=${orientation} />`;

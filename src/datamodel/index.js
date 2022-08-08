@@ -17,9 +17,21 @@ import cap7 from './cap7.js';
 
 // campo di Grano
 import cap10 from './cap10.js';
+import cap11 from './cap11.js';
+import cap12 from './cap12.js';
+import cap13 from './cap13.js';
+import cap14 from './cap14.js';
+import cap16 from './cap16.js';
+import cap17 from './cap17.js';
+import cap19 from './cap19.js';
+import cap20 from './cap20.js';
+import cap21 from './cap21.js';
+import cap24 from './cap24.js';
+import cap25 from './cap25.js';
+import cap26 from './cap26.js';
 
 // falegnameria
-
+import cap30 from './cap30.js';
 
 
 
@@ -56,5 +68,18 @@ export default {
   cap6,
   cap7,
   cap10,
+  cap11,
+  cap12,
+  cap13,
+  cap14,
+  cap16,
+  cap17,
+  cap19,
+  cap20,
+  cap21,
+  cap24,
+  cap25,
+  cap26,
+  cap30,
 
 }
