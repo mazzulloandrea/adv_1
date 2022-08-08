@@ -6,7 +6,7 @@ export default {
     è l'ennesima dimostrazione di quanto sia crudele.
     "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
-    4 ragazzi che conosci bene: Aaron, _____ ,______ e ______
+    4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".
     Nella notte, tra le lamentele ed i pianti delle madri, 
     il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale"
@@ -17,8 +17,7 @@ export default {
   `,
 
   "audio": {
-    // "src": "/assets/audio/cap7.mp3",
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap7.mp3",
     "interrompe": "",
   },
   "risposte": [

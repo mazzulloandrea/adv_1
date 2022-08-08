@@ -7,8 +7,7 @@ export default {
     E' rischioso ma puoi provare ad avvicinarti ancora un po' per vedere e sentire meglio...
   `,
   "audio": {
-    // "src": "/assets/audio/cap11.mp3",
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap11.mp3",
     "interrompe": ""
   },
   "risposte": [

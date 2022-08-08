@@ -36,7 +36,7 @@ import cap30 from './cap30.js';
 
 
 // checkpoint part1 
-// incontri ______ 26
+// incontri Aaron 26
 
 
 

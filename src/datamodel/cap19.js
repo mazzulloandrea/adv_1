@@ -1,12 +1,11 @@
 export default {
   "titolo": "Nel grano",
   "frase": `
-    Non è difficile convincerlo ad andarvene visto che il campo sta bruciando sempre più velocemente. 
-    Dopo poco uscite fuori dal campo di grano dirigendovi nel bosco in piena notte.
+    Non è difficile convincerlo visto che il grano sta bruciando sempre più velocemente. 
+    Uscite fuori dal campo e vi dirigete nel bosco in piena notte.
   `,
   "audio": {
-    // "src": "/assets/audio/cap19.mp3",
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap19.mp3",
     "interrompe": ""
   },
   "risposte": [

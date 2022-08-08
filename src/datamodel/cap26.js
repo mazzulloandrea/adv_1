@@ -2,11 +2,10 @@ export default {
   "titolo": "Nel grano",
   "frase": `
     Ti allontani il più possibile quando vai a sbattere contro qualcosa che ti fa cadere per terra.
-    E' _______ un tuo amico che si sta nascondendo terrorizzato dai soldati.
+    E' Aaron un tuo amico che si sta nascondendo terrorizzato dai soldati.
   `,
   "audio": {
-    // "src": "/assets/audio/cap26.mp3",
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap26.mp3",
     "interrompe": ""
   },
   "risposte": [

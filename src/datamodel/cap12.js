@@ -6,8 +6,7 @@ export default {
     Ma quanto sarà passato?
   `,
   "audio": {
-    // "src": "/assets/audio/cap12.mp3",
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap12.mp3",
     "interrompe": ""
   },
   "gioco": "dice",
