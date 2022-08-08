@@ -53,7 +53,7 @@ function Shoot({ data, onend }) {
     if (animationList === "init") return;
     if (!animationList.length) {
       const result = determinateVictory(successList);
-      onend(result ? successo : fallimento);
+      onend(result ? successo : fallimento, result);
     } else {
       startAnimation(animationList[0].x, animationList[0].y);
     }
@@ -164,7 +164,7 @@ function Shoot({ data, onend }) {
         <span>${el ? ' success' : ' fallimento'}</span>
         `)}
       </div>
-      <div id="mirino" class=${style.shooter} onclick=${(evt)=> verifyShoot(evt)}>
+      <div id="mirino" class=${style.shooter} onclick=${(evt) => verifyShoot(evt)}>
         <div id="jolly" class="inside_mirino"></div>
       </div>
       <div class=${style.targetContainer}>

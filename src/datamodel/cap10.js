@@ -15,17 +15,14 @@ export default {
   "risposte": [
     {
       "frase": "Se vuoi andare verso i soldati per scoprire di più",
-      "gioco": "audio",
       "next": "cap11"
     },
     {
       "frase": "Preferisci restare fermo in silenzio",
-      "gioco": "audio",
       "next": "cap12"
     },
     {
       "frase": "Preferisci allontanarti",
-      "gioco": "audio",
       "next": "cap13"
     },
 

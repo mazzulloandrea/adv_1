@@ -12,17 +12,22 @@ const Risposte = ({ data, onend }) => {
   return html`
     <div class=${style.container}>
       ${shuffle(data).map((el) => {
-        const { gioco, next, abilita, frase, icon} = el;
+        const { gioco, next, abilita, frase, icon, zaino} = el;
         return html`
-        <div class=${style.response} onclick=${()=> onend(gioco, next, abilita)}
-        onanimationend=${(el) => animationEnd(el)}
-        >
-        ${frase}
-        ${icon && html`<div class=${style.iconContainer}>
-          <${TitleIcon} type=${icon} />
-          </ />`}
-      </div>
-      `
+          <div class=${style.response}
+            onclick=${()=> {
+              onend(gioco, next, abilita, zaino);
+            }}
+            onanimationend=${(el) => animationEnd(el)}
+          >
+            ${frase}
+            ${icon && html`
+              <div class=${style.iconContainer}>
+                <${TitleIcon} type=${icon} />
+              </ />
+            `}
+          </div>
+        `
       })}
     </div>
   `

@@ -185,8 +185,8 @@ function Dice({ data, caratteristiche, onend }) {
   }
   
   function prosegui() {
-    if(getResult() > obiettivo) return onend(successo);
-    else return onend(fallimento);
+    if(getResult() > obiettivo) return onend(successo, true);
+    else return onend(fallimento, false);
   }
 
   return html`

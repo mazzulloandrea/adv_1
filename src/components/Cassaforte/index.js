@@ -37,8 +37,8 @@ function Cassaforte({ data, onend }) {
       selectValue === combinazione[1].giusto &&
       progress === combinazione[2].giusto &&
       switchValue === combinazione[3].giusto
-    ) return onend(successo);
-    return onend(fallimento);
+    ) return onend(successo, true);
+    return onend(fallimento, false);
   }
 
   const getCombinazione = () => combinazione.map(el => el.giusto).join('    ');

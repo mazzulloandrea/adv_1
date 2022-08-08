@@ -100,21 +100,24 @@ const Layout = () => {
     }
   };
 
-  const onEndRisposte = (gioco, nextCap, newAbilita) => {
+  const onEndRisposte = (gioco, nextCap, newAbilita, zaino) => {
     setActualComponent(null);
-    if (abilita) {
+    if (newAbilita) {
       setAbilita(Object.assign({ ...abilita }, { [newAbilita]: abilita[newAbilita] + 1 }));
+    }
+    if (zaino) {
+      setAbilita(Object.assign({ ...abilita }, { zaino: abilita.zaino.concat(zaino) }));
     }
     toggleTransition(gioco, nextCap);
   }
 
   // rinominare con onGameEnd
   const setNewCap = (nextCap) => {
-    console.log('actual cap ', nextCap);
+    // console.log('actual cap ', nextCap);
     toggleTransition("audio", nextCap);
   };
 
-  const toggleTransition = (gioco, nextCap) => {
+  const toggleTransition = (gioco = "audio", nextCap) => {
     setActualComponent(null);
     document.getElementById("2").style.left = '33.3vw';
     document.getElementById("3").style.left = '66.6vw';
@@ -141,8 +144,8 @@ const Layout = () => {
       case "audio":
         return html`<${Audio} data=${data} onend=${() => onEndAudio()} orientation=${orientation} />`;
       case "risposte":
-        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita) => onEndRisposte(gioco,
-  nextCap, newAbilita)}
+        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
+  nextCap, newAbilita, zaino)}
   />`;
       case "etc":
         return html`<${Etc} data=${data} onend=${(nextCap)=> setNewCap(nextCap)}

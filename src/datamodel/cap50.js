@@ -13,5 +13,9 @@ export default {
     "interrompe": ""
   },
   "risposte": [
+    {
+      "frase": "Entri nel bosco buoi",
+      "next": "cap51"
+    }
   ]
 }

@@ -14,7 +14,7 @@ export default {
   "risposte": [
     {
       "frase": "Alla falegnameria troverai qualcosa la notte",
-      "gioco": "30",
+      "next": "cap30",
     },
     {
       "frase": "Alla stalla puoi trovare acqua e provviste",

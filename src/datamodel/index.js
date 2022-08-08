@@ -40,15 +40,9 @@ import cap30 from './cap30.js';
 
 
 
+// capitoli con bonus 0, 19, 25, 34,
 
-// sviluppare un capitolo per morte da cuori
-
-
-
-
-// capitoli con bonus 0, 19, 25
-
-// capitoli finali par1 7, 20,
+// capitoli finali par1 7, 20, 32, 36, 42
 // capitoli finali par2
 // finale 1
 // finale 2
