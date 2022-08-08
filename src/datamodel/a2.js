@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Carcadena",
+  "titolo": "Introduzione",
   "frase": `
     Come al solito ti brucia il ginocchio destro, dove anche tu hai lo stesso segno di tua sorella. 
     La voce di Carcadena entra nella tua mente <<Sono dal vecchio, sta morendo...>>. 

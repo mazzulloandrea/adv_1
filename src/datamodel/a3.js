@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Carcadena",
+  "titolo": "Introduzione",
   "frase": `
     Il bruciore al ginocchio destro, dove anche tu ha lo stesso segno di Carcadena è molto forte e devi assolutamente fermarti. 
     La voce di tua sorella nella tua mente <<Sono dal vecchio, sta morendo...>> 

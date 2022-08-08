@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
+import { shuffle } from '../utils';
 import TitleIcon from '../TitleIcon';
 import style from './style.css';
 
@@ -10,7 +11,7 @@ const Risposte = ({ data, onend }) => {
   }
   return html`
     <div class=${style.container}>
-      ${data.map((el) => {
+      ${shuffle(data).map((el) => {
         const { gioco, next, abilita, frase, icon} = el;
         return html`
         <div class=${style.response} onclick=${()=> onend(gioco, next, abilita)}
