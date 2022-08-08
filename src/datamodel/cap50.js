@@ -9,10 +9,13 @@ export default {
     no quella probabilmente l'ha sempre avuta!
   `,
   "audio": {
-    // "src": "/assets/audio/cap30.mp3", // stesso audio del 30
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap30.mp3", // stesso audio del 30
     "interrompe": ""
   },
   "risposte": [
+    {
+      "frase": "Entri nel bosco buoi",
+      "next": "cap51"
+    }
   ]
 }

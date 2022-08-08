@@ -1,32 +1,29 @@
 export default {
-  "titolo": "Nel grano",
+  "titolo": "Falegnameria",
   "frase": `
-    Non è difficile convincerlo visto che il grano sta bruciando sempre più velocemente. 
-    Uscite fuori dal campo e vi dirigete nel bosco in piena notte.
+    La mano del soldato passa a pochi centimetri da te...
+    "Qui non c'è! Sarà scappato nella stalla!"
+    con gran rumore esce dalla porta principale e ti lascia solo nell'oscurità
   `,
-  "audio": {
-    "src": "/assets/audio/cap19.mp3",
-    "interrompe": ""
-  },
   "risposte": [
     {
       "frase": "Corpo",
       "abilita": "corpo",
-      "next": "cap51",
+      "next": "cap35",
       "gioco": "audio",
       "icon": "corpo"
     },
     {
       "frase": "Mente",
       "abilita": "mente",
-      "next": "cap51",
+      "next": "cap35",
       "gioco": "audio",
       "icon": "mente"
     },
     {
       "frase": "Spirito",
       "abilita": "spirito",
-      "next": "cap51",
+      "next": "cap35",
       "gioco": "audio",
       "icon": "spirito"
     }

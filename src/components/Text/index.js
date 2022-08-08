@@ -39,7 +39,7 @@ function Text({ data, onend }) {
 
   return html`
     <div>
-      ${viewSand && html`<${Clessidra} class=${style.clessidraContainer} duration=${durata} onend=${()=> setViewSand(false)}
+      ${viewSand && html`<${Clessidra} class=${style.clessidraContainer} duration=${durata} onend=${() => setViewSand(false)}
         />`}
         <div class=${style.domanda}>${domande[domanda]}</div>
         ${image && html`
@@ -50,7 +50,7 @@ function Text({ data, onend }) {
         </div>
         `}
         <div class=${style.responseContainer}>
-          <input value=${risposta} class=${style.pin} maxlength="10" oninput=${(evt) => setRisposta(evt.target.value)} />
+          <input value=${risposta} class=${style.pin} maxlength="10" oninput=${(evt)=> setRisposta(evt.target.value)} />
         </div>
     </div>
   `

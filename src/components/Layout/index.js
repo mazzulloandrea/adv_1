@@ -103,10 +103,13 @@ const Layout = () => {
     }
   };
 
-  const onEndRisposte = (gioco, nextCap, newAbilita) => {
+  const onEndRisposte = (gioco, nextCap, newAbilita, zaino) => {
     setActualComponent(null);
     if (newAbilita) {
       setAbilita(Object.assign({ ...abilita }, { [newAbilita]: abilita[newAbilita] + 1 }));
+    }
+    if (zaino) {
+      setAbilita(Object.assign({ ...abilita }, { zaino: abilita.zaino.concat(zaino) }));
     }
     toggleTransition(gioco, nextCap);
   }
@@ -120,7 +123,7 @@ const Layout = () => {
     toggleTransition("audio", nextCap, feedback);
   };
 
-  const toggleTransition = (gioco, nextCap, feedback) => {
+  const toggleTransition = (gioco = "audio", nextCap, feedback) => {
     setActualComponent(null);
     if(feedback === false) {
       setActualComponent('ferita');
@@ -161,8 +164,8 @@ const Layout = () => {
       case "audio":
         return html`<${Audio} data=${data} onend=${()=> onEndAudio()} orientation=${orientation} />`;
       case "risposte":
-        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita)=> onEndRisposte(gioco,
-          nextCap, newAbilita)}
+        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
+  nextCap, newAbilita, zaino)}
   />`;
       case "etc":
         return html`<${Etc} data=${data} onend=${(nextCap, feedback) => onGameEnd(nextCap, feedback)}

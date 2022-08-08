@@ -1,11 +1,11 @@
 export default {
-  "titolo": "Nel grano",
+  "titolo": "Il Bosco",
   "frase": `
-    Le fiamme divampano sempre più e prima che te ne rendi conto devi scappare prima di rimanere intrappolato.
-    Uscendo dal campo ti ritrovi a pochi passi un soldato che grida la tua presenza; subito viene circodanto da 
-    un altro soldato e da tuo fratello Denred.
-    Quel bastardo li sta aiutando.
-      ------- da qui copia audio cap7
+    Gli animali anzichè calmarsi si agitano ed iniziano a fare troppo rumore.
+    Immediatamente attirano la'ttenzione dei soldati e mentre provi a scappare verso il bosco ti si para davanti 
+    tuo fratellastro Denred che ti afferra per il vestito "Preso"
+    Il bastardo sta aiutando le guardie
+
     "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
     4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
@@ -19,7 +19,7 @@ export default {
   `,
 
   "audio": {
-    "src": "/assets/audio/cap20.mp3", //copia parte audio 7
+    "src": "/assets/audio/cap42.mp3", // copia dal cap7
     "interrompe": "",
   },
   "risposte": [

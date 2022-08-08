@@ -8,8 +8,7 @@ export default {
     I soldati ti hanno preso.
   `,
   "audio": {
-    // "src": "/assets/audio/cap24.mp3",
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap24.mp3",
     "interrompe": ""
   },
   "risposte": [

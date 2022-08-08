@@ -1,11 +1,10 @@
 export default {
-  "titolo": "Nel grano",
+  "titolo": "Falegnameria",
   "frase": `
-    Le fiamme divampano sempre più e prima che te ne rendi conto devi scappare prima di rimanere intrappolato.
-    Uscendo dal campo ti ritrovi a pochi passi un soldato che grida la tua presenza; subito viene circodanto da 
-    un altro soldato e da tuo fratello Denred.
-    Quel bastardo li sta aiutando.
-      ------- da qui copia audio cap7
+    La mano del soldato passa a pochi centimetri da te... e ti afferra per il vestito.
+    "Pensavi di scappare? L'ho preso!" grida ed immediatamente entrano in falegnameria l'altra guardia e tuo fratellastro Denred.
+
+    Il bastardo li sta aiutando.
     "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
     4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
@@ -17,9 +16,8 @@ export default {
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.
   `,
-
   "audio": {
-    "src": "/assets/audio/cap20.mp3", //copia parte audio 7
+    "src": "/assets/audio/cap36.mp3",
     "interrompe": "",
   },
   "risposte": [
