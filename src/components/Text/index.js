@@ -34,7 +34,7 @@ function Text({ data, onend }) {
       return;
     }
     const result = risposte[domanda].includes(risposta.toLowerCase())
-    onend(result ? successo : fallimento);
+    onend(result ? successo : fallimento, result);
   }
 
   return html`

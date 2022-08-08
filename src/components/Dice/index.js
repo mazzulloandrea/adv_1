@@ -186,7 +186,7 @@ function Dice({ data, caratteristiche, onend }) {
   
   function prosegui() {
     if(getResult() > obiettivo) return onend(successo);
-    else return onend(fallimento);
+    else return onend(fallimento, false);
   }
 
   return html`

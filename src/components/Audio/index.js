@@ -37,8 +37,9 @@ function Audio({ data, onend, orientation }) {
         <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
-          <!-- <source src=${data.src} type="audio/ogg" /> -->
+          <!-- <source src=${data.src} type="audio/mp3" /> -->
           <source src=${'/assets/audio/cap0.m4a'} type="audio/mp3" />
+    
           Your browser does not support the audio tag.
         </audio>
       </div>
