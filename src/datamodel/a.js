@@ -11,7 +11,7 @@ export default {
     {
       "frase": "Spacchi la legna pensando a Denred",
       "gioco": "dice",
-    }
+    },
   ],
   "dice": {
     "successo": "a0",

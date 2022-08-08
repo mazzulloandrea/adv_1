@@ -1,17 +1,31 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
+import { useEffect, useState} from 'preact/hooks';
 import { shuffle } from '../utils';
 import TitleIcon from '../TitleIcon';
 import style from './style.css';
 
-const Risposte = ({ data, onend }) => {
+const Risposte = ({ data, caratteristiche, onend }) => {
+
+  const [response, setResponse] = useState([]);
+  
+  useEffect(() => {
+    
+    const filtered = data.filter((resp) => {
+      // solo le risposte i cui oggetti sono nello zaino
+      if(resp.checkZaino) {
+        return caratteristiche.zaino.includes(resp.checkZaino);
+      } else return true;
+    });
+    setResponse(shuffle(filtered));
+  }, []);
 
   const animationEnd = (el) => {
     el.target.classList.toggle(style.visible);
   }
   return html`
     <div class=${style.container}>
-      ${shuffle(data).map((el) => {
+      ${response.map((el) => {
         const { gioco, next, abilita, frase, icon, zaino} = el;
         return html`
           <div class=${style.response}

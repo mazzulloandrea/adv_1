@@ -164,7 +164,7 @@ const Layout = () => {
       case "audio":
         return html`<${Audio} data=${data} onend=${()=> onEndAudio()} orientation=${orientation} />`;
       case "risposte":
-        return html`<${Risposte} data=${data} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
+        return html`<${Risposte} data=${data} caratteristiche=${abilita} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
   nextCap, newAbilita, zaino)}
   />`;
       case "etc":
