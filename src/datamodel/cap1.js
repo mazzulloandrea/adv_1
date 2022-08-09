@@ -30,7 +30,7 @@ export default {
   "text": {
     "successo": "cap2",
     "fallimento": "cap3",
-    "durata": "20",
+    "durata": "15",
     "domande": [
       "Dov'è che hai la voglia?",
       "Dov'è che ha la voglia Carcadena?",

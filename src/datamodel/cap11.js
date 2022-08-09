@@ -22,8 +22,8 @@ export default {
     }
   ],
   "dice": {
-    "successo": "14",
-    "fallimento": "24",
+    "successo": "cap14",
+    "fallimento": "cap24",
     "obiettivo": 10, // numero da raggiungere con il lancio dei dadi
     "abilita": ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
     "lanci": 5 // quanti lanci col dado

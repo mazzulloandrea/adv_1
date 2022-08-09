@@ -15,16 +15,11 @@ export default {
     {
       "frase": "Provi a divincolarti",
       "gioco": "dice",
-    },
-    {
-      "frase": "Ti lasci catturare",
-      "gioco": "audio",
-      "next": "capCattura"
     }
   ],
   "dice": {
-    "successo": "26",
-    "fallimento": "capCattura",
+    "successo": "cap25",
+    "fallimento": "cap27",
     "obiettivo": 17, // numero da raggiungere con il lancio dei dadi
     "abilita": ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
     "lanci": 6 // quanti lanci col dado

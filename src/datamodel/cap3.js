@@ -50,7 +50,7 @@ export default {
       "X"
     ],
     "tipo": "bussola",
-    "durata": "10",
+    "durata": "15",
     "successo": "cap20",
     "fallimento": "cap21"
   }

@@ -4,7 +4,7 @@ export default {
   "titolo": "L'arrivo dei soldati",
   "frase": "<<Sono legata insieme ad altri, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
   "audio": {
-    "src": "/assets/audio/cap0.m4a",
+    "src": "/assets/audio/cap5.mp3",
     "interrompe": ""
   },
   "risposte": cap1.risposte.slice(1),

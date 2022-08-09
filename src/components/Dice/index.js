@@ -20,7 +20,6 @@ import {
   Cube,
   RollContainer,
   Face1, Face2, Face3, Face4, Face5, Face6,
-  Button,
   Tentativi,
   DiceRemaining,
   Risultato,
@@ -56,7 +55,9 @@ function Dice({ data, caratteristiche, onend }) {
     }
   }, []);
 
-  useEffect(() => { }, [counter]);
+  useEffect(() => { 
+    console.log('actual counter', counter)
+  }, [counter]);
   useEffect(() => { }, [diceValue1]);
   useEffect(() => { }, [diceValue2]);
   useEffect(() => { }, [diceValue3]);
@@ -150,7 +151,7 @@ function Dice({ data, caratteristiche, onend }) {
   function getCube(index) {
     return html`
       <${RollContainer}>
-        <${Cube} id=${`cube${index}`} isDisabled=${!counter}
+        <${Cube} id=${`cube${index}`} isDisabled=${counter < 1}
           onClick=${() => {
             setCounter(counter - 1);
             rollDice(index)

@@ -65,6 +65,9 @@ export const Cube = styled.div`
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s;
+  ${props => props.isDisabled && css`
+    pointer-events: none;
+  `}
   @media only screen and (orientation: landscape) {
     width: 20vw;
     height: 20vw;
@@ -126,22 +129,22 @@ export const Face6 = styled(Face)`
   }
 `
 
-export const Button = styled.button`
-  background: black;
-  color: white;
-  border: none;
-  margin: auto 0;
-  font-size: 1.5em;
-  margin-top: 2vh;
-  width: ${l * 2}vw;
-  @media only screen and (orientation: landscape) {
-    width: 20vw;
-  }
-  ${props => props.isdisabled && css`
-    pointer-events: none;
-    opacity: 0.2;
-  `}
-`;
+// export const Button = styled.button`
+//   background: black;
+//   color: white;
+//   border: none;
+//   margin: auto 0;
+//   font-size: 1.5em;
+//   margin-top: 2vh;
+//   width: ${l * 2}vw;
+//   @media only screen and (orientation: landscape) {
+//     width: 20vw;
+//   }
+//   ${props => props.isdisabled && css`
+//     pointer-events: none;
+//     opacity: 0.2;
+//   `}
+// `;
 
 export const Tentativi = styled.div`
   border-bottom: 2px solid black;
