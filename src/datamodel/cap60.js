@@ -15,11 +15,11 @@ export default {
     "fallimento": "cap62",
     "durata": "10",
     "combinazione": [
-      "Nord",
-      "Sud",
-      "Est",
-      "Nord-Ovest",
-      "Sud-Ovest"
+      "S",
+      "N",
+      "E",
+      "O",
+      "X"
     ],
     "type": "directions"
   }

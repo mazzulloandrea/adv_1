@@ -64,14 +64,14 @@ export default {
   },
   "gioco9": {
     "combinazione": [
-      "nord",
-      "nord-est",
-      "est",
-      "nord-ovest",
+      "arancione",
+      "verde",
+      "azzurro",
+      "viola"
     ],
-    "type": "directions",
-    "durata": "10",
-    "successo": "cap20",
-    "fallimento": "cap21"
+    "type": "colors",
+    "durata": 10,
+    "successo": "cap13",
+    "fallimento": "cap13"
   }
 }

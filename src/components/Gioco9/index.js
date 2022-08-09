@@ -2,22 +2,28 @@ import { h } from 'preact';
 import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
-import { shuffle, rgbToHex, paletteColors, directionsDataset } from '../utils';
+import { shuffle, paletteColors, directionsDataset } from '../utils';
 import style from './style.css';
 
-
-const cubes = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 function Gioco9({ data, durata = 10, onend }) {
-  const { combinazione, type, giochi = cubes, successo, fallimento } = data;
+  const { combinazione, type, successo, fallimento } = data;
   const [viewSand, setViewSand] = useState(true);
-  const [palette, setPalette] = useState([]);
-  const [directions, setDirections] = useState([]);
-  const [colorsClicked, setColorsClicked] = useState([]);
+  const [cubes, setCubes] = useState([]);
+  const [cubesClicked, setCubesClicked] = useState([]);
 
   useEffect(() => {
-    setPalette(shuffle(Object.values(paletteColors)));
-    setDirections(shuffle(Object.keys(directionsDataset)));
+    setCubesClicked([]);
+    const paletteS = shuffle(Object.values(paletteColors));
+    const directionS = shuffle(Object.keys(directionsDataset));
+    const cubes = paletteS.reduce((result, ele, index) => {
+      if(!result) result=[];
+      result.push({
+        palette: ele,
+        direction: directionS[index] || null
+      })
+      return result;
+    },[])
+    setCubes(cubes);
   }, []);
 
   useEffect(() => {
@@ -26,29 +32,33 @@ function Gioco9({ data, durata = 10, onend }) {
     }
   }, [viewSand]);
 
-  useEffect(() => {
-    if (palette.length) {
-      const games = document.getElementById("gameContainer").children;
-      for (let i = 0; i < games.length; i++) {
-        const game = games[i];
-        game.style.backgroundColor = palette[i];
-      }
-    }
-  }, [palette]);
-
-  useEffect(() => {
-  }, [colorsClicked]);
+  useEffect(()=>{},[cubes])
+  useEffect(()=>{},[cubesClicked])
 
   const verify = () => {
-    if (combinazione.length != colorsClicked.length) {
-      onend(fallimento, false);
-    };
-    let result = true;
-    for (let i = 0; i < combinazione.length; i++) {
-      if (paletteColors[combinazione[i]] !== colorsClicked[i]) result = false;
-    };
+    let result = false;
+    result = combinazione.every((val, index) => {
+      if (!cubesClicked) return false;
+      if (type === 'directions') return val === cubesClicked[index].direction
+      return paletteColors[val] === cubesClicked[index].palette; 
+    });
     onend(result ? successo : fallimento, result);
-  };
+  }
+
+  const drawCombinazioni = () => {
+    return combinazione.map((el, i) => {
+      if (i > cubesClicked.length) return ''
+      return html`
+        <div class=${style.combinazione}>
+          <div>${el}</div>
+          ${cubesClicked[i] && html`
+            <div class=${style.miniGame} style=${{ backgroundColor: cubesClicked[i].palette }}>
+            </div>
+          `}
+        <//>
+      `;
+    })
+  }
 
   return html`
     <div class=${style.wrapper}>
@@ -58,31 +68,22 @@ function Gioco9({ data, durata = 10, onend }) {
             />`}
         </div>
         <div class=${style.subHeader}>
-          <div class=${style.spiega}>
-            <ol class=${style.discoverList}>
-              ${combinazione.map((el, i) => html`
-              <li class=${style.discoverElement}>
-                <span>${el}</span>
-                ${colorsClicked[i] && html`
-                <div class=${style.miniGame} style=${{ backgroundColor: colorsClicked[i] }} />
-                `}
-              </li>`
-              )}
-            </ol>
-          </div>
+          ${drawCombinazioni()}
         </div>
       </div>
       <div id="gameContainer" class=${style.gameContainer}>
-        ${giochi.map((g, index) => html`
-          <div class=${style.game} onclick=${(evt)=> {
-            const color = rgbToHex(evt.target.style.backgroundColor);
-            setColorsClicked(colorsClicked.concat(color));
-            evt.target.classList.toggle(style.delete);
-          }}
+        ${cubes && cubes.map((cube, index) => html`
+          <div class=${style.game}
+              style=${{backgroundColor: cube.palette}}
+              onclick=${()=> {
+                if (cubesClicked.length >= combinazione.length) return;
+                setCubesClicked(cubesClicked.concat(cube));
+              }}
           >
-          ${type === "directions" ? directions[index] : ''}
+          <span>${cube.direction}</span>
         </div>
         `)}
+        
       </div>
     </div>
   `

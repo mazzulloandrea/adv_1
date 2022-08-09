@@ -31,23 +31,12 @@ export default {
   },
   "gioco9": {
     "combinazione": [
-      "nord",
-      "nord-est",
-      "est",
-      "nord-ovest",
-      "est",
-      "sud-ovest"
-    ],
-    "dataset": [
       "N",
       "NE",
       "E",
-      "SE",
-      "S",
-      "SO",
-      "O",
       "NO",
-      "X"
+      "E",
+      "SO"
     ],
     "tipo": "bussola",
     "durata": "15",

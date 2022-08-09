@@ -40,6 +40,7 @@ const rgbToHex = (rgb) => {
   return rgb2hex(rgb);
 }
 
+// sono usati valori Hex per il gioco9
 const paletteColors = {
   nero: '#000000',
   grigio: '#808080',
@@ -52,6 +53,7 @@ const paletteColors = {
   verde: '#008000'
 }
 
+// sono usate le chiavi (mostrate nei cubi) per il gioco9
 const directionsDataset = {
   'N': 'Nord',
   'S': 'Sud',
