@@ -150,16 +150,15 @@ function Dice({ data, caratteristiche, onend }) {
   function getCube(index) {
     return html`
       <${RollContainer}>
-        <${Cube} id=${`cube${index}`} isDisabled=${!counter}>
+        <${Cube} id=${`cube${index}`} isDisabled=${!counter}
+          onClick=${() => {
+            setCounter(counter - 1);
+            rollDice(index)
+          }} 
+        >
           ${getCubeFace()}
-          </ />
-          <${Button} isdisabled=${!counter} onClick=${() => {
-          setCounter(counter - 1);
-          rollDice(index)
-          }}
-            >Roll
-            </ />
-            </ />
+        </ />    
+      </ />
     `;
   }
 

@@ -13,6 +13,7 @@ export const Area1 = styled.div`
   height: 40vh;
   display: flex;
   flex-direction: column;
+  padding: 2vh;
   @media only screen and (orientation: landscape) {
     height: 90vh;
     width: 65vw;
@@ -21,7 +22,7 @@ export const Area1 = styled.div`
 
 export const DiceArea = styled.div`
   display: flex;
-  height: 30vh;
+  height: 25vh;
   justify-content: space-between;
   @media only screen and (orientation: landscape) {
     height: 75vh;
@@ -80,7 +81,6 @@ const Face = styled.div`
   position: absolute;
   width: ${l * 2}vw;
   height: ${l * 2}vw;
-  border: 4px solid white;
   background: black;
   opacity: 1;
   @media only screen and (orientation: landscape) {
@@ -153,7 +153,7 @@ export const Tentativi = styled.div`
 `;
 
 export const DiceRemaining = styled.div`
-  width: 10vw;
+  width: 7vw;
   margin: 0 1vw;
   @media only screen and (orientation: landscape) {
     width: 4vw;
@@ -171,8 +171,8 @@ export const Area2 = styled.div`
 `;
 
 export const Risultato = styled.div`
-  height: 25vh;
-  margin: 5vh;
+  height: 30vh;
+  margin: 2vh 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,7 +188,9 @@ export const Risultato = styled.div`
 
 
 export const Obiettivo = styled.div`
-  font-size: 1.5em;
+  font-size: 3em;
+  color: firebrick;
+  font-weight: 500;
 `;
 
 export const ActualResult = styled.div`

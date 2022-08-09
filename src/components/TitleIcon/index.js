@@ -77,32 +77,3 @@ function TitleIcon({ type }) {
 }
 
 export default TitleIcon;
-
-// // mancano le icone per, shoot,cassaforte
-// export default {
-//   caratteristiche: {
-//     corpo,
-//     mente,
-//     spirito,
-//     cuore,
-//   },
-//   dice: {
-//     dice,
-//     dice1,
-//     dice2,
-//     dice3,
-//     dice4,
-//     dice5,
-//     dice6,
-//   },
-//   gioco9: {
-//     listOrdered
-//   },
-//   nextCap,
-//   risposte: {
-//     directions
-//   },
-//   text: {
-//     question
-//   }
-// }

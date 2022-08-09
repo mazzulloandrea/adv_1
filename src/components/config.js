@@ -32,5 +32,5 @@ const initialcap = '_0';
 export {
   componentList,
   initialAbilita,
-  initialcap
+  initialcap,
 }

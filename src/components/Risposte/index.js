@@ -10,7 +10,6 @@ const Risposte = ({ data, caratteristiche, onend }) => {
   const [response, setResponse] = useState([]);
   
   useEffect(() => {
-    
     const filtered = data.filter((resp) => {
       // solo le risposte i cui oggetti sono nello zaino
       if(resp.checkZaino) {
@@ -23,6 +22,7 @@ const Risposte = ({ data, caratteristiche, onend }) => {
   const animationEnd = (el) => {
     el.target.classList.toggle(style.visible);
   }
+
   return html`
     <div class=${style.container}>
       ${response.map((el) => {

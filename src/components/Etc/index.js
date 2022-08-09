@@ -36,7 +36,6 @@ function Etc({ data, onend, orientation = 0 }) {
   }, []);
 
   useEffect(() => {
-    console.log('orientattion change', graphOrientation);
     if (chart) {
       chart.helpers.each(Chart.instances, function (instance) {
         // If the responsive flag is set in the chart instance config
@@ -50,7 +49,6 @@ function Etc({ data, onend, orientation = 0 }) {
 
   useEffect(() => {
     if (animationEnd && chartData.peaks !== undefined) {
-      console.log(`vediamo se ho vinto - picchi = ${chartData.peaks}, userClickedCounter =${userClickedCounter}`);
       if (chartData.peaks === userClickedCounter) {
         setSuccess(successList.concat(true));
       } else {

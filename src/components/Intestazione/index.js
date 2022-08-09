@@ -33,7 +33,6 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
   };
 
   function getVita() {
-    console.log(abilita, initialAbilita);
     const total = new Array(initialAbilita.vita).fill(0);
     const vitaActual = new Array(vita).fill(0);
     return html`

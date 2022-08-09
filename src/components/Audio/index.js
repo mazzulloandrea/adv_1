@@ -6,7 +6,6 @@ import style from './style.css';
 function Audio({ data, onend, orientation }) {
   const [play, setPlay] = useState(false);
   useEffect(() => {
-    console.log('orientation', orientation);
     return () => {
       // animation to slide off
       const player = document.getElementById("player");
@@ -32,9 +31,9 @@ function Audio({ data, onend, orientation }) {
 
   return html`
     <div>
-      <div id="player" class=${style.circle} onclick=${()=> managePlayer()} >
+      <div id="player" class=${style.circle} onclick=${() => managePlayer()} >
         <div id="stoppable" class=${play ? style.bars : style.triangle} />
-        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
+        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
           <!-- <source src=${data.src} type="audio/mp3" /> -->

@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
-import { initialcap, initialAbilita } from '../config';
+import { initialcap, initialAbilita, tutorialConfig } from '../config';
 import Storia from '/datamodel';
 import Intestazione from '../Intestazione';
 import Audio from '../Audio';
@@ -37,6 +37,7 @@ const Layout = () => {
       }
     })
   }, []);
+/*
 
   useEffect(() => {
     // console.log('orientation effect', orientation)
@@ -59,6 +60,12 @@ const Layout = () => {
     // console.log(abilita);
   }, [abilita]);
 
+  useEffect(() => {
+    // console.log('tutorial', tutorial)
+  }, [tutorial]);
+
+  */
+ 
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
     if (actualCap.morte) {
@@ -89,7 +96,6 @@ const Layout = () => {
   }
 
   const onGameEnd = (nextCap, feedback) => {
-    console.log('actual cap ', nextCap);
     toggleTransition("audio", nextCap, feedback);
   };
 
@@ -116,6 +122,7 @@ const Layout = () => {
     // console.log('transition end quella barre blu');
   }
 
+  
   const whichComponent = () => {
     const actualCap = story[actual.cap];
     console.log(`
@@ -123,32 +130,36 @@ const Layout = () => {
       component = ${actualComponent}
       abilita = ${JSON.stringify(abilita)}
     `);
+    
     const data = actualCap[actualComponent];
     if(abilita && abilita.vita === 0) {
       return html`<${Morte} />`;
     }
+    const componentProps = {
+      data,
+      onend: (nextCap, feedback) => onGameEnd(nextCap, feedback),
+      orientation,
+      caratteristiche: abilita,
+    }
     switch (actualComponent) {
       case "audio":
-        return html`<${Audio} data=${data} onend=${()=> onEndAudio()} orientation=${orientation} />`;
+        return html`<${Audio} ...${componentProps} onend=${()=> onEndAudio()} />`;
       case "risposte":
-        return html`<${Risposte} data=${data} caratteristiche=${abilita} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
-  nextCap, newAbilita, zaino)}
-  />`;
+        return html`<${Risposte} ...${componentProps} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
+          nextCap, newAbilita, zaino)}
+          />`;
       case "etc":
-        return html`<${Etc} data=${data} onend=${(nextCap, feedback) => onGameEnd(nextCap, feedback)}
-  orientation=${orientation} />`;
+        return html`<${Etc} ...${componentProps} />`;
       case "shoot":
-        return html`<${Shoot} data=${data} onend=${(nextCap,feedback)=> onGameEnd(nextCap,feedback)} />`;
+        return html`<${Shoot} ...${componentProps} />`;
       case "cassaforte":
-        return html`<${Cassaforte} data=${data} onend=${(nextCap,feedback)=> onGameEnd(nextCap,feedback)}
-  />`;
+        return html`<${Cassaforte} ...${componentProps} />`;
       case "text":
-        return html`<${Text} data=${data} onend=${(nextCap,feedback)=> onGameEnd(nextCap,feedback)} />`;
+        return html`<${Text} ...${componentProps} />`;
       case 'gioco9':
-        return html`<${Gioco9} data=${data} onend=${(nextCap,feedback)=> onGameEnd(nextCap,feedback)} />`;
+        return html`<${Gioco9} ...${componentProps} />`;
       case "dice":
-        return html`<${Dice} data=${data} caratteristiche=${abilita} onend=${(nextCap,feedback) =>
-        onGameEnd(nextCap, feedback)} />`;
+        return html`<${Dice} ...${componentProps} />`;
       case 'ferita':
         return html`<${Ferita} onend=${() => decrementVita()} />`;
       default:
