@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Il Bosco",
+  "titolo": "La stalla",
   "frase": `
     Gli animali stanno riposando ed il tuo ingresso, per quanto silenzioso, potrebbe disturbarli.
     In fondo alla stalla c'è una razione d'acqua e del cibo che puoi provare a prendere.

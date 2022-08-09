@@ -1,7 +1,8 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
-import Storia from '/datamodel/index.js';
+import { initialcap, initialAbilita } from '../config';
+import Storia from '/datamodel';
 import Intestazione from '../Intestazione';
 import Audio from '../Audio';
 import Etc from '../Etc';
@@ -15,41 +16,8 @@ import Intro from '../Intro';
 import Ferita from '../Ferita'
 import Morte from '../Morte'; 
 import animation from './animation.css';
-// import TitleIcon from '../TitleIcon'
-// import IR from '../../assets/icons/risposte/directions.svg';
 import style from './style.css';
 
-
-const config = {
-  "audio": 0,
-  "risposte": 1,
-  "etc": 2,
-  "shoot": 3,
-  "cassaforte": 4,
-  "text": 5,
-  "quiz": 6,
-  "gioco9": 7,
-  "dice": 8,
-}
-
-/**
- * Il flusso base prevede
- * Audio -> risposte || gioco
- * Risposte -> transizione a 3 finestre
- * Transizione -> setActualComponent(gioco)
- * Wich gioco -> carica componente e gioca
- * gioca -> onend
- * onend -> onGameEnd = (newCap) (setta capitolo nuovo), setActualComponent(audio)
- * inizia audio newCap
- * 
- */
-
-const initialAbilita = {
-  corpo: 0, mente: 0, spirito: 0, vita: 4,
-  zaino: []
-}
-const initialcap = '_0';
-// const initialcap = 'cap1';
 
 const Layout = () => {
   const [story, setStory] = useState(Storia);
@@ -93,7 +61,9 @@ const Layout = () => {
 
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
-    if (actualCap.risposte) {
+    if (actualCap.morte) {
+      setAbilita(Object.assign({ ...abilita }, { vita: 0 }));
+    } else if (actualCap.risposte) {
       setActualComponent("risposte");
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
@@ -114,7 +84,7 @@ const Layout = () => {
     toggleTransition(gioco, nextCap);
   }
 
-  const decrementVita = (gioco, nextCap) => {
+  const decrementVita = () => {
     setAbilita(Object.assign({ ...abilita }, { vita: abilita.vita - 1 }));
   }
 
@@ -125,10 +95,9 @@ const Layout = () => {
 
   const toggleTransition = (gioco = "audio", nextCap, feedback) => {
     setActualComponent(null);
-    if(feedback === false) {
+    if (feedback === false) {
       setActualComponent('ferita');
-    }    
-    else {
+    } else {
       document.getElementById("2").style.left = '33.3vw';
       document.getElementById("3").style.left = '66.6vw';
       document.getElementById('overlay').classList.toggle(animation.show);
@@ -159,8 +128,6 @@ const Layout = () => {
       return html`<${Morte} />`;
     }
     switch (actualComponent) {
-      // case "morte":
-      //   return html`<${Morte} />`;
       case "audio":
         return html`<${Audio} data=${data} onend=${()=> onEndAudio()} orientation=${orientation} />`;
       case "risposte":
@@ -195,7 +162,7 @@ const Layout = () => {
       <div id="2" class=${animation.bar} />
       <div id="3" class=${animation.bar} />
       ${actual && html`
-      <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo} actualComponent=${actualComponent} />
+      <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo || ''} actualComponent=${actualComponent} />
       `}
       ${!actual
           ? html`<${Intro} onend=${() => {

@@ -32,20 +32,35 @@ import cap26 from './cap26.js';
 
 // falegnameria
 import cap30 from './cap30.js';
+import cap31 from './cap31.js';
+import cap32 from './cap32.js';
+import cap33 from './cap33.js';
+import cap34 from './cap34.js';
+import cap35 from './cap35.js';
+import cap36 from './cap36.js';
 
+// stalla
+import cap40 from './cap40.js';
+import cap41 from './cap41.js';
+import cap42 from './cap42.js';
 
+// bosco
+import cap50 from './cap50.js'; // bosco da solo
+import cap51 from './cap51.js'; // bosco in 2 51-53
 
 // checkpoint part1 
 // incontri Aaron 26
 
 
 
-// capitoli con bonus 0, 19, 25, 34,
+// capitoli con bonus 0, 19, 25, 34, 50,
 
-// capitoli finali par1 7, 20, 32, 36, 42
+// capitoli finali par1 7, 20, 32, 36, 42, 64, 65
 // capitoli finali par2
 // finale 1
 // finale 2
+
+// morte 90
 
 export default {
   _0,
@@ -75,5 +90,15 @@ export default {
   cap25,
   cap26,
   cap30,
-
+  cap31,
+  cap32,
+  cap33,
+  cap34,
+  cap35,
+  cap36,
+  cap40,
+  cap41,
+  cap42,
+  cap50,
+  cap51,
 }

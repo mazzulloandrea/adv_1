@@ -7,15 +7,31 @@ export default {
     Vi addestreranno a suon di calci e pugni e se non ce la farete.. bhe vi lasceranno morire."
     Lui ce l'aveva fatta ed era tornato con tanto di armi, armatura, distintivo e cattiveria ... 
     no quella probabilmente l'ha sempre avuta!
+
+    Entri nel bosco buio.
   `,
   "audio": {
-    "src": "/assets/audio/cap30.mp3", // stesso audio del 30
+    "src": "/assets/audio/cap50.mp3",
     "interrompe": ""
   },
   "risposte": [
     {
-      "frase": "Entri nel bosco buoi",
-      "next": "cap51"
+      "frase": "Corpo",
+      "abilita": "corpo",
+      "next": "cap52",
+      "icon": "corpo"
+    },
+    {
+      "frase": "Mente",
+      "abilita": "mente",
+      "next": "cap52",
+      "icon": "mente"
+    },
+    {
+      "frase": "Spirito",
+      "abilita": "spirito",
+      "next": "cap52",
+      "icon": "spirito"
     }
-  ]
+  ],
 }

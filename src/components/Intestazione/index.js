@@ -1,5 +1,7 @@
 import { html } from 'htm/preact';
 import Cuore from '../../assets/icons/caratteristiche/cuore.svg';
+import Spezzato from '../../assets/icons/ferite/heartCrash.svg';
+import { initialAbilita } from '../config';
 import TitleIcon from '../TitleIcon';
 import { Header, Abilita, AbilitaIconContainer, Caratteristica, Title, IconContainer, Zaino, Cuori, AbilitaContainer } from './styled.js';
 
@@ -31,13 +33,18 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
   };
 
   function getVita() {
-    const cuori = new Array(vita).fill(0);
+    console.log(abilita, initialAbilita);
+    const total = new Array(initialAbilita.vita).fill(0);
+    const vitaActual = new Array(vita).fill(0);
     return html`
     <${Cuori}>
-      ${cuori.map(c => html`
-      <${Cuore} />`)}
+      ${vitaActual.map(c => html`
+      <${Cuore} />
+      `)}
+      ${total.slice(vitaActual.length).map(c => html`
+      <${Spezzato} />
+      `)}
       </ />
-      
     `;
   }
 

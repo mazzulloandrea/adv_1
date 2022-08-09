@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Resa",
+  "titolo": "Cattura",
   "frase": `
     Svoltato l'angolo con il mulino, ti ritrovi davanti Denred con 2 soldati "Eccolo è lui".
     Tuo fratellastro sta aiutando i soldati e questa 

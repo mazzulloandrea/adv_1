@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Il Bosco",
+  "titolo": "Cattura",
   "frase": `
     Gli animali anzichè calmarsi si agitano ed iniziano a fare troppo rumore.
     Immediatamente attirano la'ttenzione dei soldati e mentre provi a scappare verso il bosco ti si para davanti 
