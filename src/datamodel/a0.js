@@ -37,7 +37,7 @@ export default {
         "carcadaena"
       ],
       [
-        "Denred"
+        "denred"
       ],
       [
         "14"

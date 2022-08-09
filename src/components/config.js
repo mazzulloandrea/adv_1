@@ -27,8 +27,8 @@ const initialAbilita = {
   zaino: []
 }
 
-// const initialcap = '_0';
-const initialcap = 'cap14';
+const initialcap = '_0';
+// const initialcap = 'cap7';
 
 export {
   componentList,

@@ -62,6 +62,9 @@ import cap72 from './cap72.js';
 
 import cap90 from './cap90.js';
 
+import cap102 from './cap102.js';
+import cap103 from './cap103.js';
+
 // checkpoint part1 
 // incontri Aaron 26
 
@@ -132,5 +135,7 @@ export default {
 
 
 
-  cap90
+  cap90,
+  cap102,
+  cap103,
 }
