@@ -6,7 +6,7 @@ export default {
     Dopo qualche minuto non sei più sicuro della direzione corretta, forse ti sei perso ed inizia davvero a fare freddo.
   `,
   "audio": {
-    "src": "/assets/audio/cap56.mp3",
+    "src": "/assets/audio/cap60.mp3",
     "interrompe": ""
   },
   "gioco": "gioco9",

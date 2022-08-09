@@ -1,8 +1,7 @@
 export default {
   "titolo": "Il Bosco",
   "frase": `
-    Finalmente la bestia si allontana e quando hai modo di riprenderti ti accorgi che Aaron è scappato per la paura.
-    Raggiungi da solo la capanna abbandonata consapevole che sarà questo il luogo dove passerai questa notte.
+    Raggiungi la capanna abbandonata consapevole che sarà questo il luogo dove passerai questa notte.
 
     Ti sistemi alla meglio e cerchi di resistere al freddo finchè puoi 
     ma alla fine la stanchezza vince e ti addormenti.

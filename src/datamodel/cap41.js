@@ -1,7 +1,7 @@
 export default {
   "titolo": "La stalla",
   "frase": `
-    Riesci a calmare gli animi degli animali e raggiungere il tuo obiettivo.
+    Riesci a calmare gli animi degli animali e a raggiungere il tuo obiettivo.
     Mentre stai per raccoglierlo senti i rumori dei soldati.
   `,
   "audio": {

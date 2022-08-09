@@ -1,13 +1,21 @@
 export default {
   "titolo": "Il Bosco",
   "frase": `
-    Hai un freddo pazzesco e tra mille difficoltà ti addormenti.
+    Hai un freddo pazzesco, cerchi di rimanere sveglio ma alla fine ti addormenti.
     Ti risvegli al mattino da uno scossone: tuo fratellastro Denred insieme ad un soldato ti hanno trovato.
+    
+    I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
+    4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
+    Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".
+    Nella notte, tra le lamentele ed i pianti delle madri, 
+    il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale"
+    e che tra 1 anno, finito l'addestramente, ritorneremo a casa.
 
-    --copia dal cap7--
+    Sai bene che pochissimi sono ritornati... 
+    e tuo fratellastro è uno di questi.
   `,
   "audio": {
-    "src": "/assets/audio/cap64.mp3",
+    "src": "/assets/audio/cap65.mp3",
     "interrompe": ""
   },
   "risposte": [

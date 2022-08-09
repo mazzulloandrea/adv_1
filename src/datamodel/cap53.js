@@ -1,12 +1,12 @@
 export default {
   "titolo": "Il Bosco",
   "frase": `
-    Mancano pochi minutiper arrivarfe alla capanna ma un rumore vi mette in allarme
+    Mancano pochi minuti per arrivare alla capanna ma un rumore vi mette in allarme
 
     -- rumore di boar -----
   `,
   "audio": {
-    "src": "/assets/audio/cap53.mp3",
+    "src": "/assets/audio/cap53.mp3", // aggiungere rumore di cingiale
     "interrompe": ""
   },
   "risposte": [

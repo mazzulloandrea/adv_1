@@ -132,8 +132,20 @@ const Layout = () => {
     `);
     
     const data = actualCap[actualComponent];
-    if(abilita && abilita.vita === 0) {
+    if (abilita && abilita.vita === 0) {
       return html`<${Morte} />`;
+    }
+    // rimuovere quando i capitoli saranno tutti
+    // WIP
+    if (actualCap.wip) {
+      return html`
+        <div class=${style.wip}>
+          Work
+          In
+          Progress
+          ...
+        <//>
+      `;
     }
     const componentProps = {
       data,

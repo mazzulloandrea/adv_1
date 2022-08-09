@@ -11,7 +11,7 @@ export default {
     Entri nel bosco buio.
   `,
   "audio": {
-    "src": "/assets/audio/cap50.mp3",
+    "src": "/assets/audio/cap50.mp3", // da copiare dal cap10
     "interrompe": ""
   },
   "risposte": [

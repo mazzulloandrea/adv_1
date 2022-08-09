@@ -4,10 +4,21 @@ export default {
     Esci di nascosto e facendo il giro largo ti dirigi verso la stalla.
     Svoltato l'angolo vai sbattere contro qualcosa.
     "Eccolo è qui" quel bastardo di tuo fratello sta aiutando i soldati .
-    ...
+    
+
+    I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
+    4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
+    Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".
+    Nella notte, tra le lamentele ed i pianti delle madri, 
+    il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale"
+    e che tra 1 anno, finito l'addestramente, ritorneremo a casa.
+
+    Sai bene che pochissimi sono ritornati... 
+    e tuo fratellastro è uno di questi.
+
   `,
   "audio": {
-    "src": "/assets/audio/cap32.mp3", // copia dal capitolo 7
+    "src": "/assets/audio/cap32.mp3",
     "interrompe": ""
   },
   "risposte": [

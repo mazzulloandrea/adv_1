@@ -2,10 +2,10 @@ export default {
   "titolo": "Falegnameria",
   "frase": `
     La mano del soldato passa a pochi centimetri da te... e ti afferra per il vestito.
-    "Pensavi di scappare? L'ho preso!" grida ed immediatamente entrano in falegnameria l'altra guardia e tuo fratellastro Denred.
-
+    "Pensavi di scappare? L'ho preso!" 
+    grida ed immediatamente entrano in falegnameria l'altra guardia e tuo fratellastro Denred.
     Il bastardo li sta aiutando.
-    "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
+
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
     4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".

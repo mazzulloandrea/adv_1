@@ -47,11 +47,23 @@ import cap42 from './cap42.js';
 // bosco
 import cap50 from './cap50.js'; // bosco da solo
 import cap51 from './cap51.js'; // bosco in 2 51-53
+import cap52 from './cap52.js';
+import cap53 from './cap53.js';
+import cap56 from './cap56.js';
+import cap57 from './cap57.js';
+import cap60 from './cap60.js';
+import cap61 from './cap61.js';
+import cap62 from './cap62.js';
+import cap64 from './cap64.js';
+import cap65 from './cap65.js';
+import cap70 from './cap70.js';
+import cap71 from './cap71.js';
+import cap72 from './cap72.js';
+
+import cap90 from './cap90.js';
 
 // checkpoint part1 
 // incontri Aaron 26
-
-
 
 // capitoli con bonus 0, 19, 25, 34, 50,
 
@@ -101,4 +113,24 @@ export default {
   cap42,
   cap50,
   cap51,
+  cap52,
+  cap53,
+  cap56,
+  cap57,
+  cap60,
+  cap61,
+  cap62,
+  cap64,
+  cap65,
+  cap70,
+  cap71,
+  cap72,
+
+
+
+
+
+
+
+  cap90
 }

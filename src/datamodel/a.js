@@ -19,5 +19,5 @@ export default {
     "obiettivo": 14,
     "abilita": ["corpo", "mente", "spirito"],
     "lanci": 6
-  }
+  },
 }

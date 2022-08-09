@@ -2,7 +2,7 @@ export default {
   "titolo": "Falegnameria",
   "frase": `
     Rumori improvvisi all'esterno ti fanno sobbalzare; 
-    vedi le fiaccoli di 2 soldati all'incrocio che probabilmente stanno decidendo cosa fare.
+    vedi le fiaccoli di 2 soldati fermi all'incrocio che probabilmente stanno decidendo cosa fare.
   `,
   "audio": {
     "src": "/assets/audio/cap31.mp3",

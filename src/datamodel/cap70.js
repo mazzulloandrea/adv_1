@@ -1,7 +1,7 @@
 export default {
   "titolo": "Il Bosco",
   "frase": `
-    Dopo qualche minuto raggiungi il fiume, oltre il quale ci sono gli alberi.
+    Dopo qualche minuto raggiungi il fiume, oltre il quale c'è la rete di ponti sugli alberi.
     E' molto buoi e guadare il fiume potrebbe essere pericoloso.
   `,
   "audio": {

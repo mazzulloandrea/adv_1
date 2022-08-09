@@ -1,10 +1,14 @@
 export default {
   "titolo": "Falegnameria",
   "frase": `
-    La mano del soldato passa a pochi centimetri da te...
+    La mano del soldato passa a pochi centimetri da te... 
     "Qui non c'è! Sarà scappato nella stalla!"
     con gran rumore esce dalla porta principale e ti lascia solo nell'oscurità
   `,
+  "audio": {
+    "src": "/assets/audio/cap34.mp3",
+    "interrompe": ""
+  },
   "risposte": [
     {
       "frase": "Corpo",

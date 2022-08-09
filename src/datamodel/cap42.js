@@ -6,7 +6,6 @@ export default {
     tuo fratellastro Denred che ti afferra per il vestito "Preso"
     Il bastardo sta aiutando le guardie
 
-    "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
     4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".
@@ -19,7 +18,7 @@ export default {
   `,
 
   "audio": {
-    "src": "/assets/audio/cap42.mp3", // copia dal cap7
+    "src": "/assets/audio/cap42.mp3",
     "interrompe": "",
   },
   "risposte": [
