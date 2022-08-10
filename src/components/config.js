@@ -28,7 +28,7 @@ const initialAbilita = {
 }
 
 const initialcap = '_0';
-// const initialcap = 'cap1';
+// const initialcap = 'cap24';
 
 export {
   componentList,

@@ -29,6 +29,7 @@ import cap21 from './cap21.js';
 import cap24 from './cap24.js';
 import cap25 from './cap25.js';
 import cap26 from './cap26.js';
+import cap27 from './cap27.js';
 
 // falegnameria
 import cap30 from './cap30.js';
@@ -104,6 +105,7 @@ export default {
   cap24,
   cap25,
   cap26,
+  cap27,
   cap30,
   cap31,
   cap32,
