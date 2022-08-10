@@ -22,13 +22,12 @@
 
 .salta {
   position: absolute;
-  top: 10vw;
+  top: 20vw;
   right: 10vw;
-  width: 10vw;
-  height: 10vw;
+  width: 15vw;
+  height: 15vw;
   border-radius: 50%;
-  background-color: lightsalmon;
-
+  background-color: greenyellow;
 }
 
 @media only screen and (orientation: landscape) {

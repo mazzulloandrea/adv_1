@@ -13,7 +13,7 @@ export default {
   },
   "risposte": [
     {
-      "frase": "Alla falegnameria troverai qualcosa la notte",
+      "frase": "Alla falegnameria troverai attrezzi utili",
       "next": "cap30",
     },
     {

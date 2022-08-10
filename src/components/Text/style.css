@@ -32,11 +32,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10vh;
 }
 
 .pin {
   display: block;
-  margin: 1em auto;
+  margin-top: 10vh;
   border: none;
   padding: 0;
   width: 16ch;

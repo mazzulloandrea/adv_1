@@ -149,7 +149,6 @@ function Etc({ data, onend, orientation = 0 }) {
   return html`
     <div>
       <div class=${style.header}>
-        <div class=${style.spiega}>Premi sul cuore come indicato dal grafico</div>
         <div class=${style.pulseContainer}>          
           <div class=${style.heartContainer}
             onclick=${(evt)=> {

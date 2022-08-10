@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 :root {
-  --glass-color: #919EB3;
-  --frame-color: #C19875;
-  --sand-color: #EDD0AA;
+  /* --glass-color: #919EB3; */
+  /* --frame-color: #C19875; */
+  /* --sand-color: #EDD0AA; */
 }
 
 @keyframes fillbar {

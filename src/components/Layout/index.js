@@ -14,7 +14,8 @@ import Gioco9 from '../Gioco9';
 import Dice from '../Dice';
 import Intro from '../Intro';
 import Ferita from '../Ferita'
-import Morte from '../Morte'; 
+import Morte from '../Morte';
+import Tutorial from '../Tutorial';
 import animation from './animation.css';
 import style from './style.css';
 
@@ -26,6 +27,7 @@ const Layout = () => {
   const [actualComponent, setActualComponent] = useState(""); //useState("audio");
   const [orientation, setOrientation] = useState(0);
   const [abilita, setAbilita] = useState(initialAbilita);
+  const [tutorials, setTutorials] = useState(tutorialConfig);
 
   useEffect(() => {
     window.addEventListener('orientationchange', (evt) => {
@@ -37,35 +39,39 @@ const Layout = () => {
       }
     })
   }, []);
-/*
 
-  useEffect(() => {
-    // console.log('orientation effect', orientation)
-  }, [orientation]);
+  /*
+  
+    useEffect(() => {
+      // console.log('orientation effect', orientation)
+    }, [orientation]);
+  
+    useEffect(() => {
+      // console.log('story', story)
+    }, [story]);
+  
+    useEffect(() => {
+      // change paragraph
+      // !!!salvare nello storage ogni volta
+    }, [actual]);
+  
+    useEffect(() => {
+      // animazione // suoni etc feedback!!
+    }, [actualComponent]);
+  
+    useEffect(() => {
+      // console.log(abilita);
+    }, [abilita]);
+  
+    useEffect(() => {
+      // console.log('tutorial', tutorial)
+    }, [tutorial]);
+    
+    useEffect(() => {  }, [tutorials]);
+  
+    */
 
-  useEffect(() => {
-    // console.log('story', story)
-  }, [story]);
 
-  useEffect(() => {
-    // change paragraph
-    // !!!salvare nello storage ogni volta
-  }, [actual]);
-
-  useEffect(() => {
-    // animazione // suoni etc feedback!!
-  }, [actualComponent]);
-
-  useEffect(() => {
-    // console.log(abilita);
-  }, [abilita]);
-
-  useEffect(() => {
-    // console.log('tutorial', tutorial)
-  }, [tutorial]);
-
-  */
- 
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
     if (actualCap.morte) {
@@ -122,7 +128,6 @@ const Layout = () => {
     // console.log('transition end quella barre blu');
   }
 
-  
   const whichComponent = () => {
     const actualCap = story[actual.cap];
     console.log(`
@@ -130,7 +135,7 @@ const Layout = () => {
       component = ${actualComponent}
       abilita = ${JSON.stringify(abilita)}
     `);
-    
+
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita === 0) {
       return html`<${Morte} />`;
@@ -144,7 +149,7 @@ const Layout = () => {
           In
           Progress
           ...
-        <//>
+          </ />
       `;
     }
     const componentProps = {
@@ -153,19 +158,16 @@ const Layout = () => {
       orientation,
       caratteristiche: abilita,
     }
+
     switch (actualComponent) {
       case "audio":
         return html`<${Audio} ...${componentProps} onend=${()=> onEndAudio()} />`;
       case "risposte":
         return html`<${Risposte} ...${componentProps} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
           nextCap, newAbilita, zaino)}
-          />`;
+  />`;
       case "etc":
         return html`<${Etc} ...${componentProps} />`;
-      case "shoot":
-        return html`<${Shoot} ...${componentProps} />`;
-      case "cassaforte":
-        return html`<${Cassaforte} ...${componentProps} />`;
       case "text":
         return html`<${Text} ...${componentProps} />`;
       case 'gioco9':
@@ -174,9 +176,38 @@ const Layout = () => {
         return html`<${Dice} ...${componentProps} />`;
       case 'ferita':
         return html`<${Ferita} onend=${() => decrementVita()} />`;
+
+      case "shoot":// not used now
+        return html`<${Shoot} ...${componentProps} />`;
+      case "cassaforte":// not used now
+        return html`<${Cassaforte} ...${componentProps} />`;
+
       default:
         return;
     }
+  }
+
+  const getComponent = () => {
+    if (!actual) {
+      return html`<${Intro} onend=${() => {
+        setActual({ cap: initialcap });
+        setActualComponent('risposte');
+      }} />`
+    }
+    if (tutorials && tutorials[actualComponent] && tutorials[actualComponent].active) {
+      return html`
+        <${Tutorial} type=${actualComponent} dismiss=${() => {
+            delete tutorials[actualComponent];
+            setTutorials(Object.assign({}, tutorials));
+          }}
+        />
+      `
+    }
+    return html`
+      <div class=${style.wrapper}>
+        ${whichComponent()}
+      </div>
+    `
   }
 
   return html`
@@ -187,16 +218,7 @@ const Layout = () => {
       ${actual && html`
       <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo || ''} actualComponent=${actualComponent} />
       `}
-      ${!actual
-          ? html`<${Intro} onend=${() => {
-            setActual({ cap: initialcap });
-            setActualComponent('risposte');
-          }} />`
-          : html`<div class=${style.wrapper}>
-              ${whichComponent()}
-        </div>`
-      }
+      ${getComponent()}
     </div>`;
 }
-
 export default Layout;

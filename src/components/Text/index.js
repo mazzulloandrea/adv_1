@@ -4,6 +4,7 @@ import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import Clessidra from '../Clessidra/index';
 import style from './style.css';
+import { Prosegui } from '../Dice/styled';
 import blurStyle from './blurStyle.css';
 
 function Text({ data, onend }) {
@@ -26,7 +27,7 @@ function Text({ data, onend }) {
   }, [risposta]);
 
   useEffect(() => {
-    if (!viewSand) verifica();
+    // if (!viewSand) verifica();
   }, [viewSand]);
 
   const verifica = () => {
@@ -45,13 +46,16 @@ function Text({ data, onend }) {
         ${image && html`
         <div class=${blurStyle.focus}>
           <div class=${blurStyle.focusMask}>
-            <div class=${blurStyle.focusMaskInner}><img src=${image} /></div>
+            <div class=${blurStyle.focusMaskInner}>
+              <img src=${image} />
+            </div>
           </div>
         </div>
         `}
         <div class=${style.responseContainer}>
           <input value=${risposta} class=${style.pin} maxlength="10" oninput=${(evt)=> setRisposta(evt.target.value)} />
         </div>
+        <${Prosegui} onClick=${()=> verifica()}>Conferma</ />
     </div>
   `
 }

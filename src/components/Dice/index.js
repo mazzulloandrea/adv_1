@@ -192,6 +192,9 @@ function Dice({ data, caratteristiche, onend }) {
   return html`
     <${Page}>
       <${Area1}>
+        <${Tentativi}>
+          Lanci rimasti ${getRemainingDice()}
+        <//>
         <${DiceArea}>
           <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
             <${Type}>Corpo<//>
@@ -209,16 +212,14 @@ function Dice({ data, caratteristiche, onend }) {
             <${Scene}>${getCube(3)}<//>
           <//>
         <//>
-        <${Tentativi}>
-          Lanci rimasti ${getRemainingDice()}
-        <//>
       <//>
       <${Area2}>
         <${Risultato}>
-          <${Obiettivo}>Supera ${obiettivo}<//>
+          <span>Totale</span>
           <${ActualResult}>
             ${getResult()}
           <//>
+          <${Obiettivo} valid=${getResult() > obiettivo}>Supera ${obiettivo}<//>
         <//>
         <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>
       <//>

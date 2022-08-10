@@ -1,0 +1,47 @@
+@keyframes fromleft {
+  0% {
+    margin-left: -100vw;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes toleft {
+  0% {
+    margin-left: 0vw;
+  }
+
+  100% {
+    margin-left: -100vw;
+  }
+}
+
+.wrapper {
+  height: 90vh;
+  width: 100vw;
+  margin-top: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.text {
+  height: 90vh;
+  width: 100vw;
+  padding: 20vh 10vw;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin-left: -100vw;
+  animation: 1s fromleft;
+}
+
+.hide {
+  animation: 0.4s toleft;
+}
