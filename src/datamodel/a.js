@@ -12,10 +12,6 @@ export default {
       "frase": "Spacchi la legna pensando a Denred",
       "gioco": "dice",
     },
-    {
-      "frase": "Torni alla fattoria",
-      "next": "cap1",
-    },
   ],
   "dice": {
     "successo": "a0",
