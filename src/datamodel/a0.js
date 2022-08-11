@@ -29,8 +29,8 @@ export default {
     ],
     "risposte": [
       [
-        "Pantelion",
-        "Phantelion"
+        "pantelion",
+        "phantelion"
       ],
       [
         "carcadena",

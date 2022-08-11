@@ -28,15 +28,15 @@ export default {
     ],
     "risposte": [
       [
-        "Pantelion",
-        "Phantelion"
+        "pantelion",
+        "phantelion"
       ],
       [
         "carcadena",
         "carcadaena"
       ],
       [
-        "Denred"
+        "denred"
       ],
       [
         "14"
