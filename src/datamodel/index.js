@@ -60,7 +60,7 @@ import cap65 from './cap65.js';
 import cap70 from './cap70.js';
 import cap71 from './cap71.js';
 import cap72 from './cap72.js';
-
+import cap80 from './cap80.js';
 import cap90 from './cap90.js';
 
 import cap102 from './cap102.js';
@@ -130,7 +130,7 @@ export default {
   cap70,
   cap71,
   cap72,
-
+  cap80,
 
 
 

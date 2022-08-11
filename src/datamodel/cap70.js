@@ -26,8 +26,8 @@ export default {
   dice: {
     "successo": "cap80",
     "fallimento": "cap72",
-    "obiettivo": 14, // numero da raggiungere con il lancio dei dadi
-    "abilita": ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    "lanci": 6 // quanti lanci col dado
+    "obiettivo": 11, // numero da raggiungere con il lancio dei dadi
+    "abilita": ["corpo", "mente",], // quelle che non si devono usare devono essere escluse
+    "lanci": 4 // quanti lanci col dado
   }
 }

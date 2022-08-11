@@ -1,6 +1,9 @@
 export default {
   "titolo": "Il Bosco",
   "frase": `
+    Superi il fiume ma quando sei dall'altra parte non sei più convinto di aver fatto la scelta giusta.
+    Un grosso cinghiale minaccioso punta verso di te e senza perdere tempo torni sui tuoi passi. 
+    
     Durante l'attraversmento scivoli e cadendo prendi un colpo così forte che gridi dal dolore.
     Inoltre sei tutto fradicio ed infreddolito.
 
