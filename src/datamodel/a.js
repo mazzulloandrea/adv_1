@@ -9,8 +9,12 @@ export default {
   },
   "risposte": [
     {
-      "frase": "Spacchi la legna pensando a Denred",
+      "frase": "Spacchi la legna infuriato con Denred",
       "gioco": "dice",
+    },
+    {
+      "frase": "Cerchi di calmarti",
+      "gioco": "etc",
     },
   ],
   "dice": {
@@ -19,5 +23,12 @@ export default {
     "obiettivo": 14,
     "abilita": ["corpo", "mente", "spirito"],
     "lanci": 6
+  },
+  "etc": {
+    "successo": "a0",
+    "fallimento": "a1",
+    "MaxCounter": 5,
+    "MaxPicchi": 3,
+    "durata": 5000
   },
 }

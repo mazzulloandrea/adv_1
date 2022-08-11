@@ -23,7 +23,6 @@ export default {
     },
     {
       "frase": "Se vuoi comunque andare verso la fattoria",
-      "gioco": "audio",
       "next": "cap7"
     }
   ],

@@ -13,6 +13,10 @@ export default {
     {
       "frase": "Dove sei sorella?",
       "gioco": "text"
+    },
+    {
+      "frase": "Carcadena, tutto bene?",
+      "gioco": "text"
     }
   ],
   "text": {

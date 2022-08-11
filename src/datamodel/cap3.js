@@ -40,7 +40,7 @@ export default {
     ],
     "tipo": "directions",
     "durata": "15",
-    "successo": "cap20",
-    "fallimento": "cap21"
+    "successo": "cap13",
+    "fallimento": "cap13"
   }
 }

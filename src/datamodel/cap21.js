@@ -8,5 +8,14 @@ export default {
     "src": "/assets/audio/cap21.mp3",
     "interrompe": "",
   },
-  "next": "cap13"
+  "risposte": [
+    {
+      "frase": "Corri avanti",
+      "next": "cap13"
+    },
+    {
+      "frase": "Torni indietro",
+      "next": "cap20"
+    },
+  ]
 }
