@@ -15,6 +15,10 @@ export default {
     {
       "frase": "Provi a divincolarti",
       "gioco": "dice",
+    },
+    {
+      "frase": "Ti arrendi",
+      "gioco": "cap27",
     }
   ],
   "dice": {

@@ -91,19 +91,24 @@ function Dice({ data, caratteristiche, onend }) {
     let randNum = getRandomInt(1, 7);
     let _cube;
     let rotationType = randNum;
+    let oldValue;
     if (whichCube === 1) {
+      oldValue = diceValue1;
       _cube = cube1;
       if (randNum === diceValue1) rotationType = 7;
       setDiceValue1(randNum);
     } else if (whichCube === 2) {
+      oldValue = diceValue1;
       _cube = cube2;
       if (randNum === diceValue2) rotationType = 7;
       setDiceValue2(randNum);
     } else {
+      oldValue = diceValue1;
       _cube = cube3;
       if (randNum === diceValue3) rotationType = 7;
       setDiceValue3(randNum);
     }
+    console.log('debug per HotFix stesso risultato di seguito');
     switch (rotationType) {
       case 1:
         _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg)`;
