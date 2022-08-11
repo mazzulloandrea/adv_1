@@ -49,7 +49,7 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
 
   function getZaino() {
     return html`
-      ${zaino.map(z => html`<div>${z.nome}</div>`)}
+      ${zaino.map(z => html`<div>${z}</div>`)}
     `
   }
 

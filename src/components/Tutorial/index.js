@@ -11,7 +11,8 @@ function Tutorial({ type, dismiss }) {
   return html`
     <div class=${style.wrapper}>
       <div class=${introStyle.salta} onClick=${() => {
-      console.log('clicked');
+      // console.log('clicked');
+      if(clicked) return;
       document.getElementById("animationWrapper").classList.toggle(style.hide);
       setClicked(true);
     }}>

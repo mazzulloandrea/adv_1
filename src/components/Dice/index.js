@@ -1,6 +1,7 @@
 import { Fragment, h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
+import TitleIcon from '../TitleIcon';
 import dice from '../../assets/icons/dice/dice.svg';
 import icon1 from '../../assets/icons/dice/dice1.svg';
 import icon2 from '../../assets/icons/dice/dice2.svg';
@@ -197,17 +198,20 @@ function Dice({ data, caratteristiche, onend }) {
         <//>
         <${DiceArea}>
           <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
-            <${Type}>Corpo<//>
+            <${Type}>Corpo <${TitleIcon} type=${"corpo"} /><//>
+            
             <${Bonus}>${corpo}<//>
             <${Scene}>${getCube(1)}<//>
           <//>
           <${AbilitaSection} disabled=${!abilita.includes('mente')}>
-            <${Type}>Mente<//>
+            <${Type}>Mente <${TitleIcon} type=${"mente"} /><//>
+            
             <${Bonus}>${mente}<//>
             <${Scene}>${getCube(2)}<//>
           <//>
           <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
-            <${Type}>Spirito<//>
+            <${Type}>Spirito <${TitleIcon} type=${"spirito"} /><//>
+            
             <${Bonus}>${spirito}<//>
             <${Scene}>${getCube(3)}<//>
           <//>

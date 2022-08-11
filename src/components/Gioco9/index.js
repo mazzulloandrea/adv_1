@@ -38,7 +38,7 @@ function Gioco9({ data, durata = 10, onend }) {
   const verify = () => {
     let result = false;
     result = combinazione.every((val, index) => {
-      if (!cubesClicked) return false;
+      if (!cubesClicked || !cubesClicked[index]) return false;
       if (type === 'directions') return val === cubesClicked[index].direction
       return paletteColors[val] === cubesClicked[index].palette; 
     });

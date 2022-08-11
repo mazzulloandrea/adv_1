@@ -38,7 +38,7 @@ export default {
       "E",
       "SO"
     ],
-    "tipo": "bussola",
+    "tipo": "directions",
     "durata": "15",
     "successo": "cap20",
     "fallimento": "cap21"

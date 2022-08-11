@@ -1,5 +1,5 @@
 export default {
-  "titolo": "Nel grano",
+  "titolo": "Scappare",
   "frase": `
     Correndo a più non posso arrivi all'ultimo crocevia prima del bosco;
     consapevole che sarà una notte abbastanza fredda vedi

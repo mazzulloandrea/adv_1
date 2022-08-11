@@ -43,7 +43,11 @@ export const Type = styled.div`
   @media only screen and (orientation: landscape) {
     width: 20vw;
   }
-
+  svg {
+    width: 4vw;
+    flex-direction: row;
+    margin-top: 1vh;
+  }
 `
 
 export const Bonus = styled(Type)``;

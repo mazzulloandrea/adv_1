@@ -63,7 +63,7 @@ const tutorialConfig = {
   },
   dice: {
     text: [
-      "Usa la Forza, la Mente e lo Spirito",
+      "Usa il Corpo, la Mente e lo Spirito",
       "Lancia i dadi per superare la difficoltà "
     ],
     active: true,

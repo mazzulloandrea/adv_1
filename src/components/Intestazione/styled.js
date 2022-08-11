@@ -58,6 +58,7 @@ export const Zaino = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-style: italic;
   > div {
     line-height: 2.5vh;
   }

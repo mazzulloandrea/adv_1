@@ -8,7 +8,7 @@ export default {
     la capanna abbandonata, la grotta oppure sugli alberi del fiume.
   `,
   "audio": {
-    "src": "/assets/audio/cap50.mp3",
+    "src": "/assets/audio/cap52.mp3",
     "interrompe": ""
   },
   "risposte": [

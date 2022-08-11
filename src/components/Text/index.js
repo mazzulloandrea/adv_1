@@ -27,7 +27,7 @@ function Text({ data, onend }) {
   }, [risposta]);
 
   useEffect(() => {
-    // if (!viewSand) verifica();
+    if (!viewSand) verifica();
   }, [viewSand]);
 
   const verifica = () => {
