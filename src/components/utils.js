@@ -76,6 +76,8 @@ const morteText = [
   "L'ultima immagine prima di morire è il segno a forma di falce"
 ]
 
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
 export {
   determinateVictory,
   shuffle,
@@ -83,4 +85,5 @@ export {
   paletteColors,
   directionsDataset,
   morteText,
+  alphabet
 };

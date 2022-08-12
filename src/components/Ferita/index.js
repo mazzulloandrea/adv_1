@@ -12,6 +12,7 @@ function Ferita({onend}) {
   useEffect(() => {
     document.getElementById('animContainer').classList.toggle(style.containerTilt);
   },[]);
+  
   return html`
     <div class=${style.wrapper}>
       <audio id="audio" autoplay >

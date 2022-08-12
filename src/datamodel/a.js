@@ -16,6 +16,10 @@ export default {
       "frase": "Cerchi di calmarti",
       "gioco": "etc",
     },
+    {
+      "frase": "gioco9",
+      "gioco": "gioco9"
+    }
   ],
   "dice": {
     "successo": "a0",
@@ -31,4 +35,12 @@ export default {
     "MaxPicchi": 3,
     "durata": 5000
   },
+  "gioco9": {
+    "successo": "a0",
+    "fallimento": "a1",
+    "durata": "10",
+    "combinazione": "denred",
+    "type": "domanda",
+    "domanda": "Come si chiama tuo fratello?"
+  }
 }

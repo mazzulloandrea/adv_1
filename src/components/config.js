@@ -1,5 +1,5 @@
-const initialcap = '_0';
-// const initialcap = 'cap24';
+// const initialcap = '_0';
+const initialcap = 'a';
 
 
 const componentList = {

@@ -118,7 +118,7 @@ export default {
       }
     ]
   },
-  "gioco9": {
+  "gioco9": {  // funziona solo con un dataset di massimo 9 elementi (parole di 9 caratteri)
     "successo": "3",
     "fallimento": "2",
     "durata": "10",
@@ -127,7 +127,8 @@ export default {
       "azzurro",
       "verde",
       "viola"
-    ],
-    "type": "directions" || "colors"
+    ] || "stringa se il type domanda",
+    "type": "directions" || "colors" || "domanda",
+    "domanda": "Come ti chiami?" //in caso di type domanda
   }
 }
