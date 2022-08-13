@@ -128,7 +128,7 @@ export default {
       "verde",
       "viola"
     ] || "stringa se il type domanda",
-    "type": "directions" || "colors" || "domanda",
+    "type": "directions" || "colors" || "domanda" || "memory",
     "domanda": "Come ti chiami?" //in caso di type domanda
   }
 }

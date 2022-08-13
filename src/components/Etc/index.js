@@ -14,7 +14,7 @@ import style from './style.css';
 function Etc({ data, onend, orientation = 0 }) {
   const { successo, fallimento, MaxCounter, MaxPicchi , durata} = data;
   const MaxPoint = 80;
-  const totalDuration = durata || 5000;
+  const totalDuration = durata * 1000;
   const delayBetweenPoints = (totalDuration / MaxPoint) * 0.5; //data.length;
   const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
 

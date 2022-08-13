@@ -1,3 +1,4 @@
+import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago } from '/assets/icons/memory'
 const determinateVictory = (successList) => {
   if (
     successList === 'undefined' ||
@@ -66,6 +67,8 @@ const directionsDataset = {
   'X': 'S.O.S.'
 }
 
+const svgSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago };
+
 const morteText = [
   "La tua vita e la tua missione finiscono qui",
   "E che dire, peccato...",
@@ -85,5 +88,6 @@ export {
   paletteColors,
   directionsDataset,
   morteText,
-  alphabet
+  alphabet,
+  svgSet
 };

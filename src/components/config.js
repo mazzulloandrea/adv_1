@@ -1,5 +1,5 @@
 // const initialcap = '_0';
-const initialcap = 'a';
+const initialcap = 'cap56';
 
 
 const componentList = {
@@ -49,8 +49,8 @@ const tutorialConfig = {
   },
   gioco9: {
     text: [
-      "Nord, Sud, Schiva, Colpisci, ...",
-      "Clicca sulle indicazioni che ti vengono mostrate"
+      "Segui le indicazioni che vengono mostrate",
+      "Al terzo errore hai fallito"
     ],
     active: true,
   },

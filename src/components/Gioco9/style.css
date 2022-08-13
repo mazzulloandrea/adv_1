@@ -119,18 +119,14 @@
 }
 
 .subHeader {
-  height: 12vh;
-  width: 85vw;
-  margin: 1vh 7.5vw 4vh;
+  height: 22vh;
+  width: 90vw;
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .combinazione {
@@ -150,6 +146,7 @@
 
 .domanda {
   font-size: 2em;
+  text-align: center;
 }
 
 .game {
@@ -163,6 +160,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2em;
+  border-radius: 10px;
 }
 
 .miniGameContainer {
@@ -217,4 +215,60 @@
 .containerTilt {
   animation-name: tilt;
   animation-duration: 400ms;
+}
+
+.svgIcon {
+  width: 10vh;
+  height: auto;
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.iconContainer {
+  /* height: 12vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.reduce {
+  transform: scale(0.5);
+  /* height: 12vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.containerCombinazioneErrori {
+  /* display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 22vh;
+  justify-content: center;
+  align-items: center; */
+}
+
+.errors {
+  /* display: flex;
+  justify-content: left;
+  height: 8vh; */
+}
+
+.errors>svg {
+  /* width: 6vh;
+  margin: 0 2vh; */
+}
+
+.memo {
+  font-size: 2em;
+  text-align: center;
 }

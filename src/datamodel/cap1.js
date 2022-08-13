@@ -59,7 +59,7 @@ export default {
     "fallimento": "cap11",
     "MaxCounter": 5,
     "MaxPicchi": 3,
-    "durata": 5000
+    "durata": 5
   },
   "gioco9": {
     "combinazione": [
