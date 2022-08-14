@@ -14,6 +14,10 @@ export default {
     {
       "frase": "Dove sei sorella?",
       "gioco": "text"
+    },
+    {
+      "frase": "Come sta il vecchio?",
+      "gioco": "gioco9"
     }
   ],
   "text": {
@@ -46,5 +50,13 @@ export default {
         "14"
       ]
     ]
+  },
+  "gioco9": {
+    "successo": "a2",
+    "fallimento": "a3",
+    "durata": "10",
+    "combinazione": "denred",
+    "type": "domanda",
+    "domanda": "Come si chiama tuo fratello?"
   }
 }

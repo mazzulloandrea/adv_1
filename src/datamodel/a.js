@@ -8,18 +8,14 @@ export default {
     "interrompe": ""
   },
   "risposte": [
-    // {
-    //   "frase": "Spacchi la legna infuriato con Denred",
-    //   "gioco": "dice",
-    // },
-    // {
-    //   "frase": "Cerchi di calmarti",
-    //   "gioco": "etc",
-    // },
     {
-      "frase": "gioco9",
-      "gioco": "gioco9"
-    }
+      "frase": "Spacchi la legna infuriato con Denred",
+      "gioco": "dice",
+    },
+    {
+      "frase": "Cerchi di calmarti",
+      "gioco": "etc",
+    },
   ],
   "dice": {
     "successo": "a0",
@@ -34,20 +30,5 @@ export default {
     "MaxCounter": 5,
     "MaxPicchi": 3,
     "durata": 5
-  },
-  "gioco9": {
-    "successo": "a0",
-    "fallimento": "a1",
-    "durata": "10",
-    "combinazione": "denred",
-    "type": "domanda",
-    "domanda": "Come si chiama tuo fratello?"
   }
-  // "gioco9": {
-  //   "successo": "a0",
-  //   "fallimento": "a1",
-  //   "durata": "10",
-  //   "combinazione": ['N', 'S', 'NO', 'SO'],
-  //   "type": "directions",
-  // }
 }
