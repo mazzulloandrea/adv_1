@@ -118,17 +118,29 @@ export default {
       }
     ]
   },
-  "gioco9": {  // funziona solo con un dataset di massimo 9 elementi (parole di 9 caratteri)
+  // funziona solo con un dataset di massimo 9 elementi (parole di 9 caratteri)
+  "gioco9": {  // type = memory, dataset = run
     "successo": "3",
     "fallimento": "2",
     "durata": "10",
-    "combinazione": [
-      "arancione",
-      "azzurro",
-      "verde",
-      "viola"
-    ] || "stringa se il type domanda",
-    "type": "directions" || "colors" || "domanda" || "memory",
-    "domanda": "Come ti chiami?" //in caso di type domanda
+    "combinazione": ["corri", "stop", "destra"],
+    "type": "memory",
+    "dataset": "run",
+  },
+  "gioco9": {  // type = memory, dataset = combat
+    "successo": "3",
+    "fallimento": "2",
+    "durata": "10",
+    "combinazione": ["spada", "scudo", "teschio"],
+    "type": "memory",
+    "dataset": "combat",
+  },
+  "gioco9": {  // type = domanda
+    "successo": "3",
+    "fallimento": "2",
+    "durata": "10",
+    "combinazione": "panthelion",
+    "type": "domanda",
+    "domanda": "Come ti chiami?"
   }
 }

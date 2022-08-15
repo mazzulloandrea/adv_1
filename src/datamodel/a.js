@@ -14,7 +14,7 @@ export default {
     },
     {
       "frase": "Cerchi di calmarti",
-      "gioco": "etc",
+      "gioco": "gioco9",
     },
   ],
   "dice": {
@@ -24,11 +24,17 @@ export default {
     "abilita": ["corpo", "mente", "spirito"],
     "lanci": 6
   },
-  "etc": {
+  "gioco9": {
     "successo": "a0",
     "fallimento": "a1",
-    "MaxCounter": 5,
-    "MaxPicchi": 3,
-    "durata": 5
+    "durata": "10",
+    // "combinazione": [
+    //   "corri",
+    //   "zigzag",
+    //   "destra",
+    // ],
+    "combinazione": "pantelion",
+    "type": "domanda",
+    "domanda": "Come ti chiami?",
   }
 }

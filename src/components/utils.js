@@ -1,4 +1,6 @@
 import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago } from '/assets/icons/memory'
+import { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu } from '/assets/icons/run';
+
 const determinateVictory = (successList) => {
   if (
     successList === 'undefined' ||
@@ -67,7 +69,9 @@ const directionsDataset = {
   'X': 'S.O.S.'
 }
 
-const svgSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago };
+const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago };
+
+const runSet = { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu };
 
 const morteText = [
   "La tua vita e la tua missione finiscono qui",
@@ -89,5 +93,6 @@ export {
   directionsDataset,
   morteText,
   alphabet,
-  svgSet
+  combatSet,
+  runSet
 };

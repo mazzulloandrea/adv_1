@@ -31,14 +31,13 @@ export default {
   },
   "gioco9": {
     "combinazione": [
-      "N",
-      "NE",
-      "E",
-      "NO",
-      "E",
-      "SO"
+      "su",
+      "salta",
+      "zigzag",
+      "destra"
     ],
-    "tipo": "directions",
+    "type": "memory",
+    "dataset": "run",
     "durata": "15",
     "successo": "cap13",
     "fallimento": "cap13"

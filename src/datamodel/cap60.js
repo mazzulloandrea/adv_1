@@ -15,12 +15,11 @@ export default {
     "fallimento": "cap62",
     "durata": "10",
     "combinazione": [
-      "S",
-      "N",
-      "E",
-      "O",
-      "X"
+      "su",
+      "destra",
+      "sinistra"
     ],
-    "type": "directions"
+    "type": "memory",
+    "dataset": "run",
   }
 }

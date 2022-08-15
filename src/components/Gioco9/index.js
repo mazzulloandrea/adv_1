@@ -3,12 +3,18 @@ import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
 import error from '/assets/icons/memory/error.svg';
-import { shuffle, paletteColors, directionsDataset, alphabet, svgSet } from '../utils';
+import { shuffle, paletteColors, directionsDataset, alphabet, combatSet, runSet } from '../utils';
 
 import style from './style.css';
 
 function Gioco9({ data, onend }) {
-  const { combinazione, type, domanda, durata, successo, fallimento } = data;
+  const { combinazione, type, domanda, durata, successo, fallimento, dataset } = data;
+  let svgSet;
+  if (dataset ==="combat") {
+    svgSet = combatSet;
+  } else if(dataset === "run") {
+    svgSet = runSet;
+  }
   const [viewSand, setViewSand] = useState(true);
   const [cubes, setCubes] = useState([]);
   const [cubesClicked, setCubesClicked] = useState([]);

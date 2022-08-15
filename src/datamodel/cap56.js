@@ -21,5 +21,6 @@ export default {
     "durata": "5",
     "combinazione": ["spada", "spada", "teschio"],
     "type": "memory",
+    "dataset": "combat"
   }
 }

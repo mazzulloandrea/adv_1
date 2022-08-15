@@ -15,7 +15,7 @@ export default {
     },
     {
       "frase": "Preferisci scappare nel vicino campo di grano",
-      "gioco": "etc"
+      "gioco": "dice"
     },
     {
       "frase": "Torni di corsa indietro in falegnameria",
@@ -54,21 +54,21 @@ export default {
       ]
     ]
   },
-  "etc": {
+  "dice": {
     "successo": "cap10",
     "fallimento": "cap11",
-    "MaxCounter": 5,
-    "MaxPicchi": 3,
-    "durata": 5
+    "obiettivo": 15, // numero da raggiungere con il lancio dei dadi
+    "abilita": ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
+    "lanci": 6 // quanti lanci col dado
   },
   "gioco9": {
     "combinazione": [
-      "arancione",
-      "verde",
-      "azzurro",
-      "viola"
+      "su",
+      "corri",
+      "salta",
     ],
-    "type": "colors",
+    "type": "memory",
+    "dataset": "run",
     "durata": 10,
     "successo": "cap13",
     "fallimento": "cap13"
