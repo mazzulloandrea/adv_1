@@ -2,7 +2,9 @@ import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import { initialcap, initialAbilita, tutorialConfig } from '../config';
+import { saveIntoStorage, getFromStorage} from '../utils';
 import Storia from '/datamodel';
+import LoadData from '../LoadData';
 import Intestazione from '../Intestazione';
 import Audio from '../Audio';
 import Etc from '../Etc';
@@ -21,6 +23,7 @@ import style from './style.css';
 
 
 const Layout = () => {
+  const [load, setLoad] = useState(false);
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState(null);
   // { cap: cap1, gioco: "text", successo: true/false, nextCap: "cap1", ferite: true/false}
@@ -41,7 +44,10 @@ const Layout = () => {
   }, []);
 
   /*
-  
+    useEffect(() => {
+      console.log(load);
+    }, [load]);
+
     useEffect(() => {
       // console.log('orientation effect', orientation)
     }, [orientation]);
@@ -67,11 +73,24 @@ const Layout = () => {
       // console.log('tutorial', tutorial)
     }, [tutorial]);
     
-    useEffect(() => {  }, [tutorials]);
-  
     */
 
 
+  const continueFromStorage = () => {
+    setLoad(false);
+    const parsed = JSON.parse(localStorage.getItem('GV-1'));
+    setActual({ cap: parsed.cap });
+    setAbilita(parsed.abilita);
+    setActualComponent("audio");
+  }
+
+  const reset = () => {
+    setLoad(false);
+    localStorage.removeItem('GV-1');
+    window.location.reload();
+  }
+
+    
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
     if (actualCap.morte) {
@@ -82,23 +101,28 @@ const Layout = () => {
       setActualComponent(actualCap.gioco);
       if (actualCap.next) {
         setActual(actualCap.next);
+        saveIntoStorage({cap:actual.next, abilita: abilita});
       }
     }
   };
 
-  const onEndRisposte = (gioco, nextCap, newAbilita, zaino) => {
+  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino) => {
     setActualComponent(null);
     if (newAbilita) {
       setAbilita(Object.assign({ ...abilita }, { [newAbilita]: abilita[newAbilita] + 1 }));
     }
-    if (zaino) {
-      setAbilita(Object.assign({ ...abilita }, { zaino: abilita.zaino.concat(zaino) }));
+    if (newZaino) {
+      setAbilita(Object.assign({ ...abilita }, { zaino: abilita.zaino.concat(newZaino) }));
     }
     toggleTransition(gioco, nextCap);
   }
 
   const decrementVita = () => {
-    setAbilita(Object.assign({ ...abilita }, { vita: abilita.vita - 1 }));
+    // setAbilita(Object.assign({ ...abilita }, { vita: abilita.vita - 1 }));
+    let updated = Object.assign({ ...abilita }, { vita: abilita.vita - 1 });
+    setAbilita(updated);
+    updated = Object.assign(actual, updated); 
+    saveIntoStorage(updated);
   }
 
   const onGameEnd = (nextCap, feedback) => {
@@ -117,6 +141,8 @@ const Layout = () => {
     setTimeout(() => {
       if (nextCap) {
         setActual(Object.assign({ ...actual }, { gioco, cap: nextCap }));
+        // localStorage.setItem('GV-1', JSON.stringify({cap: nextCap, abilita: abilita}));
+        saveIntoStorage({cap: nextCap, abilita: abilita});
       } else {
         setActual(Object.assign({ ...actual }, { gioco }));
       }
@@ -138,11 +164,13 @@ const Layout = () => {
 
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita === 0) {
+      setTimeout(()=> reset(), 3000);
       return html`<${Morte} />`;
     }
     // rimuovere quando i capitoli saranno tutti
     // WIP
     if (actualCap.wip) {
+      setTimeout(()=> reset(), 3000);
       return html`
         <div class=${style.wip}>
           Work
@@ -188,10 +216,15 @@ const Layout = () => {
   }
 
   const getComponent = () => {
+    const storageCap = getFromStorage();
     if (!actual) {
       return html`<${Intro} onend=${() => {
-        setActual({ cap: initialcap });
-        setActualComponent('risposte');
+          if(storageCap) {
+            setLoad(true);
+          } else {
+            setActual({ cap: initialcap });
+            setActualComponent('risposte');
+          }
       }} />`
     }
     if (tutorials && tutorials[actualComponent] && tutorials[actualComponent].active) {
@@ -215,6 +248,7 @@ const Layout = () => {
       <div id="1" class=${animation.bar} />
       <div id="2" class=${animation.bar} />
       <div id="3" class=${animation.bar} />
+      ${load && html`<${LoadData} yes=${() => continueFromStorage()} not=${() => reset()} />`}
       ${actual && html`
       <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo || ''} actualComponent=${actualComponent} />
       `}

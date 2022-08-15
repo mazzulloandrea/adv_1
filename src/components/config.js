@@ -1,6 +1,7 @@
 const initialcap = '_0';
 // const initialcap = 'cap56';
 
+const keyToSaveInStorage = 'GV-1';
 
 const componentList = {
   "audio": 0,
@@ -73,6 +74,7 @@ const tutorialConfig = {
 
 export {
   componentList,
+  keyToSaveInStorage,
   initialAbilita,
   initialcap,
   tutorialConfig

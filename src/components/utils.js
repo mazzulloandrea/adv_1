@@ -1,5 +1,21 @@
 import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago } from '/assets/icons/memory'
 import { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu } from '/assets/icons/run';
+import { keyToSaveInStorage } from './config';
+
+const saveIntoStorage = (item) => {
+  if (localStorage) {
+    localStorage.setItem(keyToSaveInStorage, JSON.stringify(item));
+  };
+}
+
+const getFromStorage = () => {
+  if (localStorage) {
+    const res = localStorage.getItem(keyToSaveInStorage);
+    if (res && typeof res === 'string') {
+      return JSON.parse(res);
+    }
+  };
+}
 
 const determinateVictory = (successList) => {
   if (
@@ -86,6 +102,8 @@ const morteText = [
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 export {
+  saveIntoStorage,
+  getFromStorage,
   determinateVictory,
   shuffle,
   rgbToHex,

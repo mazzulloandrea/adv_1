@@ -1,0 +1,49 @@
+.fullPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
+  position: fixed;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.text {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  padding: 10vh 7vh;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60vh;
+}
+
+.buttonContainer>div {
+  width: 60vw;
+  height: 10vh;
+  padding: 2vh;
+  border: 3px solid;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.yes {
+  border-color: black;
+  background: green;
+  color: white
+}
+
+.no {
+  border-color: white;
+  background: burlywood;
+  color: black;
+}
