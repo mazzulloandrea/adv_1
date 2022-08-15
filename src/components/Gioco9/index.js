@@ -2,8 +2,8 @@ import { h } from 'preact';
 import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
-import error from '/assets/icons/memory/error.svg';
-import { shuffle, paletteColors, directionsDataset, alphabet, combatSet, runSet } from '../utils';
+// import error from '/assets/icons/memory/error.svg';
+import { shuffle, paletteColors, directionsDataset, alphabet, combatSet, runSet, elementSet } from '../utils';
 
 import style from './style.css';
 
@@ -14,7 +14,10 @@ function Gioco9({ data, onend }) {
     svgSet = combatSet;
   } else if(dataset === "run") {
     svgSet = runSet;
+  } else if(dataset === "element") {
+    svgSet = elementSet;
   }
+
   const [viewSand, setViewSand] = useState(true);
   const [cubes, setCubes] = useState([]);
   const [cubesClicked, setCubesClicked] = useState([]);

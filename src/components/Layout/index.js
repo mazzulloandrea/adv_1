@@ -73,7 +73,7 @@ const Layout = () => {
       // console.log('tutorial', tutorial)
     }, [tutorial]);
     
-    */
+  */
 
 
   const continueFromStorage = () => {
