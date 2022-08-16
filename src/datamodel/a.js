@@ -24,19 +24,6 @@ export default {
     "abilita": ["corpo", "mente", "spirito"],
     "lanci": 6
   },
-  // "gioco9": {
-  //   "successo": "a0",
-  //   "fallimento": "a1",
-  //   "durata": "10",
-  //   // "combinazione": [
-  //   //   "corri",
-  //   //   "zigzag",
-  //   //   "destra",
-  //   // ],
-  //   "combinazione": "pantelion",
-  //   "type": "domanda",
-  //   "domanda": "Come ti chiami?",
-  // }
   "gioco9": {
     "successo": "a0",
     "fallimento": "a1",

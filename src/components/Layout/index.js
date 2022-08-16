@@ -43,6 +43,30 @@ const Layout = () => {
     })
   }, []);
 
+  useEffect(() => {
+    if(!actual) return;
+    updateStorage();
+  }, [actual]);
+
+  useEffect(() => {
+    if (abilita) return;
+    const {corpo, mente, spirito} = abilita;
+    if (!corpo && !mente && !spirito) return;
+    updateStorage()
+  }, [abilita]);
+
+
+  const updateStorage = () => {
+    let data = getFromStorage() || {};
+    if (actual) {
+      data = Object.assign(data, {cap: actual.cap});
+    }
+    if (abilita) {
+      data = Object.assign(data, {"abilita":abilita});
+    }
+    saveIntoStorage(data);
+  }
+  
   /*
     useEffect(() => {
       console.log(load);
@@ -57,28 +81,20 @@ const Layout = () => {
     }, [story]);
   
     useEffect(() => {
-      // change paragraph
-      // !!!salvare nello storage ogni volta
-    }, [actual]);
-  
-    useEffect(() => {
       // animazione // suoni etc feedback!!
     }, [actualComponent]);
   
-    useEffect(() => {
-      // console.log(abilita);
-    }, [abilita]);
   
     useEffect(() => {
       // console.log('tutorial', tutorial)
     }, [tutorial]);
-    
-  */
 
+  */
 
   const continueFromStorage = () => {
     setLoad(false);
-    const parsed = JSON.parse(localStorage.getItem('GV-1'));
+    const parsed = getFromStorage();
+
     setActual({ cap: parsed.cap });
     setAbilita(parsed.abilita);
     setActualComponent("audio");
@@ -89,7 +105,6 @@ const Layout = () => {
     localStorage.removeItem('GV-1');
     window.location.reload();
   }
-
     
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
@@ -101,35 +116,33 @@ const Layout = () => {
       setActualComponent(actualCap.gioco);
       if (actualCap.next) {
         setActual(actualCap.next);
-        saveIntoStorage({cap:actual.next, abilita: abilita});
       }
     }
   };
 
   const onEndRisposte = (gioco, nextCap, newAbilita, newZaino) => {
     setActualComponent(null);
+    let updated = abilita;
     if (newAbilita) {
-      setAbilita(Object.assign({ ...abilita }, { [newAbilita]: abilita[newAbilita] + 1 }));
+       updated = Object.assign({ ...updated }, { [newAbilita]: abilita[newAbilita] + 1 });
     }
     if (newZaino) {
-      setAbilita(Object.assign({ ...abilita }, { zaino: abilita.zaino.concat(newZaino) }));
+      updated = Object.assign({ ...updated }, { zaino: abilita.zaino.concat(newZaino) });
     }
-    toggleTransition(gioco, nextCap);
+    setAbilita(updated);
+    changeCap(gioco, nextCap);
   }
 
   const decrementVita = () => {
-    // setAbilita(Object.assign({ ...abilita }, { vita: abilita.vita - 1 }));
     let updated = Object.assign({ ...abilita }, { vita: abilita.vita - 1 });
     setAbilita(updated);
-    updated = Object.assign(actual, updated); 
-    saveIntoStorage(updated);
   }
 
   const onGameEnd = (nextCap, feedback) => {
-    toggleTransition("audio", nextCap, feedback);
+    changeCap("audio", nextCap, feedback);
   };
 
-  const toggleTransition = (gioco = "audio", nextCap, feedback) => {
+  const changeCap = (gioco = "audio", nextCap, feedback) => {
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
@@ -141,8 +154,6 @@ const Layout = () => {
     setTimeout(() => {
       if (nextCap) {
         setActual(Object.assign({ ...actual }, { gioco, cap: nextCap }));
-        // localStorage.setItem('GV-1', JSON.stringify({cap: nextCap, abilita: abilita}));
-        saveIntoStorage({cap: nextCap, abilita: abilita});
       } else {
         setActual(Object.assign({ ...actual }, { gioco }));
       }
@@ -154,6 +165,11 @@ const Layout = () => {
     // console.log('transition end quella barre blu');
   }
 
+
+
+
+
+  
   const whichComponent = () => {
     const actualCap = story[actual.cap];
     console.log(`
