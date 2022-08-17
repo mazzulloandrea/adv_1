@@ -1,12 +1,21 @@
 import { html } from 'htm/preact';
-import Cuore from '../../assets/icons/caratteristiche/cuore.svg';
 import Spezzato from '../../assets/icons/ferite/heartCrash.svg';
 import { initialAbilita } from '../config';
 import TitleIcon from '../TitleIcon';
-import { Header, Abilita, AbilitaIconContainer, Caratteristica, Title, IconContainer, Zaino, Cuori, AbilitaContainer } from './styled.js';
+import {
+  Header,
+  Abilita,
+  AbilitaIconContainer,
+  Caratteristica,
+  Cuori,
+  AbilitaContainer,
+  Left,
+  Center,
+  Right,
+} from './styled.js';
 
 const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
-  const { corpo, mente, spirito, vita, zaino } = abilita;
+  const { corpo, mente, spirito, vita, zaino, chiavi, borsello } = abilita;
 
   function getAbilita() {
     return html`
@@ -14,22 +23,22 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
       <${Caratteristica}>
         <${AbilitaIconContainer}>
           <${TitleIcon} type=${"corpo"} />
-          </ />
+          </div>
           <div>${corpo}</div>
-          </ />
+          </div>
           <${Caratteristica}>
             <${AbilitaIconContainer}>
               <${TitleIcon} type=${"mente"} />
-              </ />
+              </div>
               <div>${mente}</div>
-              </ />
+              </div>
               <${Caratteristica}>
                 <${AbilitaIconContainer}>
                   <${TitleIcon} type=${"spirito"} />
-                  </ />
+                  </div>
                   <div>${spirito}</div>
-                  </ />
-                  </ />`
+                  </div>
+                  </div>`
   };
 
   function getVita() {
@@ -38,7 +47,7 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
     return html`
     <${Cuori}>
       ${vitaActual.map(c => html`
-      <${Cuore} />
+      <${TitleIcon} type="cuore" />
       `)}
       ${total.slice(vitaActual.length).map(c => html`
       <${Spezzato} />
@@ -49,27 +58,57 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
 
   function getZaino() {
     return html`
-      ${zaino.map(z => html`<div>${z}</div>`)}
+      ${zaino.map(z => html`<div>
+        <${TitleIcon} type=${z} />
+      </div>`)}
     `
   }
 
-  function getTitle() {
-    if (actualComponent === 'audio') return html`<${Title}>${title}</ />`;
-    return html`<${IconContainer}>
-  <${TitleIcon} type=${actualComponent} />
-  </ />`
-  }
-
-  return html`
-    <${Header}>
+  function getLeft() {
+    return html`
+    <${Left}>
       <${Abilita}>
         ${getAbilita()}
         ${getVita()}
-        </ />
-        ${getTitle()}
-        ${zaino && html`<${Zaino}>${getZaino()}</ />`}
-          </ />
+      </${Abilita}>
+    </${Left}>
     `
+  }
+
+  function getCenter() {
+    return html`
+      <${Center}>
+        <div>
+          ${chiavi && html`
+          <${TitleIcon} type=${"chiavi"} />
+          <div>${chiavi}</div>`}
+        </div>
+        <div>
+          ${borsello && html`
+          <${TitleIcon} type=${"borsello"} />
+          <div>${borsello}</div>`}
+        </div>
+      </${Center}>
+    `;
+  }
+
+  function getRight() {
+    return html`
+      <${Right}>
+        ${zaino.length > 0 && html`
+        <${TitleIcon} type=${"zaino"} />`}
+        ${zaino.length > 0 && html`<div>${getZaino()}</div>`}
+      </${Right}>
+    `
+  }
+
+  return html`
+      <${Header}>
+        ${getLeft()}
+        ${getCenter()}
+        ${getRight()}
+      </${Header}>
+  `;
 };
 
 export default Intestazione;

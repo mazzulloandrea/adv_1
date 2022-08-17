@@ -5,8 +5,8 @@ import fuoco from './fuoco.svg';
 import ghiaccio from './ghiaccio.svg';
 import natura from './natura.svg';
 import terra from './terra.svg';
-import veleno from './veleno.svg';
-import yingyang from './yingyang.svg';
+import luna from './luna.svg';
+import sole from './sole.svg';
 
 export {
   acqua,
@@ -16,6 +16,6 @@ export {
   ghiaccio,
   natura,
   terra,
-  veleno,
-  yingyang
+  luna,
+  sole
 }

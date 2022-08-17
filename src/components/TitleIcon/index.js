@@ -1,20 +1,27 @@
-import corpo from '../../assets/icons/caratteristiche/corpo.svg';
-import mente from '../../assets/icons/caratteristiche/mente.svg';
-import spirito from '../../assets/icons/caratteristiche/spirito.svg';
-import cuore from '../../assets/icons/caratteristiche/cuore.svg';
+import { h } from 'preact';
+import { html } from 'htm/preact';
+
+import corpo from '../../assets/icons/intestazione/caratteristiche/corpo.svg';
+import mente from '../../assets/icons/intestazione/caratteristiche/mente.svg';
+import spirito from '../../assets/icons/intestazione/caratteristiche/spirito.svg';
+import cuore from '../../assets/icons/intestazione/caratteristiche/cuore.svg';
+
+import borsello from '../../assets/icons/intestazione/borsello.svg';
+import zaino from '../../assets/icons/intestazione/zaino.svg';
+import chiavi from '../../assets/icons/intestazione/chiavi.svg';
 
 import dices from '../../assets/icons/dice/dices.svg';
-import dice from '../../assets/icons/dice/dice.svg';
-import dice1 from '../../assets/icons/dice/dice1.svg';
-import dice2 from '../../assets/icons/dice/dice2.svg';
-import dice3 from '../../assets/icons/dice/dice3.svg';
-import dice4 from '../../assets/icons/dice/dice4.svg';
-import dice5 from '../../assets/icons/dice/dice5.svg';
-import dice6 from '../../assets/icons/dice/dice6.svg';
+// import dice from '../../assets/icons/dice/dice.svg';
+// import dice1 from '../../assets/icons/dice/dice1.svg';
+// import dice2 from '../../assets/icons/dice/dice2.svg';
+// import dice3 from '../../assets/icons/dice/dice3.svg';
+// import dice4 from '../../assets/icons/dice/dice4.svg';
+// import dice5 from '../../assets/icons/dice/dice5.svg';
+// import dice6 from '../../assets/icons/dice/dice6.svg';
 
-import listOrdered from '../../assets/icons/gioco9/listOrdered.svg';
+import cubes from '../../assets/icons/gioco9/gioco9.svg';
 
-import nextCap from '../../assets/icons/intro/next.svg';
+// import nextCap from '../../assets/icons/intro/next.svg';
 
 import directions from '../../assets/icons/risposte/directions.svg';
 
@@ -26,8 +33,9 @@ import shoot from '../../assets/icons/shoot/shoot.svg';
 
 import cassaforte from '../../assets/icons/cassaforte/cassaforte.svg';
 
-import { h } from 'preact';
-import { html } from 'htm/preact';
+import { accetta, corda, coperta, razione } from '../../assets/icons/zaino';
+
+
 
 
 function TitleIcon({ type }) {
@@ -54,6 +62,15 @@ function TitleIcon({ type }) {
     case 'cuore':
       icon = cuore;
       break;
+    case 'borsello':
+      icon = borsello;
+      break;
+    case 'zaino':
+      icon = zaino;
+      break;
+    case 'chiavi':
+      icon = chiavi;
+      break;
     case 'etc':
       icon = etc;
       break;
@@ -64,7 +81,19 @@ function TitleIcon({ type }) {
       icon = cassaforte;
       break;
     case 'gioco9':
-      icon = listOrdered;
+      icon = cubes;
+      break;
+    case 'accetta':
+      icon = accetta;
+      break;
+    case 'coperta':
+      icon = coperta;
+      break;
+    case 'corda':
+      icon = corda;
+      break;
+    case 'razione':
+      icon = razione;
       break;
     default:
       break;

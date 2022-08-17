@@ -1,9 +1,8 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 import { html } from 'htm/preact';
-import Cuore from '/assets/icons/caratteristiche/cuore.svg';
 import Spezzato from '/assets/icons/ferite/heartCrash.svg';
-// import CrashAudio from '/assets/audio/ferita.mp3';
+import TitleIcon from '../TitleIcon';
 import style from './style.css';
 
 function Ferita({onend}) {
@@ -26,7 +25,7 @@ function Ferita({onend}) {
         onend();
       }}>
         ${cuoreIntero 
-          ? html`<${Cuore} />`
+          ? html`<${TitleIcon} type=${"cuore"} />`
           : html`<${Spezzato} />`
         }
       </div>

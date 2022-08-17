@@ -9,10 +9,67 @@ export const Header = styled.div`
   justify-content: space-between;
   text-align: center;
   background: lightblue;
+  padding: 1vh 1vw;
+  > div {
+    padding: 1vh 1vw;
+  }
 `;
 
+export const Left = styled.div`
+  width: 30vw;
+  height: 10vh;
+`;
+
+export const Center = styled.div`
+  width: 30vw;
+  height: 10vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+   svg {
+    width: 6vw;
+   }
+`;
+
+export const Right = styled.div`
+  width: 50vw;
+  height: 10vh;
+  display: flex;
+  > svg {
+    width: 10vw;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    div {
+      width: 15vw;
+      padding-top: 1.5vw;
+      svg {
+        width: 5vw;
+      }
+    }
+    div:nth-child(1) {
+      border-bottom: 1px solid;
+      border-right: 1px solid;
+      box-sizing: border-box;
+    }
+    div:nth-child(2) {
+      border-bottom: 1px solid;
+    }
+    div:nth-child(3) {
+      border-right: 1px solid;
+    }
+  }
+`;
+
+export const ObjectInZaino = styled.div`
+  width: 10vw;
+  height: 10vh;
+`
+
 export const Abilita = styled.div`
-  width: 25vw;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   > div {
@@ -36,44 +93,6 @@ export const AbilitaIconContainer = styled.div`
   }
 `;
 
-export const Title = styled.div`
-  width: ${props => props.moreWidth ? '70vw' : '50vw'};
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.5em;
-  font-weight: 500;
-`;
-
-export const IconContainer = styled.div`
-  > svg {
-    width: auto;
-    height: 8vh;
-  }
-`;
-
-export const Zaino = styled.div`
-  width: 25vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-style: italic;
-  > div {
-    line-height: 2.5vh;
-  }
-  @media only screen and (orientation: landscape) {  
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: left;
-    > div {
-      width: 12.5vw;
-      line-height: 4.5vh;
-    }
-
-  }
-`;
-
 export const Cuori = styled.div`
    svg {
     width: 4vw;
@@ -89,4 +108,9 @@ export const AbilitaContainer = styled.div`
   width: 50%;
   margin: 0 5vw 0 2vw;
 }
+`;
+
+export const Container = styled.div`
+  width: 4vh;
+  height: auto;
 `;

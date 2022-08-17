@@ -26,14 +26,14 @@ function Audio({ data, onend, orientation }) {
   }
 
   const audioEnd = (event) => {
-    setTimeout(() => onend(), 750);
+    // setTimeout(() => onend(), 750);
   }
 
   return html`
     <div>
-      <div id="player" class=${style.circle} onclick=${()=> managePlayer()} >
+      <div id="player" class=${style.circle} onclick=${() => managePlayer()} >
         <div id="stoppable" class=${play ? style.bars : style.triangle} />
-        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
+        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
           <source src=${data.src} type="audio/mp3" />
