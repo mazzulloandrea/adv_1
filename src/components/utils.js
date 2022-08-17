@@ -4,13 +4,13 @@ import { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna } from '/
 import { keyToSaveInStorage } from './config';
 
 const saveIntoStorage = (item) => {
-  if (localStorage) {
+  if (typeof window !== "undefined") {
     localStorage.setItem(keyToSaveInStorage, JSON.stringify(item));
   };
 }
 
 const getFromStorage = () => {
-  if (localStorage) {
+  if (typeof window !== "undefined") {
     const res = localStorage.getItem(keyToSaveInStorage);
     if (res && typeof res === 'string') {
       return JSON.parse(res);

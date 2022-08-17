@@ -102,7 +102,7 @@ const Layout = () => {
 
   const reset = () => {
     setLoad(false);
-    localStorage.removeItem('GV-1');
+    if (typeof window !== "undefined") localStorage.removeItem('GV-1');
     window.location.reload();
   }
     
