@@ -90,7 +90,7 @@ function Cassaforte({ data, onend }) {
               <label for="pill4"></label>
             </div>
           </div>
-        </div >
+        </div>
       </div>
     </div >
   `

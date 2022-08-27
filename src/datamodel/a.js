@@ -1,8 +1,10 @@
 export default {
   "titolo": "Introduzione",
   "frase": `
-    <<chop efx ...Bastardo! Te la farò pagare! ah si se te la farò pagare <chop efx> >> 
-    Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred`,
+    [rumore di accetta sulla legna] ...Bastardo! 
+    Te la farò pagare! ah si se te la farò pagare [rumore di accetta sulla legna].
+    Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred
+    `,
   "audio": {
     "src": "/assets/audio/a.mp3",
     "interrompe": ""

@@ -164,11 +164,6 @@ const Layout = () => {
   const transitionEnd = () => {
     // console.log('transition end quella barre blu');
   }
-
-
-
-
-
   
   const whichComponent = () => {
     const actualCap = story[actual.cap];
@@ -205,7 +200,7 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
-        return html`<${Audio} ...${componentProps} onend=${()=> onEndAudio()} />`;
+        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} onend=${()=> onEndAudio()} />`;
       case "risposte":
         return html`<${Risposte} ...${componentProps} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
           nextCap, newAbilita, zaino)}

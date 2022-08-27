@@ -80,3 +80,24 @@
   border-left: 5vw solid #ffffff;
   border-right: 5vw solid #ffffff;
 }
+
+.txt {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: 1em;
+  overflow-y: scroll;
+  height: calc(90vh - 2em - 8vh);
+  margin-top: 2vh;
+}
+
+.continueBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 8vh;
+  border-radius: 5px;
+  background-color: green;
+  color: black;
+  margin: 0 auto;
+}
