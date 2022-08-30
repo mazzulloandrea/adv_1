@@ -1,21 +1,26 @@
 export default {
-  "titolo": "Il Bosco",
+  "titolo": "La grotta",
   "frase": `
     Hai finalmente trovato la grotta.
-    Entri di pochi metri evitando il buio più totale.
+    Hai sentito storie di funchi fluorscenti e di pipistrelli ma 
+    non ti sei mai addentrato oltre che pochi metri fin dove la luce illumina l'interno.
   `,
   "audio": {
-    "src": "/assets/audio/cap61.mp3",
+    "src": "/assets/audio/cap61.mp3", // todo
     "interrompe": ""
   },
   risposte: [
     {
-      frase: "Se hai una coperta e vuoi usarla",
+      frase: "Ti addentri nell'oscurità",
+      next: "capGrotta1"
+    },
+    {
+      frase: "Se hai una coperta e vuoi usarla per riposare",
       checkZaino: "coperta",
       next: "cap64"
     },
     {
-      frase: "Resti sull'attenti",
+      frase: "Resti sull'attenti all'ingresso",
       next: "cap65"
     }
   ]

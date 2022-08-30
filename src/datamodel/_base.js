@@ -56,6 +56,37 @@ export default {
       ]
     ]
   },
+  // funziona solo con un dataset di massimo 9 elementi (parole di 9 caratteri)
+  // const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago };
+  // const runSet = { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu };
+  // const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna };
+
+  "gioco9": {  // type = memory, dataset = run
+    "successo": "3",
+    "fallimento": "2",
+    "durata": "10",
+    "combinazione": ["corri", "stop", "destra"], // all corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu
+    "type": "memory",
+    "dataset": "run",
+  },
+  "gioco9": {  // type = memory, dataset = combat
+    "successo": "3",
+    "fallimento": "2",
+    "durata": "10",
+    "combinazione": ["spada", "scudo", "teschio"],
+    "type": "memory",
+    "dataset": "combat",
+  },
+  "gioco9": {  // type = domanda
+    "successo": "3",
+    "fallimento": "2",
+    "durata": "10",
+    "combinazione": "panthelion",
+    "type": "domanda",
+    "domanda": "Come ti chiami?"
+  },
+
+  // NU
   "etc": {
     "successo": "cap2",
     "fallimento": "cap3",
@@ -118,29 +149,4 @@ export default {
       }
     ]
   },
-  // funziona solo con un dataset di massimo 9 elementi (parole di 9 caratteri)
-  "gioco9": {  // type = memory, dataset = run
-    "successo": "3",
-    "fallimento": "2",
-    "durata": "10",
-    "combinazione": ["corri", "stop", "destra"],
-    "type": "memory",
-    "dataset": "run",
-  },
-  "gioco9": {  // type = memory, dataset = combat
-    "successo": "3",
-    "fallimento": "2",
-    "durata": "10",
-    "combinazione": ["spada", "scudo", "teschio"],
-    "type": "memory",
-    "dataset": "combat",
-  },
-  "gioco9": {  // type = domanda
-    "successo": "3",
-    "fallimento": "2",
-    "durata": "10",
-    "combinazione": "panthelion",
-    "type": "domanda",
-    "domanda": "Come ti chiami?"
-  }
 }

@@ -3,7 +3,7 @@ import { html } from 'htm/preact';
 import { useState, useEffect, useRef } from 'preact/hooks';
 import targetImg from '../../assets/images/index.jpg';
 import style from './style.css';
-import { determinateVictory, shuffle } from '../utils';
+import { determinateVictory, shuffle } from '../../components/utils';
 
 const stub = {
   colpi: 1,
@@ -164,7 +164,7 @@ function Shoot({ data, onend }) {
         <span>${el ? ' success' : ' fallimento'}</span>
         `)}
       </div>
-      <div id="mirino" class=${style.shooter} onclick=${(evt) => verifyShoot(evt)}>
+      <div id="mirino" class=${style.shooter} onclick=${(evt)=> verifyShoot(evt)}>
         <div id="jolly" class="inside_mirino"></div>
       </div>
       <div class=${style.targetContainer}>
