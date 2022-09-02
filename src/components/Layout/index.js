@@ -18,6 +18,7 @@ import Intro from '../Intro';
 import Ferita from '../Ferita'
 import Morte from '../Morte';
 import Tutorial from '../Tutorial';
+import Zaino from '../Zaino';
 import animation from './animation.css';
 import style from './style.css';
 
@@ -54,7 +55,6 @@ const Layout = () => {
     if (!corpo && !mente && !spirito) return;
     updateStorage()
   }, [abilita]);
-
 
   const updateStorage = () => {
     let data = getFromStorage() || {};
@@ -123,11 +123,16 @@ const Layout = () => {
   const onEndRisposte = (gioco, nextCap, newAbilita, newZaino) => {
     setActualComponent(null);
     let updated = abilita;
-    if (newAbilita) {
-       updated = Object.assign({ ...updated }, { [newAbilita]: abilita[newAbilita] + 1 });
+    if (newAbilita &&
+      (
+        (newAbilita === 'vita' && abilita[newAbilita] < initialAbilita[newAbilita]) ||
+        (newAbilita !== 'vita')
+      )
+    ) {
+        updated = Object.assign({ ...updated }, { [newAbilita]: abilita[newAbilita] + 1 });
     }
     if (newZaino) {
-      updated = Object.assign({ ...updated }, { zaino: abilita.zaino.concat(newZaino) });
+        updated = Object.assign({ ...updated }, { zaino: abilita.zaino.concat(newZaino) });
     }
     setAbilita(updated);
     changeCap(gioco, nextCap);
@@ -174,9 +179,8 @@ const Layout = () => {
     `);
 
     const data = actualCap[actualComponent];
-    if (abilita && abilita.vita === 0) {
-      setTimeout(()=> reset(), 3000);
-      return html`<${Morte} />`;
+    if (abilita && abilita.vita === 0) {;
+      return html`<${Morte} onClick=${() => reset()} />`;
     }
     // rimuovere quando i capitoli saranno tutti
     // WIP
@@ -238,6 +242,15 @@ const Layout = () => {
           }
       }} />`
     }
+    if(abilita.zaino.length > initialAbilita.zainoMaxLength) {
+      return html`<${Zaino}  abilita=${abilita} onClick=${(z) => {
+        let start = abilita.zaino.indexOf(z);
+        let zainoCp = abilita.zaino.slice();
+        zainoCp.splice(start, 1);
+        setAbilita(Object.assign({ ...abilita }, { zaino: zainoCp }));
+        console.log(z);
+      }}/>`;
+    }
     if (tutorials && tutorials[actualComponent] && tutorials[actualComponent].active) {
       return html`
         <${Tutorial} type=${actualComponent} dismiss=${() => {
@@ -263,6 +276,7 @@ const Layout = () => {
       ${actual && html`
       <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo || ''} actualComponent=${actualComponent} />
       `}
+      
       ${getComponent()}
     </div>`;
 }
