@@ -58,9 +58,12 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
 
   function getZaino() {
     return html`
-      ${zaino.map(z => html`<div>
-        <${TitleIcon} type=${z} />
-      </div>`)}
+      ${zaino.map((z, index) => {
+        console.log(initialAbilita.zaino.length);
+        return index < initialAbilita.zainoMaxLength && html`<div>
+          <${TitleIcon} type=${z} />
+        </div>`
+      })}
     `
   }
 
