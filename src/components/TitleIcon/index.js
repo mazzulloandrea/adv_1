@@ -28,7 +28,6 @@ import zainoList from '../../assets/icons/zaino';
 
 
 function TitleIcon({ type, onClick = () => { } }) {
-  console.log(type);
   const allIcon = {
     corpo, mente, spirito, cuore,
     borsello, zaino, chiavi,

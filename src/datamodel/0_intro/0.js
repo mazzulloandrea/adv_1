@@ -17,7 +17,7 @@ export default {
     },
     {
       "frase": "Spirito",
-      "abilita": "spirito",
+      "abilita": "vita",
       "next": "a",
       "gioco": "audio",
       "icon": "spirito"

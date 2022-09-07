@@ -1,12 +1,28 @@
 export default {
   "titolo": "La grotta",
   "frase": `
-    Attraverso le rocce intravedi un cunicolo che prima non avevi notato.
     La fluorescenza dei funghi illumina la strada per quasi mezz'ora quando ti ritrovi nuovamente nell'oscurità.
     Con moltissima attenzione fai ancora pochi metri e ti ritrovi di nuovo all'aria aperta; hai attraversato la grotta finendo dall'altra parte.
-    Sei molto stanco e la luna indica che mancano circa 5 ore all'alba.
+    Sei molto stanco e mancano circa 5 ore all'alba per cui decidi di riposare.
     Prima di coricarti ripensi a tua sorella, ti concentri sulla voglia a forma di falce e provi ad attivare il potere: 
     senti che sei troppo lontano o forse troppo debole per comunicare qualcosa ma il bruciore che senti al ginocchio ti indica che Carcadena è viva.
+
+    Di notte alcuni ricordi riaffiorano: 
+    Denred che ritorna dall'addestramento con 2 dita in meno nella mano sinistra e quella cicatrice deformante sul labbro
+    che ancora oggi gli permette di parlare male; 
+    i suoi racconti della severità dei soldati, dell'addestramento ai limiti della sopportazione e della crudeltà del generale.
+
+    Il giorno del raccolto è arrivato anche per te.
+    Al tuo risveglio hai chiaro il tuo obiettivo: seguire i soldati per salvare tua sorella!
+    
+    hai 2 vie: (A)la stada veloce sulla via principale oppure (B)accostare la strada principale restando nascosto.
+
+    (A) la strada verso Berdask è praticamente deserta e non è difficile individuare le tracce di sterco lasciato dai cavalli.
+    Probabilmente i soldati avranno un carretto o qualcosa di simile. 
+    Dopo circa un ora abbonante intravedi alcune figure ferme sulla strada; dagli indumenti sembrano commercianti e hanno un carretto alle loro spalle
+    
+
+
 
     -risveglio male: Ti svegli a metà mattina sentendoti chiamare a gran voce da Denred. "Pantelion! Pantelion! Il vecchio è morto, dobbiamo seppelirlo" 
       -sentendo queste parole vai verso tuo fratello che ti abbraccia e stringendoti il braccio ti sussurra "non scapperai dall'addestramento".

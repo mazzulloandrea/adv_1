@@ -7,10 +7,10 @@ import Storia from '/datamodel';
 import LoadData from '../LoadData';
 import Intestazione from '../Intestazione';
 import Audio from '../Audio';
-import Etc from '../Etc';
-import Shoot from '../Shoot';
+// import Etc from '../Etc';
+// import Shoot from '../Shoot';
 import Risposte from '../Risposte';
-import Cassaforte from '../Cassaforte';
+// import Cassaforte from '../Cassaforte';
 import Text from '../Text';
 import Gioco9 from '../Gioco9';
 import Dice from '../Dice';
@@ -120,19 +120,22 @@ const Layout = () => {
     }
   };
 
-  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino) => {
+  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino, borselloNewValue, chiavi) => {
     setActualComponent(null);
     let updated = abilita;
     if (newAbilita &&
       (
-        (newAbilita === 'vita' && abilita[newAbilita] < initialAbilita[newAbilita]) ||
-        (newAbilita !== 'vita')
+        (newAbilita === 'vita' && abilita.vita < initialAbilita.vitaMaxLength) ||
+        (['corpo', 'spirito', 'mente'].includes[newAbilita])
       )
     ) {
         updated = Object.assign({ ...updated }, { [newAbilita]: abilita[newAbilita] + 1 });
     }
     if (newZaino) {
         updated = Object.assign({ ...updated }, { zaino: abilita.zaino.concat(newZaino) });
+    }
+    if (borselloNewValue) {
+      updated  = Object.assign({...updated}, { borsello: abilita.borsello + borselloNewValue });
     }
     setAbilita(updated);
     changeCap(gioco, nextCap);
@@ -206,8 +209,8 @@ const Layout = () => {
       case "audio":
         return html`<${Audio} ...${componentProps} frase=${actualCap.frase} onend=${()=> onEndAudio()} />`;
       case "risposte":
-        return html`<${Risposte} ...${componentProps} onend=${(gioco, nextCap, newAbilita, zaino) => onEndRisposte(gioco,
-          nextCap, newAbilita, zaino)}
+        return html`<${Risposte} ...${componentProps} onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi) => onEndRisposte(gioco,
+          nextCap, newAbilita, zaino, borsello, chiavi)}
   />`;
       case "etc":
         return html`<${Etc} ...${componentProps} />`;
@@ -219,7 +222,6 @@ const Layout = () => {
         return html`<${Dice} ...${componentProps} />`;
       case 'ferita':
         return html`<${Ferita} onend=${() => decrementVita()} />`;
-
       case "shoot":// not used now
         return html`<${Shoot} ...${componentProps} />`;
       case "cassaforte":// not used now
@@ -248,7 +250,6 @@ const Layout = () => {
         let zainoCp = abilita.zaino.slice();
         zainoCp.splice(start, 1);
         setAbilita(Object.assign({ ...abilita }, { zaino: zainoCp }));
-        console.log(z);
       }}/>`;
     }
     if (tutorials && tutorials[actualComponent] && tutorials[actualComponent].active) {

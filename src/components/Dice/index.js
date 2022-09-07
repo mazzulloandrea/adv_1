@@ -56,9 +56,7 @@ function Dice({ data, caratteristiche, onend }) {
     }
   }, []);
 
-  useEffect(() => { 
-    console.log('actual counter', counter)
-  }, [counter]);
+  useEffect(() => { }, [counter]);
   useEffect(() => { }, [diceValue1]);
   useEffect(() => { }, [diceValue2]);
   useEffect(() => { }, [diceValue3]);
@@ -108,7 +106,7 @@ function Dice({ data, caratteristiche, onend }) {
       if (randNum === diceValue3) rotationType = 7;
       setDiceValue3(randNum);
     }
-    console.log('debug per HotFix stesso risultato di seguito');
+    // if(rotationType === 7) alert();
     switch (rotationType) {
       case 1:
         _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg)`;

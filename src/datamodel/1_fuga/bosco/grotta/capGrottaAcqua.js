@@ -2,6 +2,7 @@ export default {
   "titolo": "La grotta",
   "frase": `
     L'acqua fresca e pura migliora le tue capacità.
+    Mentre deglutisci intravedi un cunicolo che prima non avevi notato.
   `,
   "audio": {
     "src": "/assets/audio/cap66.mp3", // todo

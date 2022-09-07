@@ -58,12 +58,10 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
 
   function getZaino() {
     return html`
-      ${zaino.map((z, index) => {
-        console.log(initialAbilita.zaino.length);
-        return index < initialAbilita.zainoMaxLength && html`<div>
-          <${TitleIcon} type=${z} />
+      ${zaino.map((z, index) => index < initialAbilita.zainoMaxLength && html`<div>
+        <${TitleIcon} type=${z} />
         </div>`
-      })}
+      )}
     `
   }
 
@@ -82,12 +80,12 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
     return html`
       <${Center}>
         <div>
-          ${chiavi && html`
+          ${chiavi > 0 && html`
           <${TitleIcon} type=${"chiavi"} />
           <div>${chiavi}</div>`}
         </div>
         <div>
-          ${borsello && html`
+          ${html`
           <${TitleIcon} type=${"borsello"} />
           <div>${borsello}</div>`}
         </div>
