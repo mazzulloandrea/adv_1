@@ -93,7 +93,7 @@ import cap72 from './2_cattura/cap72';
 import cap80 from './2_cattura/cap80';
 import arrivo from './2_cattura/arrivo';
 import calmo from './2_cattura/calmo';
-import calmo2 from './2_cattura/calm2';
+import calmo2 from './2_cattura/calmo2';
 import comeStaAlexis from './2_cattura/comeStaAlexis';
 import discussioneConSoldati from './2_cattura/discussioneConSoldati';
 import discussioneConSoldati2 from './2_cattura/discussioneConSoldati2';
