@@ -119,8 +119,8 @@ import scappi2 from './2_cattura/fuga/scappi2';
 import tornareIndietro from './2_cattura/fuga/tornareIndietro';
 
 // 2_cattura/carcadena
-import carcadena1 from './2_cattura/carcadena/carcadena1';
-import carcadena2 from './2_cattura/carcadena/carcadena2';
+import carcadena1 from './2_cattura/carcadena/carcadena1.js';
+import carcadena2 from './2_cattura/carcadena/carcadena2.js';
 
 // 2_cattura/baracca
 import baraccaCentro from './2_cattura/baracca/baraccaCentro';
