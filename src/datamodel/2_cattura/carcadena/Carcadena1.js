@@ -28,7 +28,7 @@ export default {
     {
       "frase": "Carcadena cosa dovremo fare?",
       "gioco": "audio",
-      "next": "Carcadena2"
+      "next": "carcadena2"
     },
     {
       "frase": "Vuoi parlare con gli altri",
