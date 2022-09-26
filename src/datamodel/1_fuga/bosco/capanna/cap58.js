@@ -18,7 +18,7 @@ export default {
     {
       "frase": "Preferisci parlare con Carcadena?",
       "gioco": "audio",
-      "next": "carcadena1"
+      "next": "sorella1"
     },
     {
       "frase": "Preferisci parlare con qualcun altro delle reclute",

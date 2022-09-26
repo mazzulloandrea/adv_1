@@ -119,8 +119,8 @@ import scappi2 from './2_cattura/fuga/scappi2';
 import tornareIndietro from './2_cattura/fuga/tornareIndietro';
 
 // 2_cattura/carcadena
-import carcadena1 from './2_cattura/carcadena/carcadena1.js';
-import carcadena2 from './2_cattura/carcadena/carcadena2.js';
+import sorella1 from './2_cattura/carcadena/sorella1';
+import sorella2 from './2_cattura/carcadena/sorella2';
 
 // 2_cattura/baracca
 import baraccaCentro from './2_cattura/baracca/baraccaCentro';
@@ -539,8 +539,8 @@ export default {
   scappi,
   scappi2,
   tornareIndietro,
-  carcadena1,
-  carcadena2,
+  sorella1,
+  sorella2,
   baraccaCentro,
   baraccaDestra,
   baraccaSinistra,
