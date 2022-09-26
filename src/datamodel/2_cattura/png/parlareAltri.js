@@ -15,24 +15,23 @@ export default {
 
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
   },
   "risposte": [
     {
       "frase": "Vuoi parlare con Essertag?",
-      "next": "Essertag"
+      "next": "essertag"
     },
     {
       "frase": "Preferisci dire qualcosa a Gudrum?",
-      "next": "Gudrum"
+      "next": "gudrum"
     },
     {
       "frase": "Vuoi dire ad Aaron?",
-      "next": "Aaron"
+      "next": "aaron"
     },
     {
       "frase": "Se pensi che Alexis sia la scelta migliore",
-      "next": "Alexis"
+      "next": "alexis"
     },
   ]
 }
