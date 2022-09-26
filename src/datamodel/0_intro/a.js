@@ -11,7 +11,7 @@ export default {
   "risposte": [
     {
       "frase": "Spacchi la legna infuriato con Denred",
-      "gioco": "cassaforte",
+      "gioco": "gioco9",
     },
     {
       "frase": "Cerchi di calmarti",
