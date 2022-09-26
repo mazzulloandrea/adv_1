@@ -8,7 +8,7 @@ export default {
     dell'aria fresca arriva da quella parte per cui senza targiversare ti incammini per la nuova strada.
   `,
   "audio": {
-    "src": "/assets/audio/capGrottaPipistrelli.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
     "interrompe": ""
   },
   "next": "capGrottaSentiero",

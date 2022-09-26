@@ -14,7 +14,7 @@ export default {
   `,
 
   "audio": {
-    "src": "/assets/audio/carcadena.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
     "interrompe": "",
   },
   "risposte": [
