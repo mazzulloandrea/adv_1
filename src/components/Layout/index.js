@@ -10,7 +10,7 @@ import Audio from '../Audio';
 // import Etc from '../Etc';
 // import Shoot from '../Shoot';
 import Risposte from '../Risposte';
-// import Cassaforte from '../Cassaforte';
+import Cassaforte from '../Cassaforte';
 import Text from '../Text';
 import Gioco9 from '../Gioco9';
 import Dice from '../Dice';
@@ -88,16 +88,19 @@ const Layout = () => {
     useEffect(() => {
       // console.log('tutorial', tutorial)
     }, [tutorial]);
-
   */
 
   const continueFromStorage = () => {
     setLoad(false);
     const parsed = getFromStorage();
 
-    setActual({ cap: parsed.cap });
-    setAbilita(parsed.abilita);
-    setActualComponent("audio");
+    if (parsed.cap === '_0') {
+      reset();
+    } else {
+      setActual({ cap: parsed.cap });
+      setAbilita(parsed.abilita);
+      setActualComponent("audio");
+    }
   }
 
   const reset = () => {
@@ -120,22 +123,33 @@ const Layout = () => {
     }
   };
 
-  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino, borselloNewValue, chiavi) => {
+  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino, borselloNewValue, chiavi, zainoElimina, ferita) => {
     setActualComponent(null);
     let updated = abilita;
     if (newAbilita &&
       (
-        (newAbilita === 'vita' && abilita.vita < initialAbilita.vitaMaxLength) ||
-        (['corpo', 'spirito', 'mente'].includes[newAbilita])
+        (newAbilita === 'vita' && abilita.vita < initialAbilita.vitaMaxLength && !ferita) ||
+        (['corpo', 'spirito', 'mente'].includes(newAbilita))
       )
     ) {
         updated = Object.assign({ ...updated }, { [newAbilita]: abilita[newAbilita] + 1 });
+    }
+    if (ferita) {
+      let newVita = abilita.vita - ferita;
+      if (newVita < 0) newVita = 0;
+      updated = Object.assign({ ...updated }, { vita: newVita });
     }
     if (newZaino) {
         updated = Object.assign({ ...updated }, { zaino: abilita.zaino.concat(newZaino) });
     }
     if (borselloNewValue) {
       updated  = Object.assign({...updated}, { borsello: abilita.borsello + borselloNewValue });
+    }
+    if(zainoElimina) {
+      const z = Array.from(abilita.zaino);
+      z.splice(z.indexOf(zainoElimina), 1);
+      // console.log(`vecchio zaino = ${abilita.zaino}, elemento da eliminare = ${zainoElimina}, nuovo zaino = ${z}`);
+      updated = Object.assign({...updated}, {zaino: z});
     }
     setAbilita(updated);
     changeCap(gioco, nextCap);
@@ -182,7 +196,7 @@ const Layout = () => {
     `);
 
     const data = actualCap[actualComponent];
-    if (abilita && abilita.vita === 0) {;
+    if (abilita && abilita.vita <= 0) {;
       return html`<${Morte} onClick=${() => reset()} />`;
     }
     // rimuovere quando i capitoli saranno tutti
@@ -209,9 +223,10 @@ const Layout = () => {
       case "audio":
         return html`<${Audio} ...${componentProps} frase=${actualCap.frase} onend=${()=> onEndAudio()} />`;
       case "risposte":
-        return html`<${Risposte} ...${componentProps} onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi) => onEndRisposte(gioco,
-          nextCap, newAbilita, zaino, borsello, chiavi)}
-  />`;
+        return html`<${Risposte} ...${componentProps} 
+          onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita) => 
+            onEndRisposte(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita)}
+        />`;
       case "etc":
         return html`<${Etc} ...${componentProps} />`;
       case "text":
@@ -219,6 +234,10 @@ const Layout = () => {
       case 'gioco9':
         return html`<${Gioco9} ...${componentProps} />`;
       case "dice":
+        return html`<${Dice} ...${componentProps} />`;
+      case "dice2":
+        return html`<${Dice} ...${componentProps} />`;
+      case "dice3":
         return html`<${Dice} ...${componentProps} />`;
       case 'ferita':
         return html`<${Ferita} onend=${() => decrementVita()} />`;
@@ -281,4 +300,5 @@ const Layout = () => {
       ${getComponent()}
     </div>`;
 }
+
 export default Layout;

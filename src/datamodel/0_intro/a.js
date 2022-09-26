@@ -7,12 +7,11 @@ export default {
     `,
   "audio": {
     "src": "/assets/audio/a.mp3",
-    "interrompe": ""
   },
   "risposte": [
     {
       "frase": "Spacchi la legna infuriato con Denred",
-      "gioco": "dice",
+      "gioco": "cassaforte",
     },
     {
       "frase": "Cerchi di calmarti",
@@ -23,7 +22,7 @@ export default {
     "successo": "a0",
     "fallimento": "a1",
     "obiettivo": 14,
-    "abilita": ["corpo", "mente", "spirito"],
+    abilita: ["corpo", "mente", "spirito"],
     "lanci": 6
   },
   "gioco9": {

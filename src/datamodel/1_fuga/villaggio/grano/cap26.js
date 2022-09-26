@@ -23,7 +23,7 @@ export default {
     "successo": "cap19", // lo convinci a scappare con te nel bosco
     "fallimento": "cap21", // scappi e vai nel bosco da solo
     "obiettivo": 5, // numero da raggiungere con il lancio dei dadi
-    "abilita": ["spirito"], // quelle che non si devono usare devono essere escluse
+    abilita: ["spirito"], // quelle che non si devono usare devono essere escluse
     "lanci": 4 // quanti lanci col dado
   },
 }

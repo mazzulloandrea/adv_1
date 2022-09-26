@@ -43,6 +43,22 @@
   width: 5vh;
 }
 
+.title {
+  font-size: 0.9em;
+}
+
+.indicazioni {
+  font-size: 1.2em;
+}
+
+.scrigno {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
 @media only screen and (orientation: portrait) {
 
   .widgetContainer {

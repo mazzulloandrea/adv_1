@@ -1,6 +1,6 @@
-import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago } from '/assets/icons/memory/combat'
+import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno } from '/assets/icons/memory/combat'
 import { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu } from '/assets/icons/memory/run';
-import { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna } from '/assets/icons/memory/element';
+import { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra } from '/assets/icons/memory/element';
 import { keyToSaveInStorage } from './config';
 
 const saveIntoStorage = (item) => {
@@ -86,11 +86,11 @@ const directionsDataset = {
   'X': 'S.O.S.'
 }
 
-const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago };
+const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno };
 
 const runSet = { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu };
 
-const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna };
+const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra };
 
 const morteText = [
   "La tua vita e la tua missione finiscono qui",
@@ -103,6 +103,7 @@ const morteText = [
 ]
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
+const numbers = '0123456789';
 
 export {
   saveIntoStorage,
@@ -116,5 +117,6 @@ export {
   alphabet,
   combatSet,
   runSet,
-  elementSet
+  elementSet,
+  numbers,
 };

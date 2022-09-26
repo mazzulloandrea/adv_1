@@ -14,11 +14,11 @@ export default {
     },
     {
       frase: "Se preferisci esaminare i resti",
-      next: "capGrotta3" // todo
+      next: "capGrotta3"
     },
     {
       frase: "Se sali sulla scalinata",
-      next: "capGrotta4" // todo
+      next: "capGrotta4"
     }
   ]
 }

@@ -12,6 +12,7 @@ export default {
     {
       "frase": "Vuoi usare la corda ?",
       "checkZaino": "corda",
+      "zainoElimina": "corda",
       "next": "cap80",
     },
     {
@@ -27,7 +28,7 @@ export default {
     "successo": "cap80",
     "fallimento": "cap72",
     "obiettivo": 11, // numero da raggiungere con il lancio dei dadi
-    "abilita": ["corpo", "mente",], // quelle che non si devono usare devono essere escluse
+    abilita: ["corpo", "mente",], // quelle che non si devono usare devono essere escluse
     "lanci": 4 // quanti lanci col dado
   }
 }

@@ -23,7 +23,7 @@ import question from '../../assets/icons/text/question.svg';
 // import shoot from '../../assets/icons/shoot/shoot.svg';
 
 // import cassaforte from '../../assets/icons/cassaforte/cassaforte.svg';
-
+import scrigno from '../../assets/icons/cassaforte/scrigno.svg';
 import zainoList from '../../assets/icons/zaino';
 
 
@@ -32,6 +32,7 @@ function TitleIcon({ type, onClick = () => { } }) {
     corpo, mente, spirito, cuore,
     borsello, zaino, chiavi,
     dices, cubes, directions, question,
+    scrigno,
     ...zainoList,
   }
   if (allIcon.hasOwnProperty(type)) {

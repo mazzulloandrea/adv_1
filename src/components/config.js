@@ -35,7 +35,7 @@ const initialAbilita = {
   zainoMaxLength: 4,
   vitaMaxLength: 4,
   borselloMaxLength: 50,
-  chiaviMaxLength: 10
+  chiaviMaxLength: 10,
   // zaino: ["corda", "coperta", "razione", "spada"],
   // chiavi: 2,
   // borsello: 4
@@ -47,13 +47,6 @@ const tutorialConfig = {
     text: [
       "Clicca su di una voce per proseguire",
       "Scegli il tuo percorso"
-    ],
-    active: true,
-  },
-  etc: {
-    text: [
-      "Fai battere il tuo cuore",
-      "Il grafico ti indicherà quante pulsazioni"
     ],
     active: true,
   },
@@ -78,6 +71,13 @@ const tutorialConfig = {
     ],
     active: true,
   },
+  cassaforte: {
+    text: [
+      "Leggi bene la combinazione corretta",
+      "Tappa sul forziere per inserire il codice"
+    ],
+    active: true,
+  }
 }
 
 

@@ -14,7 +14,7 @@ export default {
     "successo": "cap16",
     "fallimento": "cap17",
     "obiettivo": 8, // numero da raggiungere con il lancio dei dadi
-    "abilita": ["mente", "spirito"], // quelle che non si devono usare devono essere escluse
+    abilita: ["mente", "spirito"], // quelle che non si devono usare devono essere escluse
     "lanci": 4 // quanti lanci col dado
   },
 }

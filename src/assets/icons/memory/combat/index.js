@@ -7,6 +7,7 @@ import pirata from './pirata.svg';
 import scudo from './scudo.svg';
 import spada from './spada.svg';
 import teschio from './teschio.svg';
+import pugno from './pugno.svg';
 
 export {
   arco,
@@ -17,5 +18,6 @@ export {
   pirata,
   scudo,
   spada,
-  teschio
+  teschio,
+  pugno,
 }

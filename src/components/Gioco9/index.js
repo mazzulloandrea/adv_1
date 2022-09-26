@@ -3,7 +3,7 @@ import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
 // import error from '/assets/icons/memory/error.svg';
-import { shuffle, paletteColors, directionsDataset, alphabet, combatSet, runSet, elementSet } from '../utils';
+import { shuffle, paletteColors, directionsDataset, alphabet, numbers, combatSet, runSet, elementSet } from '../utils';
 
 import style from './style.css';
 
@@ -39,15 +39,23 @@ function Gioco9({ data, onend }) {
         _cubes = shuffle(_cubes);
       break;
       case 'domanda': // qua combinazione è STRING
-      _cubes = combinazione;
-      while(_cubes.length < 9) {
-        const index = Math.floor(Math.random() * alphabet.length);
-        _cubes = _cubes.concat(alphabet[index]);    
-      }
-      _cubes = shuffle(_cubes.split(''));
-      break;
+        _cubes = combinazione;
+        while(_cubes.length < 9) {
+          const index = Math.floor(Math.random() * alphabet.length);
+          _cubes = _cubes.concat(alphabet[index]);    
+        }
+        _cubes = shuffle(_cubes.split(''));
+        break;
+      case 'numbers': // qua combinazione è STRING
+        _cubes = combinazione;
+        while(_cubes.length < 9) {
+          const index = Math.floor(Math.random() * numbers.length);
+          _cubes = _cubes.concat(numbers[index]);    
+        }
+        _cubes = shuffle(_cubes.split(''));
+        break;
       case 'colors':
-      break;
+        break;
       case 'directions':
         _cubes = paletteS.reduce((result, ele, index) => {
           if(!result) result=[];
@@ -84,14 +92,14 @@ function Gioco9({ data, onend }) {
   },[cubesClicked]);
   useEffect(()=>{},[hideMemory]);
   useEffect(()=>{
-    if(["memory","domanda"].includes(type) && errors.length === 3) {
+    if(["memory","domanda", "numbers"].includes(type) && errors.length === 3) {
       verify();
     }
   },[errors]);
   
   const verify = () => {
     let result = false;
-    if (type === 'domanda') {
+    if (['domanda', 'numbers'].includes(type)) {
       result = combinazione === cubesClicked.join('');
     } else if(type === 'memory' ){
       result = combinazione.join('') === cubesClicked.join('');
@@ -108,7 +116,7 @@ function Gioco9({ data, onend }) {
   const drawHeader = () => {
     return html`
       <div class=${style.subHeader}>
-        ${type === "domanda"
+        ${["domanda", "numbers"].includes(type)
           ? html`${drawDomanda()}`
           : html`${drawCombinazioni()}`
         }
@@ -138,9 +146,16 @@ function Gioco9({ data, onend }) {
   }
 
   const drawDomanda = () => {
-    return html`
-      <div class=${style.domanda}>${domanda}</div>
-    `;
+    if (type === "domanda") {
+      return html`
+        <div class=${style.domanda}>${domanda}</div>
+      `;
+    }
+    if (type === "numbers") {
+      return domanda.map(d => html`
+        <div class=${style.domanda}>${d}</div>
+      `)
+    }
   }
 
 // draw cubes per domanda e per memory
@@ -195,7 +210,7 @@ function Gioco9({ data, onend }) {
   }
 
   const drawCubes = () => {
-    if(type === "domanda") {
+    if(["domanda", "numbers"].includes(type)) {
       return html`${drawCubesDomanda()}`;
     } else if(type === "memory") {
       return html`${drawCubesDomanda()}`;

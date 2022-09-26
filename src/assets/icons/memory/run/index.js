@@ -10,5 +10,5 @@ import giu from './giu.svg';
 
 
 export {
-  corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu,
+  corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu
 }

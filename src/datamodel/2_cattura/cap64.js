@@ -6,13 +6,11 @@ export default {
     
     Ripensi a tua sorella e ai soldati, 
     senza perdere tempo ti metti in cammino per cercare di seguirli
-     // TODO cammino dopo la cattura
+     
   `,
   "audio": {
     "src": "/assets/audio/cap64.mp3",
     "interrompe": ""
   },
-  "risposte": [
-
-  ]
+  next: "viaggio"
 }

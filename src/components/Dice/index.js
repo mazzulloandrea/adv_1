@@ -106,7 +106,6 @@ function Dice({ data, caratteristiche, onend }) {
       if (randNum === diceValue3) rotationType = 7;
       setDiceValue3(randNum);
     }
-    // if(rotationType === 7) alert();
     switch (rotationType) {
       case 1:
         _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg)`;
@@ -131,9 +130,11 @@ function Dice({ data, caratteristiche, onend }) {
         const isX = _cube.style.transform.split('X(');
         if (isX.length === 2) {
           const newValue = parseInt(isX[1]) + 360;
+          console.log(`oldValue ${parseInt(isX[1])}; newValue ${newValue}`);
           _cube.style.transform = `rotateX(${newValue}deg)`;
         } else {
           const newValue = parseInt(_cube.style.transform.split('Y(')[1]) + 360;
+          console.log(`oldValue ${parseInt(_cube.style.transform.split('Y(')[1])}; newValue ${newValue}`);
           _cube.style.transform = `rotateY(${newValue}deg)`;
         }
     }
@@ -155,7 +156,7 @@ function Dice({ data, caratteristiche, onend }) {
   function getCube(index) {
     return html`
       <${RollContainer}>
-        <${Cube} id=${`cube${index}`} isDisabled=${counter < 1}
+        <${Cube} id=${`cube${index}`} isDisabled=${counter < 1} style=${{transform: 'rotateY(0deg)'}}
           onClick=${() => {
             setCounter(counter - 1);
             rollDice(index)

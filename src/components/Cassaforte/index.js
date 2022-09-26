@@ -1,15 +1,17 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
+import Rolldate from 'rolldate';
+import TitleIcon from '../TitleIcon';
+import Clessidra from '../Clessidra/index';
 import circularProgressBar from './circularProgressBar.css';
 import switchCheckox from './switch.css';
-import Clessidra from '../../components/Clessidra/index';
 import style from './style.css';
 import increment from '/assets/images/increment.jpeg';
 import decrement from '/assets/images/decrement.png';
 
 function Cassaforte({ data, onend }) {
-  const { successo, fallimento, combinazione, durata } = data;
+  const { successo, fallimento, combinazione, domanda, durata, type } = data;
   const [viewSand, setViewSand] = useState(true);
 
   //memorizzo lo stato di ogni componente
@@ -17,9 +19,45 @@ function Cassaforte({ data, onend }) {
   const [selectValue, setSelectValue] = useState();
   const [progress, setProgress] = useState(Math.floor(Math.random() * 100));
   const [switchValue, setSwitchValue] = useState(Math.random() < 0.5);
+  const [roller, setRoller] = useState(null);
+  const [rollerVisible, setRollerVisibile] = useState(false);
 
+  useEffect(()=> {
+    const rd = new Rolldate({
+      el: '#date',
+      format: 'mm:ss',
+      beginYear: 1,
+      endYear: 100,
+      minStep:1,
+      lang:{
+        cancel:'', confirm:'conferma',
+        title:'- - - - - -', 
+        year:'', 
+        month:'',
+        day:'', 
+        hour:'', 
+        min:'', 
+        sec:''},
+      // trigger:'tap',
+      // init: function() {
+      //   console.log('init');
+      // },
+      // moveEnd: function(scroll) {
+      //   console.log('moveEnd');
+      // },
+      confirm: function(date) {
+        setRollerVisibile(false);
+        verifica(date);
+      },
+      cancel: function() {
+        setRollerVisibile(false);
+      }
+    });
+    setRoller(rd);
+  }, []);
+  
   useEffect(() => {
-    document.getElementById('progressBar').style.backgroundImage = `conic-gradient(#B5838D ${progress}%, #FFCDB2 0`;
+    // document.getElementById('progressBar').style.backgroundImage = `conic-gradient(#B5838D ${progress}%, #FFCDB2 0`;
   }, [progress]);
 
   useEffect(() => {
@@ -31,19 +69,59 @@ function Cassaforte({ data, onend }) {
 
   useEffect(() => { console.log('select', selectValue) }, [selectValue])
 
-  const verifica = () => {
-    console.log(datetimeValue, selectValue, progress, switchValue);
-    if (datetimeValue.split('-').reverse().join('-') === combinazione[0].giusto &&
-      selectValue === combinazione[1].giusto &&
-      progress === combinazione[2].giusto &&
-      switchValue === combinazione[3].giusto
-    ) return onend(successo, true);
-    return onend(fallimento, false);
+  const verifica = (date) => {
+    if (type === 'roll') {
+      console.log(roller);
+      if (date === combinazione) {
+        return onend(successo, true);
+      }
+      return onend(fallimento, false);
+    } else {
+      console.log(datetimeValue, selectValue, progress, switchValue);
+      if (datetimeValue.split('-').reverse().join('-') === combinazione[0].giusto &&
+        selectValue === combinazione[1].giusto &&
+        progress === combinazione[2].giusto &&
+        switchValue === combinazione[3].giusto
+      ) return onend(successo, true);
+      return onend(fallimento, false);
+    }
   }
 
   const getCombinazione = () => combinazione.map(el => el.giusto).join('    ');
 
   const getOptions = () => combinazione.filter(el => el["select"])[0].select;
+
+  if (type === 'roll') {
+    return html`
+      <div>
+        <div class=${style.header}>
+          ${viewSand && html`<${Clessidra} 
+            class=${style.clessidraContainer} 
+            duration=${durata} onend=${() => {
+              setViewSand(false);
+            }} 
+          />`}
+          <div class=${style.spiega}>
+            <div class=${style.title}>combinazione</div>
+            <div class=${style.indicazioni}>${domanda}</div>
+          </div>
+        </div>
+        
+        <div class=${style.scrigno} onClick=${() => {
+          if (rollerVisible) {
+            setRollerVisibile(false);
+            roller.hide();
+          } else {
+            setRollerVisibile(true);
+            roller.show();
+          }
+        }}>
+          <${TitleIcon} type=${'scrigno'} />
+        </div>
+        <div id='date' style=${{visibility: 'hidden'}} />
+      </div>
+    `;
+  }
 
   return html`
     <div>
