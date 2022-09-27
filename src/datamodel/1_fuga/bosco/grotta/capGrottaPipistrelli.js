@@ -9,7 +9,6 @@ export default {
   `,
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": ""
   },
   "next": "capGrottaSentiero",
 }

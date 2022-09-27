@@ -1,5 +1,4 @@
 const initialcap = '_0';
-// const initialcap = 'cap56';
 
 const keyToSaveInStorage = 'GV-1';
 

@@ -5,7 +5,7 @@ export default {
     Mentre deglutisci intravedi un cunicolo che prima non avevi notato.
   `,
   "audio": {
-    "src": "/assets/audio/cap66.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
     "interrompe": ""
   },
   risposte: [
