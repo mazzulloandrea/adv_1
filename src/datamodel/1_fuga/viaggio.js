@@ -18,7 +18,7 @@ export default {
 
   `,
   "audio": {
-    "src": "/assets/audio/cap66.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Il viaggio prosegue", next: "sosta1", vita: 1 }

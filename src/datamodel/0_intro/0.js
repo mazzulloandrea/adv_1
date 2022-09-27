@@ -4,7 +4,8 @@ export default {
     {
       "frase": "Corpo",
       "abilita": "corpo",
-      "next": "a",
+      // "next": "a",
+      "next": "capGrottaPipistrelli",
       "icon": "corpo",
     },
     {

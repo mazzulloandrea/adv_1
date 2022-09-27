@@ -4,7 +4,7 @@ export default {
     Le rocce sono tropo scivolose per salire e desisti quasi subito.
   `,
   "audio": {
-    "src": "/assets/audio/cap66.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
     "interrompe": ""
   },
   risposte: [

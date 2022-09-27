@@ -117,9 +117,10 @@ const Layout = () => {
       setActualComponent("risposte");
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
-      if (actualCap.next) {
-        setActual(actualCap.next);
-      }
+    } else if (actualCap.next) {
+        changeCap("audio",actualCap.next, true );
+        // setActual({cap: actualCap.next});
+        // setActualComponent(null);
     }
   };
 

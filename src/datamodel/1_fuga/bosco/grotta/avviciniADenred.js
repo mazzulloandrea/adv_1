@@ -22,7 +22,7 @@ export default {
   
   `,
   "audio": {
-    "src": "/assets/audio/cap66.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: cap7.risposte
 }

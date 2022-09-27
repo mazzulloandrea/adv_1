@@ -4,7 +4,7 @@ export default {
     L'acqua sembra fresca e pulita e potresti berne un po' e riposare qualche minuto.
   `,
   "audio": {
-    "src": "/assets/audio/cap66.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
     "interrompe": ""
   },
   risposte: [

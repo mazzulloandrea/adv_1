@@ -6,7 +6,7 @@ export default {
     Non trovi altro di utile.
   `,
   "audio": {
-    "src": "/assets/audio/cap66.mp3", // todo
+    "src": "/assets/audio/cap7.mp3", // todo
     "interrompe": ""
   },
   "risposte": [
