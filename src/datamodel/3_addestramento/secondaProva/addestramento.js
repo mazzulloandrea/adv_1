@@ -56,7 +56,7 @@ export default {
       ["no", "non so", "non lo so", "forse", "forse no", "forse si"],
       ["no", "non so", "non lo so", "forse", "forse no", "forse si"],
       ["no", "non so", "non lo so", "forse", "forse no", "forse si"],
-      ["si", "trappole"]
+      ["si", "trappole", "certo", "ovvio"]
     ]
   }
 }

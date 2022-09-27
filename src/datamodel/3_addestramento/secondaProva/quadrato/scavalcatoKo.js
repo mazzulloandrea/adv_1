@@ -11,17 +11,17 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: 'Provi a decifrare la combinazione', gioco: 'gioco9', },
+    { frase: 'Provi a decifrare la combinazione', gioco: 'cassaforte', },
     { frase: 'Cerchi di aggirare il muro di cinta', next: "aggirare" },
     { frase: 'Provi a scavalcare', gioco: "dice" },
   ],
-  "gioco9": {  // type = numbers
-    successo: "combinazioneOk",
-    fallimento: "combinazioneKo",
-    durata: "20",
-    combinazione: "24",
-    type: "numbers",
-    domanda: ["Numero soldati + numero reclute"]
+  cassaforte: {
+    "successo": "combinazioneOk",
+    "fallimento": "combinazioneKo",
+    "durata": "25",
+    type: 'roll',
+    domanda: "n# totale soldati - n# totale reclute",
+    combinazione: '15:09'
   },
   "dice": {
     successo: "scavalcatoOk",

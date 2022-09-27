@@ -2,7 +2,7 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Il muro di cinta prosegue a sinistra per pochi metri fino all'angolo,
-    invece a destra la parete di legno va avanti per una ventina di metri scarsi prima di terminare.
+    invece a destra la parete di legno va avanti per una ventina di metri prima di terminare.
     
     Dove ti dirigi?
   `,

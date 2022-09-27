@@ -71,6 +71,10 @@ function Cassaforte({ data, onend }) {
 
   const verifica = (date) => {
     if (type === 'roll') {
+      if (rollerVisible) {
+        setRollerVisibile(false);
+        roller.hide();
+      }
       console.log(roller);
       if (date === combinazione) {
         return onend(successo, true);

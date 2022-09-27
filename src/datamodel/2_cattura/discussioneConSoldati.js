@@ -4,7 +4,6 @@ export default {
     I soldati ti guardano attoniti cercando di capire se stai scherzando o parli seriamente;
     borbottano qualcosa misto ad insulti e complimenti per il tuo fegato 
     hai sicuramente guadagnato punti sul rispetto nei tuoi confronti.
-
   `,
 
   "audio": {

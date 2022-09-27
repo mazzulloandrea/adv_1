@@ -4,14 +4,14 @@ export default {
   Ve ne state tutti tranquilli seguendo le indicazioni dei soldati che vi legano nuovamente le caviglie ma vi liberano i polsi.
   Le guardie servono della zuppa calda e vi dicono di mangiare in fretta che tra poco si riparte; questi non sono luoghi sicuri in sui sostare.
 
-  Tra di voi quello che al momento se la sta passando peggio è Alexis. 
+  Tra di voi quello che al momento se la sta passando peggio è Alexis:
   si vede chiaramente che sta male e che ha bisogno di cure e di riposo; 
   in tutta risposta alcuni soldati scommettono 2 "Lune di Blick" che non supererà i 2 giorni che vi separano dall'accampamento.
 
-  Un soldato, quello che sembra essere il superiore in grado, maneggia il viso di Alexis piantodogli i polpastrelli sulle guange e ruotando il volto a destra e a sinistra; 
-  il malato apre lentamente gli occhi come in una spece di trance. 
+  Un soldato maneggia il viso di Alexis piantodogli i polpastrelli sulle guange e ruotando il volto a destra e a sinistra; 
+  il malato apre lentamente gli occhi come in una spece di trance e borbotta qualcosa; 
   
-  Borbotta qualcosa e scoppia una risata tra le guardie...
+  in tutta risposta scoppia una risata fragorosa tra le guardie...
   `,
 
   "audio": {
