@@ -24,6 +24,7 @@ export default {
   "gioco9": {
     successo: "uccisoDaiSoldati",
     fallimento: "arrivo",
+    durata: "15",
     type: "memory",
     combinazione: ["teschio", "fantasma", "teschio", "spada"],
     dataset: "combat",

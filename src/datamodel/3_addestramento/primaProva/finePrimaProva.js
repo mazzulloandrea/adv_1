@@ -13,12 +13,12 @@ export default {
     A questo punto il capitano raduna tutte le reclute e dice ad ognuno di dire il proprio nome e di presentarsi:
 
     oltre ai tuoi compagni che già conosci ci sono i quattro ragazzi di Murafredde:
+    Redro 16 anni, capelli neri, coltivatore figlio di una guardia, dice di conoscere bene la lotta
     Teela, ragazza di tredici anni, dice di essere agile cacciatrice e di saper usare l'arco
     Giak ragazzi di quindici capelli rossi, basso e muscoloso, aiutante fabbro
     Frozia di quattordici anni un po' sovrappeso e timido, aiutante bibliotecario
-    Redro 16 anni, capelli neri, coltivatore figlio di una guardia, dice di conoscere bene la lotta
-
-    Redro a quato punto si allontana con il capitano Ravon
+    
+    Redro a questo punto si allontana con il capitano Ravon
 
     Tu Pantelion chi scegli come compagno?
   `,
@@ -28,6 +28,6 @@ export default {
   },
   risposte: [
     { frase: "Scegli qualcuno dei tuoi compagni di Erbafolta ?", next: "secondaProvaErbafolta" },
-    { frase: "Scegli qualcuno dei tuoi compagni di Murafredde ?", next: "secondaProvaMurafredde" }
+    { frase: "Scegli qualcuno di Murafredde ?", next: "secondaProvaMurafredde" }
   ]
 }

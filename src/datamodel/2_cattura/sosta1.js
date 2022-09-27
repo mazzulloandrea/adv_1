@@ -15,7 +15,7 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Ne vuoi approfittare per scappare", next: "text" },
+    { frase: "Ne vuoi approfittare per scappare", gioco: "text" },
     { frase: "Te ne stai buono e calmo", next: "calmo" },
   ],
   text: {
@@ -31,10 +31,10 @@ export default {
     ],
     "risposte": [
       [
-        "4"
+        "4", "quattro"
       ],
       [
-        "3"
+        "3", "tre",
       ],
       [
         "essertag",

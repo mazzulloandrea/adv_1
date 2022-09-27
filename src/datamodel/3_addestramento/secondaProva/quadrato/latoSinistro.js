@@ -16,7 +16,7 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: 'Entri dalla piccola breccia', gioco: 'breccia', },
+    { frase: 'Entri dalla piccola breccia', gioco: 'dice', },
     { frase: 'Continui a sinistra della breccia', next: "latoAlto" },
     { frase: 'Continui a destra della breccia', next: "latoBasso" },
   ],
