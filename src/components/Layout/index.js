@@ -21,6 +21,7 @@ import Tutorial from '../Tutorial';
 import Zaino from '../Zaino';
 import animation from './animation.css';
 import style from './style.css';
+import Achievement from '../Achievement';
 
 
 const Layout = () => {
@@ -194,23 +195,12 @@ const Layout = () => {
       component = ${actualComponent}
       abilita = ${JSON.stringify(abilita)}
     `);
-
+    if (actualComponent === 'achievement') {
+        return html`<${Achievement} onClick=${() => reset()} />`;
+    }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {;
-      return html`<${Morte} onClick=${() => reset()} />`;
-    }
-    // rimuovere quando i capitoli saranno tutti
-    // WIP
-    if (actualCap.wip) {
-      setTimeout(()=> reset(), 3000);
-      return html`
-        <div class=${style.wip}>
-          Work
-          In
-          Progress
-          ...
-          </ />
-      `;
+      return html`<${Morte} onClick=${() => setActualComponent("achievement")} />`;
     }
     const componentProps = {
       data,
@@ -245,7 +235,6 @@ const Layout = () => {
         return html`<${Shoot} ...${componentProps} />`;
       case "cassaforte":// not used now
         return html`<${Cassaforte} ...${componentProps} />`;
-
       default:
         return;
     }
@@ -254,6 +243,7 @@ const Layout = () => {
   const getComponent = () => {
     const storageCap = getFromStorage();
     if (!actual) {
+      // introduzione
       return html`<${Intro} onend=${() => {
           if(storageCap) {
             setLoad(true);
@@ -264,6 +254,7 @@ const Layout = () => {
       }} />`
     }
     if(abilita.zaino.length > initialAbilita.zainoMaxLength) {
+      // gestione zaino
       return html`<${Zaino}  abilita=${abilita} onClick=${(z) => {
         let start = abilita.zaino.indexOf(z);
         let zainoCp = abilita.zaino.slice();
@@ -272,6 +263,7 @@ const Layout = () => {
       }}/>`;
     }
     if (tutorials && tutorials[actualComponent] && tutorials[actualComponent].active) {
+      // tutorial
       return html`
         <${Tutorial} type=${actualComponent} dismiss=${() => {
             delete tutorials[actualComponent];
@@ -280,6 +272,7 @@ const Layout = () => {
         />
       `
     }
+    // altri componenti come risposte, giochi, audio
     return html`
       <div class=${style.wrapper}>
         ${whichComponent()}

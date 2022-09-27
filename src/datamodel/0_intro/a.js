@@ -1,4 +1,5 @@
 export default {
+  morte: true,
   "titolo": "Introduzione",
   "frase": `
     [rumore di accetta sulla legna] ...Bastardo! 

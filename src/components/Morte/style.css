@@ -20,12 +20,38 @@
   text-align: center;
 }
 
+.tomba {
+  width: 70%;
+  height: auto;
+}
 
-.reset {
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.goToAchievement {
   position: absolute;
   top: 5vw;
   right: 5vw;
-  width: 10vw;
-  height: 10vw;
+  width: 15vw;
+  height: 15vw;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background: yellowgreen;
+  justify-content: center;
+  animation: 2s pulse;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
 }
