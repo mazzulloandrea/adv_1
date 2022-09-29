@@ -45,7 +45,7 @@ const aList = [
     text: '2 monete',
     icon: 'borsello',
     cond: (abilita) => {
-      if (abilita.borsello.length === 2) return true;
+      if (abilita.borsello === 2) return true;
       return false;
     }
   },
