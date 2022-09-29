@@ -42,10 +42,10 @@ const aList = [
     }
   },
   {
-    text: 'zaino vuoto',
-    icon: 'zaino',
+    text: '2 monete',
+    icon: 'borsello',
     cond: (abilita) => {
-      if (abilita.zaino.length === 0) return true;
+      if (abilita.borsello.length === 2) return true;
       return false;
     }
   },
