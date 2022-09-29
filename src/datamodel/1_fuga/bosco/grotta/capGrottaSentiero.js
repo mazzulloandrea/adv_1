@@ -41,7 +41,7 @@ export default {
     fallimento: 'capRisveglioMale',
     durata: "20",
     combinazione: ["acqua", "aria", "elettricita", "fuoco"],
-    type: "element",
+    type: "memory",
     dataset: "element",
   },
   "dice": {

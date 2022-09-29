@@ -1,6 +1,21 @@
 import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno } from '/assets/icons/memory/combat'
 import { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu } from '/assets/icons/memory/run';
 import { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra } from '/assets/icons/memory/element';
+import {
+  albero,
+  ancora,
+  barile,
+  candela,
+  carro,
+  cobra,
+  coltello,
+  mare,
+  orso,
+  pietra,
+  ponte,
+  sentiero,
+  tomba
+} from '/assets/icons/memory/natura';
 import { keyToSaveInStorage } from './config';
 
 const saveIntoStorage = (item) => {
@@ -89,7 +104,21 @@ const directionsDataset = {
 const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno };
 
 const runSet = { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu };
-
+const natureSet = {
+  albero,
+  ancora,
+  barile,
+  candela,
+  carro,
+  cobra,
+  coltello,
+  mare,
+  orso,
+  pietra,
+  ponte,
+  sentiero,
+  tomba
+}
 const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra };
 
 const morteText = [
@@ -123,5 +152,6 @@ export {
   combatSet,
   runSet,
   elementSet,
+  natureSet,
   numbers,
 };

@@ -29,8 +29,8 @@ export default {
     "successo": "a0",
     "fallimento": "a1",
     "durata": "10",
-    "combinazione": ["stop", "stop"],
-    "type": "memory",
-    "dataset": "run"
+    combinazione: ["acqua", "fuoco"],
+    type: "memory",
+    dataset: "element",
   }
 }

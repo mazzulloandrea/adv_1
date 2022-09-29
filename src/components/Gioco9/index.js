@@ -3,7 +3,7 @@ import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
 // import error from '/assets/icons/memory/error.svg';
-import { shuffle, paletteColors, directionsDataset, alphabet, numbers, combatSet, runSet, elementSet } from '../utils';
+import { shuffle, paletteColors, directionsDataset, alphabet, numbers, combatSet, runSet, elementSet, natureSet } from '../utils';
 
 import style from './style.css';
 

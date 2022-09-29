@@ -9,5 +9,12 @@ export default {
   },
   "risposte": cap1.risposte.slice(1),
   "etc": cap1.etc,
-  "gioco9": cap1.gioco9
+  "gioco9": {
+    durata: "25",
+    combinazione: ["luna", "aria", "terra", "fuoco"],
+    type: "memory",
+    dataset: "element",
+    "successo": "cap13",
+    "fallimento": "cap13"
+  }
 }
