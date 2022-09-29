@@ -1,7 +1,7 @@
 export default {
   "titolo": "L'arrivo dei soldati",
   "frase": `
-    Provi a concentrarti, ma nonostante ti sforzi per controllarlo il bruciore al ginocchio diviene isopportabile.
+    Provi a concentrarti, ma nonostante ti sforzi per controllarlo il bruciore al ginocchio diviene insopportabile.
     Il tuo cuore e i tuoi pensieri sono troppo agitati per usare il potere.
     Scegli cosa fare`,
   "audio": {
@@ -11,7 +11,7 @@ export default {
   "risposte": [
     {
       "frase": "Preferisci scappare nel vicino campo di grano?",
-      "gioco": "etc"
+      "gioco": "dice"
     },
     {
       "frase": "Se invece torni indietro fino in falegnameria",
@@ -24,10 +24,12 @@ export default {
 
     }
   ],
-  "etc": {
-    "durata": "20",
+  "dice": {
     "successo": "cap10",
-    "fallimento": "cap11"
+    "fallimento": "cap11",
+    "obiettivo": 15, // numero da raggiungere con il lancio dei dadi
+    abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
+    "lanci": 6 // quanti lanci col dado
   },
   "gioco9": {
     "combinazione": [

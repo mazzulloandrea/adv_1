@@ -8,7 +8,7 @@ export default {
     "interrompe": ""
   },
   "risposte": cap1.risposte.slice(1),
-  "etc": cap1.etc,
+  "dice": cap1.dice,
   "gioco9": {
     durata: "25",
     combinazione: ["luna", "aria", "terra", "fuoco"],

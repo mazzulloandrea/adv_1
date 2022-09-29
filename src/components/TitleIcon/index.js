@@ -31,6 +31,9 @@ import aaron from '../../assets/icons/traguardi/aaron.svg';
 import uccidere from '../../assets/icons/traguardi/uccidere.svg';
 import ok from '../../assets/icons/traguardi/ok.svg';
 import ko from '../../assets/icons/traguardi/ko.svg';
+import primaProva from '../../assets/icons/traguardi/primaProva.svg';
+import secondaProva from '../../assets/icons/traguardi/secondaProva.svg';
+import terzaProva from '../../assets/icons/traguardi/terzaProva.svg';
 
 import reset from '../../assets/icons/ferite/reload.svg';
 
@@ -48,6 +51,9 @@ function TitleIcon({ type, onClick = () => { } }) {
     ok,
     ko,
     reset,
+    primaProva,
+    secondaProva,
+    terzaProva,
   }
   if (allIcon.hasOwnProperty(type)) {
     return html`<${allIcon[type]} onClick=${onClick} />`;

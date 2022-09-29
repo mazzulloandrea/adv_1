@@ -5,9 +5,10 @@ export default {
     I soldati iniziano a prepararsi per una sosta.
     Vi fanno scendere dal carretto e vi slegano le caviglie borbottando qualcosa sul non fare cazzate.
 
-    Mentre ti guardi in giro per allentare i morsi della fame si scatena il caos: 
-    Essertag ne approfitta per scappare a più non posso ed al grido di "altolà" e "fermati bastardi" 3 soldati vanno all'inseguimento 
-    mentre gli altri vi raggruppano preoccupati con le armi in mano.
+    Mentre ti guardi in giro per allentare i morsi della fame si scatena il caos;
+    Essertag ne approfitta per scappare a più non posso e, al grido di "prendetelo" e "fermati bastardo", 3 soldati vanno all'inseguimento.
+    G
+    li altri quattro vi raggruppano e vi accerchiano con le armi in mano, per controllare ogni altra possibile evasione.
 
   `,
 

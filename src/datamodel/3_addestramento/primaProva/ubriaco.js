@@ -1,16 +1,16 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    La testa ti gira così tanto che quasi non riesci a stare in piedi inoltre, adesso che si è iniziato a lottare
-    ti accorgi che lo spazio a disposizione dentro il cerchio non è poi molto.
+    La testa ti gira così tanto che quasi non riesci a stare in piedi; 
+    adesso è iniziata la lotta ti accorgi che lo spazio a disposizione dentro il cerchio non è poi molto.
 
-    Cerchi di resistere e ti accorgi che come te anche altri sono in ginocchio e barcollano.
+    Cerchi di rimanere lucido e ti accorgi che, come te, anche altri stanno combattendo contro gli effetti dell'alcool.
 
-    Un ragazzo che non conosci sta spingendo fuori dal cerchio alcuni avversari e nel mentre
-    qualcuno si avventa su di te dandoti un fortissimo colpo sulla schiema che ti fa andare a terra;
-    sei in ginocchio e il tuo avversario ti salta sulla schiena dandoti un secondo colpo che per tua fortuna non è
-    abbastanza preciso ne forte.
-    Ti volti e vedi la ragazza che ti ha colpito, fa parte delle altre reclute, e ha tutta l'intenzione di batterti.
+    Un ragazzo che non conosci, invece, sta spingendo fuori dal cerchio alcuni avversari;
+    qualcuno si avventa su di te dandoti un fortissimo colpo sulla schiema che ti fa andare a terra.
+    Sei in ginocchio e il tuo avversario ti salta addosso dandoti un secondo colpo che per tua fortuna non è abbastanza preciso ne forte.
+    
+    Vedi il tuo avversario e capisci che fa parte delle altre reclute che già erano qui al campo; è una ragazzina molto giovane più esile di te ma con uno sguardo deciso; ha tutta l'intenzione di batterti.
 
     Sta caricando un calcio e sei pronto a rispondere
   `,
@@ -26,7 +26,7 @@ export default {
   dice: {
     successo: "parato",
     fallimento: "colpito",
-    obiettivo: 14, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 11, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
     lanci: 3 // quanti lanci col dado
   },

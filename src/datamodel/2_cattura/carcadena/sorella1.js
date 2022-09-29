@@ -7,7 +7,7 @@ export default {
     E' in quel periodo che ha perso 2 dita della mano sinistra;
     poi il freddo, la fame... diceva che lo avevano temprato come si fa per una spada.
     Quelle storie vi mettevano paura e lui sembrava sguazzare di piacere nel vedervi terrorizzati con quella sua voce
-    modificata da una cicatrice sulla guancia che gli aveva allargato e modificato l'espressione per sempre...
+    modificata da una cicatrice sulla guancia che gli aveva allargato e cambiato l'espressione per sempre...
     poi siete cresciuti ed avete iniziato a lavorare dimenticando che il giorno del raccolto sarebbe arrivato anche per voi...
 
     e poi avete scoperto di avere un legame, un forte aggancio tramite una voglia a forma di falce che brucia quando usate quello che voi chiamate "potere".
@@ -21,7 +21,7 @@ export default {
   `,
 
   "audio": {
-    "src": "/assets/audio/carcadena.mp3", // todo
+    "src": "/assets/audio/carcadena.mp3", // todo modificare audio con quello scritto
     "interrompe": "",
   },
   "risposte": [

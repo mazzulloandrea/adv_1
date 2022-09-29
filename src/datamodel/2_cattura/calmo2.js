@@ -4,17 +4,12 @@ export default {
     Si riparte immediatamente.
 
     Un altro giorno di viaggio tra le buche ed i sentieri acciottolati dei colli "sparsi"
-    Un altro giorno legati come delle bestie, ti fai forza non dovrebbe mancare molto...
+    Un altro giorno legati come delle bestie; ti fai forza non dovrebbe mancare molto...
 
-    Dopo poco tempo tornano di corsa 3 soldati, dicono che Essertag 
-    è caduto in una scarpata e che ha sbattuto la testa morendo sul colpo.
+    Dopo poco tempo tornano di corsa i 3 soldati; Essertag è caduto in una scarpata e ha sbattuto la testa morendo sul colpo.
+    Una sciocca risatina accompagnata da alcune battute sulla morte ragazzo rendono ancora più triste il viaggio.
 
-    Gudrum era un suo grande amico ed il suo sguardo è segnato dalle lacrime.
-
-    Una risatina accompagnata da alcune battute sulla debolezza del ragazzo e 
-    dal destino che ha voluto che finisse così.
-
-    I soldati sembrano proprio essere senza cuore...
+    Gudrum era un suo grande amico ed il suo sguardo è segnato dalle lacrime per gran parte del giorno.
   `,
 
   "audio": {
