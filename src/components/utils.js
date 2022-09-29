@@ -96,13 +96,15 @@ const morteText = [
   "La tua vita e la tua missione finiscono qui",
   "E che dire, peccato...",
   "Io puntavo tutto su di te e invece",
-  "Diviene tutto nero...",
+  "Diviene tutto nero",
   "Le tue ferite sono tali da non poter proseguire",
-  "Ti accasci al suolo per sempre",
   "L'ultima immagine prima di morire è il segno a forma di falce",
   "Tutti credevano in te, mannaggia",
   "Una morte orribile",
-  "Ma come fai ad essere morto?"
+  "Ma come fai ad essere già morto?",
+  "...ed eri un passo dalla fine...",
+  "Puff, tutto finito!",
+  "Nella tua mente appare il ricordo di Carcadena"
 ]
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";

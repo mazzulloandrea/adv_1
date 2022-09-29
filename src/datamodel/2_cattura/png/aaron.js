@@ -6,7 +6,7 @@ export default {
     Un'altra guardia tira fuori il coltello e fa segno di tagliarli le dita se non se ne sta zitto e buono.
 
     In tutta risposta Aaron trema di paura e si chiude a riccio facendosi più piccolo che può; 
-    dopo pochi attimi una puzza di piscio inizia a sollevarsi da Aaron ed un altro malrovescio lo colpisce in testa.
+    dopo pochi attimi una puzza di piscio inizia a sollevarsi da Aaron ed un altro malrovescio lo colpisce in faccia.
     Insulti, sbeffeggiamenti e nomignoli rendono Aaron il bersaglio delle guardie.
     
   `,

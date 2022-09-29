@@ -7,7 +7,7 @@ export default {
     
     poi si siede per terra ed attende la fine della sfida.
 
-    Restano in 2 a combattere: Gudrum ed uno straniero con una visibile ferita sanguinante sulla fronte. 
+    Restano in due a combattere: Gudrum ed uno straniero con una visibile ferita sanguinante sulla fronte. 
 
     Il tuo amico corre come impazzito gridando contro l'avversario che lo sfida invitandolo ad attaccare.
 

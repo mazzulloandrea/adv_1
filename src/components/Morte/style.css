@@ -52,6 +52,6 @@
   background: yellowgreen;
   justify-content: center;
   animation: 2s pulse;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-iteration-count: infinite;
 }

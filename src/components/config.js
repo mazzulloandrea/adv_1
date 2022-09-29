@@ -14,21 +14,9 @@ const componentList = {
   "dice": 8,
 }
 
-/**
- * Il flusso base prevede
- * Audio -> risposte || gioco
- * Risposte -> transizione a 3 finestre
- * Transizione -> setActualComponent(gioco)
- * Wich gioco -> carica componente e gioca
- * gioca -> onend
- * onend -> onGameEnd = (newCap) (setta capitolo nuovo), setActualComponent(audio)
- * inizia audio newCap
- * 
- */
-
 const initialAbilita = {
   // corpo: 0, mente: 0, spirito: 0, vita: 4,
-  corpo: 0, mente: 0, spirito: 0, vita: 0,
+  corpo: 3, mente: 0, spirito: 2, vita: 4,
   zaino: [],
   borsello: 0,
   chiavi: 0,

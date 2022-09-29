@@ -11,7 +11,7 @@ export default {
   text: {
     successo: "laProvaSuccesso",
     fallimento: "laProvaFallimento",
-    durata: "45",
+    durata: "35",
     domande: [
       "Quanti colori sono presenti nel labirinto?",
       "Quanti sono gli incroci del labirinto",

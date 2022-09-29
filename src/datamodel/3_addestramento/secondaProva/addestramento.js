@@ -39,7 +39,7 @@ export default {
   text: {
     successo: "avversarioRavonSuccesso",
     fallimento: "avversarioRavonFallimento",
-    durata: "60",
+    durata: "25",
     domande: [
       "Quante sfide ci saranno nella seconda prova, escluso la tua?",
       "La tua sfida, essendo l'ultima, dopo quanti incontri inizierà?",

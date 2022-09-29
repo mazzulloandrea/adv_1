@@ -28,6 +28,5 @@ export default {
     { frase: "Incocchi una freccia sull'arco", next: 'distanza2p', checkZaino: 'arco' },
     { frase: "Carichi la balestra", next: 'distanza2p', checkZaino: 'balestra' },
     { frase: "Carichi la fionda", next: 'distanza2p', checkZaino: 'fionda' },
-
   ]
 }

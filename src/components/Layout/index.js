@@ -33,6 +33,8 @@ const Layout = () => {
   const [orientation, setOrientation] = useState(0);
   const [abilita, setAbilita] = useState(initialAbilita);
   const [tutorials, setTutorials] = useState(tutorialConfig);
+  const [timer, setTimer] = useState(0);
+  const [timerValue, setTimerValue] = useState(0);
 
   useEffect(() => {
     window.addEventListener('orientationchange', (evt) => {
@@ -54,20 +56,12 @@ const Layout = () => {
     if (abilita) return;
     const {corpo, mente, spirito} = abilita;
     if (!corpo && !mente && !spirito) return;
-    updateStorage()
+    updateStorage();
   }, [abilita]);
 
-  const updateStorage = () => {
-    let data = getFromStorage() || {};
-    if (actual) {
-      data = Object.assign(data, {cap: actual.cap});
-    }
-    if (abilita) {
-      data = Object.assign(data, {"abilita":abilita});
-    }
-    saveIntoStorage(data);
-  }
-  
+  useEffect(() => {
+    // console.log(timerValue);
+  }, [timerValue]);
   /*
     useEffect(() => {
       console.log(load);
@@ -89,8 +83,25 @@ const Layout = () => {
     useEffect(() => {
       // console.log('tutorial', tutorial)
     }, [tutorial]);
+
+    useEffect(() => {
+      console.log(timer);
+    },[timer])
+
+    
   */
 
+  const updateStorage = () => {
+    let data = getFromStorage() || {};
+    if (actual) {
+      data = Object.assign(data, {cap: actual.cap});
+    }
+    if (abilita) {
+      data = Object.assign(data, {"abilita":abilita});
+    }
+    saveIntoStorage(data);
+  }
+  
   const continueFromStorage = () => {
     setLoad(false);
     const parsed = getFromStorage();
@@ -98,6 +109,11 @@ const Layout = () => {
     if (parsed.cap === '_0') {
       reset();
     } else {
+      // riparte il timer
+      const interval = setInterval(() => {
+        setTimerValue(Date.now());
+      }, 1000);
+      setTimer(interval);
       setActual({ cap: parsed.cap });
       setAbilita(parsed.abilita);
       setActualComponent("audio");
@@ -106,28 +122,41 @@ const Layout = () => {
 
   const reset = () => {
     setLoad(false);
-    if (typeof window !== "undefined") localStorage.removeItem('GV-1');
+    if (typeof window !== "undefined") {
+      // mantenere i dati passati?
+      localStorage.removeItem('GV-1');
+    }
     window.location.reload();
   }
     
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
     if (actualCap.morte) {
-      setAbilita(Object.assign({ ...abilita }, { vita: 0 }));
+      setAbilita(Object.assign({ ...abilita }, { vita: 0,morte: true }));
     } else if (actualCap.risposte) {
       setActualComponent("risposte");
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
     } else if (actualCap.next) {
         changeCap("audio",actualCap.next, true );
-        // setActual({cap: actualCap.next});
-        // setActualComponent(null);
+    } else if(actualCap.fine) {
+      clearInterval(timer);
+      setActualComponent('achievement');
     }
   };
 
-  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino, borselloNewValue, chiavi, zainoElimina, ferita) => {
+  const onEndRisposte = (gioco, nextCap, newAbilita, newZaino, borselloNewValue, chiavi, zainoElimina, ferita, custom) => {
+    console.log('onend risposte');
     setActualComponent(null);
     let updated = abilita;
+    if(nextCap === 'a') {
+      // inizializzo il timer
+      updated = Object.assign({...abilita}, {initTime: Date.now()});
+      const interval = setInterval(() => {
+        setTimerValue(Date.now());
+      }, 1000);
+      setTimer(interval);
+    }
     if (newAbilita &&
       (
         (newAbilita === 'vita' && abilita.vita < initialAbilita.vitaMaxLength && !ferita) ||
@@ -150,9 +179,13 @@ const Layout = () => {
     if(zainoElimina) {
       const z = Array.from(abilita.zaino);
       z.splice(z.indexOf(zainoElimina), 1);
-      // console.log(`vecchio zaino = ${abilita.zaino}, elemento da eliminare = ${zainoElimina}, nuovo zaino = ${z}`);
       updated = Object.assign({...updated}, {zaino: z});
     }
+    if(custom) {
+      updated = Object.assign({...updated}, {...custom});
+    }
+    // aggiorno il timer
+    updated = Object.assign({...updated}, {timer: timerValue});
     setAbilita(updated);
     changeCap(gioco, nextCap);
   }
@@ -197,12 +230,15 @@ const Layout = () => {
       abilita = ${JSON.stringify(abilita)}
     `);
     if (actualComponent === 'achievement') {
-        return html`<${Achievement} onClick=${() => reset()} />`;
+        return html`<${Achievement} abilita=${abilita} onClick=${() => reset()} />`;
     }
     const data = actualCap[actualComponent];
-    if (abilita && abilita.vita <= 0) {;
+    if (abilita && abilita.vita <= 0) {
+      // stop timer
+      clearInterval(timer);
       return html`<${Morte} onClick=${() => setActualComponent("achievement")} />`;
     }
+
     const componentProps = {
       data,
       onend: (nextCap, feedback) => onGameEnd(nextCap, feedback),
@@ -215,8 +251,8 @@ const Layout = () => {
         return html`<${Audio} ...${componentProps} frase=${actualCap.frase} onend=${()=> onEndAudio()} />`;
       case "risposte":
         return html`<${Risposte} ...${componentProps} 
-          onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita) => 
-            onEndRisposte(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita)}
+          onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom) => 
+            onEndRisposte(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom)}
         />`;
       case "etc":
         return html`<${Etc} ...${componentProps} />`;
@@ -246,12 +282,12 @@ const Layout = () => {
     if (!actual) {
       // introduzione
       return html`<${Intro} onend=${() => {
-          if(storageCap) {
-            setLoad(true);
-          } else {
-            setActual({ cap: initialcap });
-            setActualComponent('risposte');
-          }
+        if(storageCap) {
+          setLoad(true);
+        } else {
+          setActual({ cap: initialcap });
+          setActualComponent('risposte');
+        }
       }} />`
     }
     if(abilita.zaino.length > initialAbilita.zainoMaxLength) {

@@ -264,6 +264,16 @@ import rossoO from './4_laProva/labirinto/rossoO';
 import versoIncrocio from './4_laProva/labirinto/versoIncrocio';
 import violaN from './4_laProva/labirinto/violaN';
 import violaS from './4_laProva/labirinto/violaS';
+import laProvaSuccesso from './4_laProva/labirinto/laProvaSuccesso';
+import laProvaFallimento from './4_laProva/labirinto/laProvaFallimento';
+import schivatoTrappola from './4_laProva/labirinto/schivatoTrappola';
+import beccatoTrappola from './4_laProva/labirinto/beccatoTrappola';
+import nuotare from './4_laProva/labirinto/nuotare';
+import cercareAlternative from './4_laProva/labirinto/cercareAlternative';
+import serpenteAttacca from './4_laProva/labirinto/serpenteAttacca';
+import serpenteInnocuo from './4_laProva/labirinto/serpenteInnocuo';
+import morteAvvelenato from './4_laProva/labirinto/morteAvvelenato';
+import cordaRaggiunta from './4_laProva/labirinto/cordaRaggiunta';
 
 // 5_finale
 import ilPotere from './5_finale/ilPotere';
@@ -688,6 +698,16 @@ export default {
   violaS,
   ilPotere,
   svieni,
+  laProvaSuccesso,
+  laProvaFallimento,
+  schivatoTrappola,
+  beccatoTrappola,
+  nuotare,
+  cercareAlternative,
+  serpenteAttacca,
+  serpenteInnocuo,
+  morteAvvelenato,
+  cordaRaggiunta,
 
   cap90,
   // cap102,

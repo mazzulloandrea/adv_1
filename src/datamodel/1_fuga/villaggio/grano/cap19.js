@@ -14,21 +14,24 @@ export default {
       "abilita": "corpo",
       "next": "cap51",
       "gioco": "audio",
-      "icon": "corpo"
+      "icon": "corpo",
+      aaron: true,
     },
     {
       "frase": "Mente",
       "abilita": "mente",
       "next": "cap51",
       "gioco": "audio",
-      "icon": "mente"
+      "icon": "mente",
+      aaron: true,
     },
     {
       "frase": "Spirito",
       "abilita": "spirito",
       "next": "cap51",
       "gioco": "audio",
-      "icon": "spirito"
+      "icon": "spirito",
+      aaron: true,
     }
   ],
 }

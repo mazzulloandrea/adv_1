@@ -17,7 +17,7 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Vuoi uccidere Darius", next: "uccidereDarius" },
+    { frase: "Vuoi uccidere Darius", next: "uccidereDarius", darius: true },
     { frase: "Vuoi lasciarlo li ed uscire dal quadrato", next: "vittoriaNonSanguinante" },
     { frase: "Vuoi lasciare sul tuo nemico un ricordo", next: "amputareDarius" }
   ]

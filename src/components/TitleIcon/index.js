@@ -18,6 +18,7 @@ import directions from '../../assets/icons/risposte/directions.svg';
 
 import question from '../../assets/icons/text/question.svg';
 
+import morte from '../../assets/icons/ferite/morte.svg';
 // import etc from '../../assets/icons/etc/etc.svg';
 
 // import shoot from '../../assets/icons/shoot/shoot.svg';
@@ -25,7 +26,13 @@ import question from '../../assets/icons/text/question.svg';
 // import cassaforte from '../../assets/icons/cassaforte/cassaforte.svg';
 import scrigno from '../../assets/icons/cassaforte/scrigno.svg';
 import zainoList from '../../assets/icons/zaino';
+import timer from '../../assets/icons/traguardi/timer.svg';
+import aaron from '../../assets/icons/traguardi/aaron.svg';
+import uccidere from '../../assets/icons/traguardi/uccidere.svg';
+import ok from '../../assets/icons/traguardi/ok.svg';
+import ko from '../../assets/icons/traguardi/ko.svg';
 
+import reset from '../../assets/icons/ferite/reload.svg';
 
 function TitleIcon({ type, onClick = () => { } }) {
   const allIcon = {
@@ -34,6 +41,13 @@ function TitleIcon({ type, onClick = () => { } }) {
     dices, cubes, directions, question,
     scrigno,
     ...zainoList,
+    morte,
+    timer,
+    aaron,
+    uccidere,
+    ok,
+    ko,
+    reset,
   }
   if (allIcon.hasOwnProperty(type)) {
     return html`<${allIcon[type]} onClick=${onClick} />`;

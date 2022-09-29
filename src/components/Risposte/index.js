@@ -26,11 +26,12 @@ const Risposte = ({ data, caratteristiche, onend }) => {
   return html`
     <div class=${style.container}>
       ${response.map((el) => {
-        const { gioco, next, abilita, frase, icon, zaino, borsello, chiavi, zainoElimina, ferita} = el;
+        const { gioco, next, abilita, frase, icon, zaino, borsello, chiavi, zainoElimina, ferita, ...custom} = el;
+        console.log(custom);
         return html`
           <div class=${style.response}
             onclick=${()=> {
-              onend(gioco, next, abilita, zaino, borsello, chiavi, zainoElimina, ferita);
+              onend(gioco, next, abilita, zaino, borsello, chiavi, zainoElimina, ferita, custom );
             }}
             onanimationend=${(el) => animationEnd(el)}
           >
