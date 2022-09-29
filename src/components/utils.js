@@ -15,7 +15,7 @@ import {
   ponte,
   sentiero,
   tomba
-} from '/assets/icons/memory/natura';
+} from '/assets/icons/memory/nature';
 import { keyToSaveInStorage } from './config';
 
 const saveIntoStorage = (item) => {
