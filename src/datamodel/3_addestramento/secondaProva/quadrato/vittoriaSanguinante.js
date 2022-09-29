@@ -33,5 +33,6 @@ export default {
       "next": "capitolo4",
       "icon": "spirito"
     }
-  ]
+  ],
+  vittoria2: true,
 }

@@ -15,4 +15,5 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   next: 'rinunciaSfida',
+  vittoria3: true,
 }   

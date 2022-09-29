@@ -14,4 +14,5 @@ export default {
     "interrompe": "",
   },
   next: "haiVinto",
+  vittoria1: true,
 }
