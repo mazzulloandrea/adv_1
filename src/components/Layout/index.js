@@ -191,7 +191,13 @@ const Layout = () => {
   }
 
   const decrementVita = () => {
-    let updated = Object.assign({ ...abilita }, { vita: abilita.vita - 1 });
+    let updated;
+    if (abilita.vita === 1) {
+      updated = Object.assign({ ...abilita }, { vita: 0, morte: true });
+    } else {
+      updated = Object.assign({ ...abilita }, { vita: abilita.vita - 1 });
+    }
+     
     setAbilita(updated);
   }
 
@@ -234,7 +240,6 @@ const Layout = () => {
     }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {
-      setAbilita(Object.assign({...abilita}, {morte:true}));
       // stop timer
       clearInterval(timer);
       return html`<${Morte} onClick=${() => setActualComponent("achievement")} />`;

@@ -9,14 +9,14 @@ export default {
     Finalmente ti fermi prima che il cuore ti scoppi, ti guardi indietro e non vedi i soldati.
     Sai che non è finita, le tue tracce sono così fresche che è troppo facile seguirti.
 
-    Ricominci a correre e prosegui cercando di lasciare meno tracce possibili.
+    Ricominci a correre e prosegui cercando di lasciare meno segni possibili.
 
     Ti allontani per una buona mezz'ora quando ti accorgi di esserti perso: 
-    le colline "sparse" sono un luogo inesplorato e pericoloso frequentato da banditi e animali pericolosi.
+    le colline "sparse" sono un luogo inesplorato e pericoloso, frequentato da banditi e animali selvaggi.
 
     Ti fermi un attimo prendi fiato e provi a guardarti attorno per orientarti.
 
-    Dopo una mezz'oretta circa trovi delle impronte di stivali abbastanza fresche
+    Dopo una decina di minuti circa trovi delle impronte di stivali abbastanza fresche
   `,
 
   "audio": {

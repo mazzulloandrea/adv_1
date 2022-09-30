@@ -16,8 +16,7 @@ export default {
     essere degli uomini veri quindi sopportare la fame, il dolore, il caldo ed il freddo
     fare tutto quello che serve per servire al meglio il Duca di Blick, sovrano di Berdask.
 
-    Come prima cosa vi viene servito un tozzo di pane ed una boccale colmo di vino rosso liquoroso 
-    che tutti avidamente finite in pochi secondi.
+    Come prima cosa vi viene servito un tozzo di pane ed una boccale colmo di vino rosso liquoroso che tutti avidamente finite in pochi secondi.
 
     Poi un secondo boccale di vino e vi viene intimato di berlo senza lasciarne una goccia.
 
