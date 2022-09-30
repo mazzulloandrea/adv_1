@@ -11,7 +11,7 @@ export default {
   Un soldato maneggia il viso di Alexis piantodogli i polpastrelli sulle guange e ruotando il volto a destra e a sinistra; 
   il malato apre lentamente gli occhi come in una spece di trance e borbotta qualcosa; 
   
-  in tutta risposta scoppia una risata fragorosa tra le guardie...
+  immediatamente scoppia una risata fragorosa tra le guardie...
   `,
 
   "audio": {

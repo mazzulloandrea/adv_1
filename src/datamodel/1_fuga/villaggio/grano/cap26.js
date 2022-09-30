@@ -1,8 +1,8 @@
 export default {
   "titolo": "Nel grano",
   "frase": `
-    Ti allontani il più possibile quando vai a sbattere contro qualcosa che ti fa cadere per terra.
-    E' Aaron un tuo amico che si sta nascondendo terrorizzato dai soldati.
+    Cercando di scappare per allontanarti il più possibile, improvvisamente vai a sbattere contro qualcosa e cadi a terra;
+    è Aaron il tuo amico, che si sta nascondendo terrorizzato dai soldati.
   `,
   "audio": {
     "src": "/assets/audio/cap26.mp3",

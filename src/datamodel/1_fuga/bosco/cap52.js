@@ -5,7 +5,7 @@ export default {
     oltretutto la paura di essere preso dai soldati
     e di affrontare l'addestamento ti da la motivazione necessaria ad andare avanti.
     La prima cosa da fare è trovare riparo per la notte e ci sono 3 luoghi possibili: 
-    la capanna abbandonata, la grotta oppure sugli alberi del fiume.
+    la capanna abbandonata, la grotta oppure al fiume.
   `,
   "audio": {
     "src": "/assets/audio/cap52.mp3",
@@ -21,7 +21,7 @@ export default {
       "next": "cap61",
     },
     {
-      "frase": "Se vuoi andare sugli alberi al fiume",
+      "frase": "Se vuoi andare al fiume",
       "next": "cap70",
     }
   ],

@@ -1,9 +1,9 @@
 export default {
   "titolo": "L'arrivo dei soldati",
   "frase": `
-    Sei arrivato all'angolo con il campo di grano, alto circa 2 metri, 
-    quando senti un fortissimo bruciore al ginocchio 
-    e la voce di Carcadena nella tua mente <<Ci sono i soldati, presto scappa!>>`,
+    Sei arrivato all'angolo del sentiero dove il grano del campo è alto circa 2 metri; 
+    all'improvviso senti un fortissimo bruciore al ginocchio e la voce di Carcadena risuonare nella tua mente 
+    <<Ci sono i soldati, presto scappa!>>`,
   "audio": {
     "src": "/assets/audio/cap1.mp3",
     "interrompe": ""

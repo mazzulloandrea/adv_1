@@ -4,8 +4,7 @@ export default {
     Rotoli di lato schivando il calcio per pochissimi centimetri; la ragazza perde l'equilibrio e cade a terra.
 
     Stai per rialzarti per spingerla via quando ti accorgi di essere finito ad un piede dal bordo; 
-    nemmeno il tempo di spostarti che un avversario dai capelli rossi più basso di te ma più muscoloso ti piomba addosso
-    con tutta l'intenzione di spingerti fuori.
+    nemmeno il tempo di spostarti che un avversario dai capelli rossi, più basso di te ma più muscoloso, ti piomba addosso con tutta l'intenzione di spingerti fuori.
 
   `,
 

@@ -3,7 +3,7 @@ export default {
   "frase": `
     Sul carretto con te ci sono: 
     Essertag figlio muscoloso dell'artigiano, famoso per essere una testa calda sta provando a liberarsi dalle corde,
-    Gudrum fratello minore della numerosa famiglia di allevatori amico di Essertag controlla che le guardie non si accorgano di Essertag,
+    Gudrum fratello minore della numerosa famiglia di allevatori amico di Essertag controlla che le guardie non si accorgano del suo amico,
     Aaron, più giovane di 2 anni di te, figlio unico dei contadini che gestiscono il pozzo, abbastanza timoroso, ha subito alcune angherie dai soldati e sta accovacciato in silenzio,
     Alexis, figlio de falegname per il quale anche tu spesso lavori, è sicuramente ammalato e avrebbe bisogno di stare sdraiato a riposare.
     

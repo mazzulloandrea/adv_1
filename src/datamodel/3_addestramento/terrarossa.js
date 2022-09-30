@@ -12,8 +12,8 @@ export default {
     Cala il silenzio ai suoi passi, poi si arresta davanti a tutti voi presentandosi come "Generale Ravon";
     ha il compito di insegnarvi tutto: 
     riconoscere gli animali pericolosi e affrontarli,
-    impugnare un'arma militare, uno scudo e cavalcare 
-    essere degli uomini veri quindi sopportare la fame, il dolore, il caldo ed il freddo
+    impugnare un'arma militare, uno scudo e cavalcare,
+    essere degli uomini veri quindi sopportare la fame, il dolore, il caldo ed il freddo,
     fare tutto quello che serve per servire al meglio il Duca di Blick, sovrano di Berdask.
 
     Come prima cosa vi viene servito un tozzo di pane ed una boccale colmo di vino rosso liquoroso che tutti avidamente finite in pochi secondi.

@@ -7,12 +7,10 @@ export default {
     Anche tua sorella si è accorta della condizione del vostro amico ed insieme a te si avvicina ad Alexis;
     poggia le sue mani legate sulla fronte del malato e chiude gli occhi concentrandosi come altre volte l'hai vista fare.
 
-    Dopo pochi istanti dopo li riapre ed incrocia il tuo sguardo interrogativo; 
-    stai per chiederle spiegazioni quando vedi Alexis aprire gli occhi ed incredibilmente 
-    avere un aspetto più rilassato ed inspirare profondamente come se la malattia fosse scomparsa.
+    Pochi istanti dopo li riapre ed incrocia il tuo sguardo interrogativo; 
+    stai per chiederle spiegazioni quando vedi Alexis aprire gli occhi ed incredibilmente avere un aspetto più rilassato ed inspirare profondamente come se la malattia fosse scomparsa.
 
-    L'incredibile trasformazione però dura solo pochissimi istanti infatti Alexis batte le palpebre e ritorna immediatamente
-    ad accasciarsi su di un fianco...
+    La trasformazione però dura solo pochissimi istanti infatti Alexis batte le palpebre e ritorna immediatamente ad accasciarsi su di un fianco...
 
     Carcadena ti guarda e ti fa intendere che è una cosa nuova legata al potere ma ancora non sa bene come funzioni.
 

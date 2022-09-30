@@ -1,8 +1,8 @@
 export default {
   "titolo": "Nel grano",
   "frase": `
-    Non è difficile convincerlo visto che il grano sta bruciando sempre più velocemente. 
-    Uscite fuori dal campo e vi dirigete nel bosco in piena notte.
+    Convincerlo è facile, soprattutto perchè i soldati hanno dato fuoco al campo che sta bruciando sempre più velocemente.
+    Uscite fuori dal campo insieme e vi dirigete nel bosco in piena notte.
   `,
   "audio": {
     "src": "/assets/audio/cap19.mp3",

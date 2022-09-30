@@ -1,8 +1,8 @@
 export default {
   "titolo": "Nel grano",
   "frase": `
-    Non è difficile convincerlo ad andarsene visto che il campo sta bruciando sempre più velocemente,
-    ma preferisce scappare per i fatti suoi lasciandoti correre da solo.
+    Convincerlo è facile, soprattutto perchè i soldati hanno dato fuoco al campo che sta bruciando sempre più velocemente.
+    Aaron però preferisce scappare da solo e corre via lasciandoti indietro.
   `,
   "audio": {
     "src": "/assets/audio/cap21.mp3",

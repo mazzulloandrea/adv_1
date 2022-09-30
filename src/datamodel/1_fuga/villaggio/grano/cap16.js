@@ -1,9 +1,10 @@
 export default {
   "titolo": "Nel grano",
   "frase": `
-    Senti prima gridare e poi il rumore metallico dei soldati camminare sulla strada sterrata a pochi metri da te.
-    I soldati urlano il tuo nome e quello di Aaron; vi dicono di uscire altrimenti subirete le peggiori punizioni.
-    I battiti del tuo cuore aumentano improvvisamente quando senti che vogliono dare fuoco al campo di grano.
+    Senti gridare;
+    poi capti il rumore metallico che i soldati fanno camminando sulla strada sterrata a pochi metri da te.
+    Improvvisamente urlano il tuo nome e quello di Aaron; vi dicono di uscire altrimenti subirete le loro ira.
+    I battiti del tuo cuore aumentano improvvisamente quando senti che pensano di dare fuoco al campo di grano.
   `,
   "audio": {
     "src": "/assets/audio/cap16.mp3",
