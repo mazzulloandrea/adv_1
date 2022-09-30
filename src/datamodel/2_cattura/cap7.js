@@ -1,7 +1,7 @@
 export default {
   "titolo": "Cattura",
   "frase": `
-    Svoltato l'angolo con il mulino, ti ritrovi davanti Denred con 2 soldati "Eccolo è lui".
+    Ti dirigi verso la fattoria e, svoltato l'angolo, ti ritrovi davanti Denred con 2 soldati "Eccolo è lui".
     Tuo fratellastro sta aiutando i soldati e questa è l'ennesima dimostrazione di quanto sia crudele.
     "Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha"
     
