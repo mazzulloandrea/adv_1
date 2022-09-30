@@ -6,19 +6,15 @@ export default {
     si allontanano mentre auguri a Carcadena buona fortuna attraverso il potere.
 
     In queste settimane poche volte sei riuscito a confrontarti con lei e con gli altri giovani del campo; 
-    siete stati impegnati praticamente sempre tra gli addestramenti estenuanti per metà giornata, 
-    i compiti di pulizia fino a sera e 
-    le ultime ore dedicate alle prove fisiche, mentali e spirituali per completare l'addestramento.
+    siete stati impegnati praticamente sempre tra gli addestramenti estenuanti per metà giornata, i compiti di pulizia fino a sera e le ultime ore dedicate alle prove fisiche, mentali e spirituali per completare l'addestramento.
 
-    Passano i minuti e sei inevitabilmente in ansia per tua sorella, 
-    poi senti bruciare il ginocchio e nella mente le parole di tua sorella; 
+    Passano i minuti e sei inevitabilmente in ansia per tua sorella, poi senti bruciare il ginocchio e nella mente le parole di Carcadena; 
     ti dice che ha perso la sfida ma di non preoccuparti che sta bene.
 
     Con una certa dose di preoccupazione sai che il prossimo sarai tu;
     ti alzi in piedi e vieni accompagnato all'ingresso.
 
-    Una porta con un grosso lucchetto a combinazione è davanti a te, 
-    tutt'attorno un muro di legno alto circa 2 metri impedisce di vedere l'interno.
+    Una porta con un grosso lucchetto a combinazione è davanti a te, tutt'attorno un muro di legno alto circa 2 metri impedisce di vedere l'interno.
     
     La guardia da l'ordine: la tua seconda prova è iniziata.
   `,

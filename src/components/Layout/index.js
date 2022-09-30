@@ -132,7 +132,7 @@ const Layout = () => {
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
     if (actualCap.morte) {
-      setAbilita(Object.assign({ ...abilita }, { vita: 0,morte: true }));
+      setAbilita(Object.assign({ ...abilita }, { vita: 0, morte: true }));
     } else if (actualCap.risposte) {
       setActualComponent("risposte");
     } else if (actualCap.gioco) {
@@ -234,6 +234,7 @@ const Layout = () => {
     }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {
+      setAbilita(Object.assign({...abilita}, {morte:true}));
       // stop timer
       clearInterval(timer);
       return html`<${Morte} onClick=${() => setActualComponent("achievement")} />`;

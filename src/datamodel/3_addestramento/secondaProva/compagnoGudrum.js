@@ -2,8 +2,7 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Hai scelto Gudrum e subito il soldato vi chiede in cosa volete specializzarvi.
-    Gudrum senza esitare afferma di voler imparare il combattimento ravvicinato e senza aspettare la tua approvazione
-    convince la guardia che gli mostra 4 armi diverse: una spada, un bastone lungo, un'ascia ed un martello.
+    Gudrum senza esitare afferma di voler imparare il combattimento ravvicinato e senza aspettare la tua approvazione convince la guardia che gli mostra 4 armi diverse: una spada, un bastone lungo, un'ascia ed un martello.
     Gudrum incrocia il tuo sguardo non sapendo cosa scegliere.
   `,
 

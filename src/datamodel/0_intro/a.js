@@ -15,7 +15,7 @@ export default {
     },
     {
       "frase": "Cerchi di calmarti",
-      "gioco": "gioco9",
+      "gioco": "dice",
     },
   ],
   "dice": {

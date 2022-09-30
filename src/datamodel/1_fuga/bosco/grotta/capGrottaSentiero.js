@@ -8,9 +8,8 @@ export default {
     senti che sei troppo lontano o forse troppo debole per comunicare qualcosa ma il bruciore che senti al ginocchio ti indica che Carcadena è viva.
 
     Di notte alcuni ricordi riaffiorano: 
-    Denred che ritorna dall'addestramento con 2 dita in meno nella mano sinistra e quella cicatrice deformante sul labbro
-    che ancora oggi gli permette di parlare male; 
-    i suoi racconti della severità dei soldati, dell'addestramento ai limiti della sopportazione e della crudeltà del generale.
+    Denred che ritorna dall'addestramento con due dita in meno nella mano sinistra e quella cicatrice deformante sul labbro che ancora oggi gli permette di parlare male; 
+    i suoi racconti della severità dei soldati e dell'addestramento ai limiti della sopportazione.
 
     Il giorno del raccolto è arrivato anche per te.
 
@@ -25,7 +24,8 @@ export default {
     {
       frase: "Se hai una coperta e vuoi usarla per riposare",
       checkZaino: "coperta",
-      next: "cap64"
+      next: "cap64",
+      zainoElimina: "coperta"
     },
     {
       frase: "Se rientri di qualche metro nella grotta per riposare",
