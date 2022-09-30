@@ -66,6 +66,7 @@ export default {
   // const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago };
   // const runSet = { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu };
   // const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna };
+  // const nstureSet = { albero, ancora, barile, candela, carro, cobra, coltello, mare, orso, pietra, ponte, sentiero, tomba };
 
   "gioco9": {  // type = memory, dataset = run
     successo: "3",
@@ -81,6 +82,9 @@ export default {
 
     combinazione: ["acqua", "aria", "elettricita", "fuoco", "ghiaccio", "luna", "natura", "sole", "terra"],
     dataset: "element",
+
+    combinazione: ["albero", "ancora", "barile", "candela", "carro", "cobra", "coltello", "mare", "orso", "pietra", "ponte", "sentiero", "tomba"],
+    dataset: "nature"
   },
   "gioco9": {  // type = domanda
     successo: "3",

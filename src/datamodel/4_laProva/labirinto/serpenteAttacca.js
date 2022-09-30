@@ -14,7 +14,7 @@ export default {
     fallimento: 'morteAvvelenato',
     durata: "20",
     type: "memory",
-    combinazione: ["acqua", "elettricita", "fuoco", "ghiaccio", "natura", "terra"],
-    dataset: "element",
+    combinazione: ["candela", "cobra", "mare", "pietra", "tomba"],
+    dataset: "nature",
   },
 }   

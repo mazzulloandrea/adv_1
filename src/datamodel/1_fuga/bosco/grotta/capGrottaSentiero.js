@@ -40,9 +40,9 @@ export default {
     successo: 'capRisveglioBene',
     fallimento: 'capRisveglioMale',
     durata: "20",
-    combinazione: ["acqua", "aria", "elettricita", "fuoco"],
     type: "memory",
-    dataset: "element",
+    dataset: "nature",
+    combinazione: ["barile", "candela", "pietra", "tomba"],
   },
   "dice": {
     successo: 'capRisveglioBene',

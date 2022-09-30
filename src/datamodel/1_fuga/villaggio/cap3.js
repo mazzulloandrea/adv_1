@@ -39,7 +39,7 @@ export default {
       "destra"
     ],
     "type": "memory",
-    "dataset": "run",
+    dataset: "run",
     "durata": "15",
     "successo": "cap13",
     "fallimento": "cap13"

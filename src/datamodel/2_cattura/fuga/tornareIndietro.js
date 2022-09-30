@@ -20,7 +20,8 @@ export default {
     successo: "uccisoDaiSoldati",
     fallimento: "arrivo",
     type: "memory",
-    combinazione: ["spada", "teschio", "fantasma", "techio"],
-    dataset: "combat",
+    combinazione: ["albero", "barile", "cobra", "mare", "sentiero"],
+    dataset: "nature",
+    durata: "15",
   }
 }

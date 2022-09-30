@@ -46,8 +46,8 @@ export default {
     fallimento: "baraccaCentro",
     durata: "15",
     type: "memory",
-    combinazione: ["aria", "fuoco", "sole", "luna"],
-    dataset: "element",
+    dataset: "nature",
+    combinazione: ["barile", "carro", "cobra", "coltello"],
   },
 
 }

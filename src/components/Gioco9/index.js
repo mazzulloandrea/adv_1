@@ -16,6 +16,8 @@ function Gioco9({ data, onend }) {
     svgSet = runSet;
   } else if(dataset === "element") {
     svgSet = elementSet;
+  } else if (dataset === "nature") {
+    svgSet = natureSet;
   }
 
   const [viewSand, setViewSand] = useState(true);
@@ -218,7 +220,7 @@ function Gioco9({ data, onend }) {
       return html`
         ${cubes.map((cube, index) => html`
           <div class=${style.game}
-            style=${{backgroundColor: cube.palette}}
+            style=${{"backgroundColor": cube.palette}}
             onclick=${()=> {
               if (cubesClicked.length >= combinazione.length) return;
               setCubesClicked(cubesClicked.concat(cube));

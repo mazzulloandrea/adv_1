@@ -19,7 +19,7 @@ export default {
     "fallimento": "combinazioneKo",
     "durata": "25",
     type: 'roll',
-    domanda: "n# totale soldati - n# totale reclute",
+    domanda: "n# totale soldati - - - n# totale reclute",
     combinazione: '15:09'
   },
   "dice": {

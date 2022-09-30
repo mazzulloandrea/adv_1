@@ -11,9 +11,9 @@ export default {
   "gioco9": {
     "successo": "ca57",
     "fallimento": "cap90",
-    "durata": "5",
+    "durata": "10",
     "combinazione": ["spada", "spada", "teschio"],
     "type": "memory",
-    "dataset": "combat"
+    dataset: "combat"
   }
 }

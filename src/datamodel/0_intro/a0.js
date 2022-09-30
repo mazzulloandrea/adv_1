@@ -57,6 +57,6 @@ export default {
     "durata": "10",
     "combinazione": "denred",
     "type": "domanda",
-    "domanda": "Come si chiama tuo fratello?"
+    domanda: "Come si chiama tuo fratello?"
   }
 }

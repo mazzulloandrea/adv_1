@@ -15,7 +15,7 @@ export default {
   gioco9: {
     successo: "scappareTrappola",
     fallimento: "fineSecondaProvaMorte",
-    durata: "25",
+    durata: "15",
     type: "memory",
 
     combinazione: ["teschio", "arco", "pirata", "fantasma", "teschio"],

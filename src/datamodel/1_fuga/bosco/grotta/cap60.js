@@ -13,13 +13,13 @@ export default {
   "gioco9": {
     "successo": "cap61",
     "fallimento": "cap62",
-    "durata": "10",
+    "durata": "15",
     "combinazione": [
       "su",
       "destra",
       "sinistra"
     ],
     "type": "memory",
-    "dataset": "run",
+    dataset: "run",
   }
 }

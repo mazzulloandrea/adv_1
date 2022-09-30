@@ -29,8 +29,8 @@ export default {
     "successo": "a0",
     "fallimento": "a1",
     "durata": "10",
-    combinazione: ["acqua", "fuoco"],
     type: "memory",
+    combinazione: ["acqua", "fuoco"],
     dataset: "element",
   }
 }

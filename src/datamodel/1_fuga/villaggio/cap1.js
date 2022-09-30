@@ -68,8 +68,8 @@ export default {
       "salta",
     ],
     "type": "memory",
-    "dataset": "run",
-    "durata": 10,
+    dataset: "run",
+    "durata": 15,
     "successo": "cap13",
     "fallimento": "cap13"
   }
