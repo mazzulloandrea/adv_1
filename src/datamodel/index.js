@@ -237,6 +237,10 @@ import inizioProva3 from './4_laProva/inizioProva3';
 import rinunciaSfida from './4_laProva/rinunciaSfida';
 import scale from './4_laProva/scale';
 import scettro from './4_laProva/scettro';
+import nonSiDice from './4_laProva/nonSiDice';
+import rispostaCuriosa from './4_laProva/rispostaCuriosa';
+import secondaTorciaOk from './4_laProva/secondaTorciaOk';
+import secondaTorciaKo from './4_laProva/secondaTorciaKo';
 
 // 4_laProva/labirinto
 import arancioneEDirezioneBianco from './4_laProva/labirinto/arancioneEDirezioneBianco';
@@ -671,6 +675,10 @@ export default {
   rinunciaSfida,
   scale,
   scettro,
+  nonSiDice,
+  rispostaCuriosa,
+  secondaTorciaKo,
+  secondaTorciaOk,
   arancioneEDirezioneBianco,
   arancioneEDirezioneNero,
   arancioneODirezioneBianco,

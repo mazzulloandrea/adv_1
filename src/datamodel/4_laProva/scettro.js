@@ -23,9 +23,16 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Cosa devo aspettarmi li sotto?", next: '' },
-    { frase: "Non è meglio anche una seconda torcia?", next: '' },
-    { frase: "Gli altri hanno superato la prova?", next: '' },
+    { frase: "Cosa devo aspettarmi li sotto?", next: 'rispostaCuriosa' },
+    { frase: "Non è meglio anche una seconda torcia?", gioco: 'dice', zaino: 'torcia' },
+    { frase: "Gli altri hanno superato la prova?", next: 'nonSiDice' },
     { frase: "Afferri la torcia e inizi a scendere la scala", next: 'scale', zaino: "torcia" }
   ],
+  dice: {
+    successo: 'secondaTorciaOk',
+    fallimento: 'secondaTorciaKo',
+    obiettivo: 11, // numero da raggiungere con il lancio dei dadi
+    abilita: ["mente", "spirito"], // quelle che non si devono usare devono essere escluse
+    lanci: 4 // quanti lanci col dado
+  }
 }

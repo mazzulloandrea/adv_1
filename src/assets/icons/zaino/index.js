@@ -20,6 +20,8 @@ import razione from './razione.svg';
 import scudo from './scudo.svg';
 import spada from './spada.svg';
 import stivali from './stivali.svg';
+import torcia from './torcia.svg';
+import torcia2 from './torcia2.svg';
 
 
 export default {
@@ -45,4 +47,6 @@ export default {
   scudo,
   spada,
   stivali,
+  torcia,
+  torcia2,
 }
