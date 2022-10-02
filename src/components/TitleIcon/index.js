@@ -31,6 +31,7 @@ import morte from '../../assets/icons/ferite/morte.svg';
 
 // import cassaforte from '../../assets/icons/cassaforte/cassaforte.svg';
 import scrigno from '../../assets/icons/cassaforte/scrigno.svg';
+import lucchetto from '../../assets/icons/cassaforte/lucchetto.svg';
 import zainoList from '../../assets/icons/zaino';
 import timer from '../../assets/icons/traguardi/timer.svg';
 import aaron from '../../assets/icons/traguardi/aaron.svg';
@@ -50,6 +51,7 @@ function TitleIcon({ type, onClick = () => { } }) {
     dice1, dice2, dice3, dice4, dice5, dice6,
     dices, cubes, directions, question,
     scrigno,
+    lucchetto,
     ...zainoList,
     morte,
     timer,

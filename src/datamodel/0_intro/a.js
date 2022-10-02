@@ -32,5 +32,5 @@ export default {
     type: "memory",
     combinazione: ["acqua", "fuoco"],
     dataset: "element",
-  }
+  },
 }

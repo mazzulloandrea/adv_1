@@ -120,7 +120,7 @@ function Cassaforte({ data, onend }) {
             roller.show();
           }
         }}>
-          <${TitleIcon} type=${'scrigno'} />
+          <${TitleIcon} type=${'lucchetto'} />
         </div>
         <div id='date' style=${{visibility: 'hidden'}} />
       </div>

@@ -62,7 +62,7 @@ const tutorialConfig = {
   cassaforte: {
     text: [
       "Leggi bene la combinazione corretta",
-      "Tappa sul forziere per inserire il codice"
+      "Tappa sul lucchetto per inserire il codice"
     ],
     active: true,
   }
