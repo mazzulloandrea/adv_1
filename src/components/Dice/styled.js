@@ -52,7 +52,7 @@ export const Cube = styled.div`
   height: ${l * 2}vw;
   
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 0.5s;
   position: relative;
   ${props => props.isDisabled && css`
     pointer-events: none;
@@ -64,6 +64,7 @@ export const RollContainer = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  perspective: 250vw;
 `;
 
 const Face = styled.div`
@@ -79,22 +80,24 @@ const Face = styled.div`
 `;
 
 export const Face1 = styled(Face)`
-  transform: rotateY(0deg) translateZ(-${l}vw);
+transform: rotateY(180deg) translateZ(-${l}vw);
 `
 export const Face2 = styled(Face)`
-  transform: rotateX(-90deg) translateZ(-${l}vw);
+transform: rotateX(90deg) translateZ(-${l}vw);
 `
 export const Face3 = styled(Face)`
-  transform: rotateY(90deg) translateZ(-${l}vw);
-`
-export const Face4 = styled(Face)`
   transform: rotateY(-90deg) translateZ(-${l}vw);
 `
+export const Face4 = styled(Face)`
+  transform: rotateY(90deg) translateZ(-${l}vw);
+`
 export const Face5 = styled(Face)`
-  transform: rotateX(90deg) translateZ(-${l}vw);
+transform: rotateX(-90deg) translateZ(-${l}vw);
+  
 `
 export const Face6 = styled(Face)`
-  transform: rotateY(180deg) translateZ(-${l}vw);
+transform: rotateY(0deg) translateZ(-${l}vw);
+  
 `
 
 export const Tentativi = styled.div`
@@ -149,4 +152,38 @@ export const Prosegui = styled.button`
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+`;
+
+
+export const CubeFace = styled.div`
+  position: absolute;
+  width: 26vw;
+  height: 26vw;
+  border: 4px solid white;
+  line-height: 26vw;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background: black;  
+  opacity: 0.75;
+  `;
+
+export const CubeFace1 = styled(CubeFace)`
+  transform: rotateY(0deg) translateZ(26vw);
+`;
+export const CubeFace2 = styled(CubeFace)`
+  transform: rotateY(180deg) translateZ(26vw);
+`;
+export const CubeFace3 = styled(CubeFace)`
+  transform: rotateY(90deg) translateZ(26vw);
+`;
+export const CubeFace4 = styled(CubeFace)`
+  transform: rotateY(-90deg) translateZ(26vw);
+`;
+export const CubeFace5 = styled(CubeFace)`
+  transform: rotateX(90deg) translateZ(26vw);
+`;
+export const CubeFace6 = styled(CubeFace)`
+  transform: rotateX(-90deg) translateZ(26vw);
 `;

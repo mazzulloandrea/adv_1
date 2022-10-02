@@ -11,6 +11,12 @@ import zaino from '../../assets/icons/intestazione/zaino.svg';
 import chiavi from '../../assets/icons/intestazione/chiavi.svg';
 
 import dices from '../../assets/icons/dice/dices.svg';
+import dice1 from '../../assets/icons/dice/dice1.svg';
+import dice2 from '../../assets/icons/dice/dice2.svg';
+import dice3 from '../../assets/icons/dice/dice3.svg';
+import dice4 from '../../assets/icons/dice/dice4.svg';
+import dice5 from '../../assets/icons/dice/dice5.svg';
+import dice6 from '../../assets/icons/dice/dice6.svg';
 
 import cubes from '../../assets/icons/gioco9/gioco9.svg';
 
@@ -41,6 +47,7 @@ function TitleIcon({ type, onClick = () => { } }) {
   const allIcon = {
     corpo, mente, spirito, cuore,
     borsello, zaino, chiavi,
+    dice1, dice2, dice3, dice4, dice5, dice6,
     dices, cubes, directions, question,
     scrigno,
     ...zainoList,

@@ -2,7 +2,7 @@ export default {
   "titolo": "La grotta",
   "frase": `
     Hai finalmente trovato la grotta.
-    Hai sentito storie di funchi fluorscenti e di pipistrelli ma 
+    Hai sentito storie di funghi fluorscenti e di pipistrelli ma 
     non ti sei mai addentrato oltre che pochi metri fin dove la luce illumina l'interno.
   `,
   "audio": {

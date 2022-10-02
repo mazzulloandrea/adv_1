@@ -33,6 +33,7 @@ import {
   ActualResult,
   Obiettivo,
   Prosegui,
+  CubeFace1, CubeFace2, CubeFace3, CubeFace4, CubeFace5, CubeFace6
 } from './styled';
 
 function Dice({ data, caratteristiche, onend }) {
@@ -115,28 +116,40 @@ function Dice({ data, caratteristiche, onend }) {
     console.log('rotazione', rotationType);
     switch (rotationType) {
       case 1:
-        _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg)`;
+        // _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg) translateZ(0)`;
+        _cube.style.transform = `rotateY(360deg) translateZ(0)`;
         // _cube.style.transform = `rotateY(0deg)`;
+        // _cube.style.transform = `rotateY(180deg) translateZ(0)`;
         break;
       case 2:
-        _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) + 90}deg)`;
+        // _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) + 90}deg) translateZ(0)`;
+        _cube.style.transform = `rotateX(90deg) translateZ(0)`;
         // _cube.style.transform = `rotateX(90deg)`;
+        // _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
         break;
       case 3:
-        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 90}deg)`;
+        // _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 90}deg) translateZ(0)`;
+        _cube.style.transform = `rotateY(-90deg) translateZ(0)`;
         // _cube.style.transform = `rotateY(-90deg)`;
+        // _cube.style.transform = `rotateY(-90deg) translateZ(0)`;
         break;
       case 4:
-        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) + 90}deg)`;
+        // _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) + 90}deg) translateZ(0)`;
+        _cube.style.transform = `rotateY(90deg) translateZ(0)`;
         // _cube.style.transform = `rotateY(90deg)`;
+        // _cube.style.transform = `rotateY(90deg) translateZ(0)`;
         break;
       case 5:
-        _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) - 90}deg)`;
+        _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) - 90}deg) translateZ(0)`;
+        _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
         // _cube.style.transform = `rotateX(-90deg)`
+        // _cube.style.transform = `rotateY(-180deg) translateZ(0)`;
+        
         break;
       case 6:
-        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 180}deg)`;
+        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 180}deg) translateZ(0)`;
         // _cube.style.transform = `rotateY(-180deg)`;
+        // _cube.style.transform = `rotateY(0deg) rotateX(0deg) translateZ(0)`;
         break;
       default:
         // case same number
@@ -144,11 +157,11 @@ function Dice({ data, caratteristiche, onend }) {
         if (isX.length === 2) {
           const newValue = parseInt(isX[1]) + 360;
           console.log(`oldValue ${parseInt(isX[1])}; newValue ${newValue}`);
-          _cube.style.transform = `rotateX(${newValue}deg)`;
+          _cube.style.transform = `rotateX(${newValue}deg) translateZ(0)`;
         } else {
           const newValue = parseInt(_cube.style.transform.split('Y(')[1]) + 360;
           console.log(`oldValue ${parseInt(_cube.style.transform.split('Y(')[1])}; newValue ${newValue}`);
-          _cube.style.transform = `rotateY(${newValue}deg)`;
+          _cube.style.transform = `rotateY(${newValue}deg) translateZ(0)`;
         }
     }
   }
@@ -156,12 +169,34 @@ function Dice({ data, caratteristiche, onend }) {
   function getCubeFace() {
     return html`
       <${Fragment}>
-        <${Face1}><img src=${icon1} /></${Face1}>
+        <!-- <${CubeFace1} type=${"face1"}>1</div>
+        <${CubeFace2} type=${"face2"}>2</div>
+        <${CubeFace3} type=${"face3"}>3</div>
+        <${CubeFace4} type=${"face4"}>4</div>
+        <${CubeFace5} type=${"face5"}>5</div>
+        <${CubeFace6} type=${"face6"}>6</div> -->
+
+        <!-- <${Face1}>1</${Face1}>
+        <${Face2}>2</${Face2}>
+        <${Face3}>3</${Face3}>
+        <${Face4}>4</${Face4}>
+        <${Face5}>5</${Face5}>
+        <${Face6}>6</${Face6}> -->
+
+        <!-- <${Face1}><img src=${icon1} /></${Face1}>
         <${Face2}><img src=${icon2} /></${Face2}>
         <${Face3}><img src=${icon3} /></${Face3}>
         <${Face4}><img src=${icon4} /></${Face4}>
         <${Face5}><img src=${icon5} /></${Face5}>
-        <${Face6}><img src=${icon6} /></${Face6}>
+        <${Face6}><img src=${icon6} /></${Face6}> -->
+      
+        <${Face1}><${TitleIcon} type=${'dice1'} /></${Face1}>
+        <${Face2}><${TitleIcon} type=${'dice2'} /></${Face2}>
+        <${Face3}><${TitleIcon} type=${'dice3'} /></${Face3}>
+        <${Face4}><${TitleIcon} type=${'dice4'} /></${Face4}>
+        <${Face5}><${TitleIcon} type=${'dice5'} /></${Face5}>
+        <${Face6}><${TitleIcon} type=${'dice6'} /></${Face6}>
+        
       </${Fragment}>
     `;
   }
