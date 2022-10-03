@@ -6,6 +6,7 @@ import mente from '../../assets/icons/intestazione/caratteristiche/mente.svg';
 import spirito from '../../assets/icons/intestazione/caratteristiche/spirito.svg';
 import cuore from '../../assets/icons/intestazione/caratteristiche/cuore.svg';
 
+
 import borsello from '../../assets/icons/intestazione/borsello.svg';
 import zaino from '../../assets/icons/intestazione/zaino.svg';
 import chiavi from '../../assets/icons/intestazione/chiavi.svg';
@@ -43,6 +44,8 @@ import secondaProva from '../../assets/icons/traguardi/secondaProva.svg';
 import terzaProva from '../../assets/icons/traguardi/terzaProva.svg';
 
 import reset from '../../assets/icons/ferite/reload.svg';
+// need "vita" per tesori
+import vita from '../../assets/icons/intestazione/caratteristiche/cuore.svg';
 
 function TitleIcon({ type, onClick = () => { } }) {
   const allIcon = {
@@ -63,6 +66,7 @@ function TitleIcon({ type, onClick = () => { } }) {
     primaProva,
     secondaProva,
     terzaProva,
+    vita,
   }
   if (allIcon.hasOwnProperty(type)) {
     return html`<${allIcon[type]} onClick=${onClick} />`;

@@ -87,12 +87,15 @@ function Gioco9({ data, onend }) {
   }, [viewSand]);
 
   useEffect(()=>{},[cubes])
+  
   useEffect(()=>{
     if (type === "memory" && cubesClicked.length === combinazione.length) {
       verify()
     }
   },[cubesClicked]);
+
   useEffect(()=>{},[hideMemory]);
+  
   useEffect(()=>{
     if(["memory","domanda", "numbers"].includes(type) && errors.length === 3) {
       verify();
@@ -166,7 +169,7 @@ function Gioco9({ data, onend }) {
       html`
         <div class=${style.game} 
           style=${{background: "grey"}}
-          onclick=${(evt) =>{
+          onclick=${(evt) => {
             // se corretto
             const candidate = cubesClicked.concat(cube);
             if(type === "memory") {
@@ -188,7 +191,6 @@ function Gioco9({ data, onend }) {
                 setErrors(errors.concat(true));
                 gameContainer.classList.add(style.containerTilt);
               }
-
             } // type directions, domanda 
             else if (combinazione.slice(0, candidate.length) === candidate.join('')) {
               setCubesClicked(candidate);
@@ -220,7 +222,7 @@ function Gioco9({ data, onend }) {
       return html`
         ${cubes.map((cube, index) => html`
           <div class=${style.game}
-            style=${{"backgroundColor": cube.palette}}
+            style=${{backgroundColor: cube.palette}}
             onclick=${()=> {
               if (cubesClicked.length >= combinazione.length) return;
               setCubesClicked(cubesClicked.concat(cube));

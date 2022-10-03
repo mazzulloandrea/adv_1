@@ -21,7 +21,8 @@ export default {
   "dice": {
     "successo": "a0",
     "fallimento": "a1",
-    "obiettivo": 14,
+    // "obiettivo": 14,
+    obiettivo: 3,
     abilita: ["corpo", "mente", "spirito"],
     "lanci": 6
   },

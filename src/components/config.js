@@ -23,7 +23,7 @@ const initialAbilita = {
   zainoMaxLength: 4,
   vitaMaxLength: 4,
   borselloMaxLength: 50,
-  chiaviMaxLength: 10,
+  chiaviMaxLength: 3,
   // zaino: ["corda", "spada"],
   // chiavi: 2,
   // borsello: 4
@@ -63,6 +63,20 @@ const tutorialConfig = {
     text: [
       "Leggi bene la combinazione corretta",
       "Tappa sul lucchetto per inserire il codice"
+    ],
+    active: true,
+  },
+  chiave: {
+    text: [
+      "Risolvendo i giochi in modo corretto guadagni 1 chiave",
+      "Quando arriverai a 3 chiavi potrai ottenere un premio"
+    ],
+    active: true,
+  },
+  chiavi: {
+    text: [
+      "Ogni 3 chiavi potrai cercare il tesoro",
+      "Se sarai fortunato potrai aumentare le tue abilità e recuperare vita"
     ],
     active: true,
   }

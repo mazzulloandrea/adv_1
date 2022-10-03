@@ -86,7 +86,7 @@
   line-height: 1.5em;
   padding: 1em;
   overflow-y: auto;
-  height: calc(90vh - 2em - 8vh);
+  height: calc(90vh - 8vh);
   margin-top: 2vh;
 }
 
@@ -100,4 +100,5 @@
   background-color: green;
   color: black;
   margin: 0 auto;
+  margin-bottom: 10vh;
 }

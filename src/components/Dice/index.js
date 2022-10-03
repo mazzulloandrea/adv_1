@@ -280,7 +280,7 @@ function Dice({ data, caratteristiche, onend }) {
           <${Obiettivo} valid=${getResult() > obiettivo}>
             ${getResult() > obiettivo 
               ? `Bravo! Hai raggiunto ${obiettivo}` 
-              : `Fai almeno ${obiettivo}`}
+              : `Fai almeno ${obiettivo - 1}`}
           </${Obiettivo}>
         <//>
         <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>

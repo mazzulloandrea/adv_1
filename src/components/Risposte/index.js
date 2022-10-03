@@ -27,7 +27,6 @@ const Risposte = ({ data, caratteristiche, onend }) => {
     <div class=${style.container}>
       ${response.map((el) => {
         const { gioco, next, abilita, frase, icon, zaino, borsello, chiavi, zainoElimina, ferita, ...custom} = el;
-        console.log(custom);
         return html`
           <div class=${style.response}
             onclick=${()=> {

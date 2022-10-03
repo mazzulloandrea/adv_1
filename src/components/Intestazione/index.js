@@ -23,22 +23,22 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
       <${Caratteristica}>
         <${AbilitaIconContainer}>
           <${TitleIcon} type=${"corpo"} />
-          </div>
-          <div>${corpo}</div>
-          </div>
-          <${Caratteristica}>
-            <${AbilitaIconContainer}>
-              <${TitleIcon} type=${"mente"} />
-              </div>
-              <div>${mente}</div>
-              </div>
-              <${Caratteristica}>
-                <${AbilitaIconContainer}>
-                  <${TitleIcon} type=${"spirito"} />
-                  </div>
-                  <div>${spirito}</div>
-                  </div>
-                  </div>`
+        </${AbilitaIconContainer}>
+        <div>${corpo}</div>
+      </${Caratteristica}>
+      <${Caratteristica}>
+        <${AbilitaIconContainer}>
+          <${TitleIcon} type=${"mente"} />
+        </${AbilitaIconContainer}>
+        <div>${mente}</div>
+      </${Caratteristica}>
+      <${Caratteristica}>
+        <${AbilitaIconContainer}>
+          <${TitleIcon} type=${"spirito"} />
+        </${AbilitaIconContainer}>
+        <div>${spirito}</div>
+      </${Caratteristica}>
+    </${AbilitaContainer}>`
   };
 
   function getVita() {
@@ -52,7 +52,7 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
       ${total.slice(vitaActual.length).map(c => html`
       <${Spezzato} />
       `)}
-      </ />
+    </${Cuori}>
     `;
   }
 
@@ -80,7 +80,7 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
     return html`
       <${Center}>
         <div>
-          ${chiavi > 0 && html`
+          ${html`
           <${TitleIcon} type=${"chiavi"} />
           <div>${chiavi}</div>`}
         </div>

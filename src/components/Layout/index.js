@@ -22,6 +22,7 @@ import Zaino from '../Zaino';
 import animation from './animation.css';
 import style from './style.css';
 import Achievement from '../Achievement';
+import Tesori from '../Tesori';
 
 
 const Layout = () => {
@@ -146,7 +147,6 @@ const Layout = () => {
   };
 
   const onEndRisposte = (gioco, nextCap, newAbilita, newZaino, borselloNewValue, chiavi, zainoElimina, ferita, custom) => {
-    console.log('onend risposte');
     setActualComponent(null);
     let updated = abilita;
     if(nextCap === 'a') {
@@ -209,11 +209,17 @@ const Layout = () => {
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
+    } else if(feedback === true) {
+      if (abilita.chiavi < initialAbilita.chiaviMaxLength) {
+        setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1 }));        
+      }
     } else {
-      document.getElementById("2").style.left = '33.3vw';
-      document.getElementById("3").style.left = '66.6vw';
-      document.getElementById('overlay').classList.toggle(animation.show);
+      startAnimationFinestre(); 
     }
+    loadNextComponent(gioco, nextCap, feedback);
+  }
+
+  const loadNextComponent = (gioco, nextCap, feedback) => {
     setTimeout(() => {
       if (nextCap) {
         setActual(Object.assign({ ...actual }, { gioco, cap: nextCap }));
@@ -222,6 +228,12 @@ const Layout = () => {
       }
       setActualComponent(gioco);
     }, 2000);
+  };
+  
+  const startAnimationFinestre = () =>{
+    document.getElementById("2").style.left = '33.3vw';
+    document.getElementById("3").style.left = '66.6vw';
+    document.getElementById('overlay').classList.toggle(animation.show);
   }
 
   const transitionEnd = () => {
@@ -314,6 +326,33 @@ const Layout = () => {
           }}
         />
       `
+    }
+    if (abilita.chiavi === initialAbilita.chiaviMaxLength) {
+      if(tutorials && tutorials.chiavi && tutorials.chiavi.active) {
+        return html`
+          <${Tutorial} type=${"chiavi"} dismiss=${() => {
+              delete tutorials.chiavi;
+              setTutorials(Object.assign({}, tutorials));
+            }}
+          />
+        `        
+      } else {
+        return html`
+          <${Tesori} onEnd=${(result) => {
+            let newAbilita = Object.assign(abilita);
+            result.forEach(r => {
+              if(
+                (r === 'vita' && abilita.vita < initialAbilita.vitaMaxLength) ||
+                (['corpo', 'spirito', 'mente'].includes(r))
+              ) {
+                newAbilita[r] = newAbilita[r] + 1;
+              }
+            });
+            startAnimationFinestre();
+            setTimeout(() => setAbilita(Object.assign({...newAbilita},{chiavi:0})), 2000);
+          }} />
+        `
+      }
     }
     // altri componenti come risposte, giochi, audio
     return html`
