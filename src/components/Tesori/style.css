@@ -36,3 +36,20 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+.game {
+  width: 13vh;
+  height: 13vh;
+  margin: 2vh;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border-radius: 10px;
+}
+
+.game svg {
+  width: 100%;
+}

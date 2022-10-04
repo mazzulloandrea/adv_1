@@ -34,13 +34,13 @@ function Tesori({ abilita, onEnd }) {
       </div>
       <div class=${cubesStyle.gameContainer}>
         ${tesoriList.map(el => html`
-        <div class=${cubesStyle.game} style=${{border: 'none', margin: '2vh'}} onClick=${(evt)=> {
+        <div class=${style.game} onClick=${(evt)=> {
           if (result.length > 2) return;
           console.log(el);
           evt.currentTarget.classList.add(style.hide);
           setResult(result.concat(el));
         }}>
-          <${TitleIcon} type=${"scrigno"} style=${{width: '100%'}}/>
+          <${TitleIcon} type=${"scrigno"} />
         </div>
         `)}
       </div>
