@@ -249,43 +249,43 @@ function Dice({ data, caratteristiche, onend }) {
       <${Area1}>
         <${Tentativi}>
           Lanci rimasti ${getRemainingDice()}
-        <//>
+        </${Tentativi}>
         <${DiceArea}>
           <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
             <${Type}>Corpo <${TitleIcon} type=${"corpo"} /><//>
             
             <${Bonus}>${corpo}<//>
             <${Scene}>${getCube(1)}<//>
-          <//>
+          </${AbilitaSection}>
           <${AbilitaSection} disabled=${!abilita.includes('mente')}>
             <${Type}>Mente <${TitleIcon} type=${"mente"} /><//>
             
             <${Bonus}>${mente}<//>
             <${Scene}>${getCube(2)}<//>
-          <//>
+          </${AbilitaSection}>
           <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
             <${Type}>Spirito <${TitleIcon} type=${"spirito"} /><//>
             
             <${Bonus}>${spirito}<//>
             <${Scene}>${getCube(3)}<//>
-          <//>
-        <//>
-      <//>
+          </${AbilitaSection}>
+        </${DiceArea}>
+      </${Area1}>
       <${Area2}>
         <${Risultato}>
           <span>Totale</span>
           <${ActualResult}>
             ${getResult()}
-          <//>
+          </${ActualResult}>
           <${Obiettivo} valid=${getResult() > obiettivo}>
             ${getResult() > obiettivo 
-              ? `Bravo! Hai raggiunto ${obiettivo}` 
-              : `Fai almeno ${obiettivo - 1}`}
+              ? `Bravo! Hai superato ${obiettivo}` 
+              : `Fai almeno ${obiettivo + 1}`}
           </${Obiettivo}>
-        <//>
+        </${Risultato}>
         <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>
-      <//>
-    <//>
+      </${Area2}>
+    </${Page}>
   `;
 }
 

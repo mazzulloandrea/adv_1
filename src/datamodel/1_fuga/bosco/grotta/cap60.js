@@ -14,12 +14,8 @@ export default {
     "successo": "cap61",
     "fallimento": "cap62",
     "durata": "15",
-    "combinazione": [
-      "su",
-      "destra",
-      "sinistra"
-    ],
+    "combinazione": ["erba", "foresta", "ruota"],
     "type": "memory",
-    dataset: "run",
+    dataset: "vario",
   }
 }

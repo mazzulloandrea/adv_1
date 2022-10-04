@@ -16,6 +16,7 @@ import {
   sentiero,
   tomba
 } from '/assets/icons/memory/nature';
+import { baffi, erba, falegnameria, foresta, granchio, grano, nave, pozioneCuore, ruota, veleno } from '/assets/icons/memory/vario';
 import { keyToSaveInStorage } from './config';
 
 const saveIntoStorage = (item) => {
@@ -120,6 +121,7 @@ const natureSet = {
   tomba
 }
 const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra };
+const varioSet = { baffi, erba, falegnameria, foresta, granchio, grano, nave, pozioneCuore, ruota, veleno };
 
 const morteText = [
   "La tua vita e la tua missione finiscono qui",
@@ -154,4 +156,5 @@ export {
   elementSet,
   natureSet,
   numbers,
+  varioSet,
 };

@@ -20,19 +20,21 @@ export default {
       "abilita": "corpo",
       "next": "capitolo4",
       "icon": "corpo",
+      vittoria2: true,
     },
     {
       "frase": "Mente",
       "abilita": "mente",
       "next": "capitolo4",
-      "icon": "mente"
+      "icon": "mente",
+      vittoria2: true,
     },
     {
       "frase": "Spirito",
       "abilita": "spirito",
       "next": "capitolo4",
-      "icon": "spirito"
+      "icon": "spirito",
+      vittoria2: true,
     }
   ],
-  vittoria2: true,
 }

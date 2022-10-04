@@ -14,6 +14,8 @@ export default {
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
   },
-  next: 'rinunciaSfida',
-  vittoria3: true,
+  risposte: [
+    { frase: 'Con fierezza ritorni ai tuoi compiti', next: 'rinunciaSfida', vittoria3: true }
+  ]
+
 }   

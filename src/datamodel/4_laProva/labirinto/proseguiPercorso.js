@@ -14,7 +14,7 @@ export default {
 
     Facendo molta attenzione avanzi lentamente;
     dopo quasi un minuto ti ritrovi in una piccola stanza con una grossa rosa dei venti disegnata sul terreno:
-    il Nord è alle tue spalle mentre il sud avanti a te, l'est a sinstra e ovest a destra.
+    il Nord è alle tue spalle mentre il sud avanti a te, l'est a sinistra e ovest a destra.
 
     Dalla stanzina partono 3 corridoi:
 
@@ -30,7 +30,7 @@ export default {
   },
   risposte: [
     { frase: "Scegli ovest arancione", next: 'arancioneODirezioneBianco' },
-    { frase: "Scegli est nero", next: '', },
-    { frase: "Scegli sud viola", next: '', }
+    { frase: "Scegli est nero", next: 'neroEDirezioneBlu', },
+    { frase: "Scegli sud viola", next: 'violaS', }
   ]
 }

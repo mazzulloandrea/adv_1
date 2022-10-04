@@ -139,7 +139,7 @@ const Layout = () => {
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
     } else if (actualCap.next) {
-        changeCap("audio",actualCap.next, true );
+        changeCap("audio",actualCap.next );
     } else if(actualCap.fine) {
       clearInterval(timer);
       setActualComponent('achievement');
@@ -181,7 +181,7 @@ const Layout = () => {
       z.splice(z.indexOf(zainoElimina), 1);
       updated = Object.assign({...updated}, {zaino: z});
     }
-    if(custom) {
+    if(custom && Object.keys(custom).length > 0) {
       updated = Object.assign({...updated}, {...custom});
     }
     // aggiorno il timer
@@ -209,17 +209,16 @@ const Layout = () => {
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
-    } else if(feedback === true) {
-      if (abilita.chiavi < initialAbilita.chiaviMaxLength) {
-        setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1 }));        
-      }
+    } else if(feedback === true && abilita.chiavi < initialAbilita.chiaviMaxLength) {
+      console.log('increment Chiave');
+      setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1 }));        
     } else {
       startAnimationFinestre(); 
     }
-    loadNextComponent(gioco, nextCap, feedback);
+    loadNextComponent(gioco, nextCap);
   }
 
-  const loadNextComponent = (gioco, nextCap, feedback) => {
+  const loadNextComponent = (gioco, nextCap) => {
     setTimeout(() => {
       if (nextCap) {
         setActual(Object.assign({ ...actual }, { gioco, cap: nextCap }));

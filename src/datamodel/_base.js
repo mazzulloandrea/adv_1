@@ -74,8 +74,8 @@ export default {
     durata: "15",
     type: "memory",
 
-    combinazione: ["corri", "salta", "stop", "zigzag", "indietro", "sinistra", "destra", "su", "giu"],
-    dataset: "run",
+    combinazione: ["baffi", "erba", "falegnameria", "foresta", "granchio", "grano", "nave", "pozioneCuore", "ruota", "veleno"],
+    dataset: "vario",
 
     combinazione: ["spada", "scudo", "teschio", "elmo", "arco", "pirata", "fantasma", "ascia", "mago", "pugno"],
     dataset: "combat",

@@ -8,7 +8,7 @@ import { shuffle } from '../utils';
 
 function Tesori({ abilita, onEnd }) {
 
-  const tesoriList = shuffle(["corpo", "mente", "spirito", "vita", null, null, null, null, null]);
+  const [tesoriList, setTesoriList] = useState(shuffle(["corpo", "mente", "spirito", "vita", null, null, null, null, null]));
   const [result, setResult] = useState([]);
 
   useEffect(() => { }, []);
@@ -22,7 +22,7 @@ function Tesori({ abilita, onEnd }) {
   return html`
     <div class=${style.wrapper}>
       <div class=${style.header}>
-        ${result < 2 && html`<div class=${style.title}>Scegli ${3 - result.length} bauli</div>`}
+        ${result.length < 3 && html`<div class=${style.title}>Scegli ${3 - result.length} baul${3 - result.length > 1 ? 'i' : 'e'}</div>`}
         <div class=${style.results}>
           Hai trovato:
           ${result.map(r => html`
@@ -34,7 +34,7 @@ function Tesori({ abilita, onEnd }) {
       </div>
       <div class=${cubesStyle.gameContainer}>
         ${tesoriList.map(el => html`
-        <div class=${cubesStyle.game} onClick=${(evt)=> {
+        <div class=${cubesStyle.game} style=${{border: 'none', margin: '2vh'}} onClick=${(evt)=> {
           if (result.length > 2) return;
           console.log(el);
           evt.currentTarget.classList.add(style.hide);

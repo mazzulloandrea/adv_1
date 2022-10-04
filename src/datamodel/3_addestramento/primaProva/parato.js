@@ -2,7 +2,7 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Pari il colpo e subito afferri la gamba facendo cadere la ragazza;
-    le salti addosso e la spingi con tutte le tue forze fuori dal cerchio.
+    le salti addosso e la spingi con tutte le tue forze fuori dal perimetro.
 
     Siete rimasti in 3 nel cerchio: tu, Gudrum ed un ragazzo dai capelli neri con un visibile graffio sanguinante sulla fronte.
 

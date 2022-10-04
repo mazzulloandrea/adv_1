@@ -12,7 +12,7 @@ function Audio({ data, frase, onend, orientation }) {
   const [play, setPlay] = useState(false);
 
   useEffect(() => {
-    console.log('init');
+    // console.log('init');
     // return () => {
     //   // animation to slide off
     //   const player = document.getElementById("player");

@@ -62,13 +62,9 @@ export default {
     "lanci": 6 // quanti lanci col dado
   },
   "gioco9": {
-    "combinazione": [
-      "su",
-      "corri",
-      "salta",
-    ],
+    "combinazione": ["grano", "erba", "veleno"],
     "type": "memory",
-    dataset: "run",
+    dataset: "vario",
     "durata": 15,
     "successo": "cap13",
     "fallimento": "cap13"

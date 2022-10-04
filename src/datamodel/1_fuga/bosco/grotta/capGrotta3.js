@@ -1,8 +1,7 @@
 export default {
   "titolo": "La grotta - i resti",
   "frase": `
-    Tra le ossa ci sono i brandelli di quello che era un borsello in cui trovi all'interno
-    2 monete argentate raffiguranti il Duca di Blick, l'attuale governatore di Berdask.
+    Tra le ossa ci sono i brandelli di quello che era un borsello, in cui trovi 2 monete argentate raffiguranti il Duca di Blick, l'attuale governatore di Berdask.
     Non trovi altro di utile.
   `,
   "audio": {

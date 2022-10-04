@@ -1,8 +1,8 @@
 export default {
   "titolo": "La grotta",
   "frase": `
-    Il sole oramai illumina da qualche ora e senti le lemantele del tuo stomaco vuoto;
-    gli obiettivi della giornata sono due: cercare tua sorella e procurarsi del cibo.
+    Il sole oramai illumina da qualche ora e senti le lemantele del tuo stomaco vuoto.
+    Gli obiettivi della giornata sono due: cercare tua sorella e procurarsi del cibo.
 
   `,
   "audio": {

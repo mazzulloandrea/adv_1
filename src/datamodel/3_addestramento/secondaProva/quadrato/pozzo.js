@@ -17,7 +17,7 @@ export default {
     successo: 'nemico',
     durata: "20",
     type: "memory",
-    combinazione: ["salta", "zigzag", "zigzag", "sinistra", "destra"],
-    dataset: "run",
+    combinazione: ["erba", "falegnameria", "foresta", "grano", "ruota"],
+    dataset: "vario",
   }
 }

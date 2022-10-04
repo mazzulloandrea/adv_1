@@ -3,7 +3,7 @@ import { html } from 'htm/preact';
 import Clessidra from '../Clessidra';
 import { useEffect, useState } from 'preact/hooks';
 // import error from '/assets/icons/memory/error.svg';
-import { shuffle, paletteColors, directionsDataset, alphabet, numbers, combatSet, runSet, elementSet, natureSet } from '../utils';
+import { shuffle, paletteColors, directionsDataset, alphabet, numbers, combatSet, runSet, elementSet, natureSet, varioSet } from '../utils';
 
 import style from './style.css';
 
@@ -12,8 +12,8 @@ function Gioco9({ data, onend }) {
   let svgSet;
   if (dataset ==="combat") {
     svgSet = combatSet;
-  } else if(dataset === "run") {
-    svgSet = runSet;
+  } else if(dataset === "vario") {
+    svgSet = varioSet;
   } else if(dataset === "element") {
     svgSet = elementSet;
   } else if (dataset === "nature") {

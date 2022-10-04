@@ -1,18 +1,18 @@
 export default {
   "titolo": "La grotta",
   "frase": `
-    La fluorescenza dei funghi illumina la strada per quasi mezz'ora quando ti ritrovi nuovamente nell'oscurità.
+    Cammini per quasi mezz'ora sfruttando la fluorescenza dei funghi, quando ti ritrovi nuovamente nell'oscurità.
     Con moltissima attenzione fai ancora pochi metri e ti ritrovi di nuovo all'aria aperta; hai attraversato la grotta finendo dall'altra parte.
-    Sei molto stanco e mancano circa 5 ore all'alba per cui decidi di riposare.
-    Prima di coricarti ripensi a tua sorella, ti concentri sulla voglia a forma di falce e provi ad attivare il potere: 
-    senti che sei troppo lontano o forse troppo debole per comunicare qualcosa ma il bruciore che senti al ginocchio ti indica che Carcadena è viva.
+    Sei molto stanco e mancano circa 5 ore all'alba, per cui decidi di riposare.
+    Prima di coricarti ripensi a tua sorella, ti concentri sulla voglia a forma di falce e provi ad attivare il potere.
+    Percepisci che sei troppo lontano, o forse troppo debole, per comunicare qualcosa ma il bruciore che senti al ginocchio ti indica che Carcadena è viva.
 
-    Di notte alcuni ricordi riaffiorano: 
-    Denred che ritorna dall'addestramento con due dita in meno nella mano sinistra e quella cicatrice deformante sul labbro che ancora oggi gli permette di parlare male; 
-    i suoi racconti della severità dei soldati e dell'addestramento ai limiti della sopportazione.
+    Di notte alcuni ricordi riaffiorano:
+    Denred che ritorna dall'addestramento con due dita di meno nella mano sinistra,
+    quella cicatrice deformante sul collo e la conseguente voce modificata, 
+    i suoi racconti sulla severità dei soldati e l'addestramento ai limiti della sopportazione.
 
     Il giorno del raccolto è arrivato anche per te.
-
 
     Al tuo risveglio hai chiaro il tuo obiettivo: seguire i soldati e raggiungere tua sorella.
 
