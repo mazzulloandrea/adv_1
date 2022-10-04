@@ -1,7 +1,7 @@
 export default {
   "titolo": "La grotta",
   "frase": `
-    L'acqua sembra fresca e pulita e potresti berne un po' e riposare qualche minuto.
+    L'acqua sembra fresca e pulita, potresti berne un po'.
   `,
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
