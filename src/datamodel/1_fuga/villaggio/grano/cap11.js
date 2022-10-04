@@ -2,8 +2,7 @@ export default {
   "titolo": "Nel grano",
   "frase": `
     Ti avvicini piano, cercando di non far rumore. 
-    Arrivi quasi a ridosso dei soldati, 
-    puoi intravedere le fiaccole e sentire quasi cosa dicono.
+    Arrivi quasi a ridosso dei soldati, puoi intravedere le fiaccole e sentire quasi cosa dicono.
     E' rischioso ma puoi provare ad avvicinarti ancora un po' per vedere e sentire meglio...
   `,
   "audio": {

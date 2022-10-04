@@ -40,7 +40,7 @@ function Tesori({ abilita, onEnd }) {
           evt.currentTarget.classList.add(style.hide);
           setResult(result.concat(el));
         }}>
-          <${TitleIcon} type=${"scrigno"} />
+          <${TitleIcon} type=${"scrigno"} style=${{width: '100%'}}/>
         </div>
         `)}
       </div>
