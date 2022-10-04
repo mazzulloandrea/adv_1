@@ -3,13 +3,12 @@ export default {
   "frase": `
 
     I soldati iniziano a prepararsi per una sosta.
-    Vi fanno scendere dal carretto e vi slegano le caviglie borbottando qualcosa sul non fare cazzate.
+    Vi fanno scendere dal carretto, vi slegano le caviglie borbottando qualcosa sul non fare cazzate.
 
-    Mentre ti guardi in giro per allentare i morsi della fame si scatena il caos;
-    Essertag ne approfitta per scappare a più non posso e, al grido di "prendetelo" e "fermati bastardo", tre soldati vanno all'inseguimento.
+    Mentre ti guardi in giro, per allentare i morsi della fame, si scatena il caos;
+    Essertag ne approfitta per scappare a più non posso, al grido <<Prendetelo!>>, <<Fermati bastardo!>>, tre soldati vanno all'inseguimento.
     
-    Gli altri quattro vi raggruppano e vi accerchiano con le armi in mano, per controllare ogni altra possibile evasione.
-
+    Gli altri quattro vi raggruppano, vi accerchiano con le armi in mano, per controllare ogni altra possibile evasione.
   `,
 
   "audio": {
@@ -31,22 +30,11 @@ export default {
       "In che luogo vi siete fermati?"
     ],
     "risposte": [
-      [
-        "4", "quattro"
-      ],
-      [
-        "3", "tre",
-      ],
-      [
-        "essertag",
-        "esserta",
-      ],
-      [
-        "sosta", "mangiare", "riposo"
-      ],
-      [
-        "colli", "sparsi", "colline"
-      ]
+      ["4", "quattro"],
+      ["3", "tre"],
+      ["essertag", "esserta"],
+      ["sosta", "mangiare", "riposo", "riposare", "pasto"],
+      ["colli", "sparsi", "colline"]
     ]
   }
 }
