@@ -243,6 +243,7 @@ import comeMaiFallimento from './4_laProva/comeMaiFallimento';
 import comeMaiSuccesso from './4_laProva/comeMaiSuccesso';
 import esaminiTenda from './4_laProva/esaminiTenda';
 import indizi from './4_laProva/indizi';
+import indiziNo from './4_laProva/indiziNo';
 import inizioProva3 from './4_laProva/inizioProva3';
 import rinunciaSfida from './4_laProva/rinunciaSfida';
 import scale from './4_laProva/scale';
@@ -689,6 +690,7 @@ export default {
   comeMaiSuccesso,
   esaminiTenda,
   indizi,
+  indiziNo,
   inizioProva3,
   rinunciaSfida,
   scale,

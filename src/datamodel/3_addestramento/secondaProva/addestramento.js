@@ -11,7 +11,7 @@ export default {
     Potrete scegliere un avversario tra chiunque nel campo;
     potrete scegliere di sfidare un'altra recluta, scegliere un soldato oppure Ravon stesso.
 
-    Lo scontro avrà una durata di 1 ora massimo e avverrà in una quadrato di circa 20 metri di lato, in una zona adiacente al campo di addestramento; ci saranno alberi, nascondigli, trappole e ripari.
+    Lo scontro avrà una durata di mezz'ora massimo e avverrà in una quadrato di circa 20 metri di lato, in una zona adiacente al campo di addestramento; ci saranno alberi, nascondigli, trappole e ripari.
     
     Non è stato specificato cosa potrebbe accadere all'interno ma avete capito, dai toni del generale, che non ci sono regole.
 

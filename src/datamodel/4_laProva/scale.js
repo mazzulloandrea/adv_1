@@ -18,6 +18,28 @@ export default {
     { frase: "Esamini per capire se ci sono indizi", gioco: 'text' }
   ],
   text: {
-    successo: 'indizi'
+    successo: 'indizi',
+    fallimento: 'indiziNo',
+    durata: "15",
+    domande: [
+      "Come si chiama il Generale?",
+      "Di quante guardie conosci il nome?",
+      "Come si chiama la guardia con la lingua amputata?",
+      "Come si chiama la guardia che hai affrontato nella seconda prova?"
+    ],
+    risposte: [
+      [
+        "ravon",
+      ],
+      [
+        "2", "due",
+      ],
+      [
+        "orius",
+      ],
+      [
+        "darius"
+      ]
+    ]
   }
 }

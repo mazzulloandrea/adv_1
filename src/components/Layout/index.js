@@ -252,7 +252,7 @@ const Layout = () => {
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {
       // stop timer
-      clearInterval(timer);
+      // clearInterval(timer);
       return html`<${Morte} onClick=${() => setActualComponent("achievement")} />`;
     }
 

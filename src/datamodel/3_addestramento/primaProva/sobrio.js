@@ -30,7 +30,7 @@ export default {
   gioco9: {
     successo: "schivato",
     fallimento: "colpito",
-    durata: "45",
+    durata: "30",
     combinazione: "schivare",
     type: "domanda",
     domanda: "Sinonimo di 'evadere il colpo'"
