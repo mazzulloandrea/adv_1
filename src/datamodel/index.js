@@ -290,7 +290,7 @@ import cap90 from './cap90';
 // incontri Aaron 26
 
 // capitoli con bonus 
-// parte 1_fuga 0, 19, 25, 34, 50, capGrottaAcqua, 
+// parte 1_fuga 0, 19, 25, 34, 50, capGrottaAcqua, viaggio
 // parte 2_cattura aaronCoraggio, verita, discussioneConSoldati, rialzato, cadeIlRosso
 // parte 3_addestramento  vittoriaSanguinante, vittoriaNonSanguinante
 

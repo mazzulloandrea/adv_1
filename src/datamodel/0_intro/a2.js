@@ -1,9 +1,9 @@
 export default {
   "titolo": "Introduzione",
   "frase": `
-    Come al solito ti brucia il ginocchio destro, dove anche tu hai lo stesso segno di tua sorella. 
+    Come al solito ti brucia il ginocchio destro, dove anche tu hai la stessa voglia di tua sorella. 
     La voce di Carcadena entra nella tua mente <<Sono dal vecchio, sta morendo...>>. 
-    Carcadena è molto più brava di te ad usare il potere, riesce a farlo più volte e più a lungo`,
+    Tua sorella è molto più brava di te ad usare il potere, riesce a farlo più volte e più a lungo`,
   "audio": {
     "src": "/assets/audio/a2.mp3",
     "interrompe": ""

@@ -14,9 +14,9 @@ export default {
     Ti allontani per una buona mezz'ora quando ti accorgi di esserti perso: 
     le colline "sparse" sono un luogo inesplorato e pericoloso, frequentato da banditi e animali selvaggi.
 
-    Ti fermi un attimo prendi fiato e provi a guardarti attorno per orientarti.
+    Ti fermi un attimo, prendi fiato, e provi a guardarti attorno per orientarti.
 
-    Dopo una decina di minuti circa trovi delle impronte di stivali abbastanza fresche
+    Dopo una decina di minuti trovi delle impronte di stivali abbastanza fresche.
   `,
 
   "audio": {

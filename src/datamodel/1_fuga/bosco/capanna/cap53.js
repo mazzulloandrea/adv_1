@@ -15,11 +15,11 @@ export default {
       "next": "cap56",
     },
     {
-      "frase": "Scappare verso la grotta",
+      "frase": "Preferisci scappare verso la grotta",
       "next": "cap60"
     },
     {
-      "frase": "Scappare verso gli alberi",
+      "frase": "Megloio scappare verso il fiume",
       "next": "cap70"
     },
     {
