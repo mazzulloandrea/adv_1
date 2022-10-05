@@ -5,7 +5,7 @@ export default {
     Vi fanno scendere dal carretto, vi slegano le caviglie borbottando qualcosa sul non fare cazzate.
 
     Mentre ti guardi in giro, per allentare i morsi della fame, si scatena il caos;
-    Essertag ne approfitta per scappare a più non posso; <<Prendetelo!>>, <<Fermati bastardo!>>, tre soldati vanno all'inseguimento.
+    Essertag ne approfitta per scappare a più non posso; <<Prendetelo!>>, <<Fermati canaglia!>>, tre soldati vanno all'inseguimento.
     
     Gli altri quattro vi raggruppano, vi accerchiano con le armi in mano, per controllare ogni altra possibile evasione.
   `,

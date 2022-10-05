@@ -1,16 +1,15 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Le sfide si susseguono e nessuno in attesa del proprio turno può sapere come sono andate gli incontri precedenti.
+    Le sfide si susseguono e nessuno in attesa del proprio turno può sapere come sono andati gli incontri precedenti.
     Ad un certo punto si alza tua sorella ed insieme a lei Teela; 
     si allontanano mentre auguri a Carcadena buona fortuna attraverso il potere.
 
     In queste settimane poche volte sei riuscito a confrontarti con lei e con gli altri giovani del campo; 
-    siete stati impegnati praticamente sempre tra gli addestramenti estenuanti per metà giornata, i compiti di pulizia fino a sera e le ultime ore dedicate alle prove fisiche, mentali e spirituali per completare l'addestramento.
+    siete stati impegnati praticamente sempre tra gli addestramenti estenuanti e le varie mansioni quotidiane.
 
-    Passano i minuti e sei inevitabilmente in ansia per tua sorella, poi senti bruciare il ginocchio e nella mente le parole di Carcadena; 
-    ti dice che ha perso la sfida ma di non preoccuparti che sta bene.
-
+    Passano i minuti e sei inevitabilmente in ansia per Carcadena, poi senti bruciare il ginocchio <<Ho perso, sto bene>> 
+    
     Con una certa dose di preoccupazione sai che il prossimo sarai tu;
     ti alzi in piedi e vieni accompagnato all'ingresso.
 

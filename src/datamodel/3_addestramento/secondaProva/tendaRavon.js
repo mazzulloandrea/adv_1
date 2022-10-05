@@ -1,9 +1,7 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Il capitano ti chiede se vuoi imparare il combattimento ravvicinato, 
-    il combattimento a distanza o se preferisci 
-    apprendere le arti della difesa.
+    Il capitano ti chiede se vuoi imparare il combattimento ravvicinato, il combattimento a distanza o se preferisci apprendere le arti della difesa.
     `,
 
   "audio": {

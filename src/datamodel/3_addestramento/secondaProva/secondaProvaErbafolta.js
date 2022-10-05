@@ -1,12 +1,11 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Davanti a te ci sono Gudrum, Aaron e Alexis mentre
-    tua sorella Carcadena ha già formato coppia con Teela che ha preteso lei come compagna.
+    Davanti a te ci sono Gudrum, Aaron e Alexis mentre tua sorella Carcadena ha già formato coppia con Teela.
 
-    Gudrum, più giovane di te di due anni, sembra essere ancora abbattauto per la perdita dell'amico Essertag.
-    Aaron, abbassa lo sguardo e sembra non aver sconfitto i timori che lo accompagnano fin da giovane 
-    Alexis, sta guarendo molto lentamente e secondo te non riuscirà ad essere competitivo per i prossimi giorni
+    Gudrum, più giovane di te di due anni, sembra essere ancora abbattuto per la perdita dell'amico Essertag.
+    Aaron, abbassa lo sguardo e sembra non aver sconfitto i timori che lo accompagnano. 
+    Alexis, sta guarendo molto lentamente e secondo te non riuscirà ad essere competitivo per i prossimi giorni.
   `,
 
   "audio": {

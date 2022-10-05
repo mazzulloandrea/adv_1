@@ -22,7 +22,8 @@ function Tesori({ abilita, onEnd }) {
   return html`
     <div class=${style.wrapper}>
       <div class=${style.header}>
-        ${result.length < 3 && html`<div class=${style.title}>Scegli ${3 - result.length} baul${3 - result.length > 1 ? 'i' : 'e'}</div>`}
+        <!-- ${result.length < 3 && html`<div class=${style.title}>Scegli ${3 - result.length} baul${3 - result.length > 1 ? 'i' : 'e'}</div>`} -->
+        <div class=${style.title}>Scegli ${3 - result.length} baul${3 - result.length === 1 ? 'e' : 'i'}</div>
         <div class=${style.results}>
           Hai trovato:
           ${result.map(r => html`

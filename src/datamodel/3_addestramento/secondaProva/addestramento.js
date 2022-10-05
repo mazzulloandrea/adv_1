@@ -4,24 +4,19 @@ export default {
     L'addestramento prosegue per 3 durissime settimane; 
     venite tutti allenati anche a sopportare il freddo, a patire la fame, a resistere al dolore e a riconoscere alcuni animali pericolosi.
     
-    Non si contano nemmeno i graffi e i lividi ma alcuni di voi hanno riportato ferite ben più gravi: 
+    Non si contano nemmeno i graffi e i lividi, e alcuni di voi hanno riportato ferite ben più gravi: 
     Gudrum ha perso 1 dito della mano destra mentre Giak ha perso l'occhio sinistro.
     
-    La mattina dell'ultimo giorno della terza settimana Ravon vi spiega che ognuno di voi dovrà affrontare uno scontro che potrebbe essere mortale.
-    voi reclute potrete scegliere un avversario tra chiunque nel campo:
+    La mattina dell'ultimo giorno della terza settimana, Ravon vi spiega che ognuno di voi dovrà affrontare uno scontro che potrebbe essere mortale.
+    Potrete scegliere un avversario tra chiunque nel campo;
     potrete scegliere di sfidare un'altra recluta, scegliere un soldato oppure Ravon stesso.
 
-    Lo scontro avrà una durata di 2 ore e dovrete dimostrare di aver appreso gli addestramenti impartiti.
-
-    La sfida si terrà in una zona adiacente al campo di addestramento; 
-    sapete che ci saranno alberi, nascondigli, trappole e ripari e che sarà un quadrato di circa 20 metri di lato.
-
-    Alla conlcusione dovrete uscire da quel territorio e solo allora la prova si concluderà.
+    Lo scontro avrà una durata di 1 ora massimo e avverrà in una quadrato di circa 20 metri di lato, in una zona adiacente al campo di addestramento; ci saranno alberi, nascondigli, trappole e ripari.
     
-    Non è stato specificato cosa potrebbe accadere all'interno ma avete capito dai toni del generale che non ci sono regole e che molti non hanno superato la prova.
+    Non è stato specificato cosa potrebbe accadere all'interno ma avete capito, dai toni del generale, che non ci sono regole.
 
-    Viene sorteggiato l'ordine in cui le reclute affronteranno la prova e tu sei l'ultimo;
-    tutte le reclute si sceglono tra di loro e a te restano solo le due possibilità che nessuno ha scelto:
+    Viene sorteggiato l'ordine in cui affronterete la prova e tu sei l'ultimo;
+    tutte le reclute si sceglono tra di loro e a te restano solo due possibilità:
     affrontare il generale Ravon oppure uno dei soldati.
 
     Devi scegliere il tuo avversario.

@@ -1,8 +1,7 @@
 export default {
   "titolo": "baraccaDestra",
   "frase": `
-    Fai il giro verso la finestra; 
-    la tua preoccupazione aumenta a dismisura quando senti chiaramente dei rumori provenire dal lato opposto della baracca.
+    Fai il giro verso la finestra; la tua preoccupazione aumenta a dismisura quando senti chiaramente dei rumori provenire dal lato opposto della baracca.
 
     Cerchi di ascoltare con attenzione e capisci che una figura umanoide si sta muovendo, 3 o 4 passi poi si ferma,
     solleva l'asse di legno che sbarra la porta ed entra nella baracca; 

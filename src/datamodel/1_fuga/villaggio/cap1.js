@@ -22,7 +22,7 @@ export default {
       "gioco": "gioco9"
     },
     {
-      "frase": "Se vuoi comunque andare verso la fattoria e Carcadena",
+      "frase": "Se vuoi comunque andare verso Carcadena",
       "next": "cap7"
     }
   ],

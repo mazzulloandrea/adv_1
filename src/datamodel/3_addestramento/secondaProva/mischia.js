@@ -2,13 +2,13 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Il capitano ti spiega che la scelta che hai fatto implica un addestramento completo nel combattimento ravvicinato.
-    Le armi a disposizione sono 4 ed ognuna ha le sue peculiarità:
+    Le armi a disposizione sono quattro ed ognuna ha le sue peculiarità:
     la spada per infliggere tagli agli avversari,
     il bastone lungo per colpire fino a due metri,
-    l'ascia che permette colpi meno preicsi della spada ma più profondi
-    ed infine il martello che se usato correttamente può rompere le altre armi.
+    l'ascia che permette colpi poco precisi ma profondi
+    ed infine il martello che può rompere le armi avversarie.
 
-    Le lezioni inizieranno immediatamente domani mattina all'alba e proseguiranno per 3 settimane.
+    Le lezioni inizieranno domani mattina all'alba e proseguiranno per 3 settimane.
 
     Ora devi scegliere la tua arma.
   `,
