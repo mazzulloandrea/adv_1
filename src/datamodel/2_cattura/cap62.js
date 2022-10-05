@@ -5,7 +5,7 @@ export default {
   "frase": `
     Ti sei perso nel bosco; l'ululato dei lupi ti mette in allarme e velocemente inizi a ritornare sui tuoi passi.
 
-    Dopo qualche minuto ti senti una mano afferrarti nell'oscurità: è tuo fratellastra Dender.
+    Dopo qualche minuto ti senti una mano afferrarti nell'oscurità: è tuo fratellastra Denred.
 
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri 
     4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.

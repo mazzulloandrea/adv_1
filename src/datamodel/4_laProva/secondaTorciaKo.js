@@ -1,8 +1,7 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    <<No una ti basterà.
-    Ora smettila di lamentarti e infilati la sotto>>
+    <<No una ti basterà. Ora smettila di lamentarti e infilati la sotto>>
   `,
 
   "audio": {

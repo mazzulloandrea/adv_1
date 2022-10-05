@@ -2,10 +2,9 @@ export default {
   "titolo": "ultima prova",
   "frase": `
     Ti butti nell'acqua gelida lasciando che la torcia si spenga; 
-    il freddo punge la tua pelle come mille aghi e sveglia la tua mente come poche altre volte.
+    il freddo ti punge come mille aghi e sveglia la tua mente come poche altre volte.
 
-    Sei quasi arrivato ma quando sei a poche bracciate c'è qualcosa che ti fa paralizzare dalla paura:
-    un serpente acquatico sta nuotando nella tua direzione.
+    Sei quasi arrivato ma, quando sei a poche bracciate, c'è qualcosa che ti fa paralizzare dalla paura: un serpente acquatico sta nuotando nella tua direzione.
 
   `,
   "audio": {

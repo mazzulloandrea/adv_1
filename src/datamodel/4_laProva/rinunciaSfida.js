@@ -1,13 +1,14 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Esci dalla tenda e ti rechi da tua sorella; la trovi indaffarata con le 3 capre 
-    dalle quali mungete a turno il latte.
-    Cerchi di farle capire che le vuoi parlare e mentre sta per appoggiare gli strumenti ed 
-    appartarsi con te arriva un soldato che la chiama, Ravon la vuole in tenda.
+    Esci dalla tenda e ti rechi da tua sorella; 
+    la trovi indaffarata con le 3 capre dalle quali mungete a turno il latte.
 
-    Il tuo sguardo preoccupato comunica qualcosa a tua sorella che probabilmente non ha inteso pienamente,
-    rifletti sul da farsi: avvisarla usando il potere oppure fare finta di nulla?
+    Cerchi di farle capire che le vuoi parlare e, mentre sta per appoggiare gli strumenti ed 
+    appartarsi con te, arriva un soldato che la chiama; Ravon la vuole in tenda.
+
+    Il tuo sguardo preoccupato comunica qualcosa a tua sorella che, probabilmente, non ha inteso pienamente.
+    Rifletti velocemente: avvisarla usando il potere oppure fare finta di nulla?
   `,
 
   "audio": {

@@ -1,8 +1,7 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Guardi attentamente le parole scritte sulla porta e capisci che l'indovinello riguarda 
-    il labirinto che hai appena attraversato.
+    Guardi attentamente le parole scritte sulla porta e capisci che l'indovinello riguarda il labirinto che hai appena attraversato.
   `,
   gioco: "text",
   "audio": {

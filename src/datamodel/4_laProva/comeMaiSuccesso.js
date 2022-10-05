@@ -1,10 +1,7 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Il capitano alza lo sguardo e ti
-     dice che nemmeno lui desidera compilare tutte quelle carte 
-     ma che deve farlo, e, alzando i toni, ti intima di prendere in mano quel dannato coso e
-     smetterla di fare domande
+    Il capitano alza lo sguardo <<Nemmeno io desidero compilare tutte queste carte ma devo farlo; ora prendi in mano quel dannato coso e smettila di fare domande!>>.
     
      Poi abbassa lo sguardo e continua a compilare le sue carte.
   `,

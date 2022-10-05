@@ -1,15 +1,11 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Scendi la scala a pioli per circa una decina di gradini, saranno circa tre o quattro metri di profondità 
-    e, mentre stai per arrivare in fondo, con un tonfo la botola sopra di te si chiude.
+    Scendi la scala a pioli per circa una decina di gradini, saranno circa tre o quattro metri di profondità e, mentre stai per arrivare in fondo, con un tonfo la botola sopra di te si chiude.
 
-    Prosegui nello stretto corridoio di terra e roccia per pochi passi fino ad arrivare in una stanza più grande
-    dove ci sono 3 corridoio:
+    Prosegui nello stretto corridoio di terra e roccia per pochi passi, fino ad arrivare in una stanza più grande, dove ci sono 3 corridoio:
 
-    uno a sinistra,
-    uno al centro
-    ed uno a destra.
+    uno a sinistra, uno al centro, ed uno a destra.
   `,
 
   "audio": {

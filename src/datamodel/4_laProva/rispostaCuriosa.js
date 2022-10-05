@@ -1,8 +1,7 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    <<Buio e umidità ahahahha.
-    Dai muoviti, infilati la sotto>>
+    <<Buio e umidità. Muoviti, infilati la sotto!>>
   `,
 
   "audio": {

@@ -1,8 +1,7 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    <<L'unica cosa che devi sapere è che ti devi muovere a scendere;
-    Dai infilati la sotto>>
+    <<L'unica cosa che devi sapere è che ti devi muovere a scendere. Dai infilati la sotto>>
   `,
 
   "audio": {

@@ -3,7 +3,7 @@ export default {
   "frase": `
     Il serpente si muove così velocemente che nemmeno ti rendi conto che è già su di te, spalanca le fauci e ti morde iniettando il suo veleno.
 
-    Subito raggiungi la corda e cerchi di resistere all'effetto del veleno.
+    Subito raggiungi la corda e cerchi di resistere all'effetto tossico.
   `,
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo

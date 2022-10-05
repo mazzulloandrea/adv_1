@@ -3,7 +3,7 @@ import cap7 from './cap7';
 export default {
   "titolo": "Il Bosco",
   "frase": `
-    Torni indietro e dopo qualche minuto ti senti una mano afferrarti nell'oscurità: è tuo fratellastra Dender.
+    Torni indietro e dopo qualche minuto ti senti una mano afferrarti nell'oscurità: è tuo fratellastra Denred.
 
     --- copai da cap 7
   `,

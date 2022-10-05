@@ -1,8 +1,7 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Il capitano alza lo sguardo e ti intima di prendere in mano quel dannato coso e
-     smetterla di fare domande
+      Il capitano alza lo sguardo e ti ordina <<Prendi in mano quel dannato coso e smettila di fare domande!>>
     
      Poi abbassa lo sguardo e continua a compilare le sue carte.
 
