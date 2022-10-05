@@ -13,17 +13,17 @@ export default {
   "risposte": [
     {
       "frase": "Prendi l'accetta",
-      "zaino": "accetta",
+      zaino: "accetta",
       "next": "cap31"
     },
     {
       "frase": "Prendi la corda",
-      "zaino": "corda",
+      zaino: "corda",
       "next": "cap31"
     },
     {
       "frase": "Prendi la coperta",
-      "zaino": "coperta",
+      zaino: "coperta",
       "next": "cap31"
     },
     {

@@ -118,6 +118,16 @@ import scappi from './2_cattura/fuga/scappi';
 import scappi2 from './2_cattura/fuga/scappi2';
 import tornareIndietro from './2_cattura/fuga/tornareIndietro';
 
+// 2_cattura/animaliPercolosi
+import animaleSconosciuto from './2_cattura/animaliPericolosi/animaleSconosciuto';
+import animaliPericolosi from './2_cattura/animaliPericolosi/animaliPericolosi';
+import pirolisco from './2_cattura/animaliPericolosi/pirolisco';
+import piroliscoIgnora from './2_cattura/animaliPericolosi/piroliscoIgnora';
+import piroliscoMorte from './2_cattura/animaliPericolosi/piroliscoMorte';
+import piroliscoMorte2 from './2_cattura/animaliPericolosi/piroliscoMorte2';
+import piroliscoMorte3 from './2_cattura/animaliPericolosi/piroliscoMorte3';
+import piroliscoSconfitta from './2_cattura/animaliPericolosi/piroliscoSconfitta';
+
 // 2_cattura/carcadena
 import sorella1 from './2_cattura/carcadena/sorella1';
 import sorella2 from './2_cattura/carcadena/sorella2';
@@ -298,7 +308,7 @@ import cap90 from './cap90';
 
 // morte 
 // parte_1 90
-// parte_2 trappolaBanditiMorte
+// parte_2 trappolaBanditiMorte, piroliscoMorte, piroliscoMorte2, piroliscoMorte3
 // parte_3 fineSecondaProvaMorte, mortePerResa, scappareDarius, morteInTenda, uccisoDaDarius
 
 // informazioni per gioco Text
@@ -574,6 +584,14 @@ export default {
   trappolaBanditiMorte,
   trappolaBanditiMorte2,
 
+  animaliPericolosi,
+  animaleSconosciuto,
+  pirolisco,
+  piroliscoIgnora,
+  piroliscoMorte,
+  piroliscoMorte2,
+  piroliscoMorte3,
+  piroliscoSconfitta,
 
   terrarossa,
   cadeIlRosso,

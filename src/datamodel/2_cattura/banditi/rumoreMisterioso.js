@@ -1,11 +1,10 @@
 export default {
   "titolo": "rumore misterioso",
   "frase": `
-    Camminando per le colline sparse ti imbatti in una zona leggermente più verdeggiante, sul lato di una collina; 
-    piccoli arbusti e qualche pianta colorano di verde il rosso terriccio coperto di pietre.
+  Camminando per i colli "sparsi" ti imbatti in una zona leggermente più verdeggiante, sul lato di una collina.
 
-    Attirato da una pietra affilata ti accorgi di alcune piccole impronte... 
-    sono una decina e mentre le segui con lo sguardo senti uno strano suono provenire da poco più avanti
+  Attirato da una pianta dalle strane foglie, ti accorgi di alcune piccole impronte... 
+  sono una decina e mentre le segui con lo sguardo senti uno strano suono provenire da poco più avanti.
   `,
 
   "audio": {

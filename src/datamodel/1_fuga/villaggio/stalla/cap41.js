@@ -11,7 +11,7 @@ export default {
   "risposte": [
     {
       "frase": "Raccogli la razione di cibo",
-      "zaino": "razione",
+      zaino: "razione",
       "next": "cap50"
     },
     {
