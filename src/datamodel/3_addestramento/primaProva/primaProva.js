@@ -3,7 +3,7 @@ export default {
   "frase": `
     Tutti e 15 i soldati disegnano un cerchio sul terreno ampio circa 5 metri con voi 9 reclute all'interno;
     nel mentre le parole di Ravon sono chiare: 
-    <<al suono del tamburo inizierà uno scontro tutti contro tutti senza regole.
+    <<Al suono del tamburo inizierà uno scontro tutti contro tutti senza regole.
     Chi esce dal cerchio è eliminato.
     Chi si arrende è eliminato.>>
 

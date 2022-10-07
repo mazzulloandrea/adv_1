@@ -12,5 +12,13 @@ export default {
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
   },
-  next: "terrarossa",
+  gioco: "gioco9",
+  gioco9: {
+    successo: 'terrarossa',
+    fallimento: 'terrarossa',
+    durata: '20',
+    combinazione: "essertag",
+    type: "domanda",
+    domanda: "Come si chiama il ragazzo morto?"
+  }
 }

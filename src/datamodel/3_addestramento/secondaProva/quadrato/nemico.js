@@ -2,10 +2,9 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Corri velocemente verso il pozzo quando il terreno sotto i tuoi piedi viene a mancare;
-    con uno scatto veloce ti sposti di lato schivando la caduta per pochi centimetri.
+    con uno scatto ti sposti di lato, schivando la caduta per pochi centimetri.
     
-    Raggiungi il pozzo e non fai in tempo a guardarti attorno 
-    che Darius ti piomba addosso spingendoti con un calcio verso gli alberi.
+    Raggiungi il pozzo, non fai in tempo a guardarti attorno che Darius ti piomba addosso spingendoti con un calcio verso gli alberi.
 
     Rotoli dietro un tronco e vedi il tuo avversario che sta caricando la balestra.
 

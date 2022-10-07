@@ -4,11 +4,11 @@ export default {
     Eviti il colpo ed infliggi una pesante ferita al tuo avversario che cade in ginocchio.
 
     Darius digrigna qualcosa tra i denti e sputa sangue; 
-    non gli hai inflitto un colpo mortale ma sicuramente debilitante. 
+    gli hai inflitto un colpo quasi mortale. 
 
-    Hai vinto finalmente ma il tuo nemico farfuglia qualcosa che attira la tua attenzione; 
-    dice che una sfida finisce con la morte di uno dei due contendenti esattamente 
-    come la sfida che Essertag ha voluto intraprendere con lui.
+    Hai vinto finalmente, ma il tuo nemico farfuglia qualcosa che attira la tua attenzione:
+    <<Una sfida finisce con la morte! Esattamente come è accaduto ad Essertag [sputa sangue].
+    Quel ragazzo se l'è cercata! ahahah>>
 
     Spalanchi gli occhi a quelle parole e non sai bene come farla pagare a Darius per quello che ha fatto.
   `,

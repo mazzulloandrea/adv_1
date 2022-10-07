@@ -1,10 +1,9 @@
 export default {
   "titolo": "",
   "frase": `
-    Mostri la resa ma Darius non sembra essere soddisfatto della tua scelta 
-    ed in tutta risposta ti punta la balestra contro.
+    Mostri la resa ma Darius non sembra essere soddisfatto della tua scelta; in tutta risposta ti punta la balestra contro.
 
-    Sai che sta per sparare ed in un gesto disperato cerchi di saltare fuori dalla buca
+    Sai che sta per sparare ed in un gesto disperato cerchi di saltare fuori dalla buca.
 
   `,
 

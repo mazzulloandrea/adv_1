@@ -2,8 +2,7 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Mentre ti muovi, il terreno cede improsvvisamente facendoti cadere in una buca profondi quasi 2 metri.
-    Oltre allo spavento c'è anche la delusione perchè sopra di te troneggia Darius che puntandoti la balestra 
-    ti ordina di arrenderti.
+    Oltre allo spavento c'è anche la paura perchè sopra di te troneggia Darius che puntandoti la balestra <<Arrenditi!>>.
   `,
 
   "audio": {

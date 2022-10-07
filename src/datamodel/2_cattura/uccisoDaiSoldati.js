@@ -11,5 +11,13 @@ export default {
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
   },
-  next: "arrivo"
+  gioco: "gioco9",
+  gioco9: {
+    successo: 'arrivo',
+    fallimento: 'arrivo',
+    durata: '15',
+    combinazione: "tre",
+    type: "domanda",
+    domanda: "Quante reclute siete?"
+  }
 }

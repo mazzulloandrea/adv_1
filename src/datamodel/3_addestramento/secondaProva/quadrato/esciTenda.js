@@ -8,11 +8,10 @@ const resp = nemico.risposte.concat(
 export default {
   "titolo": "",
   frase: `
-    Esci dalla tenda e ti accorgi che alle tue spalle c'è il tuo nemico che 
-    senza esitare un momento ti punta la balestra contro e lancia un dardo che ti sfiora per pochi centimetri.
+    Esci dalla tenda; alle tue spalle c'è il tuo nemico che, senza esitare un momento, ti punta la balestra contro. 
+    Il dardo ti sfiora per pochi centimetri.
 
-    Corri a più non posso riparandoti dietro gli alberi mentre Darius,
-     imprecando per il colpo mancato, sta caricando nuovamente la balestra.
+    Scappi d'istinto, riparandoti dietro gli alberi, mentre Darius, imprecando per il colpo mancato, sta caricando nuovamente la balestra.
   `,
 
   audio: {

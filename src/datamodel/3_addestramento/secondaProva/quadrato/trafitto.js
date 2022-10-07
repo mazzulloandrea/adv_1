@@ -1,10 +1,9 @@
 export default {
   "titolo": "riparo",
   "frase": `
-    Il dardo ti colpisce il collo ma riesci a colpire ugualmente il tuo avversario che cade a Terra.
-    Siete entrambi feriti ma solo uno di voi vincerà la sfida; 
-    con tutte le forze che hai provi a rialzarti 
-    mentre Darius sembra non riuscirci.
+    Il dardo ti colpisce il collo ma riesci a colpire ugualmente il tuo avversario, che cade a Terra.
+    Siete entrambi feriti ma solo uno di voi vincerà la sfida.
+    Con tutte le forze che hai provi a rialzarti mentre Darius sembra non riuscirci.
   `,
 
   "audio": {

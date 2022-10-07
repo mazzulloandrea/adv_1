@@ -89,8 +89,8 @@ function Gioco9({ data, onend }) {
   useEffect(()=>{},[cubes])
   
   useEffect(()=>{
-    if (type === "memory" && cubesClicked.length === combinazione.length) {
-      verify()
+    if (["memory", "domanda"].includes(type) && cubesClicked.length === combinazione.length) {
+      verify();
     }
   },[cubesClicked]);
 
