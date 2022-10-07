@@ -22,11 +22,33 @@ export default {
 
     Poi un secondo boccale di vino e vi viene intimato di berlo senza lasciarne una goccia.
 
-    Senza farvi troppe domande bevete dopodichè il comandante inaspettatamente da inizio alla prima prova.
+    Senza farvi troppe domande finite il boccone, dopodichè il comandante, inaspettatamente, da inizio alla prima prova.
   `,
 
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo
+  },
+  gioco: 'text',
+  text: {
+    successo: "primaProva",
+    fallimento: "primaProva",
+    durata: "15",
+    domande: [
+      "Come si chiama il duca?",
+      "Qual'è la carica di Blick?",
+      "Di che città è sovrano il duca?",
+      "Cos'è che hai bevuto?",
+      "L'addestramento prevede l'utilizzo della fucina?",
+      "Che cos'è che hai mangiato?"
+    ],
+    risposte: [
+      ["blic", "blik", "blick"],
+      ["duca"],
+      ["berdask", "berdasc", "berdasck"],
+      ["vino"],
+      ["no", "non so", "forse", "bho", "bo"],
+      ["pane", "tozzo"]
+    ]
   },
   next: "primaProva"
 }

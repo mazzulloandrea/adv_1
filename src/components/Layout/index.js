@@ -139,7 +139,7 @@ const Layout = () => {
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
     } else if (actualCap.next) {
-        changeCap("audio",actualCap.next );
+        changeCap("audio", actualCap.next );
     } else if(actualCap.fine) {
       clearInterval(timer);
       setActualComponent('achievement');
@@ -212,6 +212,7 @@ const Layout = () => {
     } else if(feedback === true && abilita.chiavi < initialAbilita.chiaviMaxLength) {
       console.log('increment Chiave');
       setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1 }));        
+      startAnimationFinestre();
     } else {
       startAnimationFinestre(); 
     }
@@ -226,7 +227,7 @@ const Layout = () => {
         setActual(Object.assign({ ...actual }, { gioco }));
       }
       setActualComponent(gioco);
-    }, 2000);
+    }, 1500);
   };
   
   const startAnimationFinestre = () =>{
