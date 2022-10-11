@@ -63,6 +63,7 @@ const Layout = () => {
   useEffect(() => {
     // console.log(timerValue);
   }, [timerValue]);
+
   /*
     useEffect(() => {
       console.log(load);
@@ -139,7 +140,7 @@ const Layout = () => {
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
     } else if (actualCap.next) {
-        changeCap("audio", actualCap.next );
+      changeCap("audio", actualCap.next );
     } else if(actualCap.fine) {
       clearInterval(timer);
       setActualComponent('achievement');
@@ -185,7 +186,7 @@ const Layout = () => {
       updated = Object.assign({...updated}, {...custom});
     }
     // aggiorno il timer
-    updated = Object.assign({...updated}, {timer: timerValue});
+    updated = Object.assign({...updated}, {timer: timerValue, step: nextCap ? story[nextCap].step || abilita.step : abilita.step});
     setAbilita(updated);
     changeCap(gioco, nextCap);
   }
@@ -197,22 +198,19 @@ const Layout = () => {
     } else {
       updated = Object.assign({ ...abilita }, { vita: abilita.vita - 1 });
     }
-     
     setAbilita(updated);
   }
 
-  const onGameEnd = (nextCap, feedback) => {
-    changeCap("audio", nextCap, feedback);
-  };
+  const onGameEnd = (nextCap, feedback) => changeCap("audio", nextCap, feedback);
 
   const changeCap = (gioco = "audio", nextCap, feedback) => {
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
-      setAbilita(Object.assign({...abilita}, {error: true}));
+      setAbilita(Object.assign({...abilita}, {error: true, step: nextCap ? story[nextCap].step || abilita.step : abilita.step}));
     } else if(feedback === true && abilita.chiavi < initialAbilita.chiaviMaxLength) {
       console.log('increment Chiave');
-      setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1 }));        
+      setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1, step: nextCap ? story[nextCap].step || abilita.step : abilita.step}));        
       startAnimationFinestre();
     } else {
       startAnimationFinestre(); 
@@ -253,8 +251,6 @@ const Layout = () => {
     }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {
-      // stop timer
-      // clearInterval(timer);
       return html`<${Morte} onClick=${() => setActualComponent("achievement")} />`;
     }
 
@@ -350,7 +346,7 @@ const Layout = () => {
               }
             });
             startAnimationFinestre();
-            setTimeout(() => setAbilita(Object.assign({...newAbilita},{chiavi:0})), 2000);
+            setTimeout(() => setAbilita(Object.assign({...newAbilita}, {chiavi:0})), 2000);
           }} />
         `
       }
@@ -369,10 +365,12 @@ const Layout = () => {
       <div id="2" class=${animation.bar} />
       <div id="3" class=${animation.bar} />
       ${load && html`<${LoadData} yes=${() => continueFromStorage()} not=${() => reset()} />`}
-      ${actual && html`
-      <${Intestazione} abilita=${abilita} title=${story[actual.cap].titolo || ''} actualComponent=${actualComponent} />
-      `}
-      
+      ${actual && html`<${Intestazione} 
+        step=${abilita.step || 1}
+        abilita=${abilita} 
+        title=${story[actual.cap].titolo || ''} 
+        actualComponent=${actualComponent} 
+      />`}
       ${getComponent()}
     </div>`;
 }

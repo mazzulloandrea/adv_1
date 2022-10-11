@@ -1,10 +1,12 @@
 export default {
+  step: 3,
   "titolo": "Terrarossa",
   "frase": `
     Dopo un paio d'ore di fuori pista, arrivate in uno spiazzo di terra battuta rossastra; 
     ad aspettarvi ci sono una decina di soldati e altri 4 giovani come voi.
 
-    Tutto il perimetro è formato da pali di legno e fil di ferro e, una volta entrati, capisci che sarà impossibile scappare da questo luogo, definito come "campo d'addestramento".
+    Tutto il perimetro è formato da pali di legno e fil di ferro.
+    Capisci che sarà impossibile scappare da questo luogo, definito come "campo d'addestramento".
 
     Una volta dentro, venite slegati e tutte le guardie si mettono attorno a voi, radunandovi al centro.
 

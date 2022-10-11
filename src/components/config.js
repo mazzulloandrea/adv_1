@@ -15,13 +15,14 @@ const componentList = {
 }
 
 const initialAbilita = {
-  corpo: 0, mente: 0, spirito: 0, vita: 4,
+  step: 1,
+  corpo: 0, mente: 0, spirito: 0, vita: 5,
   // corpo: 2, mente: 4, spirito: 2, vita: 4,
-  zaino: [],
-  borsello: 0,
-  chiavi: 0,
+  zaino: ["corda", "spada", "armor1", "razione"],
+  borsello: 40,
+  chiavi: 2,
   zainoMaxLength: 4,
-  vitaMaxLength: 4,
+  vitaMaxLength: 5,
   borselloMaxLength: 50,
   chiaviMaxLength: 3,
   // zaino: ["corda", "accetta", "razione"],

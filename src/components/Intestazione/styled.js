@@ -3,37 +3,45 @@ import styled from 'styled-components';
 export const Header = styled.div`
   position: absolute;
   width: 100vw;
-  height: 10vh;
+  height: 13vh;
+  background: lightblue;
+  padding: 0.5vh 1vw;
+`;
+
+export const TopContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  background: lightblue;
-  padding: 1vh 1vw;
-  > div {
-    padding: 1vh 1vw;
-  }
 `;
 
 export const Left = styled.div`
   width: 30vw;
-  height: 10vh;
+  height: 9vh;
 `;
 
 export const Center = styled.div`
   width: 30vw;
-  height: 10vh;
+  height: 9vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-around;
-   svg {
-    width: 6vw;
-   }
+  padding: 0 2vh;
+  > div {
+    display: flex;
+    width: 15vw;
+    justify-content: space-around;
+    svg {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
 `;
 
 export const Right = styled.div`
   width: 50vw;
-  height: 10vh;
+  height: 9vh;
   display: flex;
   > svg {
     width: 10vw;
@@ -76,41 +84,29 @@ export const Abilita = styled.div`
     display: flex;
     justify-content: space-around;
   }
-
-  @media only screen and (orientation: landscape) {
-    flex-direction: row;
-  }
 `;
+
+
+export const AbilitaContainer = styled.div``;
 
 export const Caratteristica = styled.div`
   margin-right: 1vw;
 `;
 
 export const AbilitaIconContainer = styled.div`
-  width: 4vw;
-  @media only screen and (orientation: landscape) {
-    width: 2vw;
-  }
+  width: 6vw;
+  height: 6vw;
+`;
+
+export const Value = styled.div`
+  font-size: 1.2em;
+  line-height: 1.1em;
 `;
 
 export const Cuori = styled.div`
-   svg {
+  svg {
     width: 4vw;
     margin-right: 1vw;
-    @media only screen and (orientation: landscape) {
-      width: 2vw;
-    }
-   }
+  }
 `;
 
-export const AbilitaContainer = styled.div`
-@media only screen and (orientation: landscape) { 
-  width: 50%;
-  margin: 0 5vw 0 2vw;
-}
-`;
-
-export const Container = styled.div`
-  width: 4vh;
-  height: auto;
-`;

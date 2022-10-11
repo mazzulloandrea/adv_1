@@ -1,4 +1,5 @@
 export default {
+  step: 4,
   "titolo": "prima prova",
   "frase": `
     L'addestramento prosegue per 3 durissime settimane; 
@@ -16,8 +17,8 @@ export default {
     Non è stato specificato cosa potrebbe accadere all'interno ma avete capito, dai toni del generale, che non ci sono regole.
 
     Viene sorteggiato l'ordine in cui affronterete la prova e tu sei l'ultimo;
-    tutte le reclute si sceglono tra di loro e a te restano solo due possibilità:
-    affrontare il generale Ravon oppure uno dei soldati.
+    tutte le reclute si sceglono tra di loro e, l'ultima, sceglie uno tra i quindici soldati piuttoste che te.
+    A te restano solo due possibilità: affrontare il generale Ravon oppure un'altra guardia.
 
     Devi scegliere il tuo avversario.
   `,
@@ -27,7 +28,7 @@ export default {
   },
   risposte: [
     { frase: 'Se scegli Ravon', gioco: 'text', },
-    { frase: 'Se scegli uno dei soldati', next: "avversarioSoldati" },
+    { frase: 'Se scegli uno dei soldati rimasti', next: "avversarioSoldati" },
   ],
   text: {
     successo: "avversarioRavonSuccesso",

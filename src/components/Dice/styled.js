@@ -7,7 +7,7 @@ export const Page = styled.div`
 `;
 
 export const Area1 = styled.div`
-  height: 40vh;
+  height: 38vh;
   display: flex;
   flex-direction: column;
   padding: 2vh;
@@ -31,7 +31,7 @@ export const Type = styled.div`
   width: ${l * 2}vw;
   font-weight: bold;
   svg {
-    width: 4vw;
+    width: 5vw;
     flex-direction: row;
     margin-top: 1vh;
   }
@@ -106,7 +106,8 @@ export const Tentativi = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 10vh;
+  height: 5vh;
+  margin-top: 5vh;
 `;
 
 export const DiceRemaining = styled.div`
@@ -125,7 +126,7 @@ export const Area2 = styled.div`
 
 export const Risultato = styled.div`
   height: 30vh;
-  margin: 2vh 5vh;
+  margin: 2vh 5vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,7 +146,7 @@ export const ActualResult = styled.div`
 
 export const Prosegui = styled.button`
   width: 40%;
-  margin: 0 auto;
+  margin: 0 auto 10vh;
   display: flex;
   height: 7vh;
   border-radius: 5px;

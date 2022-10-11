@@ -10,7 +10,7 @@ export default {
   },
   "risposte": [
     {
-      "frase": "Ti dirige verso la stalla",
+      "frase": "Ti dirigi verso la stalla",
       "next": "cap32"
     },
     {

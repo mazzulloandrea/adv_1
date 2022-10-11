@@ -1,11 +1,15 @@
+import { h } from 'preact';
 import { html } from 'htm/preact';
 import Spezzato from '../../assets/icons/ferite/heartCrash.svg';
 import { initialAbilita } from '../config';
 import TitleIcon from '../TitleIcon';
+import StepProgressBar from '../StepProgressBar';
 import {
   Header,
+  TopContainer,
   Abilita,
   AbilitaIconContainer,
+  Value,
   Caratteristica,
   Cuori,
   AbilitaContainer,
@@ -14,7 +18,7 @@ import {
   Right,
 } from './styled.js';
 
-const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
+const Intestazione = ({ step = 0, abilita = {}, title = '', actualComponent }) => {
   const { corpo, mente, spirito, vita, zaino, chiavi, borsello } = abilita;
 
   function getAbilita() {
@@ -24,19 +28,19 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
         <${AbilitaIconContainer}>
           <${TitleIcon} type=${"corpo"} />
         </${AbilitaIconContainer}>
-        <div>${corpo}</div>
+        <${Value}>${corpo}</${Value}>
       </${Caratteristica}>
       <${Caratteristica}>
         <${AbilitaIconContainer}>
           <${TitleIcon} type=${"mente"} />
         </${AbilitaIconContainer}>
-        <div>${mente}</div>
+        <${Value}>${mente}</${Value}>
       </${Caratteristica}>
       <${Caratteristica}>
         <${AbilitaIconContainer}>
           <${TitleIcon} type=${"spirito"} />
         </${AbilitaIconContainer}>
-        <div>${spirito}</div>
+        <${Value}>${spirito}</${Value}>
       </${Caratteristica}>
     </${AbilitaContainer}>`
   };
@@ -44,15 +48,14 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
   function getVita() {
     const total = new Array(initialAbilita.vita).fill(0);
     const vitaActual = new Array(vita).fill(0);
-    return html`
-    <${Cuori}>
-      ${vitaActual.map(c => html`
-      <${TitleIcon} type="cuore" />
-      `)}
-      ${total.slice(vitaActual.length).map(c => html`
-      <${Spezzato} />
-      `)}
-    </${Cuori}>
+    return html`<${Cuori}>
+  ${vitaActual.map(c => html`
+  <${TitleIcon} type="cuore" />
+  `)}
+  ${total.slice(vitaActual.length).map(c => html`
+  <${Spezzato} />
+  `)}
+</${Cuori}>
     `;
   }
 
@@ -65,12 +68,13 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
     `
   }
 
+  // Layout functions Left, center e Right
   function getLeft() {
     return html`
     <${Left}>
       <${Abilita}>
-        ${getAbilita()}
         ${getVita()}
+        ${getAbilita()}
       </${Abilita}>
     </${Left}>
     `
@@ -82,12 +86,12 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
         <div>
           ${html`
           <${TitleIcon} type=${"chiavi"} />
-          <div>${chiavi}</div>`}
+          <${Value}>${chiavi}</${Value}>`}
         </div>
         <div>
           ${html`
           <${TitleIcon} type=${"borsello"} />
-          <div>${borsello}</div>`}
+          <${Value}>${borsello}</${Value}>`}
         </div>
       </${Center}>
     `;
@@ -103,11 +107,15 @@ const Intestazione = ({ abilita = {}, title = '', actualComponent }) => {
     `
   }
 
+
   return html`
       <${Header}>
-        ${getLeft()}
-        ${getCenter()}
-        ${getRight()}
+        <${TopContainer}>
+          ${getLeft()}
+          ${getCenter()}
+          ${getRight()}
+        </${TopContainer}>
+        <${StepProgressBar} step=${step} />
       </${Header}>
   `;
 };

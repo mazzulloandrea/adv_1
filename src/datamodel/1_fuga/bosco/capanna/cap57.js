@@ -1,5 +1,6 @@
 
 export default {
+  step: 2,
   "titolo": "Il Bosco",
   "frase": `
     Finalmente la bestia si allontana e quando hai modo di riprenderti ti accorgi che Aaron è scappato per la paura.
@@ -12,9 +13,7 @@ export default {
     
     Ti legano portandoti nel villaggio dove, su di un carretto, ci sono già tua sorella ed altri 4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".
-    Nella notte, tra le lamentele ed i pianti delle madri, 
-    il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale"
-    e che tra 1 anno, finito l'addestramente, ritorneremo a casa.
+    Nella notte, tra le lamentele ed i pianti delle madri, il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale" e che, tra 1 anno, finito l'addestramento, ritornerete a casa.
 
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.

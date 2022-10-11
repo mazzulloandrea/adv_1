@@ -22,7 +22,6 @@ function Tesori({ abilita, onEnd }) {
   return html`
     <div class=${style.wrapper}>
       <div class=${style.header}>
-        <!-- ${result.length < 3 && html`<div class=${style.title}>Scegli ${3 - result.length} baul${3 - result.length > 1 ? 'i' : 'e'}</div>`} -->
         <div class=${style.title}>Scegli ${3 - result.length} baul${3 - result.length === 1 ? 'e' : 'i'}</div>
         <div class=${style.results}>
           Hai trovato:
@@ -37,7 +36,6 @@ function Tesori({ abilita, onEnd }) {
         ${tesoriList.map(el => html`
         <div class=${style.game} onClick=${(evt)=> {
           if (result.length > 2) return;
-          console.log(el);
           evt.currentTarget.classList.add(style.hide);
           setResult(result.concat(el));
         }}>

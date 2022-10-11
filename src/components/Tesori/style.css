@@ -1,12 +1,11 @@
 .wrapper {
   width: 100vw;
-  height: 90vh;
-  /* margin-top: 10vh; */
+  height: 87vh;
   overflow: hidden;
   background: burlywood;
   position: absolute;
   left: 0;
-  top: 10vh;
+  top: 13vh;
 }
 
 .header {
@@ -15,6 +14,7 @@
 }
 
 .title {
+  padding-top: 2vh;
   text-align: center;
   font-size: 1.4em;
 }
@@ -38,8 +38,8 @@
 }
 
 .game {
-  width: 13vh;
-  height: 13vh;
+  width: 14vh;
+  height: 14vh;
   margin: 1vh;
   box-sizing: border-box;
   color: white;

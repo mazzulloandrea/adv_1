@@ -3,12 +3,6 @@ import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import TitleIcon from '../TitleIcon';
 import dice from '../../assets/icons/dice/dice.svg';
-// import icon1 from '../../assets/icons/dice/dice1.svg';
-// import icon2 from '../../assets/icons/dice/dice2.svg';
-// import icon3 from '../../assets/icons/dice/dice3.svg';
-// import icon4 from '../../assets/icons/dice/dice4.svg';
-// import icon5 from '../../assets/icons/dice/dice5.svg';
-// import icon6 from '../../assets/icons/dice/dice6.svg';
 import icon1 from '../../assets/icons/dice/dice1.png';
 import icon2 from '../../assets/icons/dice/dice2.png';
 import icon3 from '../../assets/icons/dice/dice3.png';
@@ -116,40 +110,23 @@ function Dice({ data, caratteristiche, onend }) {
     console.log('rotazione', rotationType);
     switch (rotationType) {
       case 1:
-        // _cube.style.transform = `rotateY(${getRandomInt(1, 4) * 360}deg) translateZ(0)`;
         _cube.style.transform = `rotateY(360deg) translateZ(0)`;
-        // _cube.style.transform = `rotateY(0deg)`;
-        // _cube.style.transform = `rotateY(180deg) translateZ(0)`;
         break;
       case 2:
-        // _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) + 90}deg) translateZ(0)`;
         _cube.style.transform = `rotateX(90deg) translateZ(0)`;
-        // _cube.style.transform = `rotateX(90deg)`;
-        // _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
         break;
       case 3:
-        // _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 90}deg) translateZ(0)`;
         _cube.style.transform = `rotateY(-90deg) translateZ(0)`;
-        // _cube.style.transform = `rotateY(-90deg)`;
-        // _cube.style.transform = `rotateY(-90deg) translateZ(0)`;
         break;
       case 4:
-        // _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) + 90}deg) translateZ(0)`;
         _cube.style.transform = `rotateY(90deg) translateZ(0)`;
-        // _cube.style.transform = `rotateY(90deg)`;
-        // _cube.style.transform = `rotateY(90deg) translateZ(0)`;
         break;
       case 5:
-        _cube.style.transform = `rotateX(${(getRandomInt(1, 4) * 360) - 90}deg) translateZ(0)`;
         _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
-        // _cube.style.transform = `rotateX(-90deg)`
-        // _cube.style.transform = `rotateY(-180deg) translateZ(0)`;
         
         break;
       case 6:
-        _cube.style.transform = `rotateY(${(getRandomInt(1, 4) * 360) - 180}deg) translateZ(0)`;
-        // _cube.style.transform = `rotateY(-180deg)`;
-        // _cube.style.transform = `rotateY(0deg) rotateX(0deg) translateZ(0)`;
+        _cube.style.transform = `rotateY(-180deg) translateZ(0)`;
         break;
       default:
         // case same number
@@ -169,34 +146,12 @@ function Dice({ data, caratteristiche, onend }) {
   function getCubeFace() {
     return html`
       <${Fragment}>
-        <!-- <${CubeFace1} type=${"face1"}>1</div>
-        <${CubeFace2} type=${"face2"}>2</div>
-        <${CubeFace3} type=${"face3"}>3</div>
-        <${CubeFace4} type=${"face4"}>4</div>
-        <${CubeFace5} type=${"face5"}>5</div>
-        <${CubeFace6} type=${"face6"}>6</div> -->
-
-        <!-- <${Face1}>1</${Face1}>
-        <${Face2}>2</${Face2}>
-        <${Face3}>3</${Face3}>
-        <${Face4}>4</${Face4}>
-        <${Face5}>5</${Face5}>
-        <${Face6}>6</${Face6}> -->
-
-        <!-- <${Face1}><img src=${icon1} /></${Face1}>
-        <${Face2}><img src=${icon2} /></${Face2}>
-        <${Face3}><img src=${icon3} /></${Face3}>
-        <${Face4}><img src=${icon4} /></${Face4}>
-        <${Face5}><img src=${icon5} /></${Face5}>
-        <${Face6}><img src=${icon6} /></${Face6}> -->
-      
         <${Face1}><${TitleIcon} type=${'dice1'} /></${Face1}>
         <${Face2}><${TitleIcon} type=${'dice2'} /></${Face2}>
         <${Face3}><${TitleIcon} type=${'dice3'} /></${Face3}>
         <${Face4}><${TitleIcon} type=${'dice4'} /></${Face4}>
         <${Face5}><${TitleIcon} type=${'dice5'} /></${Face5}>
         <${Face6}><${TitleIcon} type=${'dice6'} /></${Face6}>
-        
       </${Fragment}>
     `;
   }
@@ -252,22 +207,19 @@ function Dice({ data, caratteristiche, onend }) {
         </${Tentativi}>
         <${DiceArea}>
           <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
-            <${Type}>Corpo <${TitleIcon} type=${"corpo"} /><//>
-            
-            <${Bonus}>${corpo}<//>
-            <${Scene}>${getCube(1)}<//>
+            <${Type}>Corpo <${TitleIcon} type=${"corpo"} /></${Type}>
+            <${Bonus}>${corpo}</${Bonus}>
+            <${Scene}>${getCube(1)}</${Scene}>
           </${AbilitaSection}>
           <${AbilitaSection} disabled=${!abilita.includes('mente')}>
-            <${Type}>Mente <${TitleIcon} type=${"mente"} /><//>
-            
-            <${Bonus}>${mente}<//>
-            <${Scene}>${getCube(2)}<//>
+            <${Type}>Mente <${TitleIcon} type=${"mente"} /></${Type}>
+            <${Bonus}>${mente}</${Bonus}>
+            <${Scene}>${getCube(2)}</${Scene}>
           </${AbilitaSection}>
           <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
-            <${Type}>Spirito <${TitleIcon} type=${"spirito"} /><//>
-            
-            <${Bonus}>${spirito}<//>
-            <${Scene}>${getCube(3)}<//>
+            <${Type}>Spirito <${TitleIcon} type=${"spirito"} /></${Type}>
+            <${Bonus}>${spirito}</${Bonus}>
+            <${Scene}>${getCube(3)}</${Scene}>
           </${AbilitaSection}>
         </${DiceArea}>
       </${Area1}>

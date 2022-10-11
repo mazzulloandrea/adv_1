@@ -1,4 +1,5 @@
 export default {
+  step: 5,
   "titolo": "ultima prova",
   "frase": `
     I giorni si susseguono così come gli insegnamenti;
