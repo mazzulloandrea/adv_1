@@ -209,6 +209,7 @@ const Layout = () => {
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
+      setAbilita(Object.assign({...abilita}, {error: true}));
     } else if(feedback === true && abilita.chiavi < initialAbilita.chiaviMaxLength) {
       console.log('increment Chiave');
       setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1 }));        

@@ -11,15 +11,7 @@ function Audio({ data, frase, onend, orientation }) {
   const [mode, setMode] = useState(false);
   const [play, setPlay] = useState(false);
 
-  useEffect(() => {
-    // console.log('init');
-    // return () => {
-    //   // animation to slide off
-    //   const player = document.getElementById("player");
-    //   player.className = player.className + ' slideOff';
-    // }
-  }, [])
-
+  useEffect(() => { }, []);
   useEffect(() => { }, [play]);
   useEffect(() => { }, [mode]);
 

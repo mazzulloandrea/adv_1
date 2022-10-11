@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
-
 import corpo from '../../assets/icons/intestazione/caratteristiche/corpo.svg';
 import mente from '../../assets/icons/intestazione/caratteristiche/mente.svg';
 import spirito from '../../assets/icons/intestazione/caratteristiche/spirito.svg';
@@ -40,6 +39,7 @@ import uccidere from '../../assets/icons/traguardi/uccidere.svg';
 import ok from '../../assets/icons/traguardi/ok.svg';
 import ko from '../../assets/icons/traguardi/ko.svg';
 import primaProva from '../../assets/icons/traguardi/primaProva.svg';
+import perfezionista from '../../assets/icons/traguardi/perfezionista.svg';
 import secondaProva from '../../assets/icons/traguardi/secondaProva.svg';
 import terzaProva from '../../assets/icons/traguardi/terzaProva.svg';
 
@@ -64,6 +64,7 @@ function TitleIcon({ type, onClick = () => { } }) {
     ko,
     reset,
     primaProva,
+    perfezionista,
     secondaProva,
     terzaProva,
     vita,

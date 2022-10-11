@@ -90,6 +90,14 @@ const aList = [
     }
   },
   {
+    text: "vincere sempre",
+    icon: 'perfezionista',
+    cond: (abilita) => {
+      if (abilita.error) return false;
+      return true;
+    }
+  },
+  {
     text: 'salvare Aaron',
     icon: 'aaron',
     cond: (abilita) => {
@@ -159,11 +167,9 @@ function Achievement({ abilita, onClick }) {
             if (index === aList.length - 1) {
               updateTotale();
             }
-          }, 1500 * (index + 1));
-        } else {
-          // setTimeout(() => element.children[0].classList.toggle(style.unactive), 1500 * (index + 1));
+          }, 1000 * (index + 1));
         }
-        if (index > 1) setTimeout(() => scroller.current.scrollTop = scroller.current.scrollTop + 100, 1500 * (index + 1));
+        if (index > 1) setTimeout(() => scroller.current.scrollTop = scroller.current.scrollTop + 100, 1000 * (index + 1));
       }
     )
   }
@@ -184,7 +190,7 @@ function Achievement({ abilita, onClick }) {
   return (
     html`
     <div class=${style.wrapper}>
-      <div class=${style.reset} onClick=${()=> onClick()}>
+      <div class=${style.reset} onClick=${() => onClick()}>
         <${TitleIcon} type='reset' />
       </div>
       <div class=${style.title}>
@@ -199,7 +205,7 @@ function Achievement({ abilita, onClick }) {
             <div class=${style.text}>${el.text}</div>
           </div>
           <div class=${style.check}>
-            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko' } />
+            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko'} />
           </div>
         </div>
         `)}

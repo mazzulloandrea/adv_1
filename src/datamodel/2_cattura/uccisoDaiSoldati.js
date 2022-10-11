@@ -18,6 +18,6 @@ export default {
     durata: '15',
     combinazione: "tre",
     type: "domanda",
-    domanda: "Quante reclute siete?"
+    domanda: "Attualmente quante reclute siete?"
   }
 }

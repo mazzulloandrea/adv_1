@@ -30,7 +30,7 @@
 
 .focus:before {
   /* content: 'Carcadena'; */
-  content: url('../../assets/images/bottle.jpg');
+  /* content: url('../../assets/images/bottle.jpg'); */
   filter: blur(20px);
 }
 

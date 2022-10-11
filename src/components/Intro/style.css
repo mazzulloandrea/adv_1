@@ -12,12 +12,48 @@
   }
 }
 
+@keyframes gemPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .fullPage {
   width: 100vw;
   height: 100vh;
   background-color: lightblue;
   /* background: rgb(2, 0, 36);
   background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 81, 121, 0.6951374299719888) 1%, rgba(0, 212, 255, 1) 100%); */
+}
+
+.titleContainer {
+  height: 60vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.emerald {
+  animation-name: gemPulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.emerald img {
+  width: 50vw;
+  height: auto;
 }
 
 .salta {
@@ -28,6 +64,12 @@
   height: 15vw;
   border-radius: 50%;
   background-color: greenyellow;
+}
+
+.saltaAnimation {
+  animation-name: gemPulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 @media only screen and (orientation: landscape) {

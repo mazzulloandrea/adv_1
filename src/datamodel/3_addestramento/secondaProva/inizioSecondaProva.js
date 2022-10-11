@@ -1,7 +1,7 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Le sfide si susseguono e nessuno ,in attesa del proprio turno, può sapere come sono andati gli incontri precedenti.
+    Le sfide si susseguono e nessuno, in attesa del proprio turno, può sapere come sono andati gli incontri precedenti.
     Ad un certo punto si alza tua sorella ed, insieme a lei, Teela; 
     si allontanano mentre auguri a Carcadena buona fortuna attraverso il potere.
 
