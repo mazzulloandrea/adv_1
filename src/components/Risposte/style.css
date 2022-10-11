@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-:root {}
-
 @keyframes fromleft {
   from {
     left: -100vw;
