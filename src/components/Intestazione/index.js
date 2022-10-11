@@ -115,7 +115,7 @@ const Intestazione = ({ step = 0, abilita = {}, title = '', actualComponent }) =
           ${getCenter()}
           ${getRight()}
         </${TopContainer}>
-        <${StepProgressBar} step=${step} />
+        <${StepProgressBar} step=${step} style=${{ "margin-top": "2vh" }} />
       </${Header}>
   `;
 };
