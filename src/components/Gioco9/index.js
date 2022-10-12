@@ -9,8 +9,7 @@ import style from './style.css';
 
 function Gioco9({ data, onend }) {
   const { combinazione, type, domanda, durata, successo, fallimento, dataset, livello = 3 } = data;
-  // const durataEffective = durata || (livello === 1 ? 10 : livello === 2 ? 15 : 20);
-  const durataEffective = 200; //durata || (livello === 1 ? 10 : livello === 2 ? 15 : 20);
+  const durataEffective = durata || (livello === 1 ? 5 : livello === 2 ? 13 : 20);
   let svgSet;
   if (dataset ==="combat") {
     svgSet = combatSet;
