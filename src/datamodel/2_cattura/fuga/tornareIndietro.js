@@ -14,12 +14,12 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   gioco: "gioco9",
-  "gioco9": {
+  gioco9: {
     successo: "uccisoDaiSoldati",
     fallimento: "arrivo",
     type: "memory",
     combinazione: ["albero", "barile", "cobra", "mare", "sentiero"],
     dataset: "nature",
-    durata: "15",
+    livello: 2,
   }
 }

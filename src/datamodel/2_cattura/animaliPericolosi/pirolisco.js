@@ -30,7 +30,7 @@ export default {
   gioco9: {
     successo: 'tornareIndietro',
     fallimento: 'piroliscoMorte3',
-    durata: "15",
+    livello: 3,
     type: "memory",
     combinazione: ["elettricita", "fuoco", "sole", "terra", "fuoco"],
     dataset: "element",

@@ -17,7 +17,7 @@ export default {
       next: "capRisveglioBene"
     },
   ],
-  "gioco9": {  // type = domanda
+  gioco9: {  // type = domanda
     successo: "capRisveglioBene",
     fallimento: "capRisveglioBene",
     durata: "15",

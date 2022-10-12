@@ -37,7 +37,7 @@ export default {
   gioco9: {
     successo: "attesa",
     fallimento: "sconfitta3",
-    durata: "15",
+    livello: 2,
     type: "memory",
     combinazione: ["acqua", "aria", "elettricita", "fuoco", "ghiaccio"],
     dataset: "element",

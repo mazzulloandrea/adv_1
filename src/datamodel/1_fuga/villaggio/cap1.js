@@ -27,7 +27,7 @@ export default {
     }
   ],
   "text": {
-    "successo": "cap2",
+    successo: "cap2",
     "fallimento": "cap3",
     "durata": "15",
     "domande": [
@@ -55,18 +55,18 @@ export default {
     ]
   },
   "dice": {
-    "successo": "cap10",
+    successo: "cap10",
     "fallimento": "cap11",
     "obiettivo": 15, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
     "lanci": 6 // quanti lanci col dado
   },
-  "gioco9": {
+  gioco9: {
     "combinazione": ["grano", "erba", "veleno"],
     "type": "memory",
     dataset: "vario",
-    "durata": 15,
-    "successo": "cap13",
+    livello: 2,
+    successo: "cap13",
     "fallimento": "cap13"
   }
 }

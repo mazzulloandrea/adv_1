@@ -8,7 +8,9 @@ import { shuffle, paletteColors, directionsDataset, alphabet, numbers, combatSet
 import style from './style.css';
 
 function Gioco9({ data, onend }) {
-  const { combinazione, type, domanda, durata, successo, fallimento, dataset } = data;
+  const { combinazione, type, domanda, durata, successo, fallimento, dataset, livello = 3 } = data;
+  // const durataEffective = durata || (livello === 1 ? 10 : livello === 2 ? 15 : 20);
+  const durataEffective = 200; //durata || (livello === 1 ? 10 : livello === 2 ? 15 : 20);
   let svgSet;
   if (dataset ==="combat") {
     svgSet = combatSet;
@@ -27,14 +29,15 @@ function Gioco9({ data, onend }) {
   const [errors, setErrors] =useState([]);
   
   useEffect(() => {
+    let howManyCubes = livello === 1 ? 3 : livello === 2 ? 6 : 9;
     setCubesClicked([]);
-    const paletteS = shuffle(Object.values(paletteColors));
-    const directionS = shuffle(Object.keys(directionsDataset));
+    // const paletteS = shuffle(Object.values(paletteColors));
+    // const directionS = shuffle(Object.keys(directionsDataset));
     let _cubes;
     switch (type) {
       case 'memory': // qua combinazione è ARRAY
         _cubes = combinazione;
-        while(_cubes.length < 9) {
+        while(_cubes.length < howManyCubes) {
           const index = Math.floor(Math.random() * Object.keys(svgSet).length);
           _cubes = _cubes.concat(Object.keys(svgSet)[index]);
         }
@@ -42,7 +45,7 @@ function Gioco9({ data, onend }) {
       break;
       case 'domanda': // qua combinazione è STRING
         _cubes = combinazione;
-        while(_cubes.length < 9) {
+        while(_cubes.length < howManyCubes) {
           const index = Math.floor(Math.random() * alphabet.length);
           _cubes = _cubes.concat(alphabet[index]);    
         }
@@ -50,23 +53,24 @@ function Gioco9({ data, onend }) {
         break;
       case 'numbers': // qua combinazione è STRING
         _cubes = combinazione;
-        while(_cubes.length < 9) {
+        while(_cubes.length < howManyCubes) {
           const index = Math.floor(Math.random() * numbers.length);
           _cubes = _cubes.concat(numbers[index]);    
         }
         _cubes = shuffle(_cubes.split(''));
         break;
-      case 'colors':
-        break;
-      case 'directions':
-        _cubes = paletteS.reduce((result, ele, index) => {
-          if(!result) result=[];
-          result.push({
-            palette: ele,
-            direction: directionS[index] || null
-          })
-          return result;
-        },[])
+        // not used more
+      // case 'colors':
+      //   break;
+      // case 'directions':
+      //   _cubes = paletteS.reduce((result, ele, index) => {
+      //     if(!result) result=[];
+      //     result.push({
+      //       palette: ele,
+      //       direction: directionS[index] || null
+      //     })
+      //     return result;
+      //   },[])
       break;
     }
     setCubes(_cubes);
@@ -97,7 +101,8 @@ function Gioco9({ data, onend }) {
   useEffect(()=>{},[hideMemory]);
   
   useEffect(()=>{
-    if(["memory","domanda", "numbers"].includes(type) && errors.length === 3) {
+    let HowManyError = livello;
+    if(["memory","domanda", "numbers"].includes(type) && errors.length === HowManyError) {
       verify();
     }
   },[errors]);
@@ -239,7 +244,7 @@ function Gioco9({ data, onend }) {
     <div class=${style.wrapper}>
       <div class=${style.header}>
         <div class=${style.clessidraContainer}>
-          ${viewSand && html`<${Clessidra} duration=${durata} onend=${()=> setViewSand(false)}
+          ${viewSand && html`<${Clessidra} duration=${durataEffective} onend=${()=> setViewSand(false)}
             />`}
         </div>
         ${drawHeader()}

@@ -34,10 +34,10 @@ export default {
       gioco: "dice"
     },
   ],
-  "gioco9": {
+  gioco9: {
     successo: 'capRisveglioBene',
     fallimento: 'capRisveglioMale',
-    durata: "20",
+    livello: 2,
     type: "memory",
     dataset: "nature",
     combinazione: ["barile", "candela", "pietra", "tomba"],

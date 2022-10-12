@@ -20,7 +20,7 @@ export default {
       gioco: "gioco9"
     },
   ],
-  "gioco9": {
+  gioco9: {
     successo: "viaggio",
     fallimento: "viaggio",
     durata: "15",

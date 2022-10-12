@@ -12,7 +12,7 @@ export default {
   gioco9: {
     success: 'velenoAnnullato',
     fallimento: 'morteAvvelenato',
-    durata: "20",
+    livello: 3,
     type: "memory",
     combinazione: ["candela", "cobra", "mare", "pietra", "tomba"],
     dataset: "nature",

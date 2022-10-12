@@ -16,10 +16,10 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   "gioco": "gioco9",
-  "gioco9": {
+  gioco9: {
     successo: "uccisoDaiSoldati",
     fallimento: "arrivo",
-    durata: "15",
+    livello: 2,
     type: "memory",
     combinazione: ["teschio", "fantasma", "teschio", "spada"],
     dataset: "combat",

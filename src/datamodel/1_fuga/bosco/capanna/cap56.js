@@ -8,10 +8,10 @@ export default {
     "interrompe": ""
   },
   "gioco": "gioco9",
-  "gioco9": {
-    "successo": "ca57",
+  gioco9: {
+    successo: "ca57",
     "fallimento": "cap90",
-    "durata": "10",
+    livello: 2,
     "combinazione": ["spada", "spada", "teschio"],
     "type": "memory",
     dataset: "combat"

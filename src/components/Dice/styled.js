@@ -146,13 +146,14 @@ export const ActualResult = styled.div`
 
 export const Prosegui = styled.button`
   width: 40%;
-  margin: 0 auto 10vh;
+  margin: 2vh auto 10vh;
   display: flex;
   height: 9vh;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  padding: 4vh 2vw;
 `;
 
 

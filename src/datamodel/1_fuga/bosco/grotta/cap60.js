@@ -10,10 +10,10 @@ export default {
     "interrompe": ""
   },
   "gioco": "gioco9",
-  "gioco9": {
-    "successo": "cap61",
+  gioco9: {
+    successo: "cap61",
     "fallimento": "cap62",
-    "durata": "15",
+    livello: 2,
     "combinazione": ["erba", "foresta", "ruota"],
     "type": "memory",
     dataset: "vario",

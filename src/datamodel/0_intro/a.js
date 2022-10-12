@@ -21,18 +21,18 @@ export default {
     },
   ],
   "dice": {
-    "successo": "a0",
+    successo: "a0",
     "fallimento": "a1",
     "obiettivo": 14,
     abilita: ["corpo", "mente", "spirito"],
     "lanci": 6
   },
-  "gioco9": {
-    "successo": "a0",
-    "fallimento": "a1",
-    "durata": "10",
+  gioco9: {
+    successo: "a0",
+    fallimento: "a1",
     type: "memory",
     combinazione: ["acqua", "fuoco"],
     dataset: "element",
+    livello: 1,
   },
 }

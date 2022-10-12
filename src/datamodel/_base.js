@@ -68,7 +68,7 @@ export default {
   // const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna };
   // const nstureSet = { albero, ancora, barile, candela, carro, cobra, coltello, mare, orso, pietra, ponte, sentiero, tomba };
 
-  "gioco9": {  // type = memory, dataset = run
+  gioco9: {  // type = memory, dataset = run
     successo: "3",
     fallimento: "2",
     durata: "15",
@@ -86,7 +86,7 @@ export default {
     combinazione: ["albero", "ancora", "barile", "candela", "carro", "cobra", "coltello", "mare", "orso", "pietra", "ponte", "sentiero", "tomba"],
     dataset: "nature"
   },
-  "gioco9": {  // type = domanda
+  gioco9: {  // type = domanda
     successo: "3",
     fallimento: "2",
     durata: "10",
@@ -94,7 +94,7 @@ export default {
     type: "domanda",
     domanda: "Come ti chiami?"
   },
-  "gioco9": {  // type = numbers
+  gioco9: {  // type = numbers
     successo: "3",
     fallimento: "2",
     durata: "10",
@@ -103,7 +103,7 @@ export default {
     domanda: ["Numero di soldati + numero di reclute"],
   },
   cassaforte: {
-    "successo": "3",
+    successo: "3",
     "fallimento": "2",
     "durata": "150",
     type: 'roll',
@@ -113,13 +113,13 @@ export default {
 
   // NU
   "etc": {
-    "successo": "cap2",
+    successo: "cap2",
     "fallimento": "cap3",
     "MaxCounter": 5,
     "MaxPicchi": 3 / 4
   },
   "shoot": {
-    "successo": "cap3",
+    successo: "cap3",
     "fallimento": "cap2",
     "durata": "10",
     "params": {
@@ -141,7 +141,7 @@ export default {
     }
   },
   "cassaforte": {
-    "successo": "3",
+    successo: "3",
     "fallimento": "2",
     "durata": "15",
     domanda: 'n# soldati - n# reclute',

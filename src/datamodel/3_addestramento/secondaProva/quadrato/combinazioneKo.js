@@ -15,7 +15,7 @@ export default {
     { frase: 'Provi a scavalcare', gioco: "dice" },
   ],
   cassaforte: {
-    "successo": "combinazioneOk",
+    successo: "combinazioneOk",
     "fallimento": "combinazioneKo",
     "durata": "25",
     type: 'roll',

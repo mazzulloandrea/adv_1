@@ -42,7 +42,7 @@ const tutorialConfig = {
   gioco9: {
     text: [
       "Segui le indicazioni che vengono mostrate",
-      "Al terzo errore hai fallito"
+      "Attento a non sbagliare ..."
     ],
     active: true,
   },

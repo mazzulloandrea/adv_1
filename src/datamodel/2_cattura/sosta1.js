@@ -18,7 +18,7 @@ export default {
     { frase: "Te ne stai buono e calmo", next: "calmo" },
   ],
   text: {
-    "successo": "scappi",
+    successo: "scappi",
     "fallimento": "nonScappi",
     "durata": "20",
     "domande": [

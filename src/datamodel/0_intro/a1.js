@@ -19,7 +19,7 @@ export default {
     }
   ],
   "text": {
-    "successo": "a2",
+    successo: "a2",
     "fallimento": "a3",
     "durata": "20",
     "domande": [

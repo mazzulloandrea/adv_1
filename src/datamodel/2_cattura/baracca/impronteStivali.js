@@ -41,10 +41,10 @@ export default {
       ],
     ]
   },
-  "gioco9": {
+  gioco9: {
     successo: "baraccaCentro",
     fallimento: "baraccaCentro",
-    durata: "15",
+    livello: 2,
     type: "memory",
     dataset: "nature",
     combinazione: ["barile", "carro", "cobra", "coltello"],

@@ -27,7 +27,7 @@ export default {
   gioco9: {
     successo: "cadeIlRosso",
     fallimento: "sconfitta",
-    durata: "15",
+    livello: 2,
     type: "memory",
     combinazione: ["scudo", "teschio", "pugno", "pugno"],
     dataset: "combat",

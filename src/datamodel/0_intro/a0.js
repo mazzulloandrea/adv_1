@@ -21,7 +21,7 @@ export default {
     }
   ],
   "text": {
-    "successo": "a2",
+    successo: "a2",
     "fallimento": "a3",
     "durata": "20",
     "domande": [
@@ -51,12 +51,12 @@ export default {
       ]
     ]
   },
-  "gioco9": {
-    "successo": "a2",
-    "fallimento": "a3",
-    "durata": "10",
-    "combinazione": "denred",
-    "type": "domanda",
+  gioco9: {
+    successo: "a2",
+    fallimento: "a3",
+    durata: "10",
+    combinazione: "denred",
+    type: "domanda",
     domanda: "Come si chiama tuo fratello?"
   }
 }

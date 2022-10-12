@@ -14,9 +14,8 @@ export default {
   gioco9: {
     successo: "scappareTrappola",
     fallimento: "fineSecondaProvaMorte",
-    durata: "15",
+    livello: 3,
     type: "memory",
-
     combinazione: ["teschio", "arco", "pirata", "fantasma", "teschio"],
     dataset: "combat",
   }

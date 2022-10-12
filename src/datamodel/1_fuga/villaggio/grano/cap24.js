@@ -22,7 +22,7 @@ export default {
     }
   ],
   "dice": {
-    "successo": "cap25",
+    successo: "cap25",
     "fallimento": "cap27",
     "obiettivo": 16, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse

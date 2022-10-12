@@ -11,7 +11,7 @@ export default {
   },
   "gioco": "dice",
   "dice": {
-    "successo": "cap16",
+    successo: "cap16",
     "fallimento": "cap17",
     "obiettivo": 8, // numero da raggiungere con il lancio dei dadi
     abilita: ["mente", "spirito"], // quelle che non si devono usare devono essere escluse

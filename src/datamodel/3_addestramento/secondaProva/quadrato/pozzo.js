@@ -2,7 +2,6 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Guardi attentamente il tuo obiettivo cercando di capire quale sia la strategia migliore per avvicinarti.
-
   `,
 
   "audio": {
@@ -15,9 +14,9 @@ export default {
   gioco9: {
     fallimento: "trappola",
     successo: 'nemico',
-    durata: "20",
+    livello: 2,
     type: "memory",
-    combinazione: ["erba", "falegnameria", "foresta", "grano", "ruota"],
+    combinazione: ["erba", "foresta", "grano", "ruota"],
     dataset: "vario",
   }
 }
