@@ -10,7 +10,7 @@ export default {
     <<Una sfida finisce con la morte! Esattamente come è accaduto ad Essertag [sputa sangue].
     Quel ragazzo se l'è cercata! ahahah>>
 
-    Spalanchi gli occhi a quelle parole e non sai bene come farla pagare a Darius per quello che ha fatto.
+    Spalanchi gli occhi a quelle parole... stai pensando a come farla pagare a Darius per quello che ha fatto.
   `,
 
   "audio": {

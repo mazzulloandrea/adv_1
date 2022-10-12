@@ -2,8 +2,7 @@ export default {
   "titolo": "prima prova",
   "frase": `
     Il lucchetto si apre, togli la catena ed apri la porta di legno;
-    sei all'interno del quadrato, vicino ad un angolo, con una zona di appostamento
-    proprio a pochi passi da te.
+    sei all'interno del quadrato, vicino ad un angolo, con una zona di appostamento proprio a pochi passi da te.
     Il riparo è costituito da alcune assi di legno e vedi subito la presenza di una piccola breccia: 
     potrebbe essere un ottimo luogo per appostarsi ed aspettare il nemico. 
     Oltre il riparo ci sono 3 grossi alberi e spostando lo sguardo verso il centro del territorio 

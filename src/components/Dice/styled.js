@@ -148,7 +148,7 @@ export const Prosegui = styled.button`
   width: 40%;
   margin: 0 auto 10vh;
   display: flex;
-  height: 7vh;
+  height: 9vh;
   border-radius: 5px;
   justify-content: center;
   align-items: center;

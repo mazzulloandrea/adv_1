@@ -26,7 +26,7 @@ export default {
   "dice": {
     successo: "scavalcatoOk",
     fallimento: "scavalcatoKo",
-    obiettivo: 9, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo"], // quelle che non si devono usare devono essere escluse
     lanci: 2 // quanti lanci col dado
   }
