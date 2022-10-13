@@ -1,15 +1,14 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Ti fai più piccolo che puoi e lentamente riesci a far passare tutto il tuo corpo attraverso il piccolo pertugio.
+    Ti fai più piccolo che puoi e lentamente riesci a passare attraverso il piccolo pertugio.
 
-    Nell'angolo al tuo fianco, appoggiati per terra, ci sono uno scudo ed un elmo.
-    Davanti, oltre gli oggetti, c'è un riparo costituito da assi di legno, un ottimo luogo dove appostarsi.
-    Subito alla tua destra ci sono 3 alberi che con i rami oscurano il sole oltre i quali, 
-    verso il centro del quadrato, vedi un piccolo pozzo
-    
+    Oltre il riparo ci sono tre grossi alberi e, spostando lo sguardo verso il centro, vedi un piccolo pozzo.
+    Alla tua destra invece c'è una tenda da campo oltre la quale ci sono altri due grossi alberi.
+
     Darius sarà già entrato?
     Ti starà aspettando per un agguato?
+
   `,
 
   "audio": {

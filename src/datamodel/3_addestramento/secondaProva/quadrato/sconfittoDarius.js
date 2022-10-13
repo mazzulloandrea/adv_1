@@ -6,7 +6,9 @@ export default {
     Darius digrigna qualcosa tra i denti e sputa sangue; 
     gli hai inflitto un colpo quasi mortale. 
 
-    Hai vinto finalmente, ma il tuo nemico farfuglia qualcosa che attira la tua attenzione:
+    Hai vinto!
+    
+    Il tuo nemico farfuglia qualcosa che attira la tua attenzione:
     <<Una sfida finisce con la morte! Esattamente come è accaduto ad Essertag [sputa sangue].
     Quel ragazzo se l'è cercata! ahahah>>
 

@@ -12,7 +12,7 @@ export default {
   },
   risposte: [
     { frase: "Scegli l'arco", next: "addestramento", zaino: "arco" },
-    { frase: "Scegli la balestra", next: "addestramento", zaino: "balestra" },
-    { frase: "Scegli la fionda", next: "addestramento", zaino: "fionda" },
+    { frase: "Prendi la balestra", next: "addestramento", zaino: "balestra" },
+    { frase: "La fionda è la scelta migliore", next: "addestramento", zaino: "fionda" },
   ]
 }

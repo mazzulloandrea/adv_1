@@ -17,9 +17,9 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: 'Scegli la spada', next: "addestramento", zaino: "spada" },
-    { frase: "Scegli il bastone", next: "addestramento", zaino: "bastone" },
-    { frase: "Scegli l'ascia", next: "addestramento", zaino: "ascia" },
-    { frase: "Scegli il martello", next: "addestramento", zaino: "martello" }
+    { frase: 'Impugni la spada', next: "addestramento", zaino: "spada" },
+    { frase: "Afferri il bastone", next: "addestramento", zaino: "bastone" },
+    { frase: "L'ascia è la scelta migliore", next: "addestramento", zaino: "ascia" },
+    { frase: "Il martello è l'arma perfetta", next: "addestramento", zaino: "martello" }
   ]
 }

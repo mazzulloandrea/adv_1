@@ -1,8 +1,8 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    La testa ti gira così tanto che quasi non riesci a stare in piedi; 
-    adesso è iniziata la lotta ti accorgi che lo spazio a disposizione dentro il cerchio non è poi molto.
+    La testa ti gira così tanto che quasi non riesci a stare in piedi.
+    É iniziata una lotta furiosa e ti accorgi che lo spazio a disposizione dentro il cerchio non è poi molto.
 
     Cerchi di rimanere lucido e ti accorgi che, come te, anche altri stanno combattendo contro gli effetti dell'alcool.
 
@@ -12,7 +12,7 @@ export default {
     
     Vedi il tuo avversario e capisci che fa parte delle altre reclute che già erano qui al campo; è una ragazzina molto giovane più esile di te ma con uno sguardo deciso; ha tutta l'intenzione di batterti.
 
-    Sta caricando un calcio e sei pronto a rispondere
+    Sta caricando un calcio e sei pronto a rispondere.
   `,
 
   "audio": {

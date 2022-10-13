@@ -12,9 +12,9 @@ export default {
     "interrompe": "",
   },
   risposte: [
-    { frase: 'Scegli la spada', next: "addestramento", zaino: "spada" },
-    { frase: "Scegli il bastone", next: "addestramento", zaino: "bastone" },
-    { frase: "Scegli l'ascia", next: "addestramento", zaino: "ascia" },
+    { frase: 'Spada', next: "addestramento", zaino: "spada" },
+    { frase: "Il bastone è la scelta milgiore", next: "addestramento", zaino: "bastone" },
+    { frase: "Impugni l'ascia ", next: "addestramento", zaino: "ascia" },
     { frase: "Scegli il martello", next: "addestramento", zaino: "martello" }
   ]
 }

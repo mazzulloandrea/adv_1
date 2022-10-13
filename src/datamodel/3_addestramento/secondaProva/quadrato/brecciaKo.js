@@ -1,16 +1,10 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Ti fai più piccolo che puoi e lentamente riesci a far passare tutto il tuo corpo attraverso il piccolo pertugio;
-    sei praticamente al di la del muro ma appena ti rialzi una sporgenza del legno ti graffia profondamente la schiena
-    provocandoti una ferita che ti butta a terra dolorante.
+    Ti fai più piccolo che puoi e, lentamente, riesci a far passare il tuo corpo attraverso il piccolo pertugio.
+    Sei praticamente al di la del muro ma, appena ti rialzi, una sporgenza del legno ti graffia profondamente la schiena provocandoti una profonda ferita.
 
-    Ti rialzi dopo qualche istante cercando di concentrarti e cercando di dimenticare il dolore.
-
-    Nell'angolo al tuo fianco, appoggiati per terra, ci sono uno scudo ed un elmo.
-    Davanti, oltre gli oggetti, c'è un riparo costituito da assi di legno, un ottimo luogo dove appostarsi.
-    Subito alla tua destra ci sono 3 alberi che con i rami oscurano il sole oltre i quali, 
-    verso il centro del quadrato, vedi un piccolo pozzo
+    Davanti a te ci sono 3 grossi alberi, verso il centro del quadrato vedi un piccolo pozzo, a destra, invece, c'è un riparo costituito da assi di legno.
     
     Darius sarà già entrato?
     Ti starà aspettando per un agguato?
@@ -21,7 +15,7 @@ export default {
   },
   risposte: [
     { frase: 'Ti apposti nel riparo vicino', next: 'riparo', },
-    { frase: 'Vai verso gli alberi', next: "alberi" },
+    { frase: 'Ti nascondi dietro gli alberi', next: "alberi" },
     { frase: 'Vai al centro del quadrato verso il pozzo', next: "pozzo" },
   ],
 }

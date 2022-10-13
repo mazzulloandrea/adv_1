@@ -4,9 +4,9 @@ export default {
     All'interno il generale Ravon è alle prese con un qualche documento e, distrattamente, ti chiede di sederti, indicando con un veloce cenno lo sgabello dall'altro lato della scrivania.
 
     Nella stanza c'è un telo che avvolge una specie di cubo impedendo di vedere all'interno.
-    Sopra di esso è appoggiato una specie di candela, un cilindro di legno con intarsi circolari, sulla cui sommità spicca un piccolo rubino.
+    Sopra di esso è appoggiato una sorta di candela, un cilindro di legno con intarsi circolari, sulla cui sommità spicca un piccolo rubino.
 
-    Ravon, senza nemmeno alzare gli occhi, ti ordina di impugnare la bacchetta con la pietra e di fare 3 volte il verso di una cornacchia.
+    Ravon, senza nemmeno alzare gli occhi, ti ordina di impugnare la bacchetta con la pietra e di fare tre volte il verso di una cornacchia.
   `,
 
   "audio": {
@@ -32,12 +32,12 @@ export default {
     domande: [
       "In quale città andrai a concludere l'addestramento?",
       "Il duca di ... ",
-      "Il colore della pietra sulla sommità della bacchetta",
+      "Qual'è il colore della pietra sulla sommità della bacchetta",
     ],
     risposte: [
       ["berdask", "berdasc"],
       ["blik", "blic"],
-      ["rosso"]
+      ["rosso", "rubino"]
     ]
   }
 }

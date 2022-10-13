@@ -41,8 +41,8 @@ const tutorialConfig = {
   },
   gioco9: {
     text: [
-      "Segui le indicazioni che vengono mostrate",
-      "Attento a non sbagliare ..."
+      "Memorizza le immagini che vengono mostrate",
+      "Hai una buona memoria ?"
     ],
     active: true,
   },
@@ -62,8 +62,8 @@ const tutorialConfig = {
   },
   cassaforte: {
     text: [
-      "Leggi bene la combinazione corretta",
-      "Tappa sul lucchetto per inserire il codice"
+      "Leggi bene la combinazione",
+      "Tappa sul lucchetto e conferma il codice"
     ],
     active: true,
   },
@@ -76,7 +76,7 @@ const tutorialConfig = {
   },
   chiavi: {
     text: [
-      "Ogni 3 chiavi potrai cercare il tesoro",
+      "Usa le chiavi per aprire i bauli",
       "Se sarai fortunato potrai aumentare le tue abilità e recuperare vita"
     ],
     active: true,

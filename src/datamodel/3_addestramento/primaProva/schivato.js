@@ -13,9 +13,9 @@ export default {
     "interrompe": "",
   },
   risposte: [
-    { frase: 'Vuoi lottare e rialzarti?', gioco: 'dice' },
-    { frase: 'Vuoi provare a farlo cadere di lato?', gioco: 'gioco9' },
-    { frase: "Vuoi trascinarlo fuori insieme a te?", next: 'fuoriInsieme' },
+    { frase: 'Ti rialzarti per lottare', gioco: 'dice' },
+    { frase: 'Con una leva vuoi farlo cadere di lato', gioco: 'gioco9' },
+    { frase: "Lo trascini fuori insieme a te", next: 'fuoriInsieme' },
   ],
   dice: {
     successo: "rialzato",

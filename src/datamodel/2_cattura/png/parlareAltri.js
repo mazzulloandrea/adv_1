@@ -2,10 +2,13 @@ export default {
   "titolo": "Carcadena",
   "frase": `
     Sul carretto con te ci sono: 
-    Essertag figlio muscoloso dell'artigiano, famoso per essere una testa calda sta provando a liberarsi dalle corde,
-    Gudrum fratello minore della numerosa famiglia di allevatori amico di Essertag controlla che le guardie non si accorgano del suo amico,
-    Aaron, più giovane di 2 anni di te, figlio unico dei contadini che gestiscono il pozzo, abbastanza timoroso, ha subito alcune angherie dai soldati e sta accovacciato in silenzio,
-    Alexis, figlio de falegname per il quale anche tu spesso lavori, è sicuramente ammalato e avrebbe bisogno di stare sdraiato a riposare.
+    Essertag, una testa calda, figlio dell'artigiano
+    Gudrum, amico di Essertag, figlio di allevatori,
+    Aaron, tuo amico più giovane di 2 anni, un po' timoroso,
+    Alexis, il tuo miglior amico, figlio de falegname.
+    
+    Purtroppo Alexis, ammalato già da 2 giorni, è sdraiato a riposare; speri che si riprenda al più presto.
+    Essertag invece sta provando a slegarsi.
     
     Con chi vorresti parlare?
   `,

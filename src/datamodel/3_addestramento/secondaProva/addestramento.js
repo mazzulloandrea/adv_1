@@ -2,8 +2,8 @@ export default {
   step: 4,
   "titolo": "prima prova",
   "frase": `
-    L'addestramento prosegue per 3 durissime settimane; 
-    venite tutti allenati anche a sopportare il freddo, a patire la fame, a resistere al dolore e a riconoscere alcuni animali pericolosi.
+    L'addestramento prosegue per 3 durissime settimane.
+    Venite tutti allenati anche a sopportare il freddo, a patire la fame, a resistere al dolore e a riconoscere alcuni animali pericolosi.
     
     Non si contano nemmeno i graffi e i lividi, e alcuni di voi hanno riportato ferite ben più gravi: 
     Gudrum ha perso 1 dito della mano destra mentre Giak ha perso l'occhio sinistro.

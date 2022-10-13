@@ -18,9 +18,8 @@ export default {
     Frozia di quattordici anni un po' sovrappeso e timido, aiutante bibliotecario,
     Redro 16 anni, capelli neri, coltivatore figlio di una guardia, dice di conoscere bene la lotta.
   
-    Finite le presentazioni, i soldati vi spiegano sommariamente come è disposto il campo: i dormitori, i bagni, le cucine ed iniziano a distribuire i compiti della giornata.
-
-    Dopodichè tu vieni chiamato dal capitano nella sua tenda.
+    Finite le presentazioni, i soldati vi spiegano sommariamente come è disposto il campo: i dormitori, i bagni, le cucine, l'orto e le capre. 
+    Poi iniziano a distribuire i compiti della giornata, dopodichè vieni chiamato dal capitano nella sua tenda.
   `,
 
   "audio": {

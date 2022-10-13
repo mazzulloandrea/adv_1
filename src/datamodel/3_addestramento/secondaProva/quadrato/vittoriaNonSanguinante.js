@@ -1,13 +1,11 @@
 export default {
   "titolo": "vittoria seconda prova",
   "frase": `
-    Esci fuori dal quadrato e vieni circondato da alcune guardie che si congratulano con te;
-    ti concentri e mandi un messaggio a Carcadena dicendo che ce l'hai fatta.
+    Esci fuori dal quadrato e vieni circondato da alcune guardie che si congratulano con te.
 
     Dopo poco si scopre che Darius è morto; la notizia viene commentata come qualcosa che inevitabilmente, prima o poi, sarebbe capitato; quel bastardo avrebbe trovato qualcuno che gliel'avrebbe fatta pagare.
 
-    Vieni a scoprire che Darius, tra i tanti orrori commessi, aveva anche tagliato le 2 dita a Denred;
-    ora finalmente ha pagato per le sue colpe.
+    Vieni a scoprire che Darius, tra i tanti orrori commessi, aveva anche tagliato le 2 dita a Denred; ora finalmente ha pagato per le sue colpe.
     `,
 
   "audio": {

@@ -2,11 +2,10 @@ export default {
   "titolo": "Aaron",
   "frase": `
     Aaron alza gli occhi lentamente verso di te; timoroso dice ad una guarda che deve fermarsi per pisciare e quella risponde, con voce grossa, di farsela addosso.
-    Un'altra guardia tira fuori il coltello e fa segno di tagliarli le dita se non se ne sta zitto e buono.
+    Un'altra guardia tira fuori il coltello, e fa segno di tagliarli le dita se non se ne sta zitto e buono.
 
-    Aaron trema di paura e, dopo pochi attimi, una puzza di urina inizia a sollevarsi da Aaron; il ragazzo si prende un altro malrovescio in faccia.
+    Aaron trema di paura e, dopo pochi attimi, una puzza di urina inizia a sollevarsi; il ragazzo si prende un altro malrovescio in faccia.
     Insulti, sbeffeggiamenti e nomignoli rendono Aaron il bersaglio delle guardie.
-    
   `,
 
   "audio": {
@@ -28,27 +27,18 @@ export default {
     fallimento: "aaronPaura",
     durata: "15",
     domande: [
-      "Che lavoro fanno i genitori di Aaron?",
       "Quanti anni ha Aaron?",
       "Come è il carattere di Aaron?",
-      "Quanti fratelli ha Aaron?"
     ],
     risposte: [
-      [
-        "contadini",
-        "contadino",
-        "pozzo"
-      ],
       [
         "12"
       ],
       [
         "timoroso",
         "pauroso",
-        "fifone"
-      ],
-      [
-        "0", "nessuno", "no", "zero"
+        "fifone",
+        "timore", "paura", "fifa"
       ]
     ]
   },

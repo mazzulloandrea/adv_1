@@ -11,8 +11,8 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Scegli l'arco", next: "addestramento", zaino: "arco" },
+    { frase: "Prendi l'arco", next: "addestramento", zaino: "arco" },
     { frase: "Scegli la balestra", next: "addestramento", zaino: "balestra" },
-    { frase: "Scegli la fionda", next: "addestramento", zaino: "fionda" },
+    { frase: "Meglio la fionda", next: "addestramento", zaino: "fionda" },
   ]
 }

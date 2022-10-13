@@ -19,8 +19,8 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Scegli lo scudo", next: "addestramento", zaino: "scudo" },
-    { frase: "Scegli l'armatura", next: "addestramento", zaino: "armor1" },
+    { frase: "Afferri lo scudo", next: "addestramento", zaino: "scudo" },
+    { frase: "Preferisci l'armatura", next: "addestramento", zaino: "armor1" },
     { frase: "Scegli il mantello", next: "addestramento", zaino: "mantello" },
   ]
 }

@@ -12,8 +12,8 @@ export default {
     "interrompe": "",
   },
   risposte: [
-    { frase: "Scegli lo scudo", next: "addestramento", zaino: "scudo" },
-    { frase: "Scegli l'armatura", next: "addestramento", zaino: "armor1" },
-    { frase: "Scegli il mantello", next: "addestramento", zaino: "mantello" },
+    { frase: "Afferri lo scudo", next: "addestramento", zaino: "scudo" },
+    { frase: "Meglio l'armatura", next: "addestramento", zaino: "armor1" },
+    { frase: "Indossi il mantello", next: "addestramento", zaino: "mantello" },
   ]
 }
