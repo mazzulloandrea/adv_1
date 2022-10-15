@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.div`
   position: absolute;
   width: 100vw;
-  height: 13vh;
+  height: 15vh;
   background: lightblue;
   padding: 0.5vh 1vw;
 `;
@@ -13,21 +13,22 @@ export const TopContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  height: 100%;
 `;
 
 export const Left = styled.div`
   width: 30vw;
-  height: 9vh;
+  height: 100%;
 `;
 
 export const Center = styled.div`
-  width: 30vw;
-  height: 9vh;
+  width: 20vw;
+  height: 11vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  padding: 0 2vh;
+  padding: 0 1vh;
   > div {
     display: flex;
     width: 15vw;
@@ -40,11 +41,12 @@ export const Center = styled.div`
 `;
 
 export const Right = styled.div`
-  width: 50vw;
-  height: 9vh;
+  width: 55vw;
+  height: 15vh;
   display: flex;
   > svg {
-    width: 10vw;
+    height: auto;
+    width: 15vw;
   }
   > div {
     display: grid;
@@ -54,7 +56,8 @@ export const Right = styled.div`
       width: 15vw;
       padding-top: 1.5vw;
       svg {
-        width: 5vw;
+        width: 9vw;
+        heigth: auto;
       }
     }
     div:nth-child(1) {
@@ -80,6 +83,8 @@ export const Abilita = styled.div`
   width: 30vw;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
   > div {
     display: flex;
     justify-content: space-around;
@@ -105,7 +110,7 @@ export const Value = styled.div`
 
 export const Cuori = styled.div`
   svg {
-    width: 4vw;
+    width: 5vw;
     margin-right: 1vw;
   }
 `;

@@ -1,7 +1,7 @@
 .widget {
-  width: 35vw;
-  height: 6vh;
-  margin-top: 4vh;
+  width: 100vw;
+  height: 8vh;
+  margin-top: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,21 +16,25 @@
 }
 
 .audioSvgItem {
-  position: absolute;
+  width: 10vw;
+  height: auto;
+  /* position: absolute;
   left: -5vw;
-  top: 0;
-  width: 1.6em;
-  height: 1.6em;
+  top: 0; */
+  /* width: 1.6em; */
+  /* height: 1.6em; */
   /* background: red; */
 
 }
 
 .txtSvgItem {
-  position: absolute;
+  width: 10vw;
+  height: auto;
+  /* position: absolute;
   right: -5vw;
-  top: 0;
-  width: 1.6em;
-  height: 1.6em;
+  top: 0; */
+  /* width: 1.6em; */
+  /* height: 1.6em; */
   /* background: green; */
 }
 

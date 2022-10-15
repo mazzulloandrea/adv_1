@@ -36,11 +36,11 @@ function Audio({ data, frase, onend, orientation }) {
       <div class=${switchStyle.widget}>
         <div class=${switchStyle.item}>
           <div class=${switchStyle.audioSvgItem}><${audioSvg} /></div>
-          <div class=${switchStyle.txtSvgItem}><${textSvg} /></div>
           <div class=${switchStyle.toggle}>
             <input type="checkbox" id="pill4" checked=${mode} name="check" onchange=${(evt) => setMode(evt.target.checked)} />
             <label for="pill4"></label>
           </div>
+          <div class=${switchStyle.txtSvgItem}><${textSvg} /></div>
         </div>
       </div>
       ${mode 

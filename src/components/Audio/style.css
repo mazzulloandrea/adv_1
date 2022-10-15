@@ -83,11 +83,9 @@
 
 .txt {
   font-size: 1.5em;
-  line-height: 1.5em;
-  padding: 1em;
+  padding: 0 1em;
   overflow-y: auto;
-  height: calc(90vh - 8vh);
-  margin-top: 2vh;
+  height: calc(85vh - 6vh);
 }
 
 .continueBtn {
@@ -100,5 +98,5 @@
   background-color: green;
   color: black;
   margin: 0 auto;
-  margin-bottom: 15vh;
+  margin-bottom: 20vh;
 }

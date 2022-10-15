@@ -34,5 +34,5 @@ export default {
     combinazione: ["acqua", "fuoco"],
     dataset: "element",
     livello: 1,
-  },
+  }
 }
