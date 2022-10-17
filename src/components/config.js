@@ -16,7 +16,7 @@ const componentList = {
 
 const initialAbilita = {
   step: 1,
-  corpo: 0, mente: 0, spirito: 0, vita: 5,
+  corpo: 0, mente: 0, spirito: 0, vita: 3,
   // corpo: 2, mente: 4, spirito: 2, vita: 4,
   zaino: [],
   borsello: 0,

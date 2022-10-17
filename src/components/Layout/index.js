@@ -46,6 +46,7 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     });
+    window.addEventListener('onbackground', (evt) => {});
   }, []);
 
   useEffect(() => {
@@ -122,13 +123,18 @@ const Layout = () => {
     }
   }
 
-  const reset = () => {
+  const reset = (force) => {
     setLoad(false);
     if (typeof window !== "undefined") {
       // mantenere i dati passati?
       localStorage.removeItem('GV-1');
     }
-    window.location.reload();
+    if (force) {
+      window.location.reload();
+    } else {
+      setActual({ cap: initialcap });
+      setActualComponent('risposte');
+    }
   }
     
   const onEndAudio = () => {
@@ -247,7 +253,7 @@ const Layout = () => {
       abilita = ${JSON.stringify(abilita)}
     `);
     if (actualComponent === 'achievement') {
-        return html`<${Achievement} abilita=${abilita} onClick=${() => reset()} />`;
+        return html`<${Achievement} abilita=${abilita} onClick=${() => reset(true)} />`;
     }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {

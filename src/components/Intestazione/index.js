@@ -84,12 +84,12 @@ const Intestazione = ({ step = 0, abilita = {}, title = '', actualComponent }) =
     return html`
       <${Center}>
         <div>
-          ${html`
+          ${chiavi > 0  && html`
           <${TitleIcon} type=${"chiavi"} />
           <${Value}>${chiavi}</${Value}>`}
         </div>
         <div>
-          ${html`
+          ${borsello > 0  && html`
           <${TitleIcon} type=${"borsello"} />
           <${Value}>${borsello}</${Value}>`}
         </div>
