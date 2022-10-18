@@ -1,5 +1,4 @@
 export default {
-  step: 1,
   "titolo": "Scegli la tua abilità principale",
   "risposte": [
     {

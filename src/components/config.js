@@ -80,7 +80,7 @@ const tutorialConfig = {
       "Se sarai fortunato potrai aumentare le tue abilità e recuperare vita"
     ],
     active: true,
-  }
+  },
 }
 
 

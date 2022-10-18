@@ -47,8 +47,11 @@ import reset from '../../assets/icons/ferite/reload.svg';
 // need "vita" per tesori
 import vita from '../../assets/icons/intestazione/caratteristiche/cuore.svg';
 
+// jpg and other format
+import mappa from '../../assets/images/mappa.jpg';
+
 function TitleIcon({ type, onClick = () => { } }) {
-  const allIcon = {
+  const allIconSvg = {
     corpo, mente, spirito, cuore,
     borsello, zaino, chiavi,
     dice1, dice2, dice3, dice4, dice5, dice6,
@@ -69,8 +72,13 @@ function TitleIcon({ type, onClick = () => { } }) {
     terzaProva,
     vita,
   }
-  if (allIcon.hasOwnProperty(type)) {
-    return html`<${allIcon[type]} onClick=${onClick} />`;
+  const allIconNonSvg = {
+    mappa
+  };
+  if (allIconSvg.hasOwnProperty(type)) {
+    return html`<${allIconSvg[type]} onClick=${onClick} />`;
+  } else if(allIconNonSvg.hasOwnProperty(type)) {
+    return html`<img src=${allIconNonSvg[type]} onClick=${onClick} style=${{width:"100%"}} />`;
   }
   return null;
 }

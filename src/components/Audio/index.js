@@ -1,13 +1,14 @@
 import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useState, useEffect } from 'preact/hooks';
+import TitleIcon from '../TitleIcon';
 import audioSvg from '/assets/icons/audio/audio.svg';
 import textSvg from '/assets/icons/audio/text.svg';
 import style from './style.css';
 import switchStyle from './switch.css';
  
 
-function Audio({ data, frase, onend, orientation }) {
+function Audio({ data, frase, step, onend, orientation }) {
   const [mode, setMode] = useState(false);
   const [play, setPlay] = useState(false);
 
@@ -31,8 +32,19 @@ function Audio({ data, frase, onend, orientation }) {
     setTimeout(() => onend(), 750);
   }
 
+  const getText = (el) => {
+    if (el.includes('**')) {
+      const re = /\*\*/gi;
+      const str = el.trim().replace(re,'');
+      console.log(str);
+      return html`<div class=${style.imageMiddleText}><${TitleIcon} type=${str} /></div>`
+    }
+    return html`<p>${el}</p>`;
+  }
+
   return html`
     <div>
+      ${step && html`<div class=${style.capitolo}>CAPITOLO ${step}</div>`}
       <div class=${switchStyle.widget}>
         <div class=${switchStyle.item}>
           <div class=${switchStyle.audioSvgItem}><${audioSvg} /></div>
@@ -46,7 +58,7 @@ function Audio({ data, frase, onend, orientation }) {
       ${mode 
         ? html`
           <div class=${style.txt}>
-            ${frase.split('\n').map(el => el && html`<p>${el}</p>`)}
+            ${frase.split('\n').map(el => el && getText(el))}
             <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
           </div>
         ` 

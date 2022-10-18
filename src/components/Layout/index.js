@@ -3,7 +3,7 @@ import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import { initialcap, initialAbilita, tutorialConfig } from '../config';
 import { saveIntoStorage, getFromStorage} from '../utils';
-import Storia from '/datamodel';
+import Storia from '../../datamodel';
 import LoadData from '../LoadData';
 import Intestazione from '../Intestazione';
 import Audio from '../Audio';
@@ -46,7 +46,6 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     });
-    window.addEventListener('onbackground', (evt) => {});
   }, []);
 
   useEffect(() => {
@@ -269,7 +268,7 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
-        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} onend=${()=> onEndAudio()} />`;
+        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} step=${actualCap.step} onend=${()=> onEndAudio()} />`;
       case "risposte":
         return html`<${Risposte} ...${componentProps} 
           onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom) => 

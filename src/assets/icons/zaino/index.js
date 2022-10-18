@@ -1,8 +1,7 @@
 import accetta from './accetta.svg';
 import arco from './arco.svg';
 import armor from './armor.svg';
-import armor1 from './armor1.svg';
-import armor2 from './armor2.svg';
+import armatura from './armor2.svg';
 import ascia from './ascia.svg';
 import balestra from './balestra.svg';
 import bastone from './bastone.svg';
@@ -28,8 +27,7 @@ export default {
   accetta,
   arco,
   armor,
-  armor1,
-  armor2,
+  armatura,
   ascia,
   balestra,
   bastone,

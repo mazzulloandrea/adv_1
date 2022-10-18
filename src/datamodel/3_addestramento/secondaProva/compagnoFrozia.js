@@ -13,7 +13,7 @@ export default {
   },
   risposte: [
     { frase: "Afferri lo scudo", next: "addestramento", zaino: "scudo" },
-    { frase: "Meglio l'armatura", next: "addestramento", zaino: "armor1" },
+    { frase: "Meglio l'armatura", next: "addestramento", zaino: "armatura" },
     { frase: "Indossi il mantello", next: "addestramento", zaino: "mantello" },
   ]
 }

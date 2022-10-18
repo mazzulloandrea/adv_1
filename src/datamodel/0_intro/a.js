@@ -1,5 +1,6 @@
 export default {
   "titolo": "Introduzione",
+  step: 1,
   "frase": `
     [rumore di accetta sulla legna] 
     <<Bastardo! 

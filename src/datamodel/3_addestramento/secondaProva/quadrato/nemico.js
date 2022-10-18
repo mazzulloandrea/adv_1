@@ -23,7 +23,7 @@ export default {
     { frase: 'Estrai il martello e ti prepari a combattere', next: 'mischia2p', checkZaino: 'martello' },
     { frase: "Ti nascondi con il mantello", next: 'mantello2p', checkZaino: 'mantello' },
     { frase: "Ti prepari con lo scudo", next: 'scudo2p', checkZaino: 'scudo' },
-    { frase: "Ti senti sicuro con la protezione dell'armatura", next: 'armatura2p', checkZaino: 'armor1' },
+    { frase: "Ti senti sicuro con la protezione dell'armatura", next: 'armatura2p', checkZaino: 'armatura' },
     { frase: "Incocchi una freccia sull'arco", next: 'distanza2p', checkZaino: 'arco' },
     { frase: "Carichi la balestra", next: 'distanza2p', checkZaino: 'balestra' },
     { frase: "Carichi la fionda", next: 'distanza2p', checkZaino: 'fionda' },
