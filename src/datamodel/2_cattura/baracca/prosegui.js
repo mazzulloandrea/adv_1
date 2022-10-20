@@ -1,8 +1,7 @@
 export default {
   "titolo": "---",
   "frase": `
-    Ti tappi il naso e prosegui di pochissimi metri quando all'improvviso senti un rumore che ti fa trasalire:
-    dietro la roccia a pochi centimetri da te una creatura umanoide sta facendo i suoi bisogni e ha appena finito
+    Ti tappi il naso e prosegui di pochissimi metri, quando all'improvviso senti un rumore che ti fa trasalire; dietro la roccia a pochi centimetri da te, una creatura ha appena finito di fare i suoi bisogni.
   `,
 
   "audio": {

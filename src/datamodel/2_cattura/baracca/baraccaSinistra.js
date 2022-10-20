@@ -2,10 +2,9 @@ export default {
   "titolo": "Impronte stivali",
   "frase": `
     Passi lateralmente cercando di rimanere in silenzio e nascosto. 
-    Ogni metro che ti avvicini alla struttura aumenta sempre più una puzza di escrementi incredibile che ti mette
-    seriamente in difficoltà.
+    Ogni metro che ti avvicini alla struttura, aumenta sempre più la puzza di escrementi.
 
-    Non sai se proseguire, fermarti o fare il giro dall'altra parte
+    Non sai se proseguire o fare il giro dall'altra parte
   `,
 
   "audio": {

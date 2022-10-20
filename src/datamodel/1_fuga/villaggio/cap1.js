@@ -40,7 +40,7 @@ export default {
         "ginocchio"
       ],
       [
-        "spalla"
+        "spalla", "spalla sx"
       ],
       [
         "falce",

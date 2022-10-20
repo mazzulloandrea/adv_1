@@ -1,9 +1,8 @@
 export default {
   "titolo": "Scappare",
   "frase": `
-    Correndo a più non posso arrivi all'ultimo crocevia, prima del bosco che sta in fondo, davanti a te;
-    capisci che sarà una notte abbastanza fredda.
-    Sai che alla tua sinistra c'è la falegnameria e alla tua destra la stalla.
+    Correndo a più non posso arrivi all'ultimo crocevia, prima del bosco che sta in fondo, davanti a te; capisci che sarà una notte abbastanza fredda.
+    Alla tua sinistra c'è la falegnameria e alla tua destra la stalla.
   `,
   "audio": {
     "src": "/assets/audio/cap13.mp3",

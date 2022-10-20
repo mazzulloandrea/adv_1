@@ -49,6 +49,7 @@ import vita from '../../assets/icons/intestazione/caratteristiche/cuore.svg';
 
 // jpg and other format
 import mappa from '../../assets/images/mappa.jpg';
+import cornice from '../../assets/images/cornice.png';
 
 function TitleIcon({ type, onClick = () => { } }) {
   const allIconSvg = {
@@ -73,7 +74,8 @@ function TitleIcon({ type, onClick = () => { } }) {
     vita,
   }
   const allIconNonSvg = {
-    mappa
+    mappa,
+    cornice,
   };
   if (allIconSvg.hasOwnProperty(type)) {
     return html`<${allIconSvg[type]} onClick=${onClick} />`;

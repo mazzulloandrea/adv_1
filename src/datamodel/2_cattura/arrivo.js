@@ -4,8 +4,7 @@ export default {
     La strada principale prosegue per i "colli sparsi" ma voi siete fermi, già da alcuni minuti, davanti ad un albero morto, senza capirne il motivo.
     I soldati discutono il da farsi dopodichè due di loro si allontano oltre l'albero secco.
 
-    Dopo pochi minuti le guardie ritornano e borbottano qualcosa; pochi istanti dopo arriva l'ordine:
-    bisogna abbandonare la via principale per seguire il sentiero non battuto. 
+    Dopo pochi minuti le guardie ritornano e borbottano qualcosa; pochi istanti dopo arriva l'ordine: bisogna abbandonare la via principale per seguire il sentiero non battuto. 
     C'è bisogno dell'aiuto di tutti per dare una mano con le ruote che potrebbero danneggiarsi. 
   `,
 

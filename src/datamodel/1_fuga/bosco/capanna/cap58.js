@@ -4,17 +4,15 @@ export default {
   "frase": `
     Raggiungi la capanna abbandonata consapevole che sarà questo il luogo dove passerai questa notte.
 
-    Ti sistemi alla meglio e cerchi di resistere al freddo finchè puoi 
-    ma alla fine la stanchezza vince e ti addormenti.
+    Ti sistemi alla meglio e cerchi di resistere al freddo finchè puoi ma, alla fine, la stanchezza vince e ti addormenti.
 
-    Vieni svegliato da un grosso scossone: tuo fratellastro Denred insieme ad un soldato ti hanno trovato;
-    lui li sta aiutando e questa è l'ennesima dimostrazione di quanto sia crudele.
+    Vieni svegliato da un grosso scossone: tuo fratellastro Denred insieme ad un soldato ti hanno trovato; lui li sta aiutando e questa è l'ennesima dimostrazione di quanto sia crudele.
 
-    Ti prendono e ti portano nel villaggio dove, su di un carretto, ci sono già tua sorella ed altri 4 ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
+    Ti prendono e ti portano nel villaggio dove, su di un carretto, ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena "Pantelion perchè non mi hai ascoltato?".
     Nella notte, tra le lamentele ed i pianti delle madri, 
     il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale"
-    e che tra 1 anno, finito l'addestramento, ritornerete a casa.
+    e che tra un anno, finito l'addestramento, ritornerete a casa.
 
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.

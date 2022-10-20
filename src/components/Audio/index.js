@@ -36,8 +36,7 @@ function Audio({ data, frase, step, onend, orientation }) {
     if (el.includes('**')) {
       const re = /\*\*/gi;
       const str = el.trim().replace(re,'');
-      console.log(str);
-      return html`<div class=${style.imageMiddleText}><${TitleIcon} type=${str} /></div>`
+      return html`<div class=${style.imageMiddleText}><${TitleIcon} type=${str} /></div>`;
     }
     return html`<p>${el}</p>`;
   }

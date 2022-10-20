@@ -60,7 +60,7 @@ const Intro = ({ onend }) => {
         ${actual === 8 && html`<div class=${style.auricolari}>${frasi[actual]}</div>`}
       </div>
       <audio id="soundtrack" autoplay>
-        <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" />
+        <!-- <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" /> -->
         Your browser does not support the audio tag.
       </audio>
     </div>

@@ -104,7 +104,7 @@ const Layout = () => {
     saveIntoStorage(data);
   }
   
-  const continueFromStorage = () => {
+  const continueFromStorage = (accumulatedAchievement) => {
     setLoad(false);
     const parsed = getFromStorage();
 
@@ -116,23 +116,40 @@ const Layout = () => {
         setTimerValue(Date.now());
       }, 1000);
       setTimer(interval);
-      setActual({ cap: parsed.cap });
-      setAbilita(parsed.abilita);
-      setActualComponent("audio");
+      if(accumulatedAchievement) {
+        parsed.abilita.vita = initialAbilita.vita;
+        parsed.abilita.step = initialAbilita.step;
+        setActual({ cap: initialcap });
+        setAbilita(parsed.abilita);
+        setActualComponent("risposte");
+      } else {
+        setActual({ cap: parsed.cap });
+        setAbilita(parsed.abilita);
+        setActualComponent("audio");
+      }
+      
     }
   }
 
   const reset = (force) => {
     setLoad(false);
-    if (typeof window !== "undefined") {
-      // mantenere i dati passati?
-      localStorage.removeItem('GV-1');
-    }
+    // if (typeof window !== "undefined") {
+    //   // mantenere i dati passati?
+    //   localStorage.removeItem('GV-1');
+    // }
     if (force) {
+      if (window.localStorage) {
+        localStorage.removeItem('GV-1');
+      }
       window.location.reload();
     } else {
-      setActual({ cap: initialcap });
-      setActualComponent('risposte');
+      // mantenere i dati salavi in storage
+      // const parsed = getFromStorage();
+      // parsed.cap = initialcap;
+      // setAbilita(parsed.abilita);
+      continueFromStorage(true);
+      // setActual({ cap: initialcap });
+      // setActualComponent('risposte');
     }
   }
     
@@ -252,7 +269,7 @@ const Layout = () => {
       abilita = ${JSON.stringify(abilita)}
     `);
     if (actualComponent === 'achievement') {
-        return html`<${Achievement} abilita=${abilita} onClick=${() => reset(true)} />`;
+        return html`<${Achievement} abilita=${abilita} onClick=${() => reset()} />`;
     }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {
@@ -369,7 +386,7 @@ const Layout = () => {
       <div id="1" class=${animation.bar} />
       <div id="2" class=${animation.bar} />
       <div id="3" class=${animation.bar} />
-      ${load && html`<${LoadData} yes=${() => continueFromStorage()} not=${() => reset()} />`}
+      ${load && html`<${LoadData} yes=${() => continueFromStorage()} not=${() => reset(true)} />`}
       ${actual && html`<${Intestazione} 
         step=${abilita.step || 1}
         abilita=${abilita} 
