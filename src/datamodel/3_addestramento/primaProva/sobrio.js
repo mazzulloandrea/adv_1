@@ -1,15 +1,12 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    La testa gira ma a tratti riesci a controllarti quel che basta per accorgerti che 
-    un ragazzo che non conosci sta spingendo fuori dal cerchio alcuni avversari.
+    La testa gira ma, a tratti, riesci a controllarti quel che basta per accorgerti che un ragazzo sta spingendo fuori dal cerchio alcuni avversari.
     
-    Qualcuno si avventa su di te dandoti un fortissimo colpo sulla schiema che ti fa andare a terra;
-    mentre sei in ginocchio, il tuo avversario ti salta sulla schiena dandoti un secondo colpo per tua fortuna non 
-    abbastanza preciso ne forte.
+    Qualcuno si avventa su di te dandoti un fortissimo colpo sulla schiema che ti fa andare a terra; mentre sei in ginocchio, il tuo avversario ti salta addosso dandoti un secondo colpo.
     Ti volti e vedi la ragazza che ti ha colpito, fa parte delle altre reclute, e ha tutta l'intenzione di batterti.
 
-    Sta caricando un calcio e sei pronto a rispondere
+    Sta caricando un calcio e sei pronto a rispondere.
   `,
 
   "audio": {

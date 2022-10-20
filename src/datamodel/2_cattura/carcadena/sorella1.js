@@ -5,13 +5,13 @@ export default {
     Senza far trasparire un minimo di sentimento, con la solita voce piatta, Carcadena ti ricorda le parole di vostro fratello:
     <<Denred ci raccontava la sofferenza, la fatica e le punizioni vissute durante l'addestramento.
     E' in quel periodo che ha perso 2 dita della mano sinistra; poi il freddo, la fame... diceva che lo avevano temprato come si fa con una spada>>
-    
-    Quelle storie vi mettevano paura e lui sembrava sguazzare di piacere nel vedervi terrorizzati con quella sua voce strana, modificata da una ferita sul collo.
+    **cornice**
+    Quelle storie vi mettevano paura e lui sembrava sguazzare di piacere nel vedervi terrorizzati, con quella sua voce strana, modificata da una ferita sul collo.
     
     Poi siete cresciuti ed avete iniziato a lavorare, dimenticando che il giorno del raccolto sarebbe arrivato anche per voi...
 
     crescendo avete scoperto di avere un legame, un forte aggancio tramite una voglia a forma di falce, che brucia quando usate quello che voi chiamate "potere".
-    
+    **cornice**
     Avete deciso che è un vostro segreto e di non dire a nessuno di questo dono che vi permette di comunicare con il pensiero. 
 
     Inizialmente erano solo versi confusi ma adesso, dopo 4 mesi, riuscite a dirvi qualcosa di più; inoltre avete notato che più siete lontani e meno riuscite ad utilizzarlo.

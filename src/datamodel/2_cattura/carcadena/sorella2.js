@@ -1,7 +1,7 @@
 export default {
   "titolo": "Carcadena",
   "frase": `
-  Tua sorella ti dice che non ha senso provare a scappare, ne tantomeno cercare un dialogo; con queste parole ottiene anche l'approvazione di Aaron che non ha ascoltato il vostro discorso.
+  Tua sorella ti dice che non ha senso provare a scappare, ne tantomeno cercare un dialogo; con queste parole ottiene anche l'approvazione di Aaron che ha ascoltato il vostro discorso.
 
   Poi tua sorella chiude gli occhi e ti senti bruciare il ginocchio; emetti una piccola smorfia di dolore e ascolti nella mente le sue parole: <<l'unica cosa da fare è resistere; se restiamo uniti possiamo farcela!>>
   **cornice**

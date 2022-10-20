@@ -1,11 +1,9 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Il corridoio bianco è pieno di tracce ben visibili che seguono la tua direzione ma anche la direzione contraria.
+    Il corridoio bianco è pieno di tracce ben visibili in tutte le direzioni.
 
-    Guardi attentamente e ti sembra di riconoscere impronte di stivale;
-    infine arrivi ad una svolta verso est dove il passaggio diventa arancione.
-
+    Guardi attentamente e ti sembra di riconoscere impronte di stivale; infine arrivi ad una svolta verso destra dove il passaggio diventa arancione.
     
   `,
 
@@ -14,6 +12,6 @@ export default {
   },
   risposte: [
     { frase: "Sud, ritornando sui tuoi passi sul percorso bianco", next: 'biancoSDirezioneBlu' },
-    { frase: "Est percorso arancione", next: 'arancioneEDirezioneNero', },
+    { frase: "Destra percorso arancione", next: 'arancioneEDirezioneNero', },
   ]
 }

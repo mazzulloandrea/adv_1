@@ -11,7 +11,7 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Vuoi rispondere la verità", next: "verita" },
-    { frase: "Vuoi rispondere una bugia", next: "bugia" },
+    { frase: "Vuoi rispondere la verità", next: "verita", giakkos: true, },
+    { frase: "Vuoi rispondere una bugia", next: "bugia", giakkos: true, },
   ],
 }

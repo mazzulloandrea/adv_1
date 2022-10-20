@@ -114,6 +114,14 @@ const aList = [
     }
   },
   {
+    text: 'incontrare Giakkos',
+    icon: '',
+    cond: (abilita) => {
+      if (abilita.giakkos) return true;
+      return false;
+    }
+  },
+  {
     text: 'vinci 1° sfida',
     icon: 'primaProva',
     cond: (abilita) => {
@@ -190,7 +198,7 @@ function Achievement({ abilita, onClick }) {
   return (
     html`
     <div class=${style.wrapper}>
-      <div class=${style.reset} onClick=${() => onClick()}>
+      <div class=${style.reset} onClick=${()=> onClick()}>
         <${TitleIcon} type='reset' />
       </div>
       <div class=${style.title}>
@@ -205,7 +213,7 @@ function Achievement({ abilita, onClick }) {
             <div class=${style.text}>${el.text}</div>
           </div>
           <div class=${style.check}>
-            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko'} />
+            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko' } />
           </div>
         </div>
         `)}

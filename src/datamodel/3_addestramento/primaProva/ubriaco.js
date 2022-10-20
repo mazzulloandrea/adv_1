@@ -4,13 +4,13 @@ export default {
     La testa ti gira così tanto che quasi non riesci a stare in piedi.
     É iniziata una lotta furiosa e ti accorgi che lo spazio a disposizione dentro il cerchio non è poi molto.
 
-    Cerchi di rimanere lucido e ti accorgi che, come te, anche altri stanno combattendo contro gli effetti dell'alcool.
-
-    Un ragazzo che non conosci, invece, sta spingendo fuori dal cerchio alcuni avversari;
-    qualcuno si avventa su di te dandoti un fortissimo colpo sulla schiema che ti fa andare a terra.
-    Sei in ginocchio e il tuo avversario ti salta addosso dandoti un secondo colpo che per tua fortuna non è abbastanza preciso ne forte.
+    Cerchi di rimanere lucido e, come te, anche altri stanno combattendo contro gli effetti dell'alcool.
+    **cornice**
+    Un ragazzo che non conosci, invece, sta spingendo fuori dal cerchio alcuni avversari; qualcuno si avventa su di te dandoti un fortissimo colpo sulla schiema che ti fa andare a terra.
+    Sei in ginocchio e il tuo avversario ti salta addosso dandoti un secondo colpo.
     
-    Vedi il tuo avversario e capisci che fa parte delle altre reclute che già erano qui al campo; è una ragazzina molto giovane più esile di te ma con uno sguardo deciso; ha tutta l'intenzione di batterti.
+    Vedi il nemico che fa parte delle altre reclute che già erano qui al campo.
+    É una ragazzina molto giovane, più esile di te, ma con uno sguardo deciso e ha tutta l'intenzione di batterti.
 
     Sta caricando un calcio e sei pronto a rispondere.
   `,

@@ -1,15 +1,15 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Impugni lo strano oggetto e riproduci quanto più similmente il gracchiare di una cornacchia.
-    Durante il secondo suono senti bruciare leggermente il ginocchio destro e durante il terzo il bruciore aumenta; 
-    vedi anche un piccolissimo scintillio di luce provenire dalla pietra sulla sommita del bastone, che però subito scompare, così come il dolore al ginocchio.
+    Impugni lo strano oggetto e riproduci quanto più similmente il gracchiare di un corvo.
+    Durante il secondo suono senti bruciare leggermente il ginocchio destro e durante il terzo il bruciore aumenta; vedi anche un piccolissimo scintillio di luce provenire dalla pietra sulla sommita del bastone, che però subito scompare, così come il dolore al ginocchio.
 
-    In tutto questo, Ravon, nemmeno ha mai alzato lo sguardo, preso a compilare chissa quali documenti.
+    In tutto questo, Ravon, nemmeno ha mai alzato lo sguardo, preso a compilare chissà quali documenti.
+  **cornice**
+    Dopo pochi secondi il generale si alza in piedi, prende la bacchetta dalla tua mano e, appoggiandola dove si trovava precedentemente, ti indica la panca.
 
-    Dopo pochi secondi il generale si alza in piedi, prende la bacchetta dalla tua mano e, appoggiandola dove si trovava precedentemente, ti indica il fondo della tenda; ti fa segno di seguirlo.
-
-    In fondo ad un cono d'ombra c'è una piccola botola; il capitano ti guarda e ti dice che dovrai scendere la sotto, recuperare una chiave antica e tornare indietro.
+    <<Spostala!>> ti ordina, e senza farti pregare la scosti.
+    Al di sotto c'è una piccola botola; il capitano ti guarda e ti dice che dovrai scendere la sotto, recuperare una chiave antica e tornare indietro.
 
     Ti porge una torcia e ti avvisa che la sua durata è di circa 30 minuti.
 

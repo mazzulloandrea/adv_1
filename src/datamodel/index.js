@@ -341,7 +341,7 @@ import cap90 from './cap90';
 /** 
  * info varie
  * Pantelion, 14 anni, fratello gemello, voglia di falce sul ginocchio destro, potere da 4 mesi
- * Carcadena, bionda, voglia di falce su spalla sinistra,
+ * Carcadena, bionda, voglia di falce su spalla sinistra, tipici modi calmi e pacati, voce piatta senza sentimento
  * Denred, fratellastro, mancano 2 dita mano sinistra
  * Denred, voce rovinata per via di una cicatrice sulla guancia
  * Denred ha fatto l'adestramento con successo
@@ -741,3 +741,18 @@ export default {
   // cap102,
   // cap103,
 }
+
+
+/**
+ * 
+ * 
+ * capitoli lunghi dove mettere una cornice
+ * sostituire le coordinate con Destra- SInistra, avanti, indietro
+ * "tra le lamentele ed i pianti delle madri"
+ * avventura espidosio 2: introduzione alla magia: i maghi hanno tutti un compagno animale, il generale ravon (amico p nemico)
+ * 
+ * 
+index.js?1bd4:52 svieni
+index.js?1bd4:52 laProvaSuccesso
+index.js?1bd4:52 cordaRaggiunta
+ */

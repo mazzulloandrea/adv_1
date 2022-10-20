@@ -1,7 +1,7 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Tutti e 15 i soldati disegnano un cerchio sul terreno, ampio circa 5 metri, con voi otto reclute all'interno; nel mentre le parole di Ravon sono chiare: 
+    Tutti e quindici i soldati disegnano un cerchio sul terreno, ampio circa 5 metri, con voi otto reclute all'interno; nel mentre le parole di Ravon sono chiare: 
     <<Al suono del tamburo inizierà uno scontro tutti contro tutti senza regole.
     Chi esce dal cerchio è eliminato.
     Chi si arrende è eliminato.>>

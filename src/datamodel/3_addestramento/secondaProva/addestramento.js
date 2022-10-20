@@ -3,22 +3,19 @@ export default {
   "titolo": "prima prova",
   "frase": `
     L'addestramento prosegue per 3 durissime settimane.
-    Venite tutti allenati anche a sopportare il freddo, a patire la fame, a resistere al dolore e a riconoscere alcuni animali pericolosi.
+    Venite tutti allenati anche a sopportare il freddo, a patire la fame, a resistere al dolore.
     
-    Non si contano nemmeno i graffi e i lividi, e alcuni di voi hanno riportato ferite ben più gravi: 
-    Gudrum ha perso 1 dito della mano destra mentre Giak ha perso l'occhio sinistro.
-    
-    La mattina dell'ultimo giorno della terza settimana, Ravon vi spiega che ognuno di voi dovrà affrontare uno scontro che potrebbe essere mortale.
-    Potrete scegliere un avversario tra chiunque nel campo;
-    potrete scegliere di sfidare un'altra recluta, scegliere un soldato oppure Ravon stesso.
+    Non si contano nemmeno i graffi e i lividi, e alcuni di voi hanno riportato ferite ben più gravi: Gudrum ha perso 1 dito della mano destra invece Giak ha perso l'occhio sinistro.
+    **cornice**
+    La mattina dell'ultimo giorno della terza settimana, Ravon vi spiega che ognuno di voi dovrà affrontare uno scontro.
+    Potrete scegliere un avversario tra chiunque nel campo; potrete scegliere di sfidare un'altra recluta, scegliere un soldato oppure Ravon stesso.
 
-    Lo scontro avrà una durata di mezz'ora massimo e avverrà in una quadrato di circa 20 metri di lato, in una zona adiacente al campo di addestramento; ci saranno alberi, nascondigli, trappole e ripari.
+    Lo scontro avrà una durata di mezz'ora massimo e avverrà in una terreno, in una zona adiacente al campo di addestramento; ci saranno alberi, nascondigli, trappole e ripari.
     
     Non è stato specificato cosa potrebbe accadere all'interno ma avete capito, dai toni del generale, che non ci sono regole.
-
-    Viene sorteggiato l'ordine in cui affronterete la prova e tu sei l'ultimo;
-    tutte le reclute si sceglono tra di loro e, l'ultima, sceglie uno tra i quindici soldati piuttoste che te.
-    A te restano solo due possibilità: affrontare il generale Ravon oppure un'altra guardia.
+    **cornice**
+    Viene sorteggiato l'ordine in cui affronterete la prova e tu sei l'ultimo.
+    Tutte le reclute si sceglono tra di loro e a te, ultimo rimasto, restano solo due possibilità: affrontare il generale Ravon oppure un'altra guardia.
 
     Devi scegliere il tuo avversario.
   `,

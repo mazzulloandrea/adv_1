@@ -108,7 +108,7 @@ export default {
     "durata": "150",
     type: 'roll',
     domanda: "n# totale soldati ----- n# totale reclute",
-    combinazione: '15:08' // essertag è morto
+    combinazione: '15:09' // essertag è morto
   },
 
   // NU

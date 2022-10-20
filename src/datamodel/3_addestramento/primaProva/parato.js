@@ -1,20 +1,17 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Pari il colpo e subito afferri la gamba facendo cadere la ragazza;
-    le salti addosso e la spingi con tutte le tue forze fuori dal perimetro.
+    Pari il colpo e subito afferri la gamba facendo cadere la ragazza; le salti addosso e la spingi con tutte le tue forze fuori dal perimetro.
 
     Siete rimasti in 3 nel cerchio: tu, Gudrum ed un ragazzo dai capelli neri con un visibile graffio sanguinante sulla fronte.
 
-    Vi intima di arrendervi o sarà peggio per voi; 
+    Vi intima di arrendervi o sarà peggio per voi; Gudrum, in tutta risposta, corre come impazzito gridando contro l'avversario che sfida il tuo amico invitandolo ad attaccare.
+    **cornice**
+    I soldati, incitando allo scontro, battono le armi in un fragoroso rumore metallico misto a grida.
 
-    Gudrum in tutta risposta corri come impazzito gridando contro l'avversario che sfida il tuo amico invitandolo ad attaccare.
+    Gudrum viene scaraventato a terra con una mossa di lotta, gridando dal dolore sembra essersi rotto un braccio.
 
-    I soldati incitando allo scontro battendo le armi e facendo echeggiare un fragoroso rumore metallico misco a grida.
-
-    Gudrum viene scaRavontato a terra con una specie di mossa di lotta, gridando dal dolore "mi arrendo" sembra essersi rotto un braccio.
-
-    Lo sfidante ti guarda e ti indica: ora rimanete solamente in 2 nel cerchio a lottare per la vittoria.
+    Lo sfidante ti guarda e ti indica; ora rimanete solamente in 2 nel cerchio a lottare per la vittoria.
   `,
 
   "audio": {

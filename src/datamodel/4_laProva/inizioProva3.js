@@ -1,12 +1,11 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    All'interno il generale Ravon è alle prese con un qualche documento e, distrattamente, ti chiede di sederti, indicando con un veloce cenno lo sgabello dall'altro lato della scrivania.
-
-    Nella stanza c'è un telo che avvolge una specie di cubo impedendo di vedere all'interno.
-    Sopra di esso è appoggiato una sorta di candela, un cilindro di legno con intarsi circolari, sulla cui sommità spicca un piccolo rubino.
-
-    Ravon, senza nemmeno alzare gli occhi, ti ordina di impugnare la bacchetta con la pietra e di fare tre volte il verso di una cornacchia.
+    All'interno il generale Ravon è seduto a scrivere chissà quale documento e, distrattamente, ti chiede di sederti, indicando, con un veloce cenno del capo, lo sgabello dall'altro lato della scrivania.
+    La scrivania è piena di carte arrotolate, sigilli di cera rotti e altrettanti fogli sparsi.
+    A fianco dello scrittoio c'è un piccolo tavolino alto, di legno, decorato con incisioni e rune, con appoggiata sopra una sorta di candela, un cilindro di legno con intarsi spiraggianti, sulla cui sommità spicca un piccolo rubino.
+    
+    Ravon, senza nemmeno alzare gli occhi, ti ordina di impugnare la bacchetta con la pietra e di fare tre volte il verso del corvo.
   `,
 
   "audio": {
@@ -37,7 +36,7 @@ export default {
     risposte: [
       ["berdask", "berdasc"],
       ["blik", "blic"],
-      ["rosso", "rubino"]
+      ["rosso", "rubino", "scarlatto", "fuoco"]
     ]
   }
 }

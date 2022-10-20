@@ -1,13 +1,13 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Tutti insieme inneggiano il nome del vincotore gridando più volte a squarciagola Redro, Redro, Redro.
+    Tutti insieme inneggiano il nome del vincitore gridando più volte a squarciagola Redro, Redro, Redro.
     
-    I soldati svegliano i pochi storditi con secchiate d'acqua; il capitano dice a Redro che, avendo vinto la prima prova, verrà addestrato, per la seconda prova, direttamente da lui.
+    Il capitano dice a Redro che, avendo vinto la prima prova, verrà addestrato, per la seconda prova, direttamente da lui.
 
     Al tuo sguardo interrogativo aggiunge alcuni dettagli, parlando a gran voce verso tutti:
     <<Per le tre settimane seguenti verrete addestrati al combattimento e lo farete in coppia; alla fine delle tre settimane si terrà una prova>>
-
+    **cornice**
     A questo punto il capitano raduna tutte le reclute: oltre ai tuoi compagni ci sono i quattro ragazzi di Murafredde.
     Redro, sedici anni, capelli neri, dice di conoscere bene la lotta.
     Teela, ragazza di tredici anni, dice di essere agile cacciatrice e di saper usare l'arco.

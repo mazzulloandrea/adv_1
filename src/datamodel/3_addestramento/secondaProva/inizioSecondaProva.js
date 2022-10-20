@@ -3,7 +3,7 @@ export default {
   "frase": `
     Le sfide si susseguono e nessuno, in attesa del proprio turno, può sapere come sono andati gli incontri precedenti.
     Ad un certo punto si alza tua sorella ed, insieme a lei, Teela; si allontanano mentre auguri a Carcadena buona fortuna.
-
+    **cornice**
     In queste settimane poche volte sei riuscito a confrontarti con lei e con gli altri giovani del campo; siete stati impegnati praticamente sempre tra gli addestramenti e le varie mansioni quotidiane.
 
     Passano i minuti e sei in ansia per Carcadena, poi senti bruciare il ginocchio <<Ho perso, sto bene>>.
@@ -11,7 +11,7 @@ export default {
     Con una certa dose di preoccupazione sai che il prossimo sarai tu.
     Darius si allontana e, dopo pochi minuti, vieni accompagnato all'ingresso.
 
-    [immagine]
+    **cornice**
     Un grosso lucchetto a combinazione è davanti a te; tutt'attorno un muro di legno alto circa 2 metri impedisce di vedere l'interno.
     
     La guardia da l'ordine: la tua seconda prova è iniziata.
@@ -31,7 +31,7 @@ export default {
     "durata": "25",
     type: 'roll',
     domanda: "n# totale soldati ----- n# totale reclute",
-    combinazione: '15:08' // essertag è morto
+    combinazione: '15:09' // essertag è morto
   },
   dice: {
     successo: "scavalcatoOk",

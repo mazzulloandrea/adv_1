@@ -4,14 +4,13 @@ export default {
   step: 2,
   "titolo": "La grotta",
   "frase": `
-    Sentendo queste parole, vai verso tuo fratello che ti abbraccia 
-    e stringendoti il braccio ti sussurra <<non scapperai dall'addestramento>>.
+    Sentendo queste parole, vai verso tuo fratello che ti abbraccia e stringendoti il braccio ti sussurra <<non scapperai dall'addestramento>>.
     
     Quel bastardo di Denred è dalla parte dei soldati ed infatti alle sue spalle compaiono due guardie.
     
     Ti legano e ti portano su di un carretto dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
-
+    **cornice**
     Nella notte, tra le lamentele ed i pianti delle madri, il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale" e che tra un anno, finito l'addestramento, ritornerete a casa.
 
     Sai bene che pochissimi sono ritornati... 

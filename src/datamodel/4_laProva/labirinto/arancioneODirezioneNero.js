@@ -4,10 +4,10 @@ export default {
     L'arancione acceso sembra quasi ravvivare la fiamma.
     
     Giungi ad un incrocio a quattro vie:
-    a sud un picolissimo pertugio viola con una grande porta metallica che chiude il passaggio,
-    a ovest, oltre l'incrocio, un passaggio di colore nero
-    a nord, un corridio colorato di viola,
-    alle tue spalle, est, il passaggio arancione.
+    a sinistra una rientanza con una porta metallica che chiude il passaggio,
+    avanti, oltre l'incrocio, un passaggio di colore nero,
+    a destra, un corridio colorato di viola,
+    alle tue spalle, il passaggio arancione.
     
   `,
 
@@ -15,9 +15,9 @@ export default {
     "src": "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
-    { frase: "Est verso l'arancione", next: 'arancioneEDirezioneBianco' },
-    { frase: "Ovest per la via nera, direzione ovest", next: 'neroODirezioneBlu', },
-    { frase: "Sud, verso la porta metallica", next: 'portaMetallica', },
-    { frase: "Nord percorrendo la via viola", next: 'versoIncrocio', }
+    { frase: "Indietro verso l'arancione", next: 'arancioneEDirezioneBianco' },
+    { frase: "Avanti per la via nera", next: 'neroODirezioneBlu', },
+    { frase: "Sinistra, verso la porta metallica", next: 'portaMetallica', },
+    { frase: "Destra percorrendo la via viola", next: 'versoIncrocio', }
   ]
 }

@@ -1,14 +1,13 @@
 export default {
   "titolo": "Carcadena",
   "frase": `
-    Alexis di certo non sta bene; si vede subito: ha la febbre alta e respira con difficoltà.
+    Alexis di certo non sta bene, si vede subito; ha la febbre alta e respira con difficoltà.
 
     Anche tua sorella si è accorta della condizione del vostro amico. 
     Insieme a te gli si avvicina, poggia le sue mani sulla fronte del malato e chiude gli occhi concentrandosi, come altre volte l'hai vista fare.
-
+    **cornice**
     Pochi istanti dopo li riapre ed incrocia il tuo sguardo interrogativo.
-    Stai per chiederle spiegazioni, quando vedi Alexis aprire gli occhi. 
-    Incredibilmente ha un aspetto più rilassato e inspira profondamente, come se la malattia fosse scomparsa.
+    Stai per chiederle spiegazioni, quando vedi Alexis aprire gli occhi; incredibilmente ha un aspetto più rilassato e inspira profondamente, come se la malattia fosse scomparsa.
 
     La trasformazione però dura solo pochissimi istanti, infatti Alexis batte le palpebre e ritorna immediatamente ad accasciarsi su di un fianco...
 

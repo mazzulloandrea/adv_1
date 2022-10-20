@@ -3,7 +3,7 @@ export default {
   "frase": `
     Ti fai più piccolo che puoi e, lentamente, riesci a far passare il tuo corpo attraverso il piccolo pertugio.
     Sei praticamente al di la del muro ma, appena ti rialzi, una sporgenza del legno ti graffia profondamente la schiena provocandoti una profonda ferita.
-
+    **cornice**
     Davanti a te ci sono 3 grossi alberi, verso il centro del quadrato vedi un piccolo pozzo, a destra, invece, c'è un riparo costituito da assi di legno.
     
     Darius sarà già entrato?
