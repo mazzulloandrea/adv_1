@@ -747,12 +747,11 @@ export default {
  * 
  * 
  * capitoli lunghi dove mettere una cornice
- * sostituire le coordinate con Destra- SInistra, avanti, indietro
  * "tra le lamentele ed i pianti delle madri"
+ * Aggiungere giochi al posto di next _>
+ * sostituire tutorial per gioco9 con testo
+ * 
  * avventura espidosio 2: introduzione alla magia: i maghi hanno tutti un compagno animale, il generale ravon (amico p nemico)
  * 
  * 
-index.js?1bd4:52 svieni
-index.js?1bd4:52 laProvaSuccesso
-index.js?1bd4:52 cordaRaggiunta
  */

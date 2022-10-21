@@ -1,8 +1,7 @@
 export default {
   "titolo": "Nel grano",
   "frase": `
-    Miracolosamente riesci a scappare tra le imprecazioni dei soldati
-    che adesso minacciano di dare fuoco al campo di grano.
+    Miracolosamente riesci a scappare tra le imprecazioni dei soldati che adesso minacciano di dare fuoco al campo di grano.
     `,
   "audio": {
     "src": "/assets/audio/cap25.mp3",

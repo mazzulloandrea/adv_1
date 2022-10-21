@@ -3,7 +3,7 @@ export default {
   "frase": `
     Con una giravolta ti liberi della presa della guardia, che cade a terra maledicendoti.
     Con tutta l'energia che hai in corpo corri allontanandoti più che puoi.
-    Corri, corri e ancora corri senza voltarti, fintanto che il fiato te lo permette; superi piccoli fossi, pietre, piccoli arbusti e ti allontani dal sentiero fino a che il silenzio ti avvolge.
+    Corri, corri e ancora corri senza voltarti, fintanto che il fiato te lo permette; superi piccoli dislivelli, pietre, arbusti e ti allontani dal sentiero fino a che il silenzio ti avvolge.
 
     Ti fermi prima che il cuore ti scoppi, ti guardi indietro e non vedi i soldati.
     Sai che non è finita, le tue tracce sono così fresche che è troppo facile seguirti.

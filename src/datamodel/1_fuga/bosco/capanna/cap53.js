@@ -19,7 +19,7 @@ export default {
       "next": "cap60"
     },
     {
-      "frase": "Megloio scappare verso il fiume",
+      "frase": "Meglio scappare verso il fiume",
       "next": "cap70"
     },
     {

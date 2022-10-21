@@ -25,6 +25,7 @@ import directions from '../../assets/icons/risposte/directions.svg';
 import question from '../../assets/icons/text/question.svg';
 
 import morte from '../../assets/icons/ferite/morte.svg';
+import teschio from '../../assets/icons/ferite/teschio.svg';
 // import etc from '../../assets/icons/etc/etc.svg';
 
 // import shoot from '../../assets/icons/shoot/shoot.svg';
@@ -62,6 +63,7 @@ function TitleIcon({ type, onClick = () => { } }) {
     lucchetto,
     ...zainoList,
     morte,
+    teschio,
     timer,
     aaron,
     uccidere,

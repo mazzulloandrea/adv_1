@@ -231,7 +231,7 @@ function Dice({ data, caratteristiche, onend }) {
           </${ActualResult}>
           <${Obiettivo} valid=${getResult() > obiettivo}>
             ${getResult() > obiettivo 
-              ? `Bravo! Hai superato ${obiettivo}` 
+              ? `Bravo! Hai raggiunto ${obiettivo +1}` 
               : `Fai almeno ${obiettivo + 1}`}
           </${Obiettivo}>
         </${Risultato}>

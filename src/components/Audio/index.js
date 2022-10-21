@@ -8,7 +8,7 @@ import style from './style.css';
 import switchStyle from './switch.css';
  
 
-function Audio({ data, frase, step, onend, orientation }) {
+function Audio({ data, frase, morte, step, onend, orientation }) {
   const [mode, setMode] = useState(false);
   const [play, setPlay] = useState(false);
 
@@ -58,6 +58,12 @@ function Audio({ data, frase, step, onend, orientation }) {
         ? html`
           <div class=${style.txt}>
             ${frase.split('\n').map(el => el && getText(el))}
+            ${morte && html`
+              <div class=${style.teschioContainer}>
+                <div class=${style.teschio}>
+                  <${TitleIcon} type=${"teschio"} />
+                </div>
+              </div>`}
             <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
           </div>
         ` 

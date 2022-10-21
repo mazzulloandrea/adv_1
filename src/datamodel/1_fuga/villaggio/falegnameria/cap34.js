@@ -7,7 +7,6 @@ export default {
   `,
   "audio": {
     "src": "/assets/audio/cap34.mp3",
-    "interrompe": ""
   },
   "risposte": [
     {

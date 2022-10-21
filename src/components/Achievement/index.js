@@ -18,26 +18,26 @@ const aList = [
     },
   },
   {
-    text: 'corpo 2',
+    text: 'corpo 3',
     icon: 'corpo',
     cond: (abilita) => {
-      if (abilita.corpo > 1) return true;
+      if (abilita.corpo > 2) return true;
       return false;
     }
   },
   {
-    text: 'mente 2',
+    text: 'mente 3',
     icon: 'mente',
     cond: (abilita) => {
-      if (abilita.mente > 1) return true;
+      if (abilita.mente > 2) return true;
       return false;
     }
   },
   {
-    text: 'spirito 2',
+    text: 'spirito 3',
     icon: 'spirito',
     cond: (abilita) => {
-      if (abilita.spirito > 1) return true;
+      if (abilita.spirito > 2) return true;
       return false;
     }
   },
@@ -45,7 +45,7 @@ const aList = [
     text: '2 monete',
     icon: 'borsello',
     cond: (abilita) => {
-      if (abilita.borsello === 2) return true;
+      if (abilita.borsello > 1) return true;
       return false;
     }
   },
@@ -58,34 +58,18 @@ const aList = [
     }
   },
   {
-    text: 'finire in 45 minuti',
+    text: 'finire in 20 minuti',
     icon: 'timer',
     cond: (abilita) => {
-      if (abilita.timer - abilita.initTime < minutes * 45) return true;
+      if (abilita.timer - abilita.initTime < minutes * 20) return true;
       return false;
     }
   },
   {
-    text: 'finire in 30 minuti',
-    icon: 'timer',
-    cond: (abilita) => {
-      if (abilita.timer - abilita.initTime < minutes * 30) return true;
-      return false;
-    }
-  },
-  {
-    text: 'finire in 15 minuti',
-    icon: 'timer',
-    cond: (abilita) => {
-      if (abilita.timer - abilita.initTime < minutes * 15) return true;
-      return false;
-    }
-  },
-  {
-    text: 'finire con 4 vite',
+    text: 'finire con almeno 4 vite',
     icon: 'cuore',
     cond: (abilita) => {
-      if (abilita.vita === initialAbilita.vitaMaxLength) return true;
+      if (abilita.vita > 3) return true;
       return false;
     }
   },
@@ -153,13 +137,11 @@ function Achievement({ abilita, onClick }) {
   const point = Math.round(100 / aList.length * 100) / 100;
   const scroller = useRef(null);
 
-
   useEffect(() => {
     setTimeout(() => startAnimation(), 500);
   }, []);
 
   useEffect(() => {
-    console.log(totale);
   }, [totale]);
 
   const startAnimation = () => {
@@ -193,12 +175,13 @@ function Achievement({ abilita, onClick }) {
       }, 0
     );
     setTotale(Math.round(total * 100 / 100));
+    document.getElementById("resetButton").classList.add(style.initPulse);
   };
 
   return (
     html`
     <div class=${style.wrapper}>
-      <div class=${style.reset} onClick=${() => onClick()}>
+      <div id="resetButton" class=${style.reset} onClick=${()=> onClick()}>
         <${TitleIcon} type='reset' />
       </div>
       <div class=${style.title}>
@@ -213,7 +196,7 @@ function Achievement({ abilita, onClick }) {
             <div class=${style.text}>${el.text}</div>
           </div>
           <div class=${style.check}>
-            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko'} />
+            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko' } />
           </div>
         </div>
         `)}

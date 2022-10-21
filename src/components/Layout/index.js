@@ -61,7 +61,6 @@ const Layout = () => {
   }, [abilita]);
 
   useEffect(() => {
-    // console.log(timerValue);
   }, [timerValue]);
 
   /*
@@ -107,9 +106,12 @@ const Layout = () => {
   const continueFromStorage = (accumulatedAchievement) => {
     setLoad(false);
     const parsed = getFromStorage();
-
     if (parsed.cap === '_0') {
-      reset();
+      parsed.abilita.vita = initialAbilita.vita;
+      parsed.abilita.morte = false;
+      setAbilita(parsed.abilita);
+      setActual({ cap: initialcap });
+      setActualComponent('risposte');
     } else {
       // riparte il timer
       const interval = setInterval(() => {
@@ -117,8 +119,6 @@ const Layout = () => {
       }, 1000);
       setTimer(interval);
       if(accumulatedAchievement) {
-        parsed.abilita.vita = initialAbilita.vita;
-        parsed.abilita.step = initialAbilita.step;
         setActual({ cap: initialcap });
         setAbilita(parsed.abilita);
         setActualComponent("risposte");
@@ -127,29 +127,18 @@ const Layout = () => {
         setAbilita(parsed.abilita);
         setActualComponent("audio");
       }
-      
     }
   }
 
   const reset = (force) => {
     setLoad(false);
-    // if (typeof window !== "undefined") {
-    //   // mantenere i dati passati?
-    //   localStorage.removeItem('GV-1');
-    // }
     if (force) {
       if (window.localStorage) {
         localStorage.removeItem('GV-1');
       }
       window.location.reload();
     } else {
-      // mantenere i dati salavi in storage
-      // const parsed = getFromStorage();
-      // parsed.cap = initialcap;
-      // setAbilita(parsed.abilita);
       continueFromStorage(true);
-      // setActual({ cap: initialcap });
-      // setActualComponent('risposte');
     }
   }
     
@@ -285,7 +274,7 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
-        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} step=${actualCap.step} onend=${()=> onEndAudio()} />`;
+        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} morte=${actualCap. morte} step=${actualCap.step} onend=${()=> onEndAudio()} />`;
       case "risposte":
         return html`<${Risposte} ...${componentProps} 
           onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom) => 

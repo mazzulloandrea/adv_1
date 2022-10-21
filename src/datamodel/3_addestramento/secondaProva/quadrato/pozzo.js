@@ -9,7 +9,7 @@ export default {
   },
   risposte: [
     { frase: 'Strisci per terra', next: "trappola" },
-    { frase: 'corri velocemente', gioco: "gioco9" },
+    { frase: 'Corri velocemente', gioco: "gioco9" },
   ],
   gioco9: {
     fallimento: "trappola",

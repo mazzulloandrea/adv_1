@@ -5,8 +5,7 @@ export default {
     Le sue parole ti fanno fermare il respiro: 
     <<Non aspettavo altro. Ho ucciso io Essertag e farò lo stesso con te!>>.
 
-    Come ultima cosa vedi la balestra puntata su di te e senti il click del meccanismo, 
-    dopodichè un dolore fortissimo alla testa e tutto diventa nero.
+    Come ultima cosa vedi la balestra puntata su di te e senti il clic del meccanismo, dopodichè un dolore fortissimo alla testa e tutto diventa nero.
 
   `,
 

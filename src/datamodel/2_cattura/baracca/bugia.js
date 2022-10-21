@@ -16,7 +16,7 @@ export default {
     
     Convinti che sei tornato per la troppa paura di queste terre, ti legano le mani e ti mettono sul carretto insieme agli altri.
 
-    Tua sorella e gli altri ti guardano con aria interrogativa e se avrai modo e tempo forse racconterai loro della tua conoscenza.
+    Tua sorella e gli altri ti guardano con aria interrogativa e, se avrai modo e tempo, forse racconterai loro della tua conoscenza.
 
     Ora il viaggio prosegue.
   `,

@@ -3,7 +3,6 @@ export default {
   "frase": `
     Il sole oramai illumina da qualche ora e senti le lemantele del tuo stomaco vuoto.
     Gli obiettivi della giornata sono due: cercare tua sorella e procurarsi del cibo.
-
   `,
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo

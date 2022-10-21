@@ -8,7 +8,7 @@ export default {
     Al tuo sguardo interrogativo aggiunge alcuni dettagli, parlando a gran voce verso tutti:
     <<Per le tre settimane seguenti verrete addestrati al combattimento e lo farete in coppia; alla fine delle tre settimane si terrà una prova>>
     **cornice**
-    A questo punto il capitano raduna tutte le reclute: oltre ai tuoi compagni ci sono i quattro ragazzi di Murafredde.
+    A questo punto il capitano raduna tutte le reclute; oltre ai tuoi compagni ci sono i quattro ragazzi di Murafredde.
     Redro, sedici anni, capelli neri, dice di conoscere bene la lotta.
     Teela, ragazza di tredici anni, dice di essere agile cacciatrice e di saper usare l'arco.
     Giak, ragazzo di quindici anni, capelli rossi, basso e muscoloso, aiutante fabbro.

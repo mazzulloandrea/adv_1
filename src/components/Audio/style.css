@@ -100,7 +100,17 @@
 .imageMiddleText {
   width: 50vw;
   height: auto;
-  margin: 0 auto; 
+  margin: 0 auto;
+}
+
+.teschioContainer {
+  display: flex;
+  justify-content: center;
+  margin: 5vh 0;
+}
+
+.teschio {
+  width: 30vw;
 }
 
 .continueBtn {

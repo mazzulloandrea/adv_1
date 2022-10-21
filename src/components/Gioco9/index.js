@@ -114,7 +114,6 @@ function Gioco9({ data, onend }) {
     let generated = [];
     for (let i = 0; i < numberOfGenerated; i++) {
       const index = Math.floor(Math.random() * Object.keys(svgSet).length);
-      console.log(index, svgSet);
       generated = generated.concat(Object.keys(svgSet)[index]);
     }
     return generated;
