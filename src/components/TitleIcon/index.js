@@ -42,6 +42,7 @@ import primaProva from '../../assets/icons/traguardi/primaProva.svg';
 import perfezionista from '../../assets/icons/traguardi/perfezionista.svg';
 import secondaProva from '../../assets/icons/traguardi/secondaProva.svg';
 import terzaProva from '../../assets/icons/traguardi/terzaProva.svg';
+import giakkos from '../../assets/icons/traguardi/giakkos.svg';
 
 import reset from '../../assets/icons/ferite/reload.svg';
 // need "vita" per tesori
@@ -71,6 +72,7 @@ function TitleIcon({ type, onClick = () => { } }) {
     perfezionista,
     secondaProva,
     terzaProva,
+    giakkos,
     vita,
   }
   const allIconNonSvg = {
