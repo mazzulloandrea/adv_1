@@ -4,7 +4,7 @@ export default {
     {
       "frase": "Corpo",
       "abilita": "corpo",
-      "next": "nemico",
+      "next": "a",
       "icon": "corpo",
     },
     {
