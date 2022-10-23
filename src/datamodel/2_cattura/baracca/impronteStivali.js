@@ -1,8 +1,8 @@
 export default {
   "titolo": "Impronte stivali",
   "frase": `
-    Segui le tracce ed arrivi nei pressi di una baracca apparentemente abbandonata ma non decrepita; delle rocce permettono di avvicinarsi con furtività senza passare per l'unica finestra visibile sull'altro lato.
-    La struttura è un semplice parallelepipedo alto circa un metro e mezzo e profondo tre metri con una porta di legno con una grossa asse come fermo.
+    Segui le tracce ed arrivi nei pressi di una baracca apparentemente abbandonata ma non decrepita; delle rocce permettono di avvicinarsi con furtività senza passare per l'unica finestra sull'altro lato.
+    La struttura è un semplice parallelepipedo, alto circa un metro e mezzo, profondo tre metri, con una porta di legno chiusa da un'asse di legno.
 
   `,
 

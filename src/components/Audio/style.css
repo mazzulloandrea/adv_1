@@ -97,6 +97,10 @@
   height: calc(85vh - 6vh);
 }
 
+.txt p {
+  user-select: none;
+}
+
 .imageMiddleText {
   width: 50vw;
   height: auto;

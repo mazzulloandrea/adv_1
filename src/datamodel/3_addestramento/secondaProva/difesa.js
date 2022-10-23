@@ -1,7 +1,7 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Il capitano ti spiega che la scelta che hai fatto implica un addestramento completo nelle arti della difesa; sono 3 e sono lo scudo, l'armatura e il mantello.
+    Puoi scegliere tra lo scudo, l'armatura e il mantello.
 
     Lo scudo ripara da tutti i colpi e può essere usato anche per avvicinarti al tuo nemico.
     

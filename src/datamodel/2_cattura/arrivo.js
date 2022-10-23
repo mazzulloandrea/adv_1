@@ -15,7 +15,7 @@ export default {
   gioco9: {
     successo: 'terrarossa',
     fallimento: 'terrarossa',
-    livello: 2,
+    durata: 25,
     combinazione: "essertag",
     type: "domanda",
     domanda: "Come si chiama il ragazzo morto?"

@@ -2,16 +2,16 @@ export default {
   "titolo": "ultima prova",
   "frase": `
     Impugni lo strano oggetto e riproduci quanto più similmente il gracchiare di un corvo.
-    Durante il secondo suono senti bruciare leggermente il ginocchio destro e durante il terzo il bruciore aumenta; vedi anche un piccolissimo scintillio di luce provenire dalla pietra sulla sommita del bastone, che però subito scompare, così come il dolore al ginocchio.
+    Durante il secondo suono senti bruciare leggermente il ginocchio destro e durante il terzo il bruciore aumenta; vedi anche un piccolissimo scintillio di luce provenire dalla pietra sulla sommita del bastone, che però subito scompare, così come il dolore alla gamba.
 
     In tutto questo, Ravon, nemmeno ha mai alzato lo sguardo, preso a compilare chissà quali documenti.
   **cornice**
     Dopo pochi secondi il generale si alza in piedi, prende la bacchetta dalla tua mano e, appoggiandola dove si trovava precedentemente, ti indica la panca.
 
     <<Spostala!>> ti ordina, e senza farti pregare la scosti.
-    Al di sotto c'è una piccola botola; il capitano ti guarda e ti dice che dovrai scendere la sotto, recuperare una chiave antica e tornare indietro.
+    Al di sotto c'è una piccola botola; il capitano ti dice che dovrai scendere la sotto, recuperare una chiave antica e tornare indietro.
 
-    Ti porge una torcia e ti avvisa che la sua durata è di circa 30 minuti.
+    Porgendoti una torcia ti informa che la sua durata è di circa 30 minuti.
 
     Capisci subito che si tratta della terza prova.
   `,

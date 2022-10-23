@@ -8,7 +8,7 @@ export default {
     **cornice**
     Il giorno seguente venite tutti informati dal generale di una ultima prova, la più dura.
 
-    <<Verrete chiamati uno alla volta, nei prossimi giorni, con il divieto assoluto di parlare della sfida con gli altri; 
+    <<Verrete chiamati uno alla volta, nei prossimi giorni, con il divieto assoluto di parlare della sfida con gli altri.
     É proibito parlare con chiunque della prova sia prima sia dopo averla effettuata.
     
     La pena per i trasgressori è l'amputazione della lingua>>.
@@ -21,7 +21,7 @@ export default {
 
     Passano due giorni e credi che qualcuno abbia già effettuato la "prova"; vedi Frozia più cupo del solito e Alexis, che oramai si è ripreso totalmente dalla malattia, che cerca sempre di schivarti.
     
-    Sei sospettoso anche di qualcun altro quando, il giorno dopo, ti si avvicina una guardia e ti avverte che Ravon attende la tua presenza nella sua tenda.
+    Sei sospettoso anche di qualcun altro quando, il giorno dopo, ti si avvicina una guardia; ti avverte che Ravon attende la tua presenza nella sua tenda.
 
     Con un po' di timore raggiungi la tenda del generale.
   `,

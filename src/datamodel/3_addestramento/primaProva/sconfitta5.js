@@ -1,9 +1,7 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Ti impegni al massimo per battere questo mostro che a 3 centrimetri dalla sconfitta ribalta la situazione e 
-    ti scaRavonta fuori dal cerchio.
-
+    Ti impegni al massimo per battere questo mostro che, a tre centrimetri dalla sconfitta, ribalta la situazione e ti scaraventa fuori dal cerchio.
     Hai perso ed il vincitore è il ragazzo con la ferita sulla fronte.
   `,
 

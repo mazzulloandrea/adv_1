@@ -1,8 +1,8 @@
 export default {
   "titolo": "Calmo",
   "frase": `
-    I soldati ti guardano attoniti cercando di capire se stai scherzando o parli seriamente;
-    borbottano qualcosa misto ad insulti e complimenti per il tuo fegato hai sicuramente guadagnato punti sul rispetto nei tuoi confronti.
+    I soldati ti guardano attoniti cercando di capire se stai scherzando o parli seriamente; borbottano un misto di insulti e complimenti per la tua sfrontatezza. 
+    Hai sicuramente guadagnato punti sul rispetto nei tuoi confronti.
   `,
 
   "audio": {

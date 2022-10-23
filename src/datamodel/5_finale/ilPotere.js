@@ -1,12 +1,9 @@
 export default {
   "titolo": "ultima prova",
   "frase": `
-    Vedi la tenda del generale leggermente aperta ed una intensa luce rossa, 
-    come un enorme focolare, provenire dall'interno; 
-    l'intensità della luce ti impedisce di trattenere lo sguardo inoltre
-    un fortissimo bruciore al ginocchio ti fa accasciare al suolo impedendoti di muoverti.
+    Vedi una intensa luce rossa provenire dalla tenda del generale; l'intensità della luce ti impedisce di trattenere lo sguardo, inoltre, un fortissimo bruciore al ginocchio ti fa accasciare al suolo.
     
-    Il dolore aumenta così tanto che ti contorci, hai spasmi in tutto il corpo e soffri come non mai.
+    Il dolore aumenta così tanto che ti contorci, hai spasmi e soffri come non mai.
   `,
 
   "audio": {

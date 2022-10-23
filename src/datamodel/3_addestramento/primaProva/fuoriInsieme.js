@@ -11,7 +11,7 @@ export default {
     **cornice**
     I soldati, incitando allo scontro, battono le armi e fanno echeggiare un fragoroso rumore metallico misto a grida.
     
-    Gudrum viene scaraventato a terra con una mossa di lotta, gridando dal dolore sembra essersi rotto un braccio.
+    Gudrum viene scaraventato a terra con una mossa di lotta; grida dal dolore, sembra essersi rotto un braccio.
 
     Il ragazzo con la ferita sulla fronte ha vinto la sfida!
   `,

@@ -3,8 +3,7 @@ export default {
   "frase": `
     Essertag ha 15 anni e sta provando a liberarsi i polsi dalle corde...
 
-    I vostri sguardi si incrociano e sussurrando ti chiede di aiutarlo; 
-    ti indica un pugnale che è stato lasciato quasi incustodito dalle guardie e che se le distrai lui potrebbe prendere per poi liberarsi.
+    I vostri sguardi si incrociano e sussurrando ti chiede di aiutarlo; ti indica un pugnale, lasciato incustodito dalle guardie, che lui potrebbe prendere per poi liberarsi.
   `,
 
   "audio": {

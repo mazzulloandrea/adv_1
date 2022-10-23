@@ -1,13 +1,10 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Carichi con la forza di un toro e spingi lontano il tuo avversario che finisce a pochi centimetri dalla linea di confine;
+    Carichi con la forza di un toro e spingi lontano il tuo avversario; il nemico finisce a pochi centimetri dalla linea di confine.
+    Ti guarda con un'aria di sfida, tale da incutere paura anche ai più coraggiosi, ma tu resisti allo sguardo sapendo che i successivi secondi decreteranno il vincitore.
 
-    ti guarda con un'aria di sfida tale da incutere paura anche ai più coraggiosi ma tu resisti allo sguardo e
-    sai che i successivi secondi decreteranno il vincitore.
-
-    Basta solo un ultimo piccolo sforzo per buttarlo fuori.
-    
+    Basta solo un ultimo sforzo per buttarlo fuori.
   `,
 
   "audio": {

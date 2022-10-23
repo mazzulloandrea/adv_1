@@ -1,8 +1,7 @@
 export default {
   "titolo": "animali pericolosi",
   "frase": `
-    I tuoi ricordi ti mettono in allarme sulla estrema pericolosità dell'animale;
-    non ricordi bene se abbia una saliva mortale o se tramuti in pietra gli avversari, in ogni caso meglio stare attenti.
+    I tuoi ricordi ti mettono in allarme sulla estrema pericolosità dell'animale; non ricordi bene se abbia una saliva mortale o se tramuti in pietra gli avversari, in ogni caso meglio stare attenti.
   `,
   "audio": {
     "src": "/assets/audio/cap7.mp3", // todo

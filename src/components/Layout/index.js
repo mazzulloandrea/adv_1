@@ -120,7 +120,7 @@ const Layout = () => {
       setTimer(interval);
       if(accumulatedAchievement) {
         setActual({ cap: initialcap });
-        setAbilita(parsed.abilita);
+        setAbilita(initialAbilita);
         setActualComponent("risposte");
       } else {
         setActual({ cap: parsed.cap });

@@ -9,7 +9,7 @@ export default {
     **cornice**
     I soldati, incitando allo scontro, battono le armi in un fragoroso rumore metallico misto a grida.
 
-    Gudrum viene scaraventato a terra con una mossa di lotta, gridando dal dolore sembra essersi rotto un braccio.
+    Gudrum viene scaraventato a terra con una mossa di lotta; grida dal dolore, sembra essersi rotto un braccio.
 
     Lo sfidante ti guarda e ti indica; ora rimanete solamente in 2 nel cerchio a lottare per la vittoria.
   `,
@@ -40,7 +40,7 @@ export default {
     dataset: "element",
   },
   text: {
-    successo: "terra",
+    successo: "attaccoSorpresa",
     fallimento: "sconfitta4",
     durata: "15",
     domande: [

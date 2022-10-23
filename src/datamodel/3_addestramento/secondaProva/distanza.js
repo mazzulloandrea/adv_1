@@ -1,7 +1,6 @@
 export default {
   "titolo": "prima prova",
   "frase": `
-    Il capitano ti spiega che la scelta che hai fatto implica un addestramento completo nel combattimento a distanza.
     Ci sono 3 specialità che puoi apprendere:
     l'arco che ti permette di colpire nemici anche molto lontani,
     la balestra che nella distanza ravvicinata può anche bucare alcune difese,

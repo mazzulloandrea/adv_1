@@ -1,11 +1,11 @@
 .wrapper {
   width: 100vw;
-  height: 87vh;
+  height: 85vh;
   overflow: hidden;
   background: burlywood;
   position: absolute;
   left: 0;
-  top: 13vh;
+  top: 15vh;
 }
 
 .header {

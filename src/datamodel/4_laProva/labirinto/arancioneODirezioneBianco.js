@@ -2,7 +2,7 @@ export default {
   "titolo": "ultima prova",
   "frase": `
     Cammini sul pavimento arancione fino ad arrivare ad una svolta ad angolo verso sinistra.
-    Dopo l'angolo il pavimento cmabia colore ed il corridio è tutto bianco; con la torcia illumini per bene vedendo segni di passaggio anche recenti.
+    Dopo l'angolo il pavimento cambia colore ed il corridio è tutto bianco; con la torcia illumini per bene vedendo segni di passaggio anche recenti.
   `,
 
   "audio": {
