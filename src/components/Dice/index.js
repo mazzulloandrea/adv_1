@@ -27,11 +27,10 @@ import {
   ActualResult,
   Obiettivo,
   Prosegui,
-  CubeFace1, CubeFace2, CubeFace3, CubeFace4, CubeFace5, CubeFace6
 } from './styled';
 
 function Dice({ data, caratteristiche, onend }) {
-  const { corpo, mente, spirito, vita } = caratteristiche;
+  const { corpo, mente, spirito } = caratteristiche;
   const { successo, fallimento, abilita, obiettivo,lanci } = data;
   const [counter, setCounter] = useState(lanci);
   const [cube1, setCube1] = useState();
@@ -235,7 +234,7 @@ function Dice({ data, caratteristiche, onend }) {
               : `Fai almeno ${obiettivo + 1}`}
           </${Obiettivo}>
         </${Risultato}>
-        <${Prosegui} onClick=${() => prosegui()}>Prosegui<//>
+        <${Prosegui} valid=${getResult() > obiettivo} onClick=${() => prosegui()}>Prosegui<//>
       </${Area2}>
     </${Page}>
   `;
