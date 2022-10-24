@@ -1,7 +1,7 @@
 export default {
   "titolo": "rumore misterioso",
   "frase": `
-  Camminando per i colli "sparsi" ti imbatti in una zona leggermente più verdeggiante, sul lato di una collina.
+  Camminando per i "colli sparsi" ti imbatti in una zona leggermente più verdeggiante, sul lato di una collina.
 
   Attirato da una pianta dalle strane foglie, ti accorgi di alcune piccole impronte... 
   sono una decina e mentre le segui con lo sguardo senti uno strano suono provenire da poco più avanti.

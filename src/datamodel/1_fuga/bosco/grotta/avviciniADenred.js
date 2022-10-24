@@ -4,7 +4,7 @@ export default {
   step: 2,
   "titolo": "La grotta",
   "frase": `
-    Sentendo queste parole, vai verso tuo fratello che ti abbraccia e stringendoti il braccio ti sussurra <<non scapperai dall'addestramento>>.
+    Sentendo queste parole, vai verso tuo fratello che ti abbraccia e stringendoti il braccio ti sussurra <<Non scapperai dall'addestramento>>.
     
     Quel bastardo di Denred è dalla parte dei soldati ed infatti alle sue spalle compaiono due guardie.
     

@@ -3,7 +3,7 @@ import eremita from './eremita';
 export default {
   "titolo": "fai il giro",
   "frase": `
-    La figura all'interno si gira di scatto urlando "chi va la?". 
+    La figura all'interno si gira di scatto urlando <<Chi va la?>>. 
     Vieni colto così alla sprovvista che, d'istinto, ti spingi via dalla finestra
     Purtroppo cadi a terra picchiando la testa.
     **cornice**

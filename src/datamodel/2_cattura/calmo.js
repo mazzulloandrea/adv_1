@@ -2,7 +2,7 @@ export default {
   "titolo": "Calmo",
   "frase": `
       Ve ne state tutti tranquilli, seguendo le indicazioni dei soldati che vi legano nuovamente le caviglie ma vi liberano i polsi.
-      Viene preparata della zuppa calda; vi dicono di mangiare in fretta che tra poco si riparte. "Questi non sono luoghi sicuri in sui sostare".
+      Viene preparata della zuppa calda; vi dicono di mangiare in fretta che tra poco si riparte: <<Questi non sono luoghi sicuri in sui sostar>>.
       **cornice**
       Tra di voi quello che al momento se la sta passando peggio è Alexis.
       Si vede chiaramente che sta male e che ha bisogno di cure e di riposo.

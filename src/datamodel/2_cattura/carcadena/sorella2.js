@@ -6,7 +6,7 @@ export default {
   Carcadena chiude gli occhi e ti senti bruciare il ginocchio; emetti una piccola smorfia di dolore e ascolti nella mente le sue parole: <<L'unica cosa da fare è resistere; se restiamo uniti possiamo farcela!>>
   **cornice**
   I soldati si alternano nel riposo sul carro cosìcchè la marcia non venga mai interrotta.
-  Siete oramai in viaggio da 1 giorno intero e siete giunti sulle colline "sparse", luogo popolato da briganti e bestie selvagge.
+  Siete oramai in viaggio da 1 giorno intero e siete giunti sulle "colline sparse", luogo popolato da briganti e bestie selvagge.
   `,
 
   "audio": {

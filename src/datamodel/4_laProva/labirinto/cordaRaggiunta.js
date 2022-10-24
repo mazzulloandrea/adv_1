@@ -5,7 +5,7 @@ export default {
     
     Sulla sommità, appoggiata sul bordo di pietra, c'è una brillante chiave di rame.
     La afferri e tutto bagnato ti dirigi verso la tenda del generale; quando ti vede entrare, Ravon si complimenta con te.
-    <<Sei riuscito dove tanti altri hanno fallito! Bene ragazzo."
+    <<Sei riuscito dove tanti altri hanno fallito! Bene ragazzo.>>
     Ti raccomanda di non parlarne con nessuno e, dopo averti preso la chiave di rame, Ravon prende un sacchetto di pelle; da esso estrae alcuni granelli di una qualche polverina che ti lancia addosso, istantaneamente ritorni asciutto.
 
     Mentre cerchi di capire come sia possibile, il generale ti incita a ritornare ai tuoi compiti quotidiani e di fare silenzio con gli altri.

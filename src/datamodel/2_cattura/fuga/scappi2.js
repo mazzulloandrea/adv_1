@@ -10,7 +10,7 @@ export default {
     
     Ricominci a scappare cercando di lasciare meno segni possibili.
     **cornice**
-    Ti allontani per una buona mezz'ora quando, ti accorgi di esserti perso; le colline "sparse" sono un luogo inesplorato e pericoloso, frequentato da banditi e animali selvaggi.
+    Ti allontani per una buona mezz'ora quando, ti accorgi di esserti perso; le "colline sparse" sono un luogo inesplorato e pericoloso, frequentato da banditi e animali selvaggi.
 
     Ti fermi un attimo guardandoti attorno per orientarti.
 

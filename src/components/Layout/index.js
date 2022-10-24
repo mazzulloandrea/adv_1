@@ -46,6 +46,7 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     });
+    console.log(story);
   }, []);
 
   useEffect(() => {

@@ -2,8 +2,7 @@ export default {
   "titolo": "Calmo 2",
   "frase": `
     Si riparte immediatamente.
-
-    Un altro giorno di viaggio, tra le buche ed i sentieri acciottolati dei colli "sparsi".
+    Un altro giorno di viaggio, tra le buche ed i sentieri acciottolati dei "colli sparsi".
     Un altro giorno legati come delle bestie, ti fai forza, non dovrebbe mancare molto...
     **cornice**
     Dopo poco tempo, tornano di corsa 3 soldati; Essertag è caduto in una scarpata, e ha sbattuto la testa morendo sul colpo.
