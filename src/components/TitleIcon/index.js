@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable no-duplicate-imports */
 import { h } from 'preact';
 import { html } from 'htm/preact';
 import corpo from '../../assets/icons/intestazione/caratteristiche/corpo.svg';
@@ -27,10 +30,7 @@ import question from '../../assets/icons/text/question.svg';
 import morte from '../../assets/icons/ferite/morte.svg';
 import teschio from '../../assets/icons/ferite/teschio.svg';
 // import etc from '../../assets/icons/etc/etc.svg';
-
 // import shoot from '../../assets/icons/shoot/shoot.svg';
-
-// import cassaforte from '../../assets/icons/cassaforte/cassaforte.svg';
 import scrigno from '../../assets/icons/cassaforte/scrigno.svg';
 import lucchetto from '../../assets/icons/cassaforte/lucchetto.svg';
 import zainoList from '../../assets/icons/zaino';
@@ -45,13 +45,19 @@ import secondaProva from '../../assets/icons/traguardi/secondaProva.svg';
 import terzaProva from '../../assets/icons/traguardi/terzaProva.svg';
 import giakkos from '../../assets/icons/traguardi/giakkos.svg';
 
+import audioSvg from '../../assets/icons/audio/audio.svg';
+import silenceSvg from '../../assets/icons/audio/silence.svg';
+
 import reset from '../../assets/icons/ferite/reload.svg';
 // need "vita" per tesori
 import vita from '../../assets/icons/intestazione/caratteristiche/cuore.svg';
+// help to get life
+import cuoreAiuto from '../../assets/icons/cuoreAiuto.svg';
 
 // jpg and other format
 import mappa from '../../assets/images/mappa.jpg';
 import cornice from '../../assets/images/cornice.png';
+
 
 function TitleIcon({ type, onClick = () => { } }) {
   const allIconSvg = {
@@ -75,7 +81,10 @@ function TitleIcon({ type, onClick = () => { } }) {
     secondaProva,
     terzaProva,
     giakkos,
+    audioSvg,
+    silenceSvg,
     vita,
+    cuoreAiuto,
   }
   const allIconNonSvg = {
     mappa,

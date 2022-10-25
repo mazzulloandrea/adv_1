@@ -25,6 +25,8 @@ const initialAbilita = {
   vitaMaxLength: 5,
   borselloMaxLength: 50,
   chiaviMaxLength: 3,
+  helpCount: 0,
+  helpCountMax: 3,
   // zaino: ["corda", "accetta", "razione"],
   // chiavi: 2,
   // borsello: 4

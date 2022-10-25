@@ -2,22 +2,18 @@ import { h } from 'preact';
 import { html } from 'htm/preact';
 import { useState, useEffect } from 'preact/hooks';
 import TitleIcon from '../TitleIcon';
-import audioSvg from '/assets/icons/audio/audio.svg';
-import silenceSvg from '/assets/icons/audio/silence.svg';
 import style from './style.css';
 import switchStyle from './switch.css';
 
 
-function Audio({ data, frase, morte, step, onend, orientation }) {
+function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }) {
   const [mode, setMode] = useState(true);
   const [play, setPlay] = useState(false);
 
   useEffect(() => { }, []);
   useEffect(() => { }, [play]);
   useEffect(() => {
-    console.log(mode);
     const audio = document.getElementById('audio');
-    console.log(audio);
     if (!mode) {
       audio.pause()
     } else {
@@ -25,7 +21,7 @@ function Audio({ data, frase, morte, step, onend, orientation }) {
     }
   }, [mode]);
 
-  const audioEnd = (event) => { }
+  const audioEnd = () => { }
 
   const getText = (el) => {
     if (el.includes('**')) {
@@ -43,18 +39,25 @@ function Audio({ data, frase, morte, step, onend, orientation }) {
     <div>
       ${step && html`<div class=${style.capitolo}>CAPITOLO ${step}</div>`}
       <div class=${switchStyle.widget}>
-        <div class=${switchStyle.item}>
-          <div class=${switchStyle.audioSvgItem}>
-            <${silenceSvg} />
-          </div>
-          <div class=${switchStyle.toggle}>
-            <input type="checkbox" id="pill4" checked=${mode} name="check" onchange=${(evt)=> setMode(evt.target.checked)}
-            />
-            <label for="pill4"></label>
-          </div>
-          <div class=${switchStyle.txtSvgItem}>
-            <${audioSvg} />
-          </div>
+        <!-- <div class=${switchStyle.item}>
+                              <div class=${switchStyle.audioSvgItem}>
+                                <${TitleIcon} type=${"silenceSvg"} />
+                              </div>
+                              <div class=${switchStyle.toggle}>
+                                <input type="checkbox" id="pill4" checked=${mode} name="check" onchange=${(evt) => setMode(evt.target.checked)}
+                                />
+                                <label for="pill4"></label>
+                              </div>
+                              <div class=${switchStyle.txtSvgItem}>
+                                <${TitleIcon} type=${"audioSvg"} />
+                              </div>
+                            </div> -->
+        <div class=${switchStyle.item} onClick=${()=> setMode(!mode)}>
+          <${TitleIcon} type=${mode ? 'silenceSvg' : 'audioSvg' } />
+        </div>
+        <div class=${caratteristiche.helpCount < caratteristiche.helpCountMax ? switchStyle.shareToHelp :
+          switchStyle.shareToHelpDisabled} onClick=${()=> shareToHelp()}>
+          <${TitleIcon} type=${"cuoreAiuto"} />
         </div>
       </div>
       <div class=${style.txt}>
@@ -65,8 +68,8 @@ function Audio({ data, frase, morte, step, onend, orientation }) {
             <${TitleIcon} type=${"teschio"} />
           </div>
         </div>`}
-        <div class=${style.continueBtn} onClick=${()=> onend()}>Continua</div>
-        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
+        <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
+        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
           <source src=${data.src} type="audio/mp3" />

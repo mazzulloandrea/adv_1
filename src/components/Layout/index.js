@@ -87,7 +87,6 @@ const Layout = () => {
       console.log(timer);
     },[timer])
 
-    
   */
 
   const updateStorage = () => {
@@ -139,7 +138,21 @@ const Layout = () => {
       continueFromStorage(true);
     }
   }
-    
+  
+  const shareToHelp = async ()  => {
+    const shareData = {
+      title: 'La gemma verde',
+      text: 'Non riuscirai a finirlo!',
+      url: 'https://adv-1.vercel.app/'
+    }
+    try {
+      await navigator.share(shareData);
+      setAbilita(Object.assign({...abilita}, {vita: abilita.vita +1, helpCount: abilita.helpCount + 1 }));
+    } catch (err) {
+      alert('fail');
+    }
+  }
+
   const onEndAudio = () => {
     const actualCap = story[actual.cap];
     if (actualCap.morte) {
@@ -272,7 +285,7 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
-        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} morte=${actualCap. morte} step=${actualCap.step} onend=${()=> onEndAudio()} />`;
+        return html`<${Audio} ...${componentProps} frase=${actualCap.frase} morte=${actualCap. morte} step=${actualCap.step} onend=${()=> onEndAudio()} shareToHelp=${shareToHelp} />`;
       case "risposte":
         return html`<${Risposte} ...${componentProps} 
           onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom) => 
@@ -342,23 +355,22 @@ const Layout = () => {
             }}
           />
         `        
-      } else {
-        return html`
-          <${Tesori} onEnd=${(result) => {
-            let newAbilita = Object.assign(abilita);
-            result.forEach(r => {
-              if(
-                (r === 'vita' && abilita.vita < initialAbilita.vitaMaxLength) ||
-                (['corpo', 'spirito', 'mente'].includes(r))
-              ) {
-                newAbilita[r] = newAbilita[r] + 1;
-              }
-            });
-            startAnimationFinestre();
-            setTimeout(() => setAbilita(Object.assign({...newAbilita}, {chiavi:0})), 2000);
-          }} />
-        `
       }
+      return html`
+        <${Tesori} onEnd=${(result) => {
+          let newAbilita = Object.assign(abilita);
+          result.forEach(r => {
+            if(
+              (r === 'vita' && abilita.vita < initialAbilita.vitaMaxLength) ||
+              (['corpo', 'spirito', 'mente'].includes(r))
+            ) {
+              newAbilita[r] = newAbilita[r] + 1;
+            }
+          });
+          startAnimationFinestre();
+          setTimeout(() => setAbilita(Object.assign({...newAbilita}, {chiavi:0})), 2000);
+        }} />
+      `
     }
     // altri componenti come risposte, giochi, audio
     return html`
