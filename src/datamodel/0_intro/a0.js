@@ -21,7 +21,7 @@ export default {
   text: {
     successo: "a2",
     fallimento: "a3",
-    durata: "2000",
+    durata: "20",
     domande: [
       "Come ti chiami?",
       "Come si chiama tua sorella?",

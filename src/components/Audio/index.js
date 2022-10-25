@@ -7,6 +7,7 @@ import switchStyle from './switch.css';
 
 
 function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }) {
+  const { helpCount, helpCountMax } = caratteristiche;
   const [mode, setMode] = useState(true);
   const [play, setPlay] = useState(false);
 
@@ -39,25 +40,14 @@ function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }
     <div>
       ${step && html`<div class=${style.capitolo}>CAPITOLO ${step}</div>`}
       <div class=${switchStyle.widget}>
-        <!-- <div class=${switchStyle.item}>
-                              <div class=${switchStyle.audioSvgItem}>
-                                <${TitleIcon} type=${"silenceSvg"} />
-                              </div>
-                              <div class=${switchStyle.toggle}>
-                                <input type="checkbox" id="pill4" checked=${mode} name="check" onchange=${(evt) => setMode(evt.target.checked)}
-                                />
-                                <label for="pill4"></label>
-                              </div>
-                              <div class=${switchStyle.txtSvgItem}>
-                                <${TitleIcon} type=${"audioSvg"} />
-                              </div>
-                            </div> -->
-        <div class=${switchStyle.item} onClick=${()=> setMode(!mode)}>
-          <${TitleIcon} type=${mode ? 'silenceSvg' : 'audioSvg' } />
+        <div class=${switchStyle.item} onClick=${() => setMode(!mode)}>
+          <${TitleIcon} type=${mode ? 'audioSvg' : 'silenceSvg'} />
         </div>
-        <div class=${caratteristiche.helpCount < caratteristiche.helpCountMax ? switchStyle.shareToHelp :
-          switchStyle.shareToHelpDisabled} onClick=${()=> shareToHelp()}>
+        <div class=${helpCount < helpCountMax ? switchStyle.shareToHelp : switchStyle.shareToHelpDisabled} onClick=${() =>
+      shareToHelp()}
+          >
           <${TitleIcon} type=${"cuoreAiuto"} />
+          <span>${helpCountMax - helpCount}</span>
         </div>
       </div>
       <div class=${style.txt}>
@@ -68,13 +58,12 @@ function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }
             <${TitleIcon} type=${"teschio"} />
           </div>
         </div>`}
-        <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
-        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
+        <div class=${style.continueBtn} onClick=${()=> onend()}>Continua</div>
+        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
           <source src=${data.src} type="audio/mp3" />
           <!-- <source src=${'/assets/audio/cap0.m4a'} type="audio/mp3" /> -->
-    
           Your browser does not support the audio tag.
         </audio>
       </div>

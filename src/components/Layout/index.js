@@ -54,14 +54,16 @@ const Layout = () => {
     updateStorage();
   }, [actual]);
 
-  // useEffect(() => {
-  //   if (abilita) return;
-  // }, [abilita]);
+
 
   useEffect(() => {
   }, [timerValue]);
 
   /*
+    useEffect(() => {
+      if (abilita) return;
+    }, [abilita]);
+    
     useEffect(() => {
       console.log(load);
     }, [load]);
@@ -77,7 +79,6 @@ const Layout = () => {
     useEffect(() => {
       // animazione // suoni etc feedback!!
     }, [actualComponent]);
-  
   
     useEffect(() => {
       // console.log('tutorial', tutorial)
@@ -142,7 +143,7 @@ const Layout = () => {
   const shareToHelp = async ()  => {
     const shareData = {
       title: 'La gemma verde',
-      text: 'Non riuscirai a finirlo!',
+      text: 'Aiutami a finirlo!!',
       url: 'https://adv-1.vercel.app/'
     }
     try {

@@ -3,37 +3,41 @@ const initialcap = '_0';
 const keyToSaveInStorage = 'GV-1';
 
 const componentList = {
-  "audio": 0,
-  "risposte": 1,
-  "etc": 2,
-  "shoot": 3,
-  "cassaforte": 4,
-  "text": 5,
-  "quiz": 6,
-  "gioco9": 7,
-  "dice": 8,
+  audio: 0,
+  risposte: 1,
+  etc: 2,
+  shoot: 3,
+  cassaforte: 4,
+  text: 5,
+  quiz: 6,
+  gioco9: 7,
+  dice: 8,
 }
 
 const initialAbilita = {
   step: 1,
   corpo: 0, mente: 0, spirito: 0, vita: 3,
-  // corpo: 2, mente: 4, spirito: 2, vita: 4,
   zaino: [],
   borsello: 0,
   chiavi: 0,
   zainoMaxLength: 4,
-  vitaMaxLength: 5,
+  vitaMaxLength: 7,
   borselloMaxLength: 50,
   chiaviMaxLength: 3,
   helpCount: 0,
   helpCountMax: 3,
   // zaino: ["corda", "accetta", "razione"],
-  // chiavi: 2,
-  // borsello: 4
 }
 
 
 const tutorialConfig = {
+  audio: {
+    text: [
+      "Pui disabilitare l'audio e/o chiedere aiuto per una massimo di 3 volte",
+      "Dopo aver letto bene il testo, premi continua per proseguire"
+    ],
+    active: true,
+  },
   risposte: {
     text: [
       "Clicca su di una voce per proseguire",
