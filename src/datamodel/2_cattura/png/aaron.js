@@ -1,18 +1,19 @@
 export default {
-  "titolo": "Aaron",
-  "frase": `
-    Aaron alza gli occhi lentamente verso di te; timoroso dice ad una guarda che deve fermarsi per pisciare e quella risponde, con voce grossa, di farsela addosso.
-    Un'altra guardia tira fuori il coltello, e fa segno di tagliarli le dita se non se ne sta zitto e buono.
+  titolo: "Aaron",
+  frase: `
+    Guardi il tuo amico.
+    Aaron alza gli occhi lentamente verso di te, poi si rivolge timoroso ad una guardia: deve fermarsi per pisciare. 
+    <<Fattela addosso moccioso>> e un'altra guardia tira fuori il coltello, facendo segno di tagliarli le dita se non se ne sta zitto e buono.
 
     Aaron trema di paura e, dopo pochi attimi, una puzza di urina inizia a sollevarsi; il ragazzo si prende un altro malrovescio in faccia.
     Insulti, sbeffeggiamenti e nomignoli rendono Aaron il bersaglio delle guardie.
   `,
 
-  "audio": {
-    "src": "/assets/audio/carcadena.mp3", // todo
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/carcadena.mp3", // todo
+    interrompe: "",
   },
-  "risposte": [
+  risposte: [
     {
       frase: 'Osservi in silenzio la scena',
       next: 'sosta1'

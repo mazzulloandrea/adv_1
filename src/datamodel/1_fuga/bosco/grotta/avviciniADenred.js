@@ -2,8 +2,8 @@ import cap7 from '../../../2_cattura/cap7.js'
 
 export default {
   step: 2,
-  "titolo": "La grotta",
-  "frase": `
+  titolo: "La grotta",
+  frase: `
     Sentendo queste parole, vai verso tuo fratello che ti abbraccia e stringendoti il braccio ti sussurra <<Non scapperai dall'addestramento>>.
     
     Quel bastardo di Denred è dalla parte dei soldati ed infatti alle sue spalle compaiono due guardie.
@@ -17,8 +17,8 @@ export default {
     e tuo fratellastro è uno di questi.
   
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: cap7.risposte
 }

@@ -1,6 +1,6 @@
 export default {
-  "titolo": "Trappola banditi morte",
-  "frase": `
+  titolo: "Trappola banditi morte",
+  frase: `
     Ti chini a raccoglierla ed immediatamente, da appena sotto il terreno, compare una rete che ti avvolge e ti solleva.
 
     Sei finito in una trappola di banditi che escono subito allo scoperto; ridono e discutono su cosa fare di te. 
@@ -13,7 +13,7 @@ export default {
   `,
 
   audio: {
-    "src": "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/cap7.mp3", // todo
   },
   morte: true
 }

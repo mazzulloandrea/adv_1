@@ -1,8 +1,8 @@
 
 export default {
   step: 2,
-  "titolo": "Il Bosco",
-  "frase": `
+  titolo: "Il Bosco",
+  frase: `
     Finalmente la bestia si allontana e quando hai modo di riprenderti ti accorgi che Aaron è scappato per la paura.
     Raggiungi da solo la capanna abbandonata consapevole che sarà questo il luogo dove passerai questa notte.
 
@@ -19,19 +19,19 @@ export default {
     e tuo fratellastro è uno di questi.
 
   `, // todo
-  "audio": {
-    "src": "/assets/audio/cap57.mp3", // todo cambiare audio
+  audio: {
+    src: "/assets/audio/cap57.mp3", // todo cambiare audio
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

@@ -1,34 +1,34 @@
 export default {
-  "titolo": "Il Bosco",
-  "frase": `
-    Dopo qualche minuto raggiungi il fiume, oltre il quale c'è la rete di ponti sugli alberi.
+  titolo: "Il Bosco",
+  frase: `
+    Dopo qualche minuto raggiungi il fiume, oltre il quale ci sono gli alti alberi secolari.
     E' molto buio e guadare il fiume potrebbe essere pericoloso.
   `,
-  "audio": {
-    "src": "/assets/audio/cap70.mp3",
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap70.mp3",
+    interrompe: ""
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Vuoi usare la corda ?",
-      "checkZaino": "corda",
-      "zainoElimina": "corda",
-      "next": "cap80",
+      frase: "Vuoi usare la corda ?",
+      checkZaino: "corda",
+      zainoElimina: "corda",
+      next: "cap80",
     },
     {
-      "frase": "Stai attento e provi ad oltrepassare il fiume",
+      frase: "Stai attento e provi ad oltrepassare il fiume",
       gioco: "dice"
     },
     {
-      "frase": "E' troppo pericoloso meglio tornare indietro",
-      "next": "cap71"
+      frase: "E' troppo pericoloso meglio tornare indietro",
+      next: "cap71"
     },
   ],
   dice: {
     successo: "cap80",
-    "fallimento": "cap72",
-    "obiettivo": 11, // numero da raggiungere con il lancio dei dadi
+    fallimento: "cap72",
+    obiettivo: 11, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente",], // quelle che non si devono usare devono essere escluse
-    "lanci": 4 // quanti lanci col dado
+    lanci: 4 // quanti lanci col dado
   }
 }

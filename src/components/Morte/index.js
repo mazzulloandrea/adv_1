@@ -10,7 +10,6 @@ import style from './style.css';
 
 function Morte({ onClick }) {
   const [text, setText] = useState('');
-  const [viewAchievement, setViewAchievement] = useState(false);
 
   useEffect(() => {
     setText(shuffle(morteText)[0]);
@@ -19,7 +18,7 @@ function Morte({ onClick }) {
 
   return html`
     <div class=${style.wrapper}>
-      <div class=${style.goToAchievement} onClick=${() => onClick()}>
+      <div class=${style.goToAchievement} onClick=${()=> onClick()}>
         <${traguardi} />
       </div>
       <div class=${style.text}>${text}</div>

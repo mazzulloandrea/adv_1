@@ -1,32 +1,32 @@
 export default {
-  "titolo": "Introduzione",
+  titolo: "Introduzione",
   step: 1,
-  "frase": `
+  frase: `
     [rumore di accetta sulla legna] 
     <<Bastardo! 
     Te la farò pagare! ah si se te la farò pagare>> 
     [rumore di accetta sulla legna].
     Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred
     `,
-  "audio": {
-    "src": "/assets/audio/a.mp3",
+  audio: {
+    src: "/assets/audio/a.mp3",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Spacchi la legna infuriato con Denred",
-      "gioco": "gioco9",
+      frase: "Spacchi la legna infuriato con Denred",
+      gioco: "gioco9",
     },
     {
-      "frase": "Cerchi di calmarti",
-      "gioco": "dice",
+      frase: "Cerchi di calmarti",
+      gioco: "dice",
     },
   ],
-  "dice": {
+  dice: {
     successo: "a0",
-    "fallimento": "a1",
-    "obiettivo": 14,
+    fallimento: "a1",
+    obiettivo: 14,
     abilita: ["corpo", "mente", "spirito"],
-    "lanci": 6
+    lanci: 6
   },
   gioco9: {
     successo: "a0",

@@ -1,7 +1,7 @@
 export default {
   step: 2,
-  "titolo": "Il Bosco",
-  "frase": `
+  titolo: "Il Bosco",
+  frase: `
     Raggiungi la capanna abbandonata consapevole che sarà questo il luogo dove passerai questa notte.
 
     Ti sistemi alla meglio e cerchi di resistere al freddo finchè puoi ma, alla fine, la stanchezza vince e ti addormenti.
@@ -16,20 +16,20 @@ export default {
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.
   `,
-  "audio": {
-    "src": "/assets/audio/cap57.mp3", // todo cambiare audio
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap57.mp3", // todo cambiare audio
+    interrompe: ""
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

@@ -1,14 +1,14 @@
 export default {
-  "titolo": "Trappola banditi morte",
-  "frase": `
+  titolo: "Trappola banditi morte",
+  frase: `
     Fai qualche passo, seguendo le orme per terra, quando ti accorgi che sei finito in una trappola;
     a fianco dell'albero, vedi chiaramente una corda che finisce sotto terra e quindi immagini una rete sotterranea o qualcosa di simile.
 
     Solo la tua prontezza di riflessi possono salvarti.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: "dice",
   dice: {

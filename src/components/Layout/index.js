@@ -54,12 +54,9 @@ const Layout = () => {
     updateStorage();
   }, [actual]);
 
-  useEffect(() => {
-    if (abilita) return;
-    const {corpo, mente, spirito} = abilita;
-    if (!corpo && !mente && !spirito) return;
-    updateStorage();
-  }, [abilita]);
+  // useEffect(() => {
+  //   if (abilita) return;
+  // }, [abilita]);
 
   useEffect(() => {
   }, [timerValue]);
@@ -99,7 +96,7 @@ const Layout = () => {
       data = Object.assign(data, {cap: actual.cap});
     }
     if (abilita) {
-      data = Object.assign(data, {"abilita":abilita});
+      data = Object.assign(data, {abilita});
     }
     saveIntoStorage(data);
   }
@@ -281,8 +278,6 @@ const Layout = () => {
           onend=${(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom) => 
             onEndRisposte(gioco, nextCap, newAbilita, zaino, borsello, chiavi, zainoElimina, ferita, custom)}
         />`;
-      case "etc":
-        return html`<${Etc} ...${componentProps} />`;
       case "text":
         return html`<${Text} ...${componentProps} />`;
       case 'gioco9':
@@ -295,9 +290,11 @@ const Layout = () => {
         return html`<${Dice} ...${componentProps} />`;
       case 'ferita':
         return html`<${Ferita} onend=${() => decrementVita()} />`;
-      case "shoot":// not used now
-        return html`<${Shoot} ...${componentProps} />`;
-      case "cassaforte":// not used now
+      // case "shoot":// not used now
+      //   return html`<${Shoot} ...${componentProps} />`;
+      // case "etc":
+      //   return html`<${Etc} ...${componentProps} />`;
+      case "cassaforte":
         return html`<${Cassaforte} ...${componentProps} />`;
       default:
         return;
