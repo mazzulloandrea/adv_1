@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Attendi il tuo avversario che carica verso di te;
     nel momento dell'impatto è come se un toro ti fosse venuto addosso.
 
@@ -9,8 +9,8 @@ export default {
     Hai perso la sfida ed il vincitore è il ragazzo con la ferita sulla fronte.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   next: "finePrimaProva",
 }

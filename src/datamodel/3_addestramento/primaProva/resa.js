@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Ti arrendi tra la delusione e gli insulti dei soldati.
 
     Incroci lo sguardo di Carcadena che capisce perfettamente come la pensi.
@@ -8,8 +8,8 @@ export default {
     Il ragazzo con la ferita sulla fronte ha vinto la sfida!
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   next: "finePrimaProva",
 }

@@ -1,7 +1,7 @@
 export default {
   step: 3,
-  "titolo": "Terrarossa",
-  "frase": `
+  titolo: "Terrarossa",
+  frase: `
     Dopo un paio d'ore di fuori pista, arrivate in uno spiazzo di terra battuta. 
     Ad aspettarvi ci sono una decina di soldati e altri quattro ragazzi della vostra età.
 
@@ -25,8 +25,8 @@ export default {
     Senza farvi troppe domande finite il bicchierone, dopodichè il comandante, inaspettatamente, da inizio alla "prima prova".
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: 'text',
   text: {
@@ -50,5 +50,4 @@ export default {
       ["pane", "tozzo"]
     ]
   },
-  next: "primaProva"
 }

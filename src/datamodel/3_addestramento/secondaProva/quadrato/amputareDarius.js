@@ -1,6 +1,6 @@
 export default {
-  "titolo": "",
-  "frase": `
+  titolo: "",
+  frase: `
     Le parole della guardia stuzzicano la tua voglia di vendetta; ma la morte è un percorso troppo facile per lui.
 
     Sei indeciso su quale tipo di punizione possa essere adatta ma poi, senza perdere troppo tempo, decidi per una cosa semplice ed efficace.
@@ -12,8 +12,8 @@ export default {
     Esci dal quadrato da vincitore.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   next: "vittoriaNonSanguinante"
 }

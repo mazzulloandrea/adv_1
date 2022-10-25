@@ -1,6 +1,6 @@
 export default {
-  "titolo": "come Sta Alexis",
-  "frase": `
+  titolo: "come Sta Alexis",
+  frase: `
     Ti avvicini ad Alexis ed, insieme a te, anche Carcadena fa lo stesso; sapete bene che il ragazzo è in difficoltà e forse hanno ragione i soldati, non resisterà che qualche giorno prima di spegnersi.
     **cornice**
     Unisci le mani legate a quelle di tua sorella e le portate sul petto di Alexis; non sai di preciso cosa stai facendo ma ti lasci guidare da Carcadena.
@@ -18,8 +18,15 @@ export default {
     Il potere di Carcadena si sta ampliando e sta scoprendo nuove forme; chissà quando anche tu ne sarai capace...
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
-  next: "calmo2"
+  next: 'dice',
+  dice: {
+    successo: "calmo2",
+    fallimento: "calmo2",
+    obiettivo: 14, // numero da raggiungere con il lancio dei dadi
+    abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
+    lanci: 3 // quanti lanci col dado
+  }
 }

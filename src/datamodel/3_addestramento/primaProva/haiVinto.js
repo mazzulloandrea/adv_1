@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     I tuoi compagni e tua sorella si congratulano con te, gridano più volte a squarciagola il tuo nome.
     
     Il capitano viene verso di te congratulandosi: <<Hai vinto la prima prova, ti affiancherò io per le prossime settimane>>
@@ -21,8 +21,8 @@ export default {
     Poi iniziano a distribuire i compiti della giornata, dopodichè vieni chiamato dal capitano nella sua tenda.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   next: "tendaRavon"
 }
