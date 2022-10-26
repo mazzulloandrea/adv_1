@@ -89,14 +89,15 @@ const aList = [
       return false;
     }
   },
-  {
-    text: 'uccidere una guardia',
-    icon: 'uccidere',
-    cond: (abilita) => {
-      if (abilita.darius) return true;
-      return false;
-    }
-  },
+  // eliminato perchè troppo simile a "vinci 2° sfida"
+  // {
+  //   text: 'uccidere una guardia',
+  //   icon: 'uccidere',
+  //   cond: (abilita) => {
+  //     if (abilita.darius) return true;
+  //     return false;
+  //   }
+  // },
   {
     text: 'incontrare Giakkos',
     icon: 'giakkos',
@@ -181,7 +182,7 @@ function Achievement({ abilita, onClick }) {
   return (
     html`
     <div class=${style.wrapper}>
-      <div id="resetButton" class=${style.reset} onClick=${()=> onClick()}>
+      <div id="resetButton" class=${style.reset} onClick=${() => onClick()}>
         <${TitleIcon} type='reset' />
       </div>
       <div class=${style.title}>
@@ -196,7 +197,7 @@ function Achievement({ abilita, onClick }) {
             <div class=${style.text}>${el.text}</div>
           </div>
           <div class=${style.check}>
-            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko' } />
+            <${TitleIcon} type=${el.cond(abilita) ? 'ok' : 'ko'} />
           </div>
         </div>
         `)}

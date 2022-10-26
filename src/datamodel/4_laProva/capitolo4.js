@@ -1,9 +1,9 @@
 export default {
   step: 5,
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     I giorni si susseguono così come gli insegnamenti.
-    Dopo alcuni giorni, venite a sapere che non tutti voi andrete a Berdask; alcuni seguiranno un percorso alternativo.
+    Venite a sapere che non tutti voi andrete a Berdask; alcuni seguiranno un percorso alternativo.
     Vi separerete per circa un mese prima di riunirvi nella città del duca di Blick.
     **cornice**
     Il giorno seguente venite tutti informati dal generale di una ultima prova, la più dura.
@@ -26,17 +26,17 @@ export default {
     Con un po' di timore raggiungi la tenda del generale.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     {
-      "frase": "Entri immediatamente",
-      "next": "inizioProva3",
+      frase: "Entri immediatamente",
+      next: "inizioProva3",
     },
     {
-      "frase": "Provi a capire cosa ti aspetta",
-      "next": "esaminiTenda",
+      frase: "Provi a capire cosa ti aspetta",
+      next: "esaminiTenda",
     },
   ]
 }

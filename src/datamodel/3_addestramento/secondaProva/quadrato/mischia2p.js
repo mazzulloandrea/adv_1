@@ -1,15 +1,14 @@
 export default {
-  "titolo": "riparo",
-  "frase": `
-    Con l'arma in mano esci allo scoperto caricando verso il nemico 
-    che fa partire verso di te un colpo di balestra;
+  titolo: "riparo",
+  frase: `
+    Con l'arma in mano, esci allo scoperto caricando verso il nemico, che fa partire verso di te un colpo di balestra.
 
-    usi il tuo istinto per provare a schivare il dardo e colpire l'avversario
+    Usi il tuo istinto per provare a schivare il dardo e colpire l'avversario
 
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: "dice",
   dice: {

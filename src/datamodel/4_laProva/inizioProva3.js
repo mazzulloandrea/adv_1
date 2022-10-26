@@ -1,15 +1,15 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     All'interno il generale Ravon è seduto a scrivere chissà quale documento e, distrattamente, ti chiede di sederti, indicando, con un veloce cenno del capo, lo sgabello dall'altro lato della scrivania.
-    La scrivania è piena di carte arrotolate, sigilli di cera rotti e altrettanti fogli sparsi.
+    É piena di carte arrotolate, sigilli di cera rotti e altrettanti fogli sparsi.
     A fianco dello scrittoio c'è un piccolo tavolino alto, di legno, decorato con incisioni e rune, con appoggiata sopra una sorta di candela, un cilindro di legno con intarsi spiraggianti, sulla cui sommità spicca un piccolo rubino.
     
     Ravon, senza nemmeno alzare gli occhi, ti ordina di impugnare la bacchetta con la pietra e di fare tre volte il verso del corvo.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Senza indugi segui le istruzioni del capitano", next: 'scettro' },
