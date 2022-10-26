@@ -20,7 +20,7 @@ export default {
     **cornice**
     Come prima cosa, vi viene servito un poco di pane ed una boccale colmo di vino rosso.
     Sia voi che i soldati, mangiate quel piccolo tozzo molto avidamente.
-    Anche il vino termina in pochi secondi ed, immediatamente, ve ne viene versato un secondo bicchiere, intimandovi di berlo tutto molto rapidamente.
+    Anche il vino termina in pochi secondi ed, immediatamente, ve ne viene versato un secondo bicchiere, intimandovi di berlo molto rapidamente.
 
     Senza farvi troppe domande finite il bicchierone, dopodichè il comandante, inaspettatamente, da inizio alla "prima prova".
   `,

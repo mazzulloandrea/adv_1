@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Tutti insieme inneggiano il nome del vincitore gridando più volte a squarciagola Redro, Redro, Redro.
     
     Il capitano dice a Redro che, avendo vinto la prima prova, verrà addestrato, per la seconda prova, direttamente da lui.
@@ -13,14 +13,14 @@ export default {
     Teela, ragazza di tredici anni, dice di essere agile cacciatrice e di saper usare l'arco.
     Giak, ragazzo di quindici anni, capelli rossi, basso e muscoloso, aiutante fabbro.
     Frozia di quattordici anni, un po' sovrappeso e timido, aiutante bibliotecario.
-    
+    **cornice**
     Redro a questo punto si allontana con il capitano Ravon.
 
     Tu Pantelion chi scegli come compagno?
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Scegli qualcuno dei tuoi compagni di Erbafolta ?", next: "secondaProvaErbafolta" },

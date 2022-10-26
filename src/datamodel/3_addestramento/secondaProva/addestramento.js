@@ -1,11 +1,11 @@
 export default {
   step: 4,
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     L'addestramento prosegue per tre durissime settimane.
     Venite tutti allenati anche a sopportare il freddo, a patire la fame, a resistere al dolore.
     
-    Non si contano nemmeno i graffi e i lividi, e alcuni di voi hanno riportato ferite ben più gravi: Gudrum ha perso 1 dito della mano destra invece Giak ha perso l'occhio sinistro.
+    Non si contano nemmeno i graffi e i lividi, e alcuni di voi hanno riportato ferite ben più gravi: Gudrum ha perso un dito della mano destra invece Giak ha perso l'occhio sinistro.
     **cornice**
     La mattina dell'ultimo giorno della terza settimana, Ravon vi spiega che ognuno di voi dovrà affrontare uno scontro.
     Potrete scegliere un avversario tra chiunque nel campo; potrete scegliere di sfidare un'altra recluta, scegliere un soldato oppure Ravon stesso.
@@ -20,8 +20,8 @@ export default {
     Devi scegliere il tuo avversario.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Se scegli Ravon', gioco: 'text', },

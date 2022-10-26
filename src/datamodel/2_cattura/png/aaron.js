@@ -19,7 +19,7 @@ export default {
       next: 'sosta1'
     },
     {
-      frase: 'Cerchi di consolare Aaron',
+      frase: 'Cerchi di aiutare Aaron',
       gioco: 'text'
     }
   ],

@@ -154,12 +154,15 @@ export const Prosegui = styled.button`
   align-items: center;
   font-size: 1.5em;
   padding: 4vh 2vw;
+  
   ${props => props.valid
     ? css`
       background-color: green;
+      color: white;
     `
     : css`
       background-color: burlywood;
+      color: black;
     `
   }
 `;
