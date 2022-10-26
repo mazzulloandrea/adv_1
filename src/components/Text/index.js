@@ -41,7 +41,7 @@ function Text({ data, onend }) {
 
   return html`
     <div>
-      ${viewSand && html`<${Clessidra} class=${style.clessidraContainer} duration=${300000} onend=${()=>
+      ${viewSand && html`<${Clessidra} class=${style.clessidraContainer} duration=${durata} onend=${()=>
         setViewSand(false)}
         />`}
         <div class=${style.domanda}>${domande[domanda]}</div>

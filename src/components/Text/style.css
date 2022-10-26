@@ -41,7 +41,6 @@
   border: none;
   padding: 0;
   width: 16ch;
-  width: 80vw;
   background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 15ch 2px no-repeat;
   font: 3.5ch droid sans mono, consolas, monospace;
   letter-spacing: 0.5ch;
