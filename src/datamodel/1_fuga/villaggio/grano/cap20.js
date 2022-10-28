@@ -1,7 +1,7 @@
 export default {
   step: 2,
-  "titolo": "Nel grano",
-  "frase": `
+  titolo: "Nel grano",
+  frase: `
     Le fiamme divampano velocemente; devi scappare prima di rimanere intrappolato.
     Uscendo dal campo ti ritrovi a pochi passi un soldato che grida la tua presenza; subito viene circodanto da un altro soldato e da tuo fratello Denred.
     Quel bastardo li sta aiutando.
@@ -15,20 +15,20 @@ export default {
     e tuo fratellastro è uno di questi.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap20.mp3",
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap20.mp3",
+    interrompe: "",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

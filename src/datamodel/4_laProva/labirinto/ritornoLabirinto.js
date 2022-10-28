@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Il piccolissimo corridoio prosegue fino ad un incrocio a quattro vie di cui una è la tua:
 
     a sud la strada dalla quale arrivi,
@@ -9,8 +9,8 @@ export default {
     a ovest una via nera.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Est verso l'arancione", next: 'arancioneEDirezioneBianco' },

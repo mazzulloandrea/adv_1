@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Sopra ogni ingresso ci sono dei disegni abbastanza criptici ma secondo te indicano qualcosa di preciso:
 
     a sinistra c'è disegnato un toro,
@@ -8,8 +8,8 @@ export default {
     a destra c'è disegnato un curatore
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Vai a sinistra, toro", next: 'proseguiPercorso', abilita: 'corpo' },

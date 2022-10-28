@@ -1,6 +1,6 @@
 export default {
-  "titolo": "eremita",
-  "frase": `
+  titolo: "eremita",
+  frase: `
     Dici che ti chiami Pantelion e spieghi la storia dei soldati e del giorno del raccolto.
 
     Lui si chiamata Giakkos, ed è un eremita che vive da solo nei colli sparsi.
@@ -21,27 +21,27 @@ export default {
     Ora il viaggio prosegue.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     {
-      "frase": "Corpo",
-      "abilita": "corpo",
-      "next": "arrivo",
-      "icon": "corpo",
+      frase: "Corpo",
+      abilita: "corpo",
+      next: "arrivo",
+      icon: "corpo",
     },
     {
-      "frase": "Mente",
-      "abilita": "mente",
-      "next": "arrivo",
-      "icon": "mente",
+      frase: "Mente",
+      abilita: "mente",
+      next: "arrivo",
+      icon: "mente",
     },
     {
-      "frase": "Spirito",
-      "abilita": "spirito",
-      "next": "arrivo",
-      "icon": "spirito",
+      frase: "Spirito",
+      abilita: "spirito",
+      next: "arrivo",
+      icon: "spirito",
     }
   ]
 

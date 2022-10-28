@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     La testa ti gira così tanto che quasi non riesci a stare in piedi.
     É iniziata una lotta furiosa e ti accorgi che lo spazio a disposizione dentro il cerchio non è poi molto.
 
@@ -15,9 +15,8 @@ export default {
     Sta caricando un calcio e sei pronto a rispondere.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Vuoi parare il colpo per poi farla cadere', gioco: 'dice' },

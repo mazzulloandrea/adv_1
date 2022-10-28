@@ -6,8 +6,8 @@ const resp = nemico.risposte.concat(
 )
 
 export default {
-  "titolo": "",
-  "frase": `
+  titolo: "",
+  frase: `
     Mentre salti fuori dalla buca il colpo di balestra ti colpisce di striscio sul polpaccio sinistro,
     un forte dolore pervade il tuo corpo ma senza esitare corri via.
     L'adrenalina e la concentrazione ti caricano così tanto da non sentire momentaneamente il dolore;
@@ -15,8 +15,8 @@ export default {
     mentre il tuo inseguitore gridando di volerti uccidere ricarica la balestra.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3",
+  audio: {
+    src: "/assets/audio/cap7.mp3",
   },
   risposte: resp
 }

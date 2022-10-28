@@ -1,11 +1,11 @@
 export default {
-  "titolo": "---",
-  "frase": `
+  titolo: "---",
+  frase: `
     Ti tappi il naso e prosegui di pochissimi metri, quando all'improvviso senti un rumore che ti fa trasalire; dietro la roccia a pochi centimetri da te, una creatura ha appena finito di fare i suoi bisogni.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Resti immobile", next: "eremita" },

@@ -1,6 +1,6 @@
 export default {
-  "titolo": "riparo",
-  "frase": `
+  titolo: "riparo",
+  frase: `
     Eviti il colpo ed infliggi una pesante ferita al tuo avversario che cade in ginocchio.
 
     Darius digrigna qualcosa tra i denti e sputa sangue; gli hai inflitto un colpo quasi mortale. 
@@ -14,8 +14,8 @@ export default {
     Spalanchi gli occhi a quelle parole... stai pensando a come farla pagare a Darius per quello che ha fatto.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Vuoi uccidere Darius", next: "uccidereDarius", darius: true },

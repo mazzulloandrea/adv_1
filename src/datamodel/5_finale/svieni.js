@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     A causa del forte dolore perdi completamente conoscenza.
 
     Dopo 1 giorno, finalmente, ti svegli con un fortissimo mal di testa; un dolore in tutto il cranio ti impedisce di tenere gli occhi aperti. 
@@ -32,8 +32,8 @@ export default {
     Ti fai forza e, contando i giorni che mancano al suo arrivo, ripensi a tua sorella.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   fine: true
 }

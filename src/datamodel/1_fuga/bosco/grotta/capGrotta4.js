@@ -1,11 +1,11 @@
 export default {
-  "titolo": "La grotta",
-  "frase": `
+  titolo: "La grotta",
+  frase: `
     Le rocce sono tropo scivolose per salire e desisti quasi subito.
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
+    interrompe: ""
   },
   risposte: [
     {

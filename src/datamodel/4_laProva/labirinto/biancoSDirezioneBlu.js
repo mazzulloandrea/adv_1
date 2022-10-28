@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Il corridoio bianco è pieno di tracce ben visibili.
 
     Guardi attentamente e ti sembra di riconoscere impronte di stivale; infine arrivi ad un nuovo bivio:
@@ -10,8 +10,8 @@ export default {
     dietro di te, sul percorso bianco.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Sinistra via rossa", next: 'versoIncrocio' },

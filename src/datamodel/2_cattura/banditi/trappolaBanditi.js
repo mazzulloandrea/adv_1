@@ -1,12 +1,12 @@
 export default {
-  "titolo": "Trappola banditi",
-  "frase": `
+  titolo: "Trappola banditi",
+  frase: `
     Fai ancora qualche passo, spostando l'orecchio verso il suono, ma ti accorgi di una cosa che attira la tua attenzione.
     A terra, mezza coperta dal terriccio, c'è una moneta tutta rovinata.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Raccogli la moneta", next: "trappolaBanditiMorte" },

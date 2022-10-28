@@ -1,12 +1,12 @@
 export default {
-  "titolo": "La grotta",
-  "frase": `
+  titolo: "La grotta",
+  frase: `
     Hai finalmente trovato la grotta.
     Hai sentito parlare di funghi fluorscenti e di pipistrelli feroci, non ti sei mai addentrato oltre che pochi metri, fin dove la luce illumina l'interno.
   `,
-  "audio": {
-    "src": "/assets/audio/cap61.mp3", // todo
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap61.mp3", // todo
+    interrompe: ""
   },
   risposte: [
     {

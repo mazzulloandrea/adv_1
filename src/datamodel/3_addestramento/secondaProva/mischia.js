@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Le armi a disposizione sono quattro ed ognuna ha le sue peculiarità:
     la spada per infliggere tagli agli avversari, 
     il bastone lungo per colpire fino a due metri, 
@@ -12,8 +12,8 @@ export default {
     Ora devi scegliere la tua arma.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Impugni la spada', next: "addestramento", zaino: "spada" },

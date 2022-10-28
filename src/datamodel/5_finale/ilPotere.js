@@ -1,13 +1,13 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Vedi una intensa luce rossa provenire dalla tenda del generale; l'intensità della luce ti impedisce di trattenere lo sguardo, inoltre, un fortissimo bruciore al ginocchio ti fa accasciare al suolo.
     
     Il dolore aumenta così tanto che ti contorci, hai spasmi e soffri come non mai.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: "dice",
   dice: {

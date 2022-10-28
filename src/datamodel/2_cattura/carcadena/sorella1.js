@@ -1,6 +1,6 @@
 export default {
-  "titolo": "Carcadena",
-  "frase": `
+  titolo: "Carcadena",
+  frase: `
     Incroci gli occhi chiari di tua sorella che, con i suoi tipici modi calmi e pacati, ti dice che Denred vi ha venduto ai soldati.
     Senza far trasparire un minimo di sentimento, con la solita voce piatta, Carcadena ti ricorda le parole di vostro fratello:
     <<Denred ci raccontava la sofferenza, la fatica e le punizioni vissute durante l'addestramento.
@@ -18,20 +18,20 @@ export default {
 
   `,
 
-  "audio": {
-    "src": "/assets/audio/carcadena.mp3", // todo modificare audio con quello scritto
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/carcadena.mp3", // todo modificare audio con quello scritto
+    interrompe: "",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Carcadena cosa dovremo fare?",
-      "gioco": "audio",
-      "next": "sorella2"
+      frase: "Carcadena cosa dovremo fare?",
+      gioco: "audio",
+      next: "sorella2"
     },
     {
-      "frase": "Vuoi parlare con gli altri",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Vuoi parlare con gli altri",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

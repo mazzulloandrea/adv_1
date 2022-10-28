@@ -1,6 +1,6 @@
 export default {
-  "titolo": "Il Bosco",
-  "frase": `
+  titolo: "Il Bosco",
+  frase: `
     Corri via, ripetendoti che quel maledetto giorno è arrivato.
     Denred te ne ha aveva parlato:
     <<Verranno i soldati e prenderanno te, tua sorella e tutti gli altri giovani scansafatiche. 
@@ -10,28 +10,28 @@ export default {
 
     Continuando a pensare entri nel bosco buio.
   `,
-  "audio": {
-    "src": "/assets/audio/cap50.mp3", // da copiare dal cap10
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap50.mp3", // da copiare dal cap10
+    interrompe: ""
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Corpo",
-      "abilita": "corpo",
-      "next": "cap52",
-      "icon": "corpo"
+      frase: "Corpo",
+      abilita: "corpo",
+      next: "cap52",
+      icon: "corpo"
     },
     {
-      "frase": "Mente",
-      "abilita": "mente",
-      "next": "cap52",
-      "icon": "mente"
+      frase: "Mente",
+      abilita: "mente",
+      next: "cap52",
+      icon: "mente"
     },
     {
-      "frase": "Spirito",
-      "abilita": "spirito",
-      "next": "cap52",
-      "icon": "spirito"
+      frase: "Spirito",
+      abilita: "spirito",
+      next: "cap52",
+      icon: "spirito"
     }
   ],
 }

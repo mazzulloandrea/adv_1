@@ -1,11 +1,11 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
    Dei ragazzi di Murafredde, la tua scelta può cadere solo su Giak o Frozia perchè Teela ha già fatto coppia con Carcadena; Redro, invece, avendo vinto la prima prova, farà coppia con il generale Ravon. 
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
     "interrompe": "",
   },
   risposte: [

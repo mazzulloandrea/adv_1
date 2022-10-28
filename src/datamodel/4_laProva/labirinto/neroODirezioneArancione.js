@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Il nero assorbe quasi totalmente la fiamma della torcia; prosegui lentamente con il cuore che batte pesantemente.
     I nervi sono tesissimi e sei pronto a scattare come un gatto alle prime avvisaglie di pericolo.
     **cornice**
@@ -12,8 +12,8 @@ export default {
     
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Avanti verso l'arancione", next: 'arancioneODirezioneBianco' },

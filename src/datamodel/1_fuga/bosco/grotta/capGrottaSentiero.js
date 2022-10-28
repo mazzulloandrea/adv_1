@@ -1,6 +1,6 @@
 export default {
-  "titolo": "La grotta",
-  "frase": `
+  titolo: "La grotta",
+  frase: `
     Cammini per quasi mezz'ora sfruttando la fluorescenza dei funghi, quando ti ritrovi nuovamente nell'oscurità.
     Con moltissima attenzione fai ancora pochi metri e sei di nuovo all'aria aperta; hai attraversato la grotta finendo dall'altra parte.
     Sei molto stanco e mancano circa 5 ore all'alba, per cui decidi di riposare.
@@ -15,8 +15,8 @@ export default {
     Al tuo risveglio hai chiaro il tuo obiettivo: seguire i soldati e raggiungere tua sorella.
 
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     {
@@ -42,7 +42,7 @@ export default {
     dataset: "nature",
     combinazione: ["barile", "candela", "pietra", "tomba"],
   },
-  "dice": {
+  dice: {
     successo: 'capRisveglioBene',
     fallimento: 'capRisveglioMale',
     obiettivo: 14, // numero da raggiungere con il lancio dei dadi

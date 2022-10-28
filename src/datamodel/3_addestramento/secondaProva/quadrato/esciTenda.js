@@ -6,7 +6,7 @@ const resp = nemico.risposte.concat(
 );
 
 export default {
-  "titolo": "",
+  titolo: "",
   frase: `
     Esci dalla tenda; alle tue spalle c'è il tuo nemico che, senza esitare un momento, ti punta la balestra contro. 
     Il dardo ti sfiora per pochi centimetri.

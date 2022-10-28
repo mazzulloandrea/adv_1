@@ -1,6 +1,6 @@
 export default {
-  "titolo": "riparo",
-  "frase": `
+  titolo: "riparo",
+  frase: `
     Lo scudo ti proteggerà, ne sei sicuro.
     
     Ascolti in un silenzio assoluto i movimenti del tuo nemico che lentamente si avvicinano; 
@@ -11,8 +11,8 @@ export default {
     Solo la tua prontezza di riflessi può salvarti.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: "dice",
   dice: {

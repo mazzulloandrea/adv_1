@@ -1,13 +1,13 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Il lucchetto non si apre, non c'è nulla da fare.
     
     Se vuoi iniziare la sfida devi entrare nel quadrato.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Provi a decifrare la combinazione', gioco: 'cassaforte', },
@@ -16,13 +16,13 @@ export default {
   ],
   cassaforte: {
     successo: "combinazioneOk",
-    "fallimento": "combinazioneKo",
-    "durata": "25",
+    fallimento: "combinazioneKo",
+    durata: "25",
     type: 'roll',
     domanda: "n# totale soldati ----- n# totale reclute",
     combinazione: '15:09' // essertag è morto
   },
-  "dice": {
+  dice: {
     successo: "scavalcatoOk",
     fallimento: "scavalcatoKo",
     obiettivo: 7, // numero da raggiungere con il lancio dei dadi

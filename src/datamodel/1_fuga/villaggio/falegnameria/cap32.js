@@ -1,7 +1,7 @@
 export default {
   step: 2,
-  "titolo": "Falegnameria",
-  "frase": `
+  titolo: "Falegnameria",
+  frase: `
     Esci di nascosto e, facendo il giro largo, ti dirigi verso la stalla.
     Svoltato l'angolo vai sbattere contro qualcosa che ti afferra.
     É Denred, accompagnato da alcuni soldati <<Eccolo è qui>>, tuo fratello sta aiutando le guardie.
@@ -15,19 +15,19 @@ export default {
     e tuo fratellastro è uno di questi.
 
   `,
-  "audio": {
-    "src": "/assets/audio/cap32.mp3",
+  audio: {
+    src: "/assets/audio/cap32.mp3",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

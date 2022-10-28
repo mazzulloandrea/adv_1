@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Corri velocemente verso il pozzo quando il terreno sotto i tuoi piedi viene a mancare; con uno scatto ti sposti di lato, schivando la caduta per pochi centimetri.
     
     Raggiungi il pozzo, non fai in tempo a guardarti attorno che Darius ti piomba addosso spingendoti con un calcio verso gli alberi.
@@ -9,8 +9,8 @@ export default {
 
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Se vuoi scappare", next: 'scappareDarius' },

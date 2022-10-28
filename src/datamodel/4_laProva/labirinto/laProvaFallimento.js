@@ -1,12 +1,12 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Senti un rumore metallico e capisci che qualcosa non va:
     la tua prontezza di riflessi viene messa alla prova da una lama che compare dal soffitto.
   `,
   gioco: "dice",
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   dice: {
     successo: "schivatoTrappola",

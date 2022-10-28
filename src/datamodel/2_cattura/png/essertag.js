@@ -1,29 +1,29 @@
 export default {
-  "titolo": "Essertag",
-  "frase": `
-    Essertag ha 15 anni e sta provando a liberarsi i polsi dalle corde...
+  titolo: "Essertag",
+  frase: `
+    Essertag ha quindici anni e sta provando a liberarsi i polsi dalle corde...
 
     I vostri sguardi si incrociano e sussurrando ti chiede di aiutarlo; ti indica un pugnale, lasciato incustodito dalle guardie, che lui potrebbe prendere per poi liberarsi.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
+    interrompe: "",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Vuoi dare ad Essertag la tua accetta?",
-      "next": "tentativoAccetta",
-      "checkZaino": "accetta",
-      "zainoElimina": "accetta",
+      frase: "Vuoi dare ad Essertag la tua accetta?",
+      next: "tentativoAccetta",
+      checkZaino: "accetta",
+      zainoElimina: "accetta",
     },
     {
-      "frase": "Vuoi provare a distrarre la guardia?",
-      "gioco": "dice"
+      frase: "Vuoi provare a distrarre la guardia?",
+      gioco: "dice"
     },
     {
-      "frase": "Se preferisci lasciar stare",
-      "next": "sosta1"
+      frase: "Se preferisci lasciar stare",
+      next: "sosta1"
     },
   ],
   dice: {

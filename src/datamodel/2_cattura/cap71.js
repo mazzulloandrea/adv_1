@@ -2,8 +2,8 @@ import cap7 from './cap7';
 
 export default {
   step: 2,
-  "titolo": "Il Bosco",
-  "frase": `
+  titolo: "Il Bosco",
+  frase: `
     Torni indietro e, dopo qualche minuto, senti una mano afferrarti nell'oscurità: è tuo fratellastro Denred.
 
     E' accompagnato da due soldati, quel bastardo li sta aiutando.
@@ -19,9 +19,9 @@ export default {
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.
   `,
-  "audio": {
-    "src": "/assets/audio/cap71.mp3",
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap71.mp3",
+    interrompe: ""
   },
-  "risposte": cap7.risposte
+  risposte: cap7.risposte
 }

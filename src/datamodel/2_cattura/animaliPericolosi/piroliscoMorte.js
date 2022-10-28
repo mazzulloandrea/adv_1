@@ -1,6 +1,6 @@
 export default {
-  "titolo": "animali pericolosi",
-  "frase": `
+  titolo: "animali pericolosi",
+  frase: `
       Cerchi di restare immobile mentre l'animale si avvicina lentamente; il tuo battito aumenta freneticamente mentre la gallina arriva a pochi centimetri da te.
 
       Poi, per una frazione di secondo, incroci il suo sguardo, la piuma rossa sulla coda dell'animale si incendia e tu ricordi perfettamente.
@@ -11,8 +11,8 @@ export default {
 
       Te ne ricordi solo ora, mentre bruci vivo in pochi secondi.
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   morte: true,
 }

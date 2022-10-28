@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Ti fai più piccolo che puoi e, lentamente, riesci a far passare il tuo corpo attraverso il piccolo pertugio.
     Sei praticamente al di la del muro ma, appena ti rialzi, una sporgenza del legno ti graffia profondamente la schiena provocandoti una profonda ferita.
     **cornice**
@@ -10,8 +10,8 @@ export default {
     Ti starà aspettando per un agguato?
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Ti apposti nel riparo vicino', next: 'riparo', },

@@ -1,5 +1,5 @@
 export default {
-  "titolo": "",
+  titolo: "",
   frase: `
     Ti giri e scappi correndo a più non posso.
     All'improvviso un dolore fortissimo dietro la nuca ti fa vacillare e cadi malamente a terra.

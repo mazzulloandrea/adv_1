@@ -2,8 +2,8 @@ import cap7 from './cap7';
 
 export default {
   step: 2,
-  "titolo": "Il Bosco",
-  "frase": `
+  titolo: "Il Bosco",
+  frase: `
     Durante l'attraversamento scivoli e cadendo prendi un colpo così forte che gridi dal dolore.
     Esci quantoprima dall'acqua e tutto radicio cerchi di asciugarti; una mano ti afferra per il vestito!
     É Denred, accompagnato da un soldato. 
@@ -19,9 +19,9 @@ export default {
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.
   `,
-  "audio": {
-    "src": "/assets/audio/cap72.mp3",
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap72.mp3",
+    interrompe: ""
   },
-  "risposte": cap7.risposte
+  risposte: cap7.risposte
 }

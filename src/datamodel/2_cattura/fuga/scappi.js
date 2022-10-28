@@ -1,14 +1,14 @@
 export default {
-  "titolo": "Scappi",
-  "frase": `
+  titolo: "Scappi",
+  frase: `
     Ne approfitti della distrazione di una guardia per scattare di lato.
     Fai pochi metri quando senti una mano appoggiarsi prepotentemente sulla tua spalla e afferrarti il vestito.
     Se sei abbastanza agile ed intelligente puoi liberarti dalla presa.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
+    interrompe: "",
   },
   gioco: "dice",
   dice: {

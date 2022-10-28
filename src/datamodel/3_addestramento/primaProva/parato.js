@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Pari il colpo e subito afferri la gamba facendo cadere la ragazza; le salti addosso e la spingi con tutte le tue forze fuori dal perimetro.
 
     Siete rimasti in 3 nel cerchio: tu, Gudrum ed un ragazzo dai capelli neri con un visibile graffio sanguinante sulla fronte.
@@ -14,9 +14,9 @@ export default {
     Lo sfidante ti guarda e ti indica; ora rimanete solamente in 2 nel cerchio a lottare per la vittoria.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
+    interrompe: "",
   },
   risposte: [
     { frase: 'Vuoi caricare come Gudrum?', gioco: 'dice' },

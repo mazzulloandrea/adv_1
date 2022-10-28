@@ -1,6 +1,6 @@
 export default {
-  "titolo": "Ucciso dai soldati",
-  "frase": `
+  titolo: "Ucciso dai soldati",
+  frase: `
     Vedi gocce di sangue sullo stivale di uno dei soldati e, seguendo gli schizzi, ti accorgi che anche il fodero della spada è sporco di rosso.
 
     Le tracce sono fresche e, mentre guardi con attenzione, ti sorge un dubbio: che Essertag sia stato ucciso?
@@ -8,8 +8,8 @@ export default {
     Il soldato si chiama Darius e ha un volto che non dimenticherai mai più.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: "gioco9",
   gioco9: {

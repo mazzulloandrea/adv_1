@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Con una energia che non ti aspettavi tieni testa ai muscoli del tuo avversario;
     riesci anche a rialzarti a far esplodere così tanta forza che lo spingi in parte fuori dal perimetro.
     con uno scatto si libera e mentre le guardie gridano che è stato eliminato 
@@ -9,9 +9,8 @@ export default {
     Una secchiata d'acqua ti risveglia fuori dal perimetro, hai perso.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     {

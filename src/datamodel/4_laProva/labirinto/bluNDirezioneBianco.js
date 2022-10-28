@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Il blu scuro sembra assorbire la luce della torcia, infine arrivi ad un incrocio a tre vie: 
 
     verso destra una via rossa,
@@ -10,8 +10,8 @@ export default {
     Che strada prenderai?
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Destra verso il rosso", next: 'versoIncrocio' },

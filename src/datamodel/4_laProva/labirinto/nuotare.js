@@ -1,13 +1,13 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Ti butti nell'acqua gelida lasciando che la torcia si spenga; il freddo ti punge come mille aghi e sveglia la tua mente come poche altre volte.
 
     Sei quasi arrivato ma, quando mancano poche bracciate, c'è qualcosa che ti fa paralizzare dalla paura: un serpente acquatico sta nuotando nella tua direzione.
 
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Cerchi di raggiungere la corda", gioco: 'dice' },

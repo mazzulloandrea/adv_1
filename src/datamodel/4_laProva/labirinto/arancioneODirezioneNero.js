@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     L'arancione acceso sembra quasi ravvivare la fiamma.
     
     Giungi ad un incrocio a quattro vie:
@@ -11,8 +11,8 @@ export default {
     
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Indietro verso l'arancione", next: 'arancioneEDirezioneBianco' },

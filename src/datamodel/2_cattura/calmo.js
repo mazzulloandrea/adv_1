@@ -1,8 +1,8 @@
 export default {
-  "titolo": "Calmo",
-  "frase": `
+  titolo: "Calmo",
+  frase: `
       Ve ne state tutti tranquilli, seguendo le indicazioni dei soldati che vi legano nuovamente le caviglie ma vi liberano i polsi.
-      Viene preparata della zuppa calda; vi dicono di mangiare in fretta che tra poco si riparte: <<Questi non sono luoghi sicuri in sui sostar>>.
+      Viene preparata della zuppa calda; vi dicono di mangiare in fretta che tra poco si riparte: <<Questi non sono luoghi sicuri in sui sostare>>.
       **cornice**
       Tra di voi quello che al momento se la sta passando peggio è Alexis.
       Si vede chiaramente che sta male e che ha bisogno di cure e di riposo.
@@ -13,8 +13,8 @@ export default {
       immediatamente le guerdie scoppiano in una risata fragorosa.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Se vuoi chiedere che cavolo hanno da ridere?", gioco: "dice" },

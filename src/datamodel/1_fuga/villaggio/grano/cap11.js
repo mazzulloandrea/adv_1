@@ -1,30 +1,29 @@
 export default {
-  "titolo": "Nel grano",
-  "frase": `
+  titolo: "Nel grano",
+  frase: `
     Ti avvicini piano, cercando di non far rumore. 
     Arrivi quasi a ridosso dei soldati, puoi intravedere le fiaccole ed intuire cosa dicono.
     E' rischioso ma puoi provare ad avvicinarti ancora un po' per vedere e sentire meglio...
   `,
-  "audio": {
-    "src": "/assets/audio/cap11.mp3",
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap11.mp3",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Vuoi avvicinarti in silenzio",
-      "gioco": "dice",
+      frase: "Vuoi avvicinarti in silenzio",
+      gioco: "dice",
     },
     {
-      "frase": "E' troppo pericoloso meglio allontanarsi",
-      "gioco": "audio",
-      "next": "cap13"
+      frase: "E' troppo pericoloso meglio allontanarsi",
+      gioco: "audio",
+      next: "cap13"
     }
   ],
-  "dice": {
+  dice: {
     successo: "cap14",
-    "fallimento": "cap24",
-    "obiettivo": 10, // numero da raggiungere con il lancio dei dadi
+    fallimento: "cap24",
+    obiettivo: 10, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
-    "lanci": 5 // quanti lanci col dado
+    lanci: 5 // quanti lanci col dado
   },
 }

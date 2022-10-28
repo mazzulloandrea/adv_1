@@ -1,7 +1,7 @@
 export default {
   step: 2,
-  "titolo": "Cattura",
-  "frase": `
+  titolo: "Cattura",
+  frase: `
     Gli animali anzichè calmarsi si agitano ed iniziano a fare troppo rumore.
     Immediatamente attirano la'ttenzione dei soldati e mentre provi a scappare verso il bosco ti si para davanti 
     tuo fratellastro Denred che ti afferra per il vestito "Preso"
@@ -16,20 +16,19 @@ export default {
     e tuo fratellastro è uno di questi.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap42.mp3",
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap42.mp3",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

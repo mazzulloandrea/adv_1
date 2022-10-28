@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Cammini sul pavimento arancione fino ad arrivare ad un incrocio a quattro vie:
     a sinistra la via iniziale dalla quale sei entrato nel labirinto,
     indietro, da dove arrivi, un passaggio di colore arancione acceso,
@@ -8,8 +8,8 @@ export default {
     aventi, in direzione est, un corridoio nero.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Indietro verso l'arancione", next: 'arancioneODirezioneBianco' },

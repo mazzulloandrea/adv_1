@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Esci dalla tenda e ti rechi da tua sorella. 
     La trovi indaffarata con le 3 capre, dalle quali mungete a turno il latte, e le fai capire che devi parlarle.
 
@@ -10,8 +10,8 @@ export default {
     Rifletti velocemente: avvisarla usando il potere oppure fare finta di nulla?
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Vuoi avvisare Carcadena", next: 'avvisareCarcadena3Prova', },

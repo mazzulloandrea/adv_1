@@ -1,5 +1,5 @@
 export default {
-  "titolo": "",
+  titolo: "",
   frase: `
     Non ti accorgi che, all'esterno della tenda, è giunto il tuo nemico; senza farsi troppi scrupoli, spara un dardo colpendoti in piena schiena.
 

@@ -1,11 +1,11 @@
 export default {
-  "titolo": "La grotta",
-  "frase": `
+  titolo: "La grotta",
+  frase: `
     L'acqua sembra fresca e pulita, potresti berne un po'.
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
+    interrompe: ""
   },
   risposte: [
     {

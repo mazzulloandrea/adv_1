@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Puoi scegliere tra lo scudo, l'armatura e il mantello.
 
     Lo scudo ripara da tutti i colpi e può essere usato anche per avvicinarti al tuo nemico.
@@ -14,8 +14,8 @@ export default {
     Ora devi scegliere la tua difesa.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Afferri lo scudo", next: "addestramento", zaino: "scudo" },

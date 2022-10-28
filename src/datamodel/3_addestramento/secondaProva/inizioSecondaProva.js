@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Le sfide si susseguono e nessuno, in attesa del proprio turno, può sapere come sono andati gli incontri precedenti.
     Ad un certo punto si alza tua sorella ed, insieme a lei, Teela; si allontanano mentre auguri a Carcadena buona fortuna.
     **cornice**
@@ -17,8 +17,8 @@ export default {
     La guardia da l'ordine: la tua seconda prova è iniziata.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Provi a decifrare la combinazione', gioco: 'cassaforte', },

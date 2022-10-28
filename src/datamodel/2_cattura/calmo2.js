@@ -1,6 +1,6 @@
 export default {
-  "titolo": "Calmo 2",
-  "frase": `
+  titolo: "Calmo 2",
+  frase: `
     Si riparte immediatamente.
     Un altro giorno di viaggio, tra le buche ed i sentieri acciottolati dei "colli sparsi".
     Un altro giorno legati come delle bestie, ti fai forza, non dovrebbe mancare molto...
@@ -11,10 +11,10 @@ export default {
     Gudrum era un suo grande amico, il suo sguardo è segnato dalle lacrime per gran parte del giorno.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
-  "gioco": "gioco9",
+  gioco: "gioco9",
   gioco9: {
     successo: "uccisoDaiSoldati",
     fallimento: "arrivo",

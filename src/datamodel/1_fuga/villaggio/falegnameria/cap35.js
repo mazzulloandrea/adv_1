@@ -1,15 +1,15 @@
 export default {
-  "titolo": "Falegnameria",
-  "frase": `
+  titolo: "Falegnameria",
+  frase: `
     Senza esitare un attimo esci dalla falegnameria.
   `,
-  "audio": {
-    "src": "/assets/audio/cap34.mp3", // todo modificare audio
+  audio: {
+    src: "/assets/audio/cap34.mp3", // todo modificare audio
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Ti dirigi correndo verso il bosco",
-      "next": "cap50",
+      frase: "Ti dirigi correndo verso il bosco",
+      next: "cap50",
     },
   ],
 }

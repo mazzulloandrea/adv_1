@@ -5,15 +5,15 @@ const resp = nemico.risposte.concat(
 )
 
 export default {
-  "titolo": "riparo",
-  "frase": `
+  titolo: "riparo",
+  frase: `
     Ti apposti nel vicino riparo; cerchi la posizione migliore per poter tenere sotto controlla la zona senza essere visto.
 
     Dopo qualche minuto, vedi passare Darius all'altezza del pozzo, ha in mano una balestra e si sta muovendo molto lentamente verso la tenda.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: resp,
 }

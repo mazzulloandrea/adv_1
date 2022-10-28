@@ -2,8 +2,8 @@ import cap7 from './cap7';
 
 export default {
   step: 2,
-  "titolo": "Il Bosco",
-  "frase": `
+  titolo: "Il Bosco",
+  frase: `
     Superi il fiume ma, quando sei dall'altra parte, non sei più convinto di aver fatto la scelta giusta.
     Un grosso cinghiale minaccioso punta verso di te; senza perdere tempo, torni velocemente sui tuoi passi. 
     
@@ -23,9 +23,9 @@ export default {
     Sai bene che pochissimi sono ritornati... 
     e tuo fratellastro è uno di questi.
   `,
-  "audio": {
-    "src": "/assets/audio/cap72.mp3",
-    "interrompe": ""
+  audio: {
+    src: "/assets/audio/cap72.mp3",
+    interrompe: ""
   },
-  "risposte": cap7.risposte
+  risposte: cap7.risposte
 }

@@ -1,10 +1,10 @@
 export default {
-  "titolo": "animali pericolosi",
-  "frase": `
+  titolo: "animali pericolosi",
+  frase: `
     C'è qualcosa, che non ricordi bene, che ti mette in allarme.
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Dai una razione alla gallina in modo da andartene', next: 'tornareIndietro', checkZaino: 'razione', zainoElimina: 'razione' },

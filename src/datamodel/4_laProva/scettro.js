@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Impugni lo strano oggetto e riproduci quanto più similmente il gracchiare di un corvo.
     Durante il secondo suono senti bruciare leggermente il ginocchio destro e durante il terzo il bruciore aumenta; vedi anche un piccolissimo scintillio di luce provenire dalla pietra sulla sommita del bastone, che però subito scompare, così come il dolore alla gamba.
 
@@ -16,8 +16,8 @@ export default {
     Capisci subito che si tratta della terza prova.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Cosa devo aspettarmi li sotto?", next: 'rispostaCuriosa' },

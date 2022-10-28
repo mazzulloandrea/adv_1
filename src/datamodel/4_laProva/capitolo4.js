@@ -9,7 +9,7 @@ export default {
     Il giorno seguente venite tutti informati dal generale di una ultima prova, la più dura.
 
     <<Verrete chiamati uno alla volta, nei prossimi giorni, con il divieto assoluto di parlare della sfida con gli altri.
-    É proibito parlare con chiunque della prova sia prima sia dopo averla effettuata.
+    É proibito parlare con chiunque della prova, sia prima sia dopo averla effettuata.
     
     La pena per i trasgressori è l'amputazione della lingua>>.
 

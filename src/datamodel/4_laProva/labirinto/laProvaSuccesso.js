@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Senti un rumore metallico ed il portone di ferro si apre lentamente.
     Ce l'hai fatta!!
     
@@ -12,8 +12,8 @@ export default {
     Non sai di preciso quanto sarà profondo il lago sotterraneo ma quasi sicuramente dovrai nuotare.
 
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Nuoti fino alla corda", next: 'nuotare' },

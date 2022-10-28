@@ -1,7 +1,7 @@
 export default {
   step: 2,
-  "titolo": "Cattura",
-  "frase": `
+  titolo: "Cattura",
+  frase: `
     Ti dirigi verso tua sorella e, svoltato l'angolo, ti ritrovi davanti Denred con 2 soldati "Eccolo è lui".
     Tuo fratellastro sta aiutando i soldati e questa è l'ennesima dimostrazione di quanto sia crudele.
     <<Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha>>
@@ -15,19 +15,19 @@ export default {
     e tuo fratellastro è uno di questi.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3",
+  audio: {
+    src: "/assets/audio/cap7.mp3",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

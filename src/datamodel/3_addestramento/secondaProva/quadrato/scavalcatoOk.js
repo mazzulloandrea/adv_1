@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Ti arrampichi sulla parete scivolosa e, con un salto, la scavalchi, catapultandoti all'interno del quadrato, vicino ad un angolo.
     
     Davanti a te c'è un riparo, costituito da alcuni assi di legno, con la presenza di una piccola breccia.
@@ -11,8 +11,8 @@ export default {
     Ti starà aspettando per un agguato?
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Ti apposti nel riparo vicino', next: 'riparo', },

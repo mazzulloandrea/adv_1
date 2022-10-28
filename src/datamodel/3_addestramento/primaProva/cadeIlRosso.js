@@ -1,14 +1,14 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Con un'abile mossa, riesci a far perdere l'equilibrio al tuo avversario che cade per terra e finisce parzialmente fuori dal perimetro.
     Si rialza e continua a combattere; mentre le guardie gridano che è stato eliminato, fa in tempo a tirarti un cazzotto che ti manda ko.
 
     Una secchiata d'acqua ti risveglia fuori dal perimetro, hai perso.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     {

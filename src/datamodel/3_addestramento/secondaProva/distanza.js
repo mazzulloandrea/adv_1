@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Ci sono 3 specialità che puoi apprendere:
     l'arco che ti permette di colpire nemici anche molto lontani,
     la balestra che nella distanza ravvicinata può anche bucare alcune difese,
@@ -11,8 +11,8 @@ export default {
     Ora devi scegliere la tua arma.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Scegli l'arco", next: "addestramento", zaino: "arco" },

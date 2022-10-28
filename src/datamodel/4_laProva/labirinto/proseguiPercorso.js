@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Prosegui nel corridoio; dopo quasi un minuto ti ritrovi in una piccola stanza con una grossa rosa dei venti disegnata sul terreno. 
     Il Nord è alle tue spalle.
 
@@ -12,8 +12,8 @@ export default {
     potrebbe essere un labirinto devi stare attento.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Scegli ovest arancione", next: 'arancioneODirezioneBianco' },

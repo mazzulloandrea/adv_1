@@ -1,7 +1,7 @@
 export default {
   step: 2,
-  "titolo": "Cattura",
-  "frase": `
+  titolo: "Cattura",
+  frase: `
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
     **cornice**
@@ -11,20 +11,19 @@ export default {
     e tuo fratellastro è uno di questi.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap27.mp3",
-    "interrompe": "",
+  audio: {
+    src: "/assets/audio/cap27.mp3",
   },
-  "risposte": [
+  risposte: [
     {
-      "frase": "Preferisci parlare con Carcadena?",
-      "gioco": "audio",
-      "next": "sorella1"
+      frase: "Preferisci parlare con Carcadena?",
+      gioco: "audio",
+      next: "sorella1"
     },
     {
-      "frase": "Preferisci parlare con qualcun altro delle reclute",
-      "gioco": "audio",
-      "next": "parlareAltri"
+      frase: "Preferisci parlare con qualcun altro delle reclute",
+      gioco: "audio",
+      next: "parlareAltri"
     },
   ]
 }

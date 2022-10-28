@@ -1,13 +1,12 @@
 export default {
-  "titolo": "Impronte stivali",
-  "frase": `
+  titolo: "Impronte stivali",
+  frase: `
     Segui le tracce ed arrivi nei pressi di una baracca apparentemente abbandonata ma non decrepita; delle rocce permettono di avvicinarsi con furtività senza passare per l'unica finestra sull'altro lato.
     La struttura è un semplice parallelepipedo, alto circa un metro e mezzo, profondo tre metri, con una porta di legno chiusa da un'asse di legno.
-
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: "Vuoi avvicinarti lateralmente nascondendoti tra le rocce", gioco: "dice" },

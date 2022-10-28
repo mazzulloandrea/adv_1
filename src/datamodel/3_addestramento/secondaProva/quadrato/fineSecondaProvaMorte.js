@@ -1,6 +1,6 @@
 export default {
-  "titolo": "",
-  "frase": `
+  titolo: "",
+  frase: `
     Mentre cerchi di uscire dalla trappola vedi un sorriso sinistro sul volto di Darius.
     Le sue parole ti fanno fermare il respiro: 
     <<Non aspettavo altro. Ho ucciso io Essertag e farò lo stesso con te!>>.
@@ -9,8 +9,8 @@ export default {
 
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   morte: true
 }

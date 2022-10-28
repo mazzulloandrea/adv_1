@@ -1,6 +1,6 @@
 export default {
-  "titolo": "ultima prova",
-  "frase": `
+  titolo: "ultima prova",
+  frase: `
     Ti aggrappi e con molta fatica raggiungi la cima del pozzo.
     
     Sulla sommità, appoggiata sul bordo di pietra, c'è una brillante chiave di rame.
@@ -13,8 +13,8 @@ export default {
     Ancora incredulo di quanto sia accaduto, lasci la tenda e ritorni alle tue attività.
 
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Ritorni ai tuoi compiti', next: 'rinunciaSfida', vittoria3: true }

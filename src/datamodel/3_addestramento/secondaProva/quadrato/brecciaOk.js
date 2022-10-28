@@ -1,6 +1,6 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Ti fai più piccolo che puoi e lentamente riesci a passare attraverso il piccolo pertugio.
 
     Oltre il riparo ci sono tre grossi alberi e, spostando lo sguardo verso il centro, vedi un piccolo pozzo.
@@ -8,11 +8,10 @@ export default {
 
     Darius sarà già entrato?
     Ti starà aspettando per un agguato?
-
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Ti apposti nel riparo vicino', next: 'riparo', },

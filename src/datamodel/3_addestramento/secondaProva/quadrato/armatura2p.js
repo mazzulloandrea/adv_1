@@ -1,18 +1,18 @@
 export default {
-  "titolo": "riparo",
-  "frase": `
+  titolo: "riparo",
+  frase: `
     La protezione ti salverà, ne sei sicuro.
     
-    Ascolti in un silenzio assoluto i movimenti del tuo nemico che lentamente si avvicinano; 
-    raccogli un sasso da terra e sei pronto a colpire il tuo nemico appena sarà a pochissimi passi da te.
+    Ascolti in un silenzio assoluto i movimenti del tuo nemico che lentamente si avvicinano.
+    Raccogli un sasso da terra e sei pronto a colpire il tuo nemico appena sarà a pochissimi passi da te.
 
-    Gli piombi addosso e nella lotta la guardia riesce a lanciare un dardo con la balestra che potrebbe colpirti.
+    Gli piombi addosso e, nella lotta, Darius spara un dardo dritto verso il tuo volto. 
 
     Solo la tua prontezza di riflessi può salvarti.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: "dice",
   dice: {

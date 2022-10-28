@@ -1,10 +1,10 @@
 export default {
-  "titolo": "animali pericolosi",
-  "frase": `
+  titolo: "animali pericolosi",
+  frase: `
     Da un cespuglio davanti a te esce fuori una piccola gallina selvaggia che, con circospezione, si muove lentamente.
   `,
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   gioco: 'dice',
   dice: {

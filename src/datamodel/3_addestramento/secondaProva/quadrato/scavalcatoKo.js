@@ -1,14 +1,14 @@
 export default {
-  "titolo": "prima prova",
-  "frase": `
+  titolo: "prima prova",
+  frase: `
     Ti arrampichi sulla parete ma al momento di tuffarti al di la, scivoli indietro
     ritornando davanti all'ingresso.
     
     Se vuoi iniziare la sfida devi entrare nel quadrato.
   `,
 
-  "audio": {
-    "src": "/assets/audio/cap7.mp3", // todo
+  audio: {
+    src: "/assets/audio/cap7.mp3", // todo
   },
   risposte: [
     { frase: 'Provi a decifrare la combinazione', gioco: 'cassaforte', },
