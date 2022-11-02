@@ -57,14 +57,14 @@ const aList = [
       return false;
     }
   },
-  {
-    text: 'finire in 20 minuti',
-    icon: 'timer',
-    cond: (abilita) => {
-      if (abilita.timer - abilita.initTime < minutes * 20) return true;
-      return false;
-    }
-  },
+  // {
+  //   text: 'finire in 20 minuti',
+  //   icon: 'timer',
+  //   cond: (abilita) => {
+  //     if (abilita.timer - abilita.initTime < minutes * 20) return true;
+  //     return false;
+  //   }
+  // },
   {
     text: 'finire con almeno 4 vite',
     icon: 'cuore',

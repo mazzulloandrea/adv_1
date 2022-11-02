@@ -28,17 +28,6 @@
   }
 }
 
-
-.bkgVideo {
-  top: 0;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0.3;
-}
-
 .capitolo {
   padding-top: 3vh;
   font-size: 2em;

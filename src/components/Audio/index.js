@@ -5,7 +5,6 @@ import TitleIcon from '../TitleIcon';
 import style from './style.css';
 import switchStyle from './switch.css';
 
-
 function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }) {
   const { helpCount, helpCountMax } = caratteristiche;
   const [mode, setMode] = useState(true);
@@ -36,15 +35,16 @@ function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }
     return html`<p>${el}</p>`;
   }
 
+
   return html`
     <div>
       ${step && html`<div class=${style.capitolo}>CAPITOLO ${step}</div>`}
       <div class=${switchStyle.widget}>
-        <div class=${switchStyle.item} onClick=${() => setMode(!mode)}>
-          <${TitleIcon} type=${mode ? 'audioSvg' : 'silenceSvg'} />
+        <div class=${switchStyle.item} onClick=${()=> setMode(!mode)}>
+          <${TitleIcon} type=${mode ? 'audioSvg' : 'silenceSvg' } />
         </div>
-        <div class=${helpCount < helpCountMax ? switchStyle.shareToHelp : switchStyle.shareToHelpDisabled} onClick=${() =>
-      shareToHelp()}
+        <div class=${helpCount < helpCountMax ? switchStyle.shareToHelp : switchStyle.shareToHelpDisabled} onClick=${()=>
+          shareToHelp()}
           >
           <${TitleIcon} type=${"cuoreAiuto"} />
           <span>${helpCountMax - helpCount}</span>
@@ -58,8 +58,8 @@ function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }
             <${TitleIcon} type=${"teschio"} />
           </div>
         </div>`}
-        <div class=${style.continueBtn} onClick=${()=> onend()}>Continua</div>
-        <audio id="audio" autoplay class=${style.play} onended=${(evt) => audioEnd(evt)}
+        <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
+        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
           <source src=${data.src} type="audio/mp3" />

@@ -18,7 +18,7 @@ import {
   Right,
 } from './styled.js';
 
-const Intestazione = ({ step = 0, abilita = {}, title = '', actualComponent }) => {
+const Intestazione = ({ step = 0, abilita = {} }) => {
   const { corpo, mente, spirito, vita, zaino, chiavi, borsello } = abilita;
 
   function getAbilita() {
@@ -49,13 +49,13 @@ const Intestazione = ({ step = 0, abilita = {}, title = '', actualComponent }) =
     const total = new Array(initialAbilita.vita).fill(0);
     const vitaActual = new Array(vita).fill(0);
     return html`<${Cuori}>
-  ${vitaActual.map(c => html`
-  <${TitleIcon} type="cuore" />
-  `)}
-  ${total.slice(vitaActual.length).map(c => html`
-  <${Spezzato} />
-  `)}
-</${Cuori}>
+      ${vitaActual.map(() => html`
+       <${TitleIcon} type="cuore" />
+      `)}
+      ${total.slice(vitaActual.length).map(() => html`
+        <${Spezzato} />
+      `)}
+    </${Cuori}>
     `;
   }
 
