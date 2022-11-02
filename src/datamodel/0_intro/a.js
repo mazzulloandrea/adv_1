@@ -22,14 +22,14 @@ export default {
     },
   ],
   dice: {
-    successo: "a0",
+    successo: "a1",
     fallimento: "a1",
     obiettivo: 14,
     abilita: ["corpo", "mente", "spirito"],
     lanci: 6
   },
   gioco9: {
-    successo: "a0",
+    successo: "a1",
     fallimento: "a1",
     type: "memory",
     combinazione: ["acqua", "fuoco"],

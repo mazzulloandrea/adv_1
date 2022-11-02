@@ -1,11 +1,11 @@
 export default {
   titolo: "Introduzione",
   frase: `
-    Sei molto stanco e con fatica accatasti gli ultimi ciocchi, poi ti fermi, ti rilassi, chiudi gli occhi e ti concentri su tua sorella gemella: i suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. 
-    Sai che puoi comunicarle solo poche parole`,
+    Sei molto stanco e con fatica accatasti gli ultimi ciocchi; poi ti fermi, ti rilassi, chiudi gli occhi e ti concentri su tua sorella gemella.
+    Pensi ai suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. 
+    Sai che puoi comunicarle col pensiero solo poche parole`,
   audio: {
-    src: "/assets/audio/a1.mp3",
-    interrompe: ""
+    src: "/assets/audio/a1.mp3", // done
   },
   risposte: [
     {

@@ -39,7 +39,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  position: absolute;
+  z-index: 2;
 }
 
 .title {
@@ -57,17 +58,21 @@
 
 .emerald img {
   width: 50vw;
+  max-width: 50vh;
   height: auto;
 }
 
 .salta {
   position: absolute;
-  top: 20vw;
+  top: 10vh;
   right: 10vw;
   width: 15vw;
   height: 15vw;
   border-radius: 50%;
   background-color: greenyellow;
+  max-height: 15vh;
+  max-width: 15vh;
+  z-index: 999;
 }
 
 .saltaAnimation {
@@ -99,4 +104,15 @@
 .auricolari {
   font-size: 0.5em;
   text-align: center;
+}
+
+.bkgVideo {
+  top: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.3;
+  z-index: 1;
 }

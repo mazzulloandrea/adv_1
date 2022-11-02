@@ -27,6 +27,7 @@ import Tesori from '../Tesori';
 
 const Layout = () => {
   const [load, setLoad] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [story, setStory] = useState(Storia);
   const [actual, setActual] = useState(null);
   // { cap: cap1, gioco: "text", successo: true/false, nextCap: "cap1", ferite: true/false}
@@ -34,8 +35,6 @@ const Layout = () => {
   const [orientation, setOrientation] = useState(0);
   const [abilita, setAbilita] = useState(initialAbilita);
   const [tutorials, setTutorials] = useState(tutorialConfig);
-  const [timer, setTimer] = useState(0);
-  const [timerValue, setTimerValue] = useState(0);
 
   useEffect(() => {
     window.addEventListener('orientationchange', (evt) => {
@@ -46,7 +45,6 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     });
-    console.log(story);
   }, []);
 
   useEffect(() => {
@@ -54,10 +52,8 @@ const Layout = () => {
     updateStorage();
   }, [actual]);
 
-
-
-  useEffect(() => {
-  }, [timerValue]);
+  // useEffect(() => {
+  // }, [timerValue]);
 
   /*
     useEffect(() => {
@@ -112,11 +108,12 @@ const Layout = () => {
       setActualComponent('risposte');
     } else {
       // riparte il timer
-      const interval = setInterval(() => {
-        setTimerValue(Date.now());
-      }, 1000);
-      setTimer(interval);
-      if(accumulatedAchievement) {
+      // const interval = setInterval(() => {
+      //   setTimerValue(Date.now());
+      // }, 1000);
+      // setTimer(interval);
+      console.log();
+      if (accumulatedAchievement) {
         setActual({ cap: initialcap });
         setAbilita(initialAbilita);
         setActualComponent("risposte");
@@ -165,7 +162,7 @@ const Layout = () => {
     } else if (actualCap.next) {
       changeCap("audio", actualCap.next );
     } else if(actualCap.fine) {
-      clearInterval(timer);
+      // clearInterval(timer);
       setActualComponent('achievement');
     }
   };
@@ -176,10 +173,10 @@ const Layout = () => {
     if(nextCap === 'a') {
       // inizializzo il timer
       updated = Object.assign({...abilita}, {initTime: Date.now()});
-      const interval = setInterval(() => {
-        setTimerValue(Date.now());
-      }, 1000);
-      setTimer(interval);
+      // const interval = setInterval(() => {
+      //   setTimerValue(Date.now());
+      // }, 1000);
+      // setTimer(interval);
     }
     if (newAbilita &&
       (
@@ -209,7 +206,8 @@ const Layout = () => {
       updated = Object.assign({...updated}, {...custom});
     }
     // aggiorno il timer
-    updated = Object.assign({...updated}, {timer: timerValue, step: nextCap ? story[nextCap].step || abilita.step : abilita.step});
+    // updated = Object.assign({...updated}, {timer: timerValue, step: nextCap ? story[nextCap].step || abilita.step : abilita.step});
+    updated = Object.assign({...updated}, {step: nextCap ? story[nextCap].step || abilita.step : abilita.step});
     setAbilita(updated);
     changeCap(gioco, nextCap);
   }
@@ -227,12 +225,12 @@ const Layout = () => {
   const onGameEnd = (nextCap, feedback) => changeCap("audio", nextCap, feedback);
 
   const changeCap = (gioco = "audio", nextCap, feedback) => {
+    
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
       setAbilita(Object.assign({...abilita}, {error: true, step: nextCap ? story[nextCap].step || abilita.step : abilita.step}));
     } else if(feedback === true && abilita.chiavi < initialAbilita.chiaviMaxLength) {
-      console.log('increment Chiave');
       setAbilita(Object.assign({...abilita}, { chiavi: abilita.chiavi +1, step: nextCap ? story[nextCap].step || abilita.step : abilita.step}));        
       startAnimationFinestre();
     } else {
@@ -386,6 +384,11 @@ const Layout = () => {
       <div id="1" class=${animation.bar} />
       <div id="2" class=${animation.bar} />
       <div id="3" class=${animation.bar} />
+      ${actual && html`<audio id="audioBackgroundLow" autoplay loop>
+          <source src=${"/assets/audio/soundtrack_low.mp3"} type="audio/mp3" volume="0.2" />
+          <!-- <source src=${'/assets/audio/cap0.m4a'} type="audio/mp3" /> -->
+          Your browser does not support the audio tag.
+        </audio>`}
       ${load && html`<${LoadData} yes=${() => continueFromStorage()} not=${() => reset(true)} />`}
       ${actual && html`<${Intestazione} 
         step=${abilita.step || 1}

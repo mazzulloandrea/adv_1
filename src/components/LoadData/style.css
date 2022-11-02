@@ -8,7 +8,8 @@
 }
 
 .text {
-  height: 30vh;
+  height: 40vh;
+  margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 60vh;
+  height: 40vh;
 }
 
 .buttonContainer>div {

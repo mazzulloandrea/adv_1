@@ -9,7 +9,7 @@
 // 0_intro
 import _0 from './0_intro/0';
 import a from './0_intro/a';
-import a0 from './0_intro/a0';
+// import a0 from './0_intro/a0';
 import a1 from './0_intro/a1';
 import a2 from './0_intro/a2';
 import a3 from './0_intro/a3';
@@ -300,7 +300,7 @@ import cap90 from './cap90';
 export default {
   _0,
   a,
-  a0,
+  // a0,
   a1,
   a2,
   a3,

@@ -4,7 +4,7 @@ import { html } from 'htm/preact';
 import emerald from '../../assets/icons/android-chrome-512x512.png';
 import next from '../../assets/icons/intro/next.svg';
 import style from './style.css';
-
+import allBkgVideo from '../../assets/video';
 
 
 const Intro = ({ onend }) => {
@@ -59,10 +59,13 @@ const Intro = ({ onend }) => {
         ${actual === 7 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
         ${actual === 8 && html`<div class=${style.auricolari}>${frasi[actual]}</div>`}
       </div>
-      <audio id="soundtrack" autoplay>
+      <audio id="soundtrack" autoplay loop>
         <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" />
         Your browser does not support the audio tag.
       </audio>
+      <video class=${style.bkgVideo} autoplay muted loop>
+        <source src=${allBkgVideo.fiamme} type="video/mp4" />
+      </video>
     </div>
   `
 }
