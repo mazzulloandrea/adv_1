@@ -49,7 +49,7 @@ const Layout = () => {
       console.log('visibilitychange', evt);
       const audioLow = document.getElementById("audioBackgroundLow");
       const audioIntro = document.getElementById("soundtrack");
-      if (evt.visibilityState === 'visible') {
+      if (evt.current.visibilityState === 'visible') {
         if (audioLow) audioLow.play();
         if (audioIntro) audioIntro.play();
       } else {
