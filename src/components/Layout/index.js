@@ -45,14 +45,15 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     });
-    window.addEventListener('resume', (evt) => {
-      console.log('resume', evt);
-    });
-    window.addEventListener('pause', (evt) => {
-      console.log('pause', evt);
-    });
     window.addEventListener('visibilitychange', (evt) => {
       console.log('visibilitychange', evt);
+      const audio = document.getElementById("audioBackgroundLow");
+      if (!audio) return;
+      if (evt.visibilityState === 'visible') {
+        audio.play();
+      } else {
+        audio.pause();
+      }
     });
   }, []);
 
@@ -156,7 +157,8 @@ const Layout = () => {
       await navigator.share(shareData);
       setAbilita(Object.assign({...abilita}, {vita: abilita.vita +1, helpCount: abilita.helpCount + 1 }));
     } catch (err) {
-      alert('fail');
+      console.log('Sharing non  riuscito');
+      console.log('sharing err', JSON.stringify(err));
     }
   }
 
@@ -234,7 +236,6 @@ const Layout = () => {
   const onGameEnd = (nextCap, feedback) => changeCap("audio", nextCap, feedback);
 
   const changeCap = (gioco = "audio", nextCap, feedback) => {
-    
     setActualComponent(null);
     if (feedback === false) {
       setActualComponent('ferita');
@@ -395,7 +396,6 @@ const Layout = () => {
       <div id="3" class=${animation.bar} />
       ${actual && html`<audio id="audioBackgroundLow" autoplay loop>
           <source src=${"/assets/audio/soundtrack_low.mp3"} type="audio/mp3" volume="0.2" />
-          <!-- <source src=${'/assets/audio/cap0.m4a'} type="audio/mp3" /> -->
           Your browser does not support the audio tag.
         </audio>`}
       ${load && html`<${LoadData} yes=${() => continueFromStorage()} not=${() => reset(true)} />`}
