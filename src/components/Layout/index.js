@@ -47,12 +47,14 @@ const Layout = () => {
     });
     window.addEventListener('visibilitychange', (evt) => {
       console.log('visibilitychange', evt);
-      const audio = document.getElementById("audioBackgroundLow");
-      if (!audio) return;
+      const audioLow = document.getElementById("audioBackgroundLow");
+      const audioIntro = document.getElementById("soundtrack");
       if (evt.visibilityState === 'visible') {
-        audio.play();
+        if (audioLow) audioLow.play();
+        if (audioIntro) audioIntro.play();
       } else {
-        audio.pause();
+        if (audioLow) audioLow.pause();
+        if (audioIntro) audioIntro.pause();
       }
     });
   }, []);
