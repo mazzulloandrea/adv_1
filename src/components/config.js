@@ -17,7 +17,7 @@ const componentList = {
 const initialAbilita = {
   step: 1,
   corpo: 0, mente: 0, spirito: 0, vita: 3,
-  zaino: [],
+  zaino: [], //["corda", "accetta", "razione", "chiave1"],
   borsello: 0,
   chiavi: 0,
   zainoMaxLength: 4,
@@ -33,8 +33,8 @@ const initialAbilita = {
 const tutorialConfig = {
   audio: {
     text: [
-      "Pui disabilitare l'audio e/o chiedere aiuto per una massimo di 3 volte",
-      "Dopo aver letto bene il testo, premi continua per proseguire"
+      "Sulla sinista potrai disabilitare l'audio",
+      "Sulla destra puoi chiedere aiuto ai tuoi contatti",
     ],
     active: true,
   },

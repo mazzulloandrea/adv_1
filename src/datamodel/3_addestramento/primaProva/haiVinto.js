@@ -6,9 +6,7 @@ export default {
     Il capitano viene verso di te congratulandosi: <<Hai vinto la prima prova, ti affiancherò io per le prossime settimane>>
 
     Al tuo sguardo interrogativo aggiunge alcuni dettagli, parlando a gran voce verso tutti:
-    <<Per le tre settimane seguenti verrete addestrati ad usare uno stile di combattimento, e lo farete in coppia!
-    Alla fine si terrà la seconda prova>>
-
+    <<Per le tre settimane seguenti verrete addestrati al combattimento e lo farete in coppia; alla fine delle tre settimane si terrà una prova>>
     A questo punto il capitano raduna tutte le reclute e chiede ad ognuno di presentarsi.
     **cornice**
     Oltre ai tuoi compagni, che già conosci, ci sono i quattro ragazzi di Murafredde:

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+const tablet = `(min-width: 500px)`;
+const desktop = `(min-width: 900px)`;
 
 export const Header = styled.div`
   position: absolute;
@@ -27,15 +29,23 @@ export const Center = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media ${tablet} {
+    align-items: center;
+  }
   justify-content: space-around;
   padding: 0 1vh;
   > div {
     display: flex;
     width: 15vw;
     justify-content: space-around;
+    align-items: center;
     svg {
       width: 6vw;
       height: 6vw;
+      @media ${tablet} {
+        width: 3vw;
+        height: 6vh;
+      }
     }
   }
 `;
@@ -44,9 +54,14 @@ export const Right = styled.div`
   width: 55vw;
   height: 15vh;
   display: flex;
+  justify-content: center;
   > svg {
     height: auto;
     width: 15vw;
+    @media ${tablet} {
+      height: 11vh;
+      margin-top: 2vh;
+    }
   }
   > div {
     display: grid;
@@ -55,9 +70,17 @@ export const Right = styled.div`
     div {
       width: 15vw;
       padding-top: 1.5vw;
+      @media ${tablet} {
+        height: 7.5vh;
+        width: auto;
+      }
       svg {
         width: 9vw;
         heigth: auto;
+        @media ${tablet} {
+          height: 4vh;
+          width: 5vw;
+        }
       }
     }
     div:nth-child(1) {
@@ -91,7 +114,6 @@ export const Abilita = styled.div`
   }
 `;
 
-
 export const AbilitaContainer = styled.div``;
 
 export const Caratteristica = styled.div`
@@ -101,6 +123,8 @@ export const Caratteristica = styled.div`
 export const AbilitaIconContainer = styled.div`
   width: 6vw;
   height: 6vw;
+  max-width: 40px;
+  max-height: 40px;
 `;
 
 export const Value = styled.div`
@@ -112,6 +136,9 @@ export const Cuori = styled.div`
   svg {
     width: 5vw;
     margin-right: 1vw;
+    @media ${tablet} {
+      height: 5vh;
+      width: auto;
+    }
   }
 `;
-

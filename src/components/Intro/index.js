@@ -14,8 +14,6 @@ const Intro = ({ onend }) => {
     "C'è una storia dove TU sei il protagonista!",
     "La strada è lunga e piena di difficoltà",
     "Ci saranno prove in cui dovrai dimostrare tutta la tua abilità",
-    "Se avrai successo guadagnerai una chiave",
-    "Se fallirai perderai una vita",
     "Ce la farai ad arrivare alla fine?",
     "Metti gli auricolari per una miglior esperienza"
   ];
@@ -55,9 +53,7 @@ const Intro = ({ onend }) => {
         ${actual === 3 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
         ${actual === 4 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
         ${actual === 5 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
-        ${actual === 6 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
-        ${actual === 7 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
-        ${actual === 8 && html`<div class=${style.auricolari}>${frasi[actual]}</div>`}
+        ${actual === 6 && html`<div class=${style.auricolari}>${frasi[actual]}</div>`}
       </div>
       <audio id="soundtrack" autoplay loop>
         <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" />

@@ -23,6 +23,7 @@
 .tomba {
   width: 70%;
   height: auto;
+  max-width: 300px;
 }
 
 
@@ -54,4 +55,6 @@
   animation: 2s pulse;
   animation-delay: 2s;
   animation-iteration-count: infinite;
+  max-width: 60px;
+  max-height: 60px;
 }

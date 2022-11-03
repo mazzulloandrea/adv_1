@@ -1,3 +1,11 @@
+TODO:
+responsive all
+tutorial
+gioco 9
+help
+audio
+
+
 
 // checkpoint part1 
 // incontri Aaron 26
