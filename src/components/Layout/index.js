@@ -45,6 +45,15 @@ const Layout = () => {
         setOrientation(0); // portrait
       }
     });
+    window.addEventListener('resume', (evt) => {
+      console.log('resume', evt);
+    });
+    window.addEventListener('pause', (evt) => {
+      console.log('pause', evt);
+    });
+    window.addEventListener('visibilitychange', (evt) => {
+      console.log('visibilitychange', evt);
+    });
   }, []);
 
   useEffect(() => {
