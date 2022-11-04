@@ -59,9 +59,11 @@ const Intro = ({ onend }) => {
         <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" />
         Your browser does not support the audio tag.
       </audio>
-      <video id="" class=${style.bkgVideo} autoplay muted loop>
-        <source src=${allBkgVideo.fiamme} type="video/mp4" />
-      </video>
+      <div dangerouslySetInnerHTML={{
+        __html: <video id="" class=${style.bkgVideo} autoplay muted loop playsinline>
+          <source src=${allBkgVideo.fiamme} type="video/mp4" />
+        </video>
+      }}></div>
     </div>
   `
 }

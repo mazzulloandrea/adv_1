@@ -63,8 +63,7 @@ const shuffle = (array) => {
 
 
 const rgbToHex = (rgb) => {
-  var hexDigits = new Array
-    ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
+  const hexDigits = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
   // Function to convert rgb color to hex format
   function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -91,15 +90,15 @@ const paletteColors = {
 
 // sono usate le chiavi (mostrate nei cubi) per il gioco9
 const directionsDataset = {
-  'N': 'Nord',
-  'S': 'Sud',
-  'O': 'Ovest',
-  'E': 'Est',
-  'NO': 'Nord-Ovest',
-  'NE': 'Nord-Est',
-  'SO': 'Sud-Ovest',
-  'SE': 'Sud-Est',
-  'X': 'S.O.S.'
+  N: 'Nord',
+  S: 'Sud',
+  O: 'Ovest',
+  E: 'Est',
+  NO: 'Nord-Ovest',
+  NE: 'Nord-Est',
+  SO: 'Sud-Ovest',
+  SE: 'Sud-Est',
+  X: 'S.O.S.'
 }
 
 const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno };
