@@ -8,34 +8,40 @@ function StepProgressBar({ step }) {
   const steps = [1, 2, 3, 4, 5];
 
   const getVideo = () => {
+    const defualt = {
+      loop:true,
+      muted:true,
+      autoplay:true,
+      playsinline:true
+    }
     switch (step) {
       case 1:
         return html`
-          <video id=${"foresta"} key=${"foresta"} class=${style.bkgVideo} autoplay muted loop>
+          <video id=${"foresta"} key=${"foresta"} class=${style.bkgVideo} {...default} >
             <source src=${videos.foresta} type="video/mp4" />
           </video>
         `
       case 2:
         return html`
-          <video id=${"colline"} key=${"colline"} class=${style.bkgVideo} autoplay muted loop>
+          <video id=${"colline"} key=${"colline"} class=${style.bkgVideo} {...default} >
             <source src=${videos.colline} type="video/mp4" />
           </video>
         `
       case 3:
         return html`
-          <video id=${"cielo"} key=${"cielo"} class=${style.bkgVideo} autoplay muted loop>
+          <video id=${"cielo"} key=${"cielo"} class=${style.bkgVideo} {...default} >
             <source src=${videos.cielo} type="video/mp4" />
           </video>
         `
       case 4:
         return html`
-          <video id=${"muro"} key=${"muro"} class=${style.bkgVideo} autoplay muted loop>
+          <video id=${"muro"} key=${"muro"} class=${style.bkgVideo} {...default} >
             <source src=${videos.muro} type="video/mp4" />
           </video>
         `
       case 5:
         return html`
-          <video id=${"scintille"} key=${"scintille"} class=${style.bkgVideo} autoplay muted loop>
+          <video id=${"scintille"} key=${"scintille"} class=${style.bkgVideo} {...default} >
             <source src=${videos.scintille} type="video/mp4" />
           </video>
         `
