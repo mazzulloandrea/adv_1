@@ -51,3 +51,11 @@
   background: burlywood;
   color: black;
 }
+
+.no.span {
+  font-size: 1.1rem;
+}
+
+.no.span:first-child {
+  font-size: 1.1em;
+}
