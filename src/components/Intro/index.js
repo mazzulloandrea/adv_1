@@ -6,7 +6,6 @@ import next from '../../assets/icons/intro/next.svg';
 import style from './style.css';
 import allBkgVideo from '../../assets/video';
 
-
 const Intro = ({ onend }) => {
   const frasi = [
     "La gemma Verde",
@@ -59,11 +58,9 @@ const Intro = ({ onend }) => {
         <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" />
         Your browser does not support the audio tag.
       </audio>
-      <div dangerouslySetInnerHTML={{
-        __html: <video id="" class=${style.bkgVideo} autoplay muted loop playsinline>
-          <source src=${allBkgVideo.fiamme} type="video/mp4" />
-        </video>
-      }}></div>
+      <video id="" class=${style.bkgVideo} loop=${true} muted=${true} autoplay=${true} playsinline=${true}>
+        <source src=${allBkgVideo.fiamme} type="video/mp4" />
+      </video>
     </div>
   `
 }

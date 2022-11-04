@@ -22,7 +22,7 @@ import { keyToSaveInStorage } from './config';
 const saveIntoStorage = (item) => {
   if (typeof window !== "undefined") {
     localStorage.setItem(keyToSaveInStorage, JSON.stringify(item));
-  };
+  }
 }
 
 const getFromStorage = () => {
@@ -31,7 +31,7 @@ const getFromStorage = () => {
     if (res && typeof res === 'string') {
       return JSON.parse(res);
     }
-  };
+  }
 }
 
 const determinateVictory = (successList) => {
