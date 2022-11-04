@@ -43,6 +43,7 @@
   overflow-y: auto;
   height: calc(85vh - 6vh);
   position: fixed;
+  color: black;
 }
 
 .txt p {
