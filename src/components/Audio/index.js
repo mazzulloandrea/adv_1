@@ -6,6 +6,7 @@ import style from './style.css';
 import switchStyle from './switch.css';
 
 function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }) {
+  console.log('audio', caratteristiche);
   const { helpCount, helpCountMax } = caratteristiche;
   const [mode, setMode] = useState(true);
   const [play, setPlay] = useState(false);
@@ -35,7 +36,7 @@ function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }
     return html`<p>${el}</p>`;
   }
 
-
+  console.log(helpCountMax, helpCount);
   return html`
     <div>
       ${step && html`<div class=${style.capitolo}>CAPITOLO ${step}</div>`}

@@ -3,12 +3,7 @@ import { html } from 'htm/preact';
 import { useEffect, useState } from 'preact/hooks';
 import TitleIcon from '../TitleIcon';
 import dice from '../../assets/icons/dice/dice.svg';
-import icon1 from '../../assets/icons/dice/dice1.png';
-import icon2 from '../../assets/icons/dice/dice2.png';
-import icon3 from '../../assets/icons/dice/dice3.png';
-import icon4 from '../../assets/icons/dice/dice4.png';
-import icon5 from '../../assets/icons/dice/dice5.png';
-import icon6 from '../../assets/icons/dice/dice6.png';
+
 import {
   Page,
   Area1,
@@ -89,19 +84,19 @@ function Dice({ data, caratteristiche, onend }) {
     let randNum = getRandomInt(1, 7);
     let _cube;
     let rotationType = randNum;
-    let oldValue;
+    // let oldValue;
     if (whichCube === 1) {
-      oldValue = diceValue1;
+      // oldValue = diceValue1;
       _cube = cube1;
       if (randNum === diceValue1) rotationType = 7;
       setDiceValue1(randNum);
     } else if (whichCube === 2) {
-      oldValue = diceValue1;
+      // oldValue = diceValue1;
       _cube = cube2;
       if (randNum === diceValue2) rotationType = 7;
       setDiceValue2(randNum);
     } else {
-      oldValue = diceValue1;
+      // oldValue = diceValue1;
       _cube = cube3;
       if (randNum === diceValue3) rotationType = 7;
       setDiceValue3(randNum);
@@ -129,6 +124,7 @@ function Dice({ data, caratteristiche, onend }) {
         break;
       default:
         // case same number
+        // eslint-disable-next-line no-case-declarations
         const isX = _cube.style.transform.split('X(');
         if (isX.length === 2) {
           const newValue = parseInt(isX[1]) + 360;
@@ -174,9 +170,7 @@ function Dice({ data, caratteristiche, onend }) {
 
   function getRemainingDice() {
     let i = new Array(counter).fill(0);
-    return html`${i.map(el => 
-    html`
-    <${DiceRemaining}><${dice} /><//>`)}`;
+    return html`${i.map(() => html`<${DiceRemaining}><${dice} /><//>`)}`;
   }
 
   function getResult() {

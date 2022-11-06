@@ -9,7 +9,7 @@ export default {
   audio: {
     src: "/assets/audio/cap7.mp3", // todo
   },
-  next: 'dice',
+  gioco: 'dice',
   dice: {
     successo: "sosta1",
     fallimento: "sosta1",

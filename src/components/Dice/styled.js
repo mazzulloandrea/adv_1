@@ -113,9 +113,7 @@ export const Tentativi = styled.div`
 export const DiceRemaining = styled.div`
   width: 7vw;
   margin: 0 1vw;
-  @media only screen and (orientation: landscape) {
-    width: 4vw;
-  }
+  max-width: 30px;
 `;
 
 export const Area2 = styled.div`
