@@ -16,9 +16,9 @@ function Tutorial({ type, dismiss }) {
 
   return html`
     <div class=${style.wrapper} onClick=${() => salta()}>
-      <div class=${introStyle.salta} onClick=${() => salta()}>
+      <!-- <div class=${introStyle.salta} onClick=${() => salta()}>
         <${next} />
-      </div>
+      </div> -->
       <div class=${style.text} id="animationWrapper" onanimationend=${(evt) => {
         if(clicked) {
           evt.currentTarget.style.marginLeft = '-100vw';
