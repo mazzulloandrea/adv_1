@@ -39,6 +39,7 @@
 
 .txt {
   font-size: 1.5em;
+  font-family: 'Afterglow';
   padding: 0 1em;
   overflow-y: auto;
   height: calc(85vh - 6vh);

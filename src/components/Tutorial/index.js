@@ -29,6 +29,6 @@ function Tutorial({ type, dismiss }) {
       </div>
     </div>
   `
-};
+}
 
 export default Tutorial;

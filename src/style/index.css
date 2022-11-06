@@ -5,8 +5,8 @@ body {
   padding: 0;
   margin: 0;
   background: #F0F0F0;
-  font-family: 'Helvetica Neue', arial, sans-serif;
-  font-family: 'Afterglow';
+  /* font-family: 'Helvetica Neue', arial, sans-serif; */
+  font-family: "Josefin Slab";
   font-weight: 400;
   color: #444;
   -webkit-font-smoothing: antialiased;
