@@ -60,7 +60,8 @@ function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }
           </div>
         </div>`}
         <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
-        <audio id="audio" autoplay class=${style.play} onended=${(evt)=> audioEnd(evt)}
+        <audio id="audio" loop=${true} autoplay=${true} playsinline=${true} class=${style.play} onended=${(evt)=>
+          audioEnd(evt)}
           onplaying=${() => setPlay(true)}
           >
           <source src=${data.src} type="audio/mp3" />

@@ -8,19 +8,21 @@ import { tutorialConfig } from '../config'
 
 function Tutorial({ type, dismiss }) {
   const [clicked, setClicked] = useState(false);
+  const salta = () => {
+    if(clicked) return;
+    document.getElementById("animationWrapper").classList.toggle(style.hide);
+    setClicked(true);
+  }
+
   return html`
-    <div class=${style.wrapper}>
-      <div class=${introStyle.salta} onClick=${() => {
-      if(clicked) return;
-      document.getElementById("animationWrapper").classList.toggle(style.hide);
-      setClicked(true);
-    }}>
+    <div class=${style.wrapper} onClick=${() => salta()}>
+      <div class=${introStyle.salta} onClick=${() => salta()}>
         <${next} />
       </div>
       <div class=${style.text} id="animationWrapper" onanimationend=${(evt) => {
         if(clicked) {
           evt.currentTarget.style.marginLeft = '-100vw';
-          dismiss()
+          dismiss();
         } else {
           evt.currentTarget.style.marginLeft = '0';
         }

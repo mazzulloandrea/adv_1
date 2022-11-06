@@ -33,8 +33,8 @@ const initialAbilita = {
 const tutorialConfig = {
   audio: {
     text: [
-      "Sulla sinista potrai disabilitare l'audio",
-      "Sulla destra puoi chiedere aiuto ai tuoi contatti",
+      "Puoi disabilitare l'audio in lato a sinistra",
+      "In alto a destra, invece, puoi chiedere aiuto ai tuoi contatti",
     ],
     active: true,
   },
