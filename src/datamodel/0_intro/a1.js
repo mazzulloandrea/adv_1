@@ -5,7 +5,7 @@ export default {
     Pensi ai suoi capelli biondi, la sua schiena ed infine la voglia a forma di falce che Carcadena ha sulla sua spalla sinistra. 
     Sai che puoi comunicarle col pensiero solo poche parole`,
   audio: {
-    src: "/assets/audio/a1.mp3", // done
+    src: "/assets/audio/a1.mp3",
   },
   risposte: [
     {
@@ -18,7 +18,7 @@ export default {
     }
   ],
   text: {
-    successo: "a2",
+    successo: "a3",
     fallimento: "a3",
     durata: "20",
     domande: [

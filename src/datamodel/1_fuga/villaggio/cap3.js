@@ -1,7 +1,7 @@
 export default {
   titolo: "L'arrivo dei soldati",
   frase: `
-    Provi a concentrarti, ma nonostante ti sforzi per controllarlo il bruciore al ginocchio diviene insopportabile.
+    Provi a concentrarti, ma nonostante ti sforzi per controllarlo, il bruciore al ginocchio diviene insopportabile.
     Il tuo cuore e i tuoi pensieri sono troppo agitati per usare il potere.
     Scegli cosa fare`,
   audio: {

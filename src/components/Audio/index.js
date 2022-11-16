@@ -6,17 +6,17 @@ import style from './style.css';
 import switchStyle from './switch.css';
 
 function Audio({ data, caratteristiche, frase, morte, step, onend, shareToHelp }) {
-  console.log('audio', caratteristiche);
   const { helpCount, helpCountMax } = caratteristiche;
   const [mode, setMode] = useState(true);
   const [play, setPlay] = useState(false);
 
   useEffect(() => { }, []);
   useEffect(() => { }, [play]);
+
   useEffect(() => {
     const audio = document.getElementById('audio');
     if (!mode) {
-      audio.pause()
+      audio.pause();
     } else {
       audio.play();
     }

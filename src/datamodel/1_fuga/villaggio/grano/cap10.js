@@ -2,11 +2,10 @@ export default {
   titolo: "Nel grano",
   frase: `
     Ti nascondi tra le alte spighe, facendo attenzione a non fare troppo rumore.
-    I fusti del mais sono un perfetto nascondiglio ma devi fare attenzione a non farli oscillare.
+    I fusti del mais sono un perfetto nascondiglio.
   `,
   audio: {
-    src: "/assets/audio/cap10.mp3", // todo -> cambiare audio con le nuove scritte
-    interrompe: ""
+    src: "/assets/audio/cap10.mp3",
   },
   risposte: [
     {

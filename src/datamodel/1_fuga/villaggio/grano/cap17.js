@@ -1,8 +1,7 @@
 export default {
   titolo: "Nel grano",
   frase: `
-    Il tempo passa ed il senso di ansia e paura salgono; inizi a camminare a zonzo
-    quando ti accorgi improvvisamente che il campo è in fiamme.
+    Il tempo passa ed il senso di ansia e paura salgono; inizi a camminare a zonzo quando ti accorgi improvvisamente che il campo è in fiamme.
     Devi immediatamente scappare dal muro di fuoco davanti a te prima di morire bruciato
   `,
   audio: {

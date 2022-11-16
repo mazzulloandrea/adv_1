@@ -3,8 +3,7 @@ export default {
   titolo: "Cattura",
   frase: `
     Gli animali anzichè calmarsi si agitano ed iniziano a fare troppo rumore.
-    Immediatamente attirano la'ttenzione dei soldati e mentre provi a scappare verso il bosco ti si para davanti 
-    tuo fratellastro Denred che ti afferra per il vestito "Preso"
+    Immediatamente attirano l'attenzione dei soldati e, mentre provi a scappare verso il bosco, ti si para davanti tuo fratellastro Denred che ti afferra per il vestito "Preso"
     Il bastardo sta aiutando le guardie
 
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
@@ -17,7 +16,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap42.mp3",
+    src: "/assets/audio/cap42.mp3", // TODO da integrare l'audio con il cap7 per laseconda parte da "I soldati ti legano etc etc"
   },
   risposte: [
     {

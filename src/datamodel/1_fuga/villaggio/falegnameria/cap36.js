@@ -15,8 +15,7 @@ export default {
     e tuo fratellastro è uno di questi.
   `,
   audio: {
-    src: "/assets/audio/cap36.mp3",
-    interrompe: "",
+    src: "/assets/audio/cap36.mp3", // TODO integrare con cap 32 per la seconda parte
   },
   risposte: [
     {

@@ -1,8 +1,8 @@
 export default {
   titolo: "Falegnameria",
   frase: `
-    Ti fai più piccolo che puoi cercando di trattenere il respiro restando immobile.
-    Senti i battiti del cuore forti come un tamburo rimbombare nel tuo petto e nella tua testa
+    Ti fai più piccolo che puoi, cercando di trattenere il respiro restando immobile.
+    Senti i battiti del cuore, forti come un tamburo, rimbombare nel tuo petto e nella tua testa.
   `,
   audio: {
     src: "/assets/audio/cap33.mp3",

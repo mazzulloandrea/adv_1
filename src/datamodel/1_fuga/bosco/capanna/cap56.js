@@ -5,7 +5,6 @@ export default {
   `,
   audio: {
     src: "/assets/audio/cap56.mp3",
-    interrompe: ""
   },
   gioco: "gioco9",
   gioco9: {

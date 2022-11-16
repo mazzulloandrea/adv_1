@@ -2,7 +2,7 @@ export default {
   titolo: "La stalla",
   frase: `
     Riesci a calmare gli animi degli animali e a raggiungere il tuo obiettivo.
-    Mentre stai per raccoglierlo senti i rumori dei soldati.
+    Mentre stai per raccoglierlo senti i rumori dei soldati vicini.
   `,
   audio: {
     src: "/assets/audio/cap41.mp3",

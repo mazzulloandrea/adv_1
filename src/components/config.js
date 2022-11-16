@@ -33,8 +33,8 @@ const initialAbilita = {
 const tutorialConfig = {
   audio: {
     text: [
-      "Puoi disabilitare l'audio in alto a sinistra",
-      "In alto a destra, invece, puoi chiedere aiuto ai tuoi contatti",
+      "In alto a sinistra puoi disabilitare l'audio",
+      "A destra, invece, puoi chiedere aiuto ai tuoi contatti",
     ],
     active: true,
   },
@@ -75,7 +75,7 @@ const tutorialConfig = {
   },
   chiave: {
     text: [
-      "Risolvendo i giochi in modo corretto guadagni 1 chiave",
+      "Risolvendo i giochi in modo corretto guadagnerai 1 chiave",
       "Quando arriverai a 3 chiavi potrai ottenere un premio"
     ],
     active: true,

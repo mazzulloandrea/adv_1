@@ -18,13 +18,15 @@ const Intro = ({ onend }) => {
   ];
   const [actual, setActual] = useState(0);
 
-  useEffect(() => { }, []);
+  useEffect(() => {
+  }, []);
+
   useEffect(() => {
     if (actual === frasi.length-1) {
       const salta = document.getElementById("salta");
       salta.classList.add(style.saltaAnimation);
     }
-  }, [actual]);
+  }, [actual, frasi.length]);
 
   const changeFrase = () => {
     setActual(actual + 1);
@@ -40,7 +42,9 @@ const Intro = ({ onend }) => {
         ${actual === 0 && html`<div class=${style.titleContainer} onClick=${()=> { 
               changeFrase();
               const audio = document.getElementById("soundtrack");
+              const video = document.getElementById("fiammaBackground");
               if (audio.paused) audio.play();
+              if (video.paused) video.play();
             }}>
           <div class=${style.title}>${frasi[actual]}</div>
           <div class=${style.emerald}>
@@ -54,11 +58,11 @@ const Intro = ({ onend }) => {
         ${actual === 5 && html`<div class=${style.animation} onanimationend=${()=> changeFrase()}>${frasi[actual]}</div>`}
         ${actual === 6 && html`<div class=${style.auricolari}>${frasi[actual]}</div>`}
       </div>
-      <audio id="soundtrack" autoplay loop>
+      <audio id="soundtrack" loop autoplay=${"autoplay"} playsinline>
         <source src=${"/assets/audio/soundtrack.mp3"} type="audio/mp3" volume="0.2" />
         Your browser does not support the audio tag.
       </audio>
-      <video id="" class=${style.bkgVideo} loop=${true} muted=${true} autoplay=${true} playsinline=${true}>
+      <video id="fiammaBackground" class=${style.bkgVideo} loop muted autoplay=${"autoplay"} playsinline>
         <source src=${allBkgVideo.fiamme} type="video/mp4" />
       </video>
     </div>

@@ -7,7 +7,6 @@ export default {
   `,
   audio: {
     src: "/assets/audio/cap60.mp3",
-    interrompe: ""
   },
   gioco: "gioco9",
   gioco9: {
@@ -17,5 +16,5 @@ export default {
     combinazione: ["erba", "foresta", "ruota"],
     type: "memory",
     dataset: "vario",
-  }
-}
+  },
+};

@@ -5,16 +5,16 @@ export default {
     Viaggi cercando tracce del passaggio dei soldati; vai avanti per qualche ora senza trovare nulla.
     Poi ti avvicini ad una grossa strada che porta verso i "colli sparsi" in direzione Berdask, qui trovi tracce fresche di escrementi di cavalli ed i segni delle ruote di quello che potrebbe essere un carretto.
 
-    Cercando di rimanere nascosto, segui le tracce e dopo un'altra ora vedi in lontananza il gruppetto che stavi cercando.
-    Provi ad avvicinarti per osservarli meglio e senti bruciare il ginocchio destro; Carcadena ti sta parlando mentalmente <<Ho bisogno della tua vicinanza>>.
+    Cercando di rimanere nascosto, segui le impronte e, dopo un'altra ora, vedi in lontananza il gruppetto che stavi cercando.
+    Provi ad avvicinarti per osservarli meglio quando improvvisamente senti bruciare il ginocchio destro; Carcadena ti sta parlando mentalmente <<Ho bisogno della tua vicinanza>>.
 
-    Convinto di fare la cosa giusta, ti avvicini al gruppetto ed immediatamente vieni preso dalle guardie che ti legano e ti mettono sul carro insieme agli altri.
+    Convinto di fare la cosa giusta, ti avvicini al gruppetto e vieni preso dalle guardie che ti legano e ti mettono sul carro insieme agli altri.
 
     Carcadena ti sorride e appoggiando le mani sul tuo petto ti trasmette un calore incredibile.
 
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/viaggio.mp3", // todo
   },
   risposte: [
     {

@@ -106,6 +106,7 @@ const Layout = () => {
     if (abilita) {
       data = Object.assign(data, {abilita});
     }
+    console.log('dati che salvo per LOG', data);
     saveIntoStorage(data);
   }
   

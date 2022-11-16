@@ -2,7 +2,7 @@ export default {
   titolo: "Falegnameria",
   frase: `
     La mano del soldato passa a pochi centimetri da te... 
-    "Qui non c'è! Sarà scappato nella stalla!"
+    <<Qui non c'è! Sarà scappato nella stalla!>>
     con gran rumore esce dalla porta principale e ti lascia solo nell'oscurità
   `,
   audio: {

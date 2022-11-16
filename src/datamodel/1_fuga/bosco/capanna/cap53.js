@@ -6,7 +6,7 @@ export default {
     [rumore di animale]
   `,
   audio: {
-    src: "/assets/audio/cap53.mp3", // aggiungere rumore di cingiale
+    src: "/assets/audio/cap53.mp3", // TODO aggiungere rumore di cingiale
   },
   risposte: [
     {

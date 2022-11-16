@@ -8,28 +8,28 @@ export default {
 
     Vieni svegliato da un grosso scossone: tuo fratellastro Denred insieme ad un soldato ti hanno trovato; lui li sta aiutando e questa è l'ennesima dimostrazione di quanto sia crudele.
 
-    Ti prendono e ti portano nel villaggio dove, su di un carretto, ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
+    Ti prendono e ti portano nel villaggio, dove, su di un carretto, ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
     **cornice**
     Nella notte, tra le lamentele ed i pianti delle madri, il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale" e che tra un anno, finito l'addestramento, ritornerete a casa.
 
     Sai bene che pochissimi sono ritornati... 
-    e tuo fratellastro è uno di questi.
+    e tuo fratellastro è proprio uno di questi.
   `,
   audio: {
-    src: "/assets/audio/cap57.mp3", // todo cambiare audio
-    interrompe: ""
+    src: "/assets/audio/cap57.mp3", // todo aggiungere Carcadena
+    interrompe: "",
   },
   risposte: [
     {
       frase: "Preferisci parlare con Carcadena?",
       gioco: "audio",
-      next: "sorella1"
+      next: "sorella1",
     },
     {
       frase: "Preferisci parlare con qualcun altro delle reclute",
       gioco: "audio",
-      next: "parlareAltri"
+      next: "parlareAltri",
     },
-  ]
-}
+  ],
+};

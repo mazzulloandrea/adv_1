@@ -16,7 +16,7 @@ export default {
 
   `,
   audio: {
-    src: "/assets/audio/cap32.mp3",
+    src: "/assets/audio/cap32.mp3", // todo manca integrazine Carcadena
   },
   risposte: [
     {
