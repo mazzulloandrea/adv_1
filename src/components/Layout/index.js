@@ -352,6 +352,7 @@ const Layout = () => {
       onend: (nextCap, feedback) => onGameEnd(nextCap, feedback),
       orientation,
       caratteristiche: abilita,
+      capName: actual.cap,
     };
 
     switch (actualComponent) {
