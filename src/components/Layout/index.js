@@ -38,7 +38,11 @@ const Layout = () => {
 
   useEffect(() => {
     ReactGA.initialize("G-CKF93XL3FW");
-    ReactGA.send({ hitType: "event", page: "/openApp" });
+    // ReactGA.send({ hitType: "pageView", page: "/openApp" });
+    ReactGA.event({
+      category: "init",
+      action: "openApp",
+    });
     window.addEventListener("orientationchange", (evt) => {
       const angle = evt.target.screen.orientation.angle;
       if (angle === 90 || angle === 270) {
