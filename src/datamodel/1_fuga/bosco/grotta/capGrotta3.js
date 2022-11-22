@@ -5,18 +5,17 @@ export default {
     Non trovi altro di utile.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
-    interrompe: ""
+    src: "/assets/audio/capGrotta3.mp3",
   },
   risposte: [
     {
       frase: "Prendi le monete al cadavere",
       borsello: 2,
-      next: "capGrottaPipistrelli"
+      next: "capGrottaPipistrelli",
     },
     {
       frase: "Lasci al morto le sue proprietà e vai verso la scalinata",
-      next: "capGrotta4"
-    }
-  ]
-}
+      next: "capGrotta4",
+    },
+  ],
+};

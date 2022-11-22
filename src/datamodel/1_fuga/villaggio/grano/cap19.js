@@ -2,7 +2,7 @@ export default {
   titolo: "Nel grano",
   frase: `
     Convincerlo è facile, soprattutto perchè i soldati hanno dato fuoco al campo che sta bruciando sempre più velocemente.
-    Uscite fuori dal campo insieme e vi dirigete nel bosco in piena notte.
+    Uscite fuori e insieme vi dirigete nel bosco in piena notte.
   `,
   audio: {
     src: "/assets/audio/cap19.mp3",
@@ -31,6 +31,6 @@ export default {
       gioco: "audio",
       icon: "spirito",
       aaron: true,
-    }
+    },
   ],
-}
+};

@@ -18,7 +18,7 @@ export default {
   
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/avviciniADenred.mp3", // todo voce di Denred // TODO voce di carcadena
   },
   risposte: cap7.risposte,
 };

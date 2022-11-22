@@ -10,7 +10,7 @@ export default {
       Te ne ricordi solo ora, mentre bruci vivo in pochi secondi.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/piroliscoMorte2.mp3",
   },
   morte: true,
-}
+};

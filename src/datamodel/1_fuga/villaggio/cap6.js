@@ -1,10 +1,11 @@
-import cap1 from './cap1.js';
+import cap1 from "./cap1.js";
 
 export default {
   titolo: "L'arrivo dei soldati",
-  frase: "<<Sta morendo, ma Pantelion scappa, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
+  frase:
+    "<<Sta morendo, ma Pantelion scappa, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
   audio: {
-    src: "/assets/audio/cap6.mp3", // TODO mergiare con cap4 cambiando la frase di Carcadena
+    src: "/assets/audio/cap6.mp3", // TODO rifare audio e mettere voce di carcadena
   },
   risposte: cap1.risposte.slice(1),
   dice: cap1.dice,
@@ -14,6 +15,6 @@ export default {
     type: "memory",
     dataset: "element",
     successo: "cap13",
-    fallimento: "cap13"
-  }
-}
+    fallimento: "cap13",
+  },
+};

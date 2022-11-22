@@ -8,45 +8,44 @@ export default {
     Prima di coricarti ripensi a tua sorella, ti concentri sulla voglia a forma di falce e provi ad attivare il potere.
     Percepisci che sei troppo lontano, o forse troppo debole, per comunicare qualcosa, ma il bruciore che senti al ginocchio ti indica che Carcadena non è poi così lontana.
     **cornice**
-    Di notte alcuni ricordi riaffiorano: Denred che ritorna dall'addestramento, la sua mano sinistra priva di due dita, quella cicatrice deformante sul collo e la conseguente voce modificata, la severità dei soldati e l'addestramento ai limiti della sopportazione.
-
+    Di notte alcuni ricordi riaffiorano: Denred che ritorna dall'addestramento, la sua mano sinistra priva di due dita, quella cicatrice deformante sul collo, la severità dei soldati e l'addestramento ai limiti della sopportazione.
     Il giorno del raccolto è arrivato anche per te.
 
     Al tuo risveglio hai chiaro il tuo obiettivo: seguire i soldati e raggiungere tua sorella.
 
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/capGrottaSentiero.mp3",
   },
   risposte: [
     {
       frase: "Se hai una coperta e vuoi usarla per riposare",
       checkZaino: "coperta",
       next: "cap64",
-      zainoElimina: "coperta"
+      zainoElimina: "coperta",
     },
     {
       frase: "Se rientri di qualche metro nella grotta per riposare",
-      gioco: "gioco9"
+      gioco: "gioco9",
     },
     {
       frase: "Se decidi di riposare su di una roccia",
-      gioco: "dice"
+      gioco: "dice",
     },
   ],
   gioco9: {
-    successo: 'capRisveglioBene',
-    fallimento: 'capRisveglioMale',
+    successo: "capRisveglioBene",
+    fallimento: "capRisveglioMale",
     livello: 2,
     type: "memory",
     dataset: "nature",
     combinazione: ["barile", "candela", "pietra", "tomba"],
   },
   dice: {
-    successo: 'capRisveglioBene',
-    fallimento: 'capRisveglioMale',
+    successo: "capRisveglioBene",
+    fallimento: "capRisveglioMale",
     obiettivo: 14, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 3 // quanti lanci col dado
-  }
-}
+    lanci: 3, // quanti lanci col dado
+  },
+};

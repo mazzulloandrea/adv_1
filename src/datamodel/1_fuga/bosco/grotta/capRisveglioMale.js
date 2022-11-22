@@ -5,24 +5,25 @@ export default {
     <<Pantelion! Pantelion! Il vecchio è morto, dobbiamo seppellirlo>>
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/capRisveglioMale.mp3",
   },
   risposte: [
     {
       frase: "Vai verso tuo fratello",
-      next: "avviciniADenred"
+      next: "avviciniADenred",
     },
     {
       frase: "Ti allontani, non vuoi essere trovato",
-      next: "capRisveglioBene"
+      next: "capRisveglioBene",
     },
   ],
-  gioco9: {  // type = domanda
+  gioco9: {
+    // type = domanda
     successo: "capRisveglioBene",
     fallimento: "capRisveglioBene",
     durata: "15",
     combinazione: "panthelion",
     type: "domanda",
-    domanda: "Come ti chiami?"
+    domanda: "Come ti chiami?",
   },
-}
+};

@@ -6,7 +6,7 @@ export default {
     Con un'abile mossa riesci a far allontanare la bestia e, assicurandoti di non essere in pericolo, ti allontani da quella zona.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/piroliscoSconfitta.mp3",
   },
-  next: 'tornareIndietro'
-}
+  next: "tornareIndietro",
+};

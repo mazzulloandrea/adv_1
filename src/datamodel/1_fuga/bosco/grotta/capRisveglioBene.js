@@ -5,18 +5,18 @@ export default {
     Gli obiettivi della giornata sono due: cercare tua sorella e procurarsi del cibo.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/capRisveglioBene.mp3",
   },
   risposte: [
     {
       frase: "Mangi la razione",
       checkZaino: "razione",
       next: "viaggio",
-      vita: 1
+      vita: 1,
     },
     {
       frase: "Cerchi delle bacche",
-      gioco: "gioco9"
+      gioco: "gioco9",
     },
   ],
   gioco9: {
@@ -25,6 +25,6 @@ export default {
     durata: "15",
     combinazione: "bacche",
     type: "domanda",
-    domanda: "Che cibo stai cercando?"
-  }
-}
+    domanda: "Che cibo stai cercando?",
+  },
+};

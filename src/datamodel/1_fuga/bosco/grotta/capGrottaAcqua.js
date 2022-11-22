@@ -5,8 +5,7 @@ export default {
     Mentre deglutisci intravedi un cunicolo che prima non avevi notato.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
-    interrompe: ""
+    src: "/assets/audio/capGrottaAcqua.mp3",
   },
   risposte: [
     {
@@ -14,21 +13,21 @@ export default {
       abilita: "corpo",
       next: "capGrottaSentiero",
       gioco: "audio",
-      icon: "corpo"
+      icon: "corpo",
     },
     {
       frase: "Mente",
       abilita: "mente",
       next: "capGrottaSentiero",
       gioco: "audio",
-      icon: "mente"
+      icon: "mente",
     },
     {
       frase: "Spirito",
       abilita: "spirito",
       next: "capGrottaSentiero",
       gioco: "audio",
-      icon: "spirito"
-    }
-  ]
-}
+      icon: "spirito",
+    },
+  ],
+};

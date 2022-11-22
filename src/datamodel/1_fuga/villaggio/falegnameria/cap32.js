@@ -5,7 +5,7 @@ export default {
     Esci di nascosto e, facendo il giro largo, ti dirigi verso la stalla.
     Svoltato l'angolo vai sbattere contro qualcosa che ti afferra.
     É Denred, accompagnato da alcuni soldati <<Eccolo è qui>>, tuo fratello sta aiutando le guardie.
-    
+    **cornice**
     I soldati ti legano portandoti su di un carretto, dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
     **cornice**
@@ -16,18 +16,18 @@ export default {
 
   `,
   audio: {
-    src: "/assets/audio/cap32.mp3", // todo manca integrazine Carcadena
+    src: "/assets/audio/cap32.mp3", // TODO manca integrazine Carcadena
   },
   risposte: [
     {
       frase: "Preferisci parlare con Carcadena?",
       gioco: "audio",
-      next: "sorella1"
+      next: "sorella1",
     },
     {
       frase: "Preferisci parlare con qualcun altro delle reclute",
       gioco: "audio",
-      next: "parlareAltri"
+      next: "parlareAltri",
     },
-  ]
-}
+  ],
+};

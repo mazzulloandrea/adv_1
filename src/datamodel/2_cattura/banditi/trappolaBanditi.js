@@ -6,10 +6,10 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/trappolaBanditi.mp3",
   },
   risposte: [
     { frase: "Raccogli la moneta", next: "trappolaBanditiMorte" },
     { frase: "Prosegui seguendo le impronte", next: "trappolaBanditi2" },
-  ]
-}
+  ],
+};

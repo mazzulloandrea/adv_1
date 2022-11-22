@@ -4,7 +4,7 @@ export default {
     Senza esitare un attimo, esci dalla falegnameria.
   `,
   audio: {
-    src: "/assets/audio/cap34.mp3", // todo modificare audio
+    src: "/assets/audio/cap35.mp3",
   },
   risposte: [
     {
@@ -12,4 +12,4 @@ export default {
       next: "cap50",
     },
   ],
-}
+};

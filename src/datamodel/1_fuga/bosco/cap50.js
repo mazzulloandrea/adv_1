@@ -11,27 +11,26 @@ export default {
     Continuando a pensare entri nel bosco buio.
   `,
   audio: {
-    src: "/assets/audio/cap50.mp3", // da copiare dal cap10
-    interrompe: ""
+    src: "/assets/audio/cap50.mp3",
   },
   risposte: [
     {
       frase: "Corpo",
       abilita: "corpo",
       next: "cap52",
-      icon: "corpo"
+      icon: "corpo",
     },
     {
       frase: "Mente",
       abilita: "mente",
       next: "cap52",
-      icon: "mente"
+      icon: "mente",
     },
     {
       frase: "Spirito",
       abilita: "spirito",
       next: "cap52",
-      icon: "spirito"
-    }
+      icon: "spirito",
+    },
   ],
-}
+};

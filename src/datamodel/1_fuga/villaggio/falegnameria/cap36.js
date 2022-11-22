@@ -2,11 +2,11 @@ export default {
   step: 2,
   titolo: "Falegnameria",
   frase: `
-    La mano del soldato passa a pochi centimetri da te... e ti afferra per il vestito.
-    <<Pensavi di scappare? L'ho preso!>> grida, ed immediatamente entrano in falegnameria l'altra guardia e tuo fratellastro Denred.
+    La mano del soldato passa a pochissimi centimetri da te... e ti afferra per il vestito.
+    Grida immediatamente di averti preso ed entrano in falegnameria l'altra guardia e tuo fratellastro Denred.
     Il bastardo li sta aiutando.
-
-    I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
+    
+    I soldati ti legano e ti portano su di un carretto dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
     Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
     **cornice**
     Nella notte, tra le lamentele ed i pianti delle madri, il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale" e che tra un anno, finito l'addestramento, ritornerete a casa.
@@ -15,18 +15,18 @@ export default {
     e tuo fratellastro è uno di questi.
   `,
   audio: {
-    src: "/assets/audio/cap36.mp3", // TODO integrare con cap 32 per la seconda parte
+    src: "/assets/audio/cap36.mp3", // TODO integrare con voce Carcadena
   },
   risposte: [
     {
       frase: "Preferisci parlare con Carcadena?",
       gioco: "audio",
-      next: "sorella1"
+      next: "sorella1",
     },
     {
       frase: "Preferisci parlare con qualcun altro delle reclute",
       gioco: "audio",
-      next: "parlareAltri"
+      next: "parlareAltri",
     },
-  ]
-}
+  ],
+};
