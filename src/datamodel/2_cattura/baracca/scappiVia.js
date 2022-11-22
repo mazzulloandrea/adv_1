@@ -9,7 +9,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/scappiVia.mp3",
   },
-  next: "tornareIndietro"
-}
+  next: "tornareIndietro",
+};

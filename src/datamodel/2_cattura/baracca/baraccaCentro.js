@@ -1,4 +1,4 @@
-import eremita from './eremita';
+import eremita from "./eremita";
 
 export default {
   titolo: "baraccaDestra",
@@ -10,7 +10,7 @@ export default {
     Con toni calmi e pacati, ti chiede come ti chiami e soprattutto cosa ci fai li.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/baraccaCentro.mp3",
   },
   risposte: eremita.risposte,
-}
+};

@@ -8,10 +8,10 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/baraccaSinistra.mp3",
   },
   risposte: [
     { frase: "Prosegui", next: "prosegui" },
     { frase: "Fai il giro dall'altra parte", next: "baraccaDestra" },
   ],
-}
+};

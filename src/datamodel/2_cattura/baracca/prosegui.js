@@ -5,11 +5,11 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/prosegui.mp3",
   },
   risposte: [
     { frase: "Resti immobile", next: "eremita" },
     { frase: "Corri via", next: "scappiVia" },
     { frase: "Sei pronto a combattere", next: "eremita" },
   ],
-}
+};

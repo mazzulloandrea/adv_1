@@ -1,4 +1,4 @@
-import eremita from './eremita';
+import eremita from "./eremita";
 
 export default {
   titolo: "eremita in casa",
@@ -10,7 +10,7 @@ export default {
 
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/eremitaInCasa.mp3",
   },
   risposte: eremita.risposte,
-}
+};
