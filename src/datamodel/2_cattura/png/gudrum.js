@@ -2,24 +2,22 @@ export default {
   titolo: "Gudrum",
   frase: `
     Gudrum si guarda attorno e manda cenni al suo amico più grande.
-    Poi posa lo sguardo su di te e ti chiede di aiutarlo; 
-    il piano consiste nel distrarre le guardie in modo che Essertag possa liberarsi.
+    Poi posa lo sguardo su di te e ti chiede di aiutarlo; il piano consiste nel distrarre le guardie in modo che Essertag possa liberarsi.
 
     Gudrum inzia ad alzare volontariamente la voce nei tuoi confronti, vuole creare un po' di casino.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+    src: "/assets/audio/gudrum.mp3",
   },
-  "risposte": [
+  risposte: [
     {
       frase: "Alzi anche tu la voce fingendo di litigare?",
-      gioco: 'dice'
+      gioco: "dice",
     },
     {
       frase: "Lasci perdere",
-      "next": "sosta1"
+      next: "sosta1",
     },
   ],
   dice: {
@@ -27,6 +25,6 @@ export default {
     fallimento: "distrarreGuardia",
     obiettivo: 5, // numero da raggiungere con il lancio dei dadi
     abilita: ["spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 2 // quanti lanci col dado
-  }
-}
+    lanci: 2, // quanti lanci col dado
+  },
+};

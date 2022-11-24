@@ -10,37 +10,26 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/carcadena.mp3", // todo
-    interrompe: "",
+    src: "/assets/audio/aaron.mp3",
   },
   risposte: [
     {
-      frase: 'Osservi in silenzio la scena',
-      next: 'sosta1'
+      frase: "Osservi in silenzio la scena",
+      next: "sosta1",
     },
     {
-      frase: 'Cerchi di aiutare Aaron',
-      gioco: 'text'
-    }
+      frase: "Cerchi di aiutare Aaron",
+      gioco: "text",
+    },
   ],
   text: {
     successo: "aaronCoraggio",
     fallimento: "aaronPaura",
     durata: "15",
-    domande: [
-      "Quanti anni ha Aaron?",
-      "Come è il carattere di Aaron?",
-    ],
+    domande: ["Quanti anni ha Aaron?", "Come è il carattere di Aaron?"],
     risposte: [
-      [
-        "12"
-      ],
-      [
-        "timoroso",
-        "pauroso",
-        "fifone",
-        "timore", "paura", "fifa"
-      ]
-    ]
+      ["12"],
+      ["timoroso", "pauroso", "fifone", "timore", "paura", "fifa"],
+    ],
   },
-}
+};

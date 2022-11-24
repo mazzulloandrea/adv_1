@@ -7,7 +7,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/scappi.mp3",
     interrompe: "",
   },
   gioco: "dice",
@@ -16,6 +16,6 @@ export default {
     fallimento: "nonScappi",
     obiettivo: 11, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 3 // quanti lanci col dado
-  }
-}
+    lanci: 3, // quanti lanci col dado
+  },
+};

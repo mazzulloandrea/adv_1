@@ -18,11 +18,14 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/scappi2.mp3",
   },
   risposte: [
     { frase: "Vuoi seguire le impronte", next: "impronteStivali" },
-    { frase: "Vai nella direzione opposta perchè non ti fidi", next: "rumoreMisterioso" },
+    {
+      frase: "Vai nella direzione opposta perchè non ti fidi",
+      next: "rumoreMisterioso",
+    },
     { frase: "Vuoi tornare indietro sui tuoi passi", next: "tornareIndietro" },
-  ]
-}
+  ],
+};

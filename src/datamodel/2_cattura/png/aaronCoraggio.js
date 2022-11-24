@@ -9,7 +9,7 @@ export default {
     
   `,
   audio: {
-    src: "/assets/audio/carcadena.mp3", // todo
+    src: "/assets/audio/aaronCoraggio.mp3",
     interrompe: "",
   },
   risposte: [
@@ -17,19 +17,19 @@ export default {
       frase: "Corpo",
       abilita: "corpo",
       next: "sosta1",
-      icon: "corpo"
+      icon: "corpo",
     },
     {
       frase: "Mente",
       abilita: "mente",
       next: "sosta1",
-      icon: "mente"
+      icon: "mente",
     },
     {
       frase: "Spirito",
       abilita: "vita",
       next: "sosta1",
-      icon: "spirito"
-    }
+      icon: "spirito",
+    },
   ],
-}
+};

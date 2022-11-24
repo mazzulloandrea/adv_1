@@ -3,7 +3,8 @@ export default {
   frase: `
     Si riparte immediatamente.
     Un altro giorno di viaggio, tra le buche ed i sentieri acciottolati dei "colli sparsi".
-    Un altro giorno legati come delle bestie, ti fai forza, non dovrebbe mancare molto...
+    Un altro giorno legati come delle bestie. 
+    Ti fai forza, non dovrebbe mancare molto...
     **cornice**
     Dopo poco tempo, tornano di corsa 3 soldati; Essertag è caduto in una scarpata, e ha sbattuto la testa morendo sul colpo.
     Una sciocca risatina, accompagnata da alcune battute sulla morte ragazzo, rendono ancora più triste il viaggio.
@@ -12,7 +13,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/calmo2.mp3",
   },
   gioco: "gioco9",
   gioco9: {
@@ -22,5 +23,5 @@ export default {
     type: "memory",
     combinazione: ["teschio", "fantasma", "teschio", "spada"],
     dataset: "combat",
-  }
-}
+  },
+};

@@ -6,12 +6,12 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/aaronPaura.mp3",
   },
   risposte: [
     {
-      frase: 'Osservi in silenzio la scena',
-      next: 'sosta1'
+      frase: "Osservi in silenzio la scena",
+      next: "sosta1",
     },
-  ]
-}
+  ],
+};

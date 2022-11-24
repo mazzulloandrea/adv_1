@@ -10,7 +10,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/tornareIndietro.mp3",
   },
   gioco: "gioco9",
   gioco9: {
@@ -20,5 +20,5 @@ export default {
     combinazione: ["albero", "barile", "cobra", "mare", "sentiero"],
     dataset: "nature",
     livello: 2,
-  }
-}
+  },
+};
