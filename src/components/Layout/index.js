@@ -35,6 +35,7 @@ const Layout = () => {
   const [orientation, setOrientation] = useState(0);
   const [abilita, setAbilita] = useState(initialAbilita);
   const [tutorials, setTutorials] = useState(tutorialConfig);
+  const [visibility, setVisibility] = useState(true);
 
   useEffect(() => {
     ReactGA.initialize("G-CKF93XL3FW");
@@ -56,11 +57,13 @@ const Layout = () => {
       const audioLow = document.getElementById("audioBackgroundLow");
       const audioIntro = document.getElementById("soundtrack");
       if (evt.target.visibilityState === "visible") {
+        setVisibility(true);
         if (audioLow) audioLow.play();
         if (audioIntro) audioIntro.play();
       } else {
         if (audioLow) audioLow.pause();
         if (audioIntro) audioIntro.pause();
+        setVisibility(false);
       }
     });
   }, []);
@@ -353,6 +356,7 @@ const Layout = () => {
       orientation,
       caratteristiche: abilita,
       capName: actual.cap,
+      visibility,
     };
 
     switch (actualComponent) {

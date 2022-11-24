@@ -15,6 +15,7 @@ function Audio({
   step,
   onend,
   shareToHelp,
+  visibility,
 }) {
   const { helpCount, helpCountMax } = caratteristiche;
   const [mode, setMode] = useState(true);
@@ -23,7 +24,14 @@ function Audio({
   useEffect(() => {
     ReactGA.send({ hitType: "pageView", page: `/${capName}` });
   }, []);
+
   useEffect(() => {}, [play]);
+
+  useEffect(() => {
+    if (!visibility) {
+      setMode(false);
+    }
+  }, [visibility]);
 
   useEffect(() => {
     const audio = document.getElementById("audio");
