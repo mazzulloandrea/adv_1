@@ -8,7 +8,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/uccidereDarius.mp3",
   },
-  next: "vittoriaNonSanguinante"
-}
+  next: "vittoriaNonSanguinante",
+};

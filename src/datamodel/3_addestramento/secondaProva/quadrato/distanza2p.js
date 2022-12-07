@@ -7,9 +7,8 @@ export default {
 
     Solamente l'istinto ti farà evitare il dardo del tuo avversario
   `,
-
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/distanza2p.mp3",
   },
   gioco: "dice",
   dice: {
@@ -17,6 +16,6 @@ export default {
     fallimento: "trafitto",
     obiettivo: 13, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 5 // quanti lanci col dado
+    lanci: 5, // quanti lanci col dado
   },
-}
+};

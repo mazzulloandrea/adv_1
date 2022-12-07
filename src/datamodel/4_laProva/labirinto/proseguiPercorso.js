@@ -1,23 +1,24 @@
 export default {
   titolo: "ultima prova",
   frase: `
-    Prosegui nel corridoio; dopo quasi un minuto ti ritrovi in una piccola stanza con una grossa rosa dei venti disegnata sul terreno. 
+    Prosegui nel corridoio. 
+    Dopo quasi un minuto ti ritrovi in una piccola stanza con una grossa rosa dei venti disegnata sul terreno. 
     Il Nord è alle tue spalle.
 
-    Dalla stanzina partono 3 corridoi:
-    a destra, direzione ovest, un corridio con pavimento arancione,
-    a sinistra, direzione est,  un corridoio con pavimento nero
-    al centro, direzione sud, un corridio viola
+    Dalla stanzina partono 3 corridoi. 
+    A destra, direzione ovest, un corridio con pavimento arancione.
+    A sinistra, direzione est,  un corridoio con pavimento nero.
+    Al centro, direzione sud, un corridio viola.
     
-    potrebbe essere un labirinto devi stare attento.
+    Potrebbe essere un labirinto devi stare molto attento.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/proseguiPercorso.mp3",
   },
   risposte: [
-    { frase: "Scegli ovest arancione", next: 'arancioneODirezioneBianco' },
-    { frase: "Scegli est nero", next: 'neroEDirezioneBlu', },
-    { frase: "Scegli sud viola", next: 'violaS', }
-  ]
-}
+    { frase: "Scegli ovest arancione", next: "arancioneODirezioneBianco" },
+    { frase: "Scegli est nero", next: "neroEDirezioneBlu" },
+    { frase: "Scegli sud viola", next: "violaS" },
+  ],
+};

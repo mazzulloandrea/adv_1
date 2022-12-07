@@ -7,7 +7,7 @@ export default {
     Quel bastardo li sta aiutando.
       
     I soldati ti legano portandoti su di un carretto dove ci sono già tua sorella ed altri quattro giovani che conosci bene: Aaron, Alexis, Essertag e Gudrum.
-    Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
+    Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltata?>>.
     **cornice**
     Nella notte, tra le lamentele ed i pianti delle madri, il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale" e che tra un anno, finito l'addestramento, ritornerete a casa.
 
@@ -16,7 +16,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap20.mp3", // TODO integrare con voce di Carcadena
+    src: "/assets/audio/cap20.mp3",
   },
   risposte: [
     {

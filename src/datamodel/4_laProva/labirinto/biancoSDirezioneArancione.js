@@ -5,14 +5,14 @@ export default {
 
     Guardi attentamente e ti sembra di riconoscere impronte di stivale; infine arrivi ad una svolta ad angolo verso destra.
 
-    a destra, un corridoio arancione acceso, alle tue spalle, il percorso bianco.
+    Un corridoio arancione acceso e, alle tue spalle, il percorso bianco.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/biancoSDirezioneArancione.mp3",
   },
   risposte: [
-    { frase: "Destra via arancione", next: 'arancioneODirezioneNero' },
-    { frase: "Indietro bianco", next: 'biancoNDirezioneBlu', }, // todo
-  ]
-}
+    { frase: "Destra via arancione", next: "arancioneODirezioneNero" },
+    { frase: "Indietro bianco", next: "biancoNDirezioneBlu" },
+  ],
+};

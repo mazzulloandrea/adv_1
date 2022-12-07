@@ -1,7 +1,7 @@
 export default {
   titolo: "prima prova",
   frase: `
-    Ti aggrappi al tuo avversario, che ti spinge fuori dal cerchio, e lo trascini con te al di la del perimetro.
+    Ti aggrappi al tuo avversario, che ti spinge fuori dal cerchio, e afferandolo, lo trascini con te al di la del perimetro.
     
     Arrabbiato come pochi, il rosso sputa per terra e ti addita dicendo che te la farà pagare; poi si siede per terra ed attende la fine della sfida.
 
@@ -17,7 +17,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/fuoriInsieme.mp3",
   },
   next: "finePrimaProva",
-}
+};

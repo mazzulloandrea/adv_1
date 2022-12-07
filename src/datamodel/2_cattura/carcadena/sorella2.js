@@ -10,7 +10,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/sorella2.mp3", // TODO integrare con voce di Carcadena
+    src: "/assets/audio/sorella2.mp3",
   },
   next: "dice",
   dice: {

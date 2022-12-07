@@ -5,7 +5,7 @@ export default {
   `,
   gioco: "text",
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/enigmaColori.mp3",
   },
   text: {
     successo: "laProvaSuccesso",
@@ -18,7 +18,7 @@ export default {
       "Sono maggiori i passaggi verdi o i passaggi blu?",
       "Nel labirinto quante volte compare il giallo?",
       "Quanti corridoi gialli ci sono?",
-      "Sono di più i passaggi marroni o quelli rosa?"
+      "Sono di più i passaggi marroni o quelli rosa?",
     ],
     risposte: [
       ["7", "sette"],
@@ -27,7 +27,18 @@ export default {
       ["blu"],
       ["una"],
       ["zero", "o", "0", "nessuno"],
-      ["no", "uguali", "uguale", "nessuno", "stesso", "stessi", "errore", "zero", "o", "0"]
-    ]
-  }
-}
+      [
+        "no",
+        "uguali",
+        "uguale",
+        "nessuno",
+        "stesso",
+        "stessi",
+        "errore",
+        "zero",
+        "o",
+        "0",
+      ],
+    ],
+  },
+};

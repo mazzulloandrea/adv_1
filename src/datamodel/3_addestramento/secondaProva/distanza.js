@@ -12,11 +12,11 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/distanza.mp3",
   },
   risposte: [
     { frase: "Scegli l'arco", next: "addestramento", zaino: "arco" },
     { frase: "Scegli la balestra", next: "addestramento", zaino: "balestra" },
     { frase: "Scegli la fionda", next: "addestramento", zaino: "fionda" },
-  ]
-}
+  ],
+};

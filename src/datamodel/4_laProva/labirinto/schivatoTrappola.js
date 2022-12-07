@@ -7,7 +7,7 @@ export default {
     La porta metallica è ancora chiusa e non ci sono altre vie se non ritornare indietro.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/schivatoTrappola.mp3",
   },
-  risposte: portaMetallica.risposte
-}
+  risposte: portaMetallica.risposte,
+};

@@ -3,16 +3,15 @@ export default {
   frase: `
     Lo scudo ti proteggerà, ne sei sicuro.
     
-    Ascolti in un silenzio assoluto i movimenti del tuo nemico che lentamente si avvicinano; 
-    raccogli un sasso da terra e sei pronto a colpire il tuo nemico appena sarà a pochissimi passi da te.
+    Ascolti in silenzio i movimenti del tuo nemico che lentamente si avvicina; raccogli un sasso da terra e sei pronto a colpirlo appena sarà a pochissimi passi da te.
 
-    Gli piombi addosso e nella lotta la guardia riesce a lanciare un dardo con la balestra che potrebbe colpirti.
+    Gli piombi addosso e nella lotta la guardia riesce a lanciare un dardo diretto verso la tua testa.
 
-    Solo la tua prontezza di riflessi può salvarti.
+    Solo i tuoi riflessi possono salvarti.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/scudo2p.mp3",
   },
   gioco: "dice",
   dice: {
@@ -20,6 +19,6 @@ export default {
     fallimento: "trafitto",
     obiettivo: 11, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 4 // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
-}
+};

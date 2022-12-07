@@ -11,4 +11,4 @@ export default {
     src: "/assets/audio/cap90.mp3",
   },
   morte: true,
-}
+};

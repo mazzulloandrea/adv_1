@@ -1,15 +1,15 @@
 export default {
   titolo: "prima prova",
   frase: `
-    Mentre ti muovi, il terreno cede improsvvisamente facendoti cadere in una buca profondi quasi 2 metri.
-    Oltre allo spavento c'è anche la paura perchè sopra di te troneggia Darius che puntandoti la balestra <<Arrenditi!>>.
+    Mentre ti muovi, il terreno cede improvvisamente facendoti cadere in una buca profonda quasi 2 metri.
+    Oltre al dolore c'è anche la paura perchè sopra di te troneggia Darius; puntandoti la balestra ti ordina <<Arrenditi!>>.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/trappola.mp3",
   },
   risposte: [
-    { frase: 'Ti arrendi', next: 'fineSecondaProva', },
-    { frase: 'Mai arrendersi', next: "fineSecondaProvaMorte" },
+    { frase: "Ti arrendi", next: "fineSecondaProva" },
+    { frase: "Mai arrendersi", next: "fineSecondaProvaMorte" },
   ],
-}
+};

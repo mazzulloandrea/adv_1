@@ -8,26 +8,26 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/cadeIlRosso.mp3",
   },
   risposte: [
     {
-      frase: 'Corpo',
+      frase: "Corpo",
       next: "finePrimaProva",
       icon: "corpo",
-      abilita: "corpo"
+      abilita: "corpo",
     },
     {
-      frase: 'Mente',
+      frase: "Mente",
       next: "finePrimaProva",
       icon: "mente",
-      abilita: "mente"
+      abilita: "mente",
     },
     {
-      frase: 'Spirito',
+      frase: "Spirito",
       next: "finePrimaProva",
       icon: "spirito",
-      abilita: "spirito"
+      abilita: "spirito",
     },
   ],
-}
+};

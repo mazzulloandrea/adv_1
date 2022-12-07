@@ -5,11 +5,11 @@ export default {
     `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/tendaRavon.mp3",
   },
   risposte: [
-    { frase: 'Combattimento in mischia', next: "mischia" },
+    { frase: "Combattimento in mischia", next: "mischia" },
     { frase: "Combattimento a distanza", next: "distanza" },
-    { frase: 'Difendersi è la migliore arte', next: "difesa" },
-  ]
-}
+    { frase: "Difendersi è la migliore arte", next: "difesa" },
+  ],
+};

@@ -10,12 +10,12 @@ export default {
   risposte: [
     {
       frase: "Dove sei sorella?",
-      gioco: "text"
+      gioco: "text",
     },
     {
       frase: "Carcadena, tutto bene?",
-      gioco: "text"
-    }
+      gioco: "text",
+    },
   ],
   text: {
     successo: "a3",
@@ -26,26 +26,14 @@ export default {
       "Come si chiama tua sorella?",
       "Come si chiama tuo fratello?",
       "Quanti anni ha tua sorella?",
-      "Quanti anni hai tu?"
+      "Quanti anni hai tu?",
     ],
     risposte: [
-      [
-        "pantelion",
-        "phantelion"
-      ],
-      [
-        "carcadena",
-        "carcadaena"
-      ],
-      [
-        "denred"
-      ],
-      [
-        "14"
-      ],
-      [
-        "14"
-      ]
-    ]
-  }
-}
+      ["pantelion", "phantelion"],
+      ["carcadena", "carcadaena"],
+      ["denred"],
+      ["14"],
+      ["14"],
+    ],
+  },
+};

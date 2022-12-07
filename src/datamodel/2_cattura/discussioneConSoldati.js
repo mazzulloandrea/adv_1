@@ -6,7 +6,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/discussioneConSoldati.mp3",
   },
   risposte: [
     {
@@ -19,13 +19,13 @@ export default {
       frase: "Mente",
       abilita: "mente",
       next: "calmo2",
-      icon: "mente"
+      icon: "mente",
     },
     {
       frase: "Spirito",
       abilita: "spirito",
       next: "calmo2",
-      icon: "spirito"
-    }
+      icon: "spirito",
+    },
   ],
-}
+};

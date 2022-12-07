@@ -1,5 +1,5 @@
 export default {
-  titolo: "prima prova",
+  titolo: "seconda prova",
   frase: `
     Dopo pochi metri svolti l'angolo; prosegui cercando appigli che puoi sfruttare per arrampicarti ma non trovi nulla. 
     Vedi i rami alti, degli alberi all'interno, che fanno ombra e oscurano il sole. 
@@ -8,18 +8,18 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/latoSinistro.mp3",
   },
   risposte: [
-    { frase: 'Entri dalla piccola breccia', gioco: 'dice', },
-    { frase: 'Continui a sinistra della breccia', next: "latoAlto" },
-    { frase: 'Continui a destra della breccia', next: "latoBasso" },
+    { frase: "Entri dalla piccola breccia", gioco: "dice" },
+    { frase: "Continui a sinistra della breccia", next: "latoAlto" },
+    { frase: "Continui a destra della breccia", next: "latoBasso" },
   ],
   dice: {
-    successo: 'brecciaOk',
-    fallimento: 'brecciaKo',
+    successo: "brecciaOk",
+    fallimento: "brecciaKo",
     obiettivo: 8, // numero da raggiungere con il lancio dei dadi
     abilita: ["mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 3 // quanti lanci col dado
-  }
-}
+    lanci: 3, // quanti lanci col dado
+  },
+};

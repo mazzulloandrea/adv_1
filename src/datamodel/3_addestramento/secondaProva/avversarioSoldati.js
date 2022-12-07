@@ -6,7 +6,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/avversarioSoldati.mp3",
   },
   risposte: [
     {
@@ -25,7 +25,7 @@ export default {
       frase: "Spirito",
       abilita: "spirito",
       next: "inizioSecondaProva",
-      icon: "spirito"
-    }
-  ]
-}
+      icon: "spirito",
+    },
+  ],
+};

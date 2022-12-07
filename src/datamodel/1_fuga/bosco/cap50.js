@@ -7,8 +7,6 @@ export default {
     Vi addestreranno a suon di calci e pugni e se non ce la farete.. bhe vi lasceranno morire>>.
     Lui però ce l'aveva fatta ed era tornato, con tanto di armi, armatura, distintivo e cattiveria ... 
     o forse quella l'aveva sempre avuta!
-
-    Continuando a pensare entri nel bosco buio.
   `,
   audio: {
     src: "/assets/audio/cap50.mp3",

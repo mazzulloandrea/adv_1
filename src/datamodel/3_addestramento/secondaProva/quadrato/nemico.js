@@ -10,21 +10,53 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/nemico.mp3",
   },
   risposte: [
-    { frase: "Se vuoi scappare", next: 'scappareDarius' },
+    { frase: "Se vuoi scappare", next: "scappareDarius" },
     { frase: "Se vuoi arrenderti", next: "mortePerResa" },
 
-    { frase: 'Estrai la spada e ti prepari a combattere', next: 'mischia2p', checkZaino: 'spada' },
-    { frase: 'Estrai il bastone e ti prepari a combattere', next: 'mischia2p', checkZaino: 'bastone' },
-    { frase: "Estrai l'ascia e ti prepari a combattere", next: 'mischia2p', checkZaino: 'ascia' },
-    { frase: 'Estrai il martello e ti prepari a combattere', next: 'mischia2p', checkZaino: 'martello' },
-    { frase: "Ti nascondi con il mantello", next: 'mantello2p', checkZaino: 'mantello' },
-    { frase: "Ti prepari con lo scudo", next: 'scudo2p', checkZaino: 'scudo' },
-    { frase: "Ti senti sicuro con la protezione dell'armatura", next: 'armatura2p', checkZaino: 'armatura' },
-    { frase: "Incocchi una freccia sull'arco", next: 'distanza2p', checkZaino: 'arco' },
-    { frase: "Carichi la balestra", next: 'distanza2p', checkZaino: 'balestra' },
-    { frase: "Carichi la fionda", next: 'distanza2p', checkZaino: 'fionda' },
-  ]
-}
+    {
+      frase: "Estrai la spada e ti prepari a combattere",
+      next: "mischia2p",
+      checkZaino: "spada",
+    },
+    {
+      frase: "Estrai il bastone e ti prepari a combattere",
+      next: "mischia2p",
+      checkZaino: "bastone",
+    },
+    {
+      frase: "Estrai l'ascia e ti prepari a combattere",
+      next: "mischia2p",
+      checkZaino: "ascia",
+    },
+    {
+      frase: "Estrai il martello e ti prepari a combattere",
+      next: "mischia2p",
+      checkZaino: "martello",
+    },
+    {
+      frase: "Ti nascondi con il mantello",
+      next: "mantello2p",
+      checkZaino: "mantello",
+    },
+    { frase: "Ti prepari con lo scudo", next: "scudo2p", checkZaino: "scudo" },
+    {
+      frase: "Ti senti sicuro con la protezione dell'armatura",
+      next: "armatura2p",
+      checkZaino: "armatura",
+    },
+    {
+      frase: "Incocchi una freccia sull'arco",
+      next: "distanza2p",
+      checkZaino: "arco",
+    },
+    {
+      frase: "Carichi la balestra",
+      next: "distanza2p",
+      checkZaino: "balestra",
+    },
+    { frase: "Carichi la fionda", next: "distanza2p", checkZaino: "fionda" },
+  ],
+};

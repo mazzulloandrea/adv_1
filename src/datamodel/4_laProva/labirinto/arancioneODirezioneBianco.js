@@ -6,10 +6,16 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/arancioneODirezioneBianco.mp3",
   },
   risposte: [
-    { frase: "Continui a sinistra sul corridoio bianco", next: 'biancoSDirezioneBlu' },
-    { frase: "Torni indietro per la via arancione", next: 'arancioneEDirezioneNero', },
-  ]
-}
+    {
+      frase: "Continui a sinistra sul corridoio bianco",
+      next: "biancoSDirezioneBlu",
+    },
+    {
+      frase: "Torni indietro per la via arancione",
+      next: "arancioneEDirezioneNero",
+    },
+  ],
+};

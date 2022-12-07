@@ -1,7 +1,7 @@
 export default {
   titolo: "prima prova",
   frase: `
-    Carichi come aveva fatto precedentemente Gudrum e anche tu come il tuo compagno prima di te vieni scaraventato a terra; poi, come se non bastasse, vieni sollevato, e ributtato a terra.
+    Carichi come aveva fatto precedentemente Gudrum e anche tu, come il tuo compagno, prima di te, vieni scaraventato a terra; poi, come se non bastasse, vieni sollevato, e ributtato nuovamente sul terreno.
 
     Finisci immediatamente fuori dal cerchio, sei eliminato.
     
@@ -9,7 +9,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/sconfitta2.mp3",
   },
   next: "finePrimaProva",
-}
+};

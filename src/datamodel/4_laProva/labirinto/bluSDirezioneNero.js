@@ -8,10 +8,10 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/bluSDirezioneNero.mp3",
   },
   risposte: [
-    { frase: "Sinistra verso il nero", next: 'neroEDirezioneArancione' },
-    { frase: "Torni indietro per la via blu", next: 'bluNDirezioneBianco', },
-  ]
-}
+    { frase: "Sinistra verso il nero", next: "neroEDirezioneArancione" },
+    { frase: "Torni indietro per la via blu", next: "bluNDirezioneBianco" },
+  ],
+};

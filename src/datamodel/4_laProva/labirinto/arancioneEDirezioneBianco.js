@@ -5,10 +5,16 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/arancioneEDirezioneBianco.mp3",
   },
   risposte: [
-    { frase: "Svolti l'ngolo a sinistra, la via bianca", next: 'biancoNDirezioneBlu', },
-    { frase: "Ritorni sul percorso arancione", next: "arancioneODirezioneNero" },
-  ]
-}
+    {
+      frase: "Svolti l'ngolo a sinistra, la via bianca",
+      next: "biancoNDirezioneBlu",
+    },
+    {
+      frase: "Ritorni sul percorso arancione",
+      next: "arancioneODirezioneNero",
+    },
+  ],
+};

@@ -8,10 +8,13 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/biancoNDirezioneArancione.mp3",
   },
   risposte: [
-    { frase: "Sud, ritornando sui tuoi passi sul percorso bianco", next: 'biancoSDirezioneBlu' },
-    { frase: "Destra percorso arancione", next: 'arancioneEDirezioneNero', },
-  ]
-}
+    {
+      frase: "Sud, ritornando sui tuoi passi sul percorso bianco",
+      next: "biancoSDirezioneBlu",
+    },
+    { frase: "Destra percorso arancione", next: "arancioneEDirezioneNero" },
+  ],
+};

@@ -5,11 +5,13 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+    src: "/assets/audio/cap7.secondaProvaMurafredde",
   },
   risposte: [
-    { frase: "Scegli Giak, muscoloso dai capelli rossi ?", next: "compagnoGiak" },
-    { frase: "Scegli Frozia, grassoccio tuttologo ?", next: "compagnoFrozia" }
-  ]
-}
+    {
+      frase: "Scegli Giak, muscoloso dai capelli rossi ?",
+      next: "compagnoGiak",
+    },
+    { frase: "Scegli Frozia, grassoccio tuttologo ?", next: "compagnoFrozia" },
+  ],
+};

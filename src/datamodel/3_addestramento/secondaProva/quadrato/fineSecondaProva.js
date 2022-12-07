@@ -5,11 +5,10 @@ export default {
 
     Sai che sta per sparare ed in un gesto disperato cerchi di saltare fuori dalla buca.
   `,
-
   audio: {
-    src: "/assets/audio/cap7.mp3",
+    src: "/assets/audio/fineSecondaProva.mp3",
   },
-  gioco: 'gioco9',
+  gioco: "gioco9",
   gioco9: {
     successo: "scappareTrappola",
     fallimento: "fineSecondaProvaMorte",
@@ -17,5 +16,5 @@ export default {
     type: "memory",
     combinazione: ["teschio", "arco", "pirata", "fantasma", "teschio"],
     dataset: "combat",
-  }
-}
+  },
+};

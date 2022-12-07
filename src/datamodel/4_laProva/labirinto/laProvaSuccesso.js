@@ -13,10 +13,13 @@ export default {
 
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/laProvaSuccesso.mp3",
   },
   risposte: [
-    { frase: "Nuoti fino alla corda", next: 'nuotare' },
-    { frase: "Esamini intorno cercando alternative", next: 'cercareAlternative' }
-  ]
-}   
+    { frase: "Nuoti fino alla corda", next: "nuotare" },
+    {
+      frase: "Esamini intorno cercando alternative",
+      next: "cercareAlternative",
+    },
+  ],
+};

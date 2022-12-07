@@ -5,7 +5,7 @@ export default {
     Ora guardi in alto verso il tuo ultimo obiettivo per uscire dal sotterraneo.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/velenoAnnullato.mp3",
   },
-  next: 'cordaRaggiunta'
-}   
+  next: "cordaRaggiunta",
+};

@@ -6,11 +6,11 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/rossoO.mp3",
   },
   risposte: [
-    { frase: "Destra strada bianca", next: 'biancoNDirezioneArancione' },
-    { frase: "Pavimento blu scuro a sinistra", next: 'bluSDirezioneNero', },
-    { frase: "Torni indietro alla statua", next: 'versoIncrocio', },
-  ]
-}
+    { frase: "Destra strada bianca", next: "biancoNDirezioneArancione" },
+    { frase: "Pavimento blu scuro a sinistra", next: "bluSDirezioneNero" },
+    { frase: "Torni indietro alla statua", next: "versoIncrocio" },
+  ],
+};

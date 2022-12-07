@@ -1,31 +1,31 @@
 export default {
-  titolo: "prima prova",
+  titolo: "seconda prova",
   frase: `
-    Su questo lato c'è solo l'ingresso con combinazione e non ci sono appigli o rocce che puoi sfruttare per arrampicarti.
+    Su questo lato c'è solamente l'ingresso con la combinazione e non ci sono appigli o rocce che puoi sfruttare per arrampicarti.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/latoBasso.mp3",
   },
   risposte: [
-    { frase: 'Provi a decifrare la combinazione', gioco: 'cassaforte', },
+    { frase: "Provi a decifrare la combinazione", gioco: "cassaforte" },
     { frase: "Vai a destra", next: "latoDestro" },
-    { frase: 'Vai a sinistra', next: "latoSinistro" },
-    { frase: 'Provi a scavalcare', gioco: "dice" },
+    { frase: "Vai a sinistra", next: "latoSinistro" },
+    { frase: "Provi a scavalcare", gioco: "dice" },
   ],
   cassaforte: {
     successo: "combinazioneOk",
     fallimento: "combinazioneKo",
     durata: "25",
-    type: 'roll',
+    type: "roll",
     domanda: "n# totale soldati ----- n# totale reclute",
-    combinazione: '15:09' // essertag è morto
+    combinazione: "15:09", // essertag è morto
   },
   dice: {
     successo: "scavalcatoOk",
     fallimento: "scavalcatoKo",
     obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo"], // quelle che non si devono usare devono essere escluse
-    lanci: 2 // quanti lanci col dado
-  }
-}
+    lanci: 2, // quanti lanci col dado
+  },
+};

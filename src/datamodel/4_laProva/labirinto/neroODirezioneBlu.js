@@ -7,10 +7,13 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/neroODirezioneBlu.mp3",
   },
   risposte: [
-    { frase: "Destra percorso blu intenso", next: 'bluNDirezioneBianco' },
-    { frase: "Torni indietro per la via nera", next: 'neroEDirezioneArancione', },
-  ]
-}
+    { frase: "Destra percorso blu intenso", next: "bluNDirezioneBianco" },
+    {
+      frase: "Torni indietro per la via nera",
+      next: "neroEDirezioneArancione",
+    },
+  ],
+};

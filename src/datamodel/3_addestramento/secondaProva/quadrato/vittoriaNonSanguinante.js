@@ -9,7 +9,7 @@ export default {
     `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/vittoriaNonSanguinante.mp3",
   },
   risposte: [
     {
@@ -32,6 +32,6 @@ export default {
       next: "capitolo4",
       icon: "spirito",
       vittoria2: true,
-    }
+    },
   ],
-}
+};

@@ -15,11 +15,15 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/difesa.mp3",
   },
   risposte: [
     { frase: "Afferri lo scudo", next: "addestramento", zaino: "scudo" },
-    { frase: "Preferisci l'armatura", next: "addestramento", zaino: "armatura" },
+    {
+      frase: "Preferisci l'armatura",
+      next: "addestramento",
+      zaino: "armatura",
+    },
     { frase: "Scegli il mantello", next: "addestramento", zaino: "mantello" },
-  ]
-}
+  ],
+};

@@ -5,18 +5,18 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/pozzo.mp3",
   },
   risposte: [
-    { frase: 'Strisci per terra', next: "trappola" },
-    { frase: 'Corri velocemente', gioco: "gioco9" },
+    { frase: "Strisci per terra", next: "trappola" },
+    { frase: "Corri velocemente", gioco: "gioco9" },
   ],
   gioco9: {
     fallimento: "trappola",
-    successo: 'nemico',
+    successo: "nemico",
     livello: 2,
     type: "memory",
     combinazione: ["erba", "foresta", "grano", "ruota"],
     dataset: "vario",
-  }
-}
+  },
+};

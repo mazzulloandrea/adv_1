@@ -2,12 +2,12 @@ export default {
   step: 2,
   titolo: "Cattura",
   frase: `
-    Ti dirigi verso tua sorella e, svoltato l'angolo, ti ritrovi davanti Denred con 2 soldati "Eccolo è lui".
-    Tuo fratellastro sta aiutando i soldati e questa è l'ennesima dimostrazione di quanto sia crudele.
-    <<Al vecchio ci penso io, organizzerò un bel funerale ahahhaha ahhaha>>
+    Ti dirigi verso tua sorella e, svoltato l'angolo, ti ritrovi davanti Denred con 2 soldati <<Eccolo è qui>>.
+    Tuo fratellastro sta aiutando le guardie e questa è l'ennesima dimostrazione di quanto sia crudele.
+    <<Al vecchio ci penso io, organizzerò un bel funerale ahah ah>>
     
     I soldati ti legano portandoti su di un carretto, dove ci sono già tua sorella ed altri quattro ragazzi che conosci bene: Aaron, Alexis, Essertag e Gudrum.
-    Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltato?>>.
+    Incroci lo sguardo di Carcadena <<Pantelion perchè non mi hai ascoltata?>>.
     **cornice**
     Nella notte, tra le lamentele ed i pianti delle madri, il carretto inizia a muoversi mentre i soldati brontolano qualcosa sul volere del "Gran Generale" e che, tra un anno, finito l'addestramento, ritornerete a casa.
 
@@ -22,12 +22,12 @@ export default {
     {
       frase: "Preferisci parlare con Carcadena?",
       gioco: "audio",
-      next: "sorella1"
+      next: "sorella1",
     },
     {
       frase: "Preferisci parlare con qualcun altro delle reclute",
       gioco: "audio",
-      next: "parlareAltri"
+      next: "parlareAltri",
     },
-  ]
-}
+  ],
+};

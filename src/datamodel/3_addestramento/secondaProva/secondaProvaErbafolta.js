@@ -9,12 +9,11 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
-    "interrompe": "",
+    src: "/assets/audio/secondaProvaErbafolta.mp3",
   },
   risposte: [
     { frase: "Scegli Gudrum ?", next: "compagnoGudrum" },
     { frase: "Scegli Aaron ?", next: "compagnoAaron" },
-    { frase: "Scegli Alexis ?", next: "compagnoAlexis" }
-  ]
-}
+    { frase: "Scegli Alexis ?", next: "compagnoAlexis" },
+  ],
+};

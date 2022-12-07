@@ -10,7 +10,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/primaProva.mp3",
   },
   gioco: "dice",
   dice: {
@@ -18,6 +18,6 @@ export default {
     fallimento: "ubriaco",
     obiettivo: 12, // numero da raggiungere con il lancio dei dadi
     abilita: ["mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 3 // quanti lanci col dado
-  }
-}
+    lanci: 3, // quanti lanci col dado
+  },
+};

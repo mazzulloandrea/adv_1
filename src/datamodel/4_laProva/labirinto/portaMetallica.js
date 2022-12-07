@@ -6,10 +6,13 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/portaMetallica.mp3",
   },
   risposte: [
-    { frase: "Se vuoi risolvere l'enigma", next: 'enigmaColori' },
-    { frase: "Preferisci ritornare sui tuoi passi nel labirinto", next: 'ritornoLabirinto', },
-  ]
-}
+    { frase: "Se vuoi risolvere l'enigma", next: "enigmaColori" },
+    {
+      frase: "Preferisci ritornare sui tuoi passi nel labirinto",
+      next: "ritornoLabirinto",
+    },
+  ],
+};

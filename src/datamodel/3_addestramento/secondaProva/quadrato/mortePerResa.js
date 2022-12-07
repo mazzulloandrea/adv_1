@@ -9,7 +9,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/mortePerResa.mp3",
   },
-  morte: true
-}
+  morte: true,
+};

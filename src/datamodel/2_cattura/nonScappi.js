@@ -7,7 +7,7 @@ export default {
     Vieni riportato in mezzo agli altri in malo modo, con la minaccia che, se non te ne starai buono e tranquillo, non finirai il viaggio intero.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/nonScappi.mp3",
   },
   next: "calmo",
-}
+};

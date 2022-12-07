@@ -9,12 +9,12 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/versoIncrocio.mp3",
   },
   risposte: [
-    { frase: "Est (rosso)", next: 'rossoE' },
-    { frase: "Ovest (rosso)", next: 'rossoO', },
-    { frase: "Nord (viola)", next: 'violaN', },
-    { frase: "Sud (viola)", next: 'violaS', },
-  ]
-}
+    { frase: "Est (rosso)", next: "rossoE" },
+    { frase: "Ovest (rosso)", next: "rossoO" },
+    { frase: "Nord (viola)", next: "violaN" },
+    { frase: "Sud (viola)", next: "violaS" },
+  ],
+};

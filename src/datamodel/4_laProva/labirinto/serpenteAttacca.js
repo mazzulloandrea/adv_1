@@ -6,15 +6,15 @@ export default {
     Subito raggiungi la corda e cerchi di resistere all'effetto tossico.
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/serpenteAttacca.mp3",
   },
-  gioco: 'gioco9',
+  gioco: "gioco9",
   gioco9: {
-    success: 'velenoAnnullato',
-    fallimento: 'morteAvvelenato',
+    success: "velenoAnnullato",
+    fallimento: "morteAvvelenato",
     livello: 3,
     type: "memory",
     combinazione: ["candela", "cobra", "mare", "pietra", "tomba"],
     dataset: "nature",
   },
-}   
+};

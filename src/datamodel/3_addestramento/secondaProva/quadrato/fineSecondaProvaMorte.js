@@ -6,11 +6,9 @@ export default {
     <<Non aspettavo altro. Ho ucciso io Essertag e farò lo stesso con te!>>.
 
     Come ultima cosa vedi la balestra puntata su di te e senti il clic del meccanismo, dopodichè un dolore fortissimo alla testa e tutto diventa nero.
-
   `,
-
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/fineSecondaProvaMorte.mp3",
   },
-  morte: true
-}
+  morte: true,
+};

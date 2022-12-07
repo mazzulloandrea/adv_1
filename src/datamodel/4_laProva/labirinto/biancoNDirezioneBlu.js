@@ -7,15 +7,18 @@ export default {
 
     a sinistra, mattoni rossi decorano il pavimento,
     avanti un terreno blu intenso che ricorda il mare,
-    ritornando sui tuoi passi il percorso bianco.
+    ritornando sui tuoi passi il percorso bianco che hai appena attraversato
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/biancoNDirezioneBlu.mp3",
   },
   risposte: [
-    { frase: "Sinistra per la via rossa", next: 'versoIncrocio' },
-    { frase: "Torni indietro per la via bianca", next: 'biancoSDirezioneArancione', },
-    { frase: "Avanti pavimento blu", next: 'bluNDirezioneNero', },
-  ]
-}
+    { frase: "Sinistra per la via rossa", next: "versoIncrocio" },
+    {
+      frase: "Torni indietro per la via bianca",
+      next: "biancoSDirezioneArancione",
+    },
+    { frase: "Avanti pavimento blu", next: "bluNDirezioneNero" },
+  ],
+};

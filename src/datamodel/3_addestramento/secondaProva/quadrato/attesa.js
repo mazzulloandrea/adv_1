@@ -1,8 +1,9 @@
-import nemico from './nemico.js';
+import nemico from "./nemico.js";
 
-const resp = nemico.risposte.concat(
-  { frase: 'Vuoi scappare cambiando riparo', next: 'scappareDarius' }
-);
+const resp = nemico.risposte.concat({
+  frase: "Vuoi scappare cambiando riparo",
+  next: "scappareDarius",
+});
 
 export default {
   titolo: "riparo",
@@ -14,7 +15,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/attesa.mp3",
   },
-  risposte: resp
-}
+  risposte: resp,
+};

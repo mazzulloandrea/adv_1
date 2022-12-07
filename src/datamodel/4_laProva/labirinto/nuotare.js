@@ -7,33 +7,33 @@ export default {
 
   `,
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/nuotare.mp3",
   },
   risposte: [
-    { frase: "Cerchi di raggiungere la corda", gioco: 'dice' },
-    { frase: "Torni a riva", gioco: 'dice2' },
+    { frase: "Cerchi di raggiungere la corda", gioco: "dice" },
+    { frase: "Torni a riva", gioco: "dice2" },
     { frase: "Provi a capire che intenzioni ha", gioco: "dice3" },
-    { frase: "Resti immobile", next: 'serpenteAttacca' },
+    { frase: "Resti immobile", next: "serpenteAttacca" },
   ],
   dice: {
-    successo: 'cordaRaggiunta',
-    fallimento: 'serpenteAttacca',
+    successo: "cordaRaggiunta",
+    fallimento: "serpenteAttacca",
     obiettivo: 17, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 4 // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
   dice2: {
-    successo: 'serpenteAttacca',
-    fallimento: 'serpenteAttacca',
+    successo: "serpenteAttacca",
+    fallimento: "serpenteAttacca",
     obiettivo: 20, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 4 // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
   dice3: {
-    successo: 'serpenteInnocuo',
-    fallimento: 'serpenteAttacca',
+    successo: "serpenteInnocuo",
+    fallimento: "serpenteAttacca",
     obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 3 // quanti lanci col dado
-  }
-}   
+    lanci: 3, // quanti lanci col dado
+  },
+};

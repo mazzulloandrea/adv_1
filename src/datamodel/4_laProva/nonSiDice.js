@@ -5,9 +5,9 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/nonSiDice.mp3",
   },
   risposte: [
-    { frase: "Afferri la torcia e inizi a scendere la scala", next: 'scale' }
-  ]
-}
+    { frase: "Afferri la torcia e inizi a scendere la scala", next: "scale" },
+  ],
+};

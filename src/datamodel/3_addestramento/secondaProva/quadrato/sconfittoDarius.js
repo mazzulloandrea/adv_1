@@ -7,19 +7,25 @@ export default {
 
     Hai vinto!
     **cornice**
-    Il tuo nemico, a terra, farfuglia qualcosa che attira la tua attenzione:
-    <<Una sfida finisce con la morte! Esattamente come è accaduto ad Essertag [sputa sangue].
+    Nonostante questo, il tuo nemico, a terra, farfuglia qualcosa che attira la tua attenzione:
+    <<Una sfida finisce con la morte! Esattamente come è accaduto ad Essertag.
     Quel ragazzo se l'è cercata! Ahahah>>
 
     Spalanchi gli occhi a quelle parole... stai pensando a come farla pagare a Darius per quello che ha fatto.
   `,
 
   audio: {
-    src: "/assets/audio/cap7.mp3", // todo
+    src: "/assets/audio/sconfittoDarius.mp3",
   },
   risposte: [
     { frase: "Vuoi uccidere Darius", next: "uccidereDarius", darius: true },
-    { frase: "Vuoi lasciarlo li ed uscire dal quadrato", next: "vittoriaNonSanguinante" },
-    { frase: "Vuoi lasciare sul tuo nemico un ricordo", next: "amputareDarius" }
-  ]
-}
+    {
+      frase: "Vuoi lasciarlo li ed uscire dal quadrato",
+      next: "vittoriaNonSanguinante",
+    },
+    {
+      frase: "Vuoi lasciare sul tuo nemico un ricordo",
+      next: "amputareDarius",
+    },
+  ],
+};
