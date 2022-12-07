@@ -3,10 +3,10 @@ export default {
   frase: `
     Mancano pochi minuti per arrivare alla capanna ma un rumore vi mette in allarme
 
-    [rumore di animale]
+    [verso di animale]
   `,
   audio: {
-    src: "/assets/audio/cap53.mp3", // TODO aggiungere rumore di cingiale
+    src: "/assets/audio/cap53.mp3",
   },
   risposte: [
     {
@@ -16,15 +16,15 @@ export default {
     },
     {
       frase: "Preferisci scappare verso la grotta",
-      next: "cap60"
+      next: "cap60",
     },
     {
       frase: "Meglio scappare verso il fiume",
-      next: "cap70"
+      next: "cap70",
     },
     {
       frase: "Combatti a mani nude",
-      next: "cap90"
-    }
+      next: "cap90",
+    },
   ],
-}
+};
