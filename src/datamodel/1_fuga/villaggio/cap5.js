@@ -5,7 +5,7 @@ export default {
   frase:
     "<<Sono legata insieme ad altri, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
   audio: {
-    src: "/assets/audio/cap5.mp3", // TODO rifre audio ed mettere voce di carcadena
+    src: "/assets/audio/cap5.mp3",
   },
   risposte: cap1.risposte.slice(1),
   dice: cap1.dice,

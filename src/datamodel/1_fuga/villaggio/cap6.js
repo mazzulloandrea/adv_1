@@ -5,7 +5,7 @@ export default {
   frase:
     "<<Sta morendo, ma Pantelion scappa, scappa>> il tono di tua sorella ti fa capire che non c'è un attimo da perdere",
   audio: {
-    src: "/assets/audio/cap6.mp3", // TODO rifare audio e mettere voce di carcadena
+    src: "/assets/audio/cap6.mp3",
   },
   risposte: cap1.risposte.slice(1),
   dice: cap1.dice,

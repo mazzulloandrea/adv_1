@@ -5,7 +5,7 @@ export default {
     Hai sentito parlare di funghi fluorescenti e di pipistrelli feroci, e non ti sei mai addentrato oltre che pochi metri, fin dove la luce del sole illumina l'interno.
   `,
   audio: {
-    src: "/assets/audio/cap61.mp3", // todo tagliare ultimo secondo
+    src: "/assets/audio/cap61.mp3",
   },
   risposte: [
     {

@@ -14,7 +14,7 @@ export default {
 
   `,
   audio: {
-    src: "/assets/audio/viaggio.mp3", // TODO voce di Carcadena
+    src: "/assets/audio/viaggio.mp3",
   },
   risposte: [
     {

@@ -4,7 +4,7 @@ export default {
     Sei arrivato all'angolo del sentiero dove il grano del campo è alto circa 2 metri; all'improvviso senti un fortissimo bruciore al ginocchio e la voce di Carcadena risuonare nella tua mente
     <<Ci sono i soldati, presto scappa!>>`,
   audio: {
-    src: "/assets/audio/cap1.mp3", // TODO metere voce di carcadena
+    src: "/assets/audio/cap1.mp3",
   },
   risposte: [
     {

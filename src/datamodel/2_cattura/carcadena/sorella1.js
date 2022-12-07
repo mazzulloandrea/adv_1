@@ -19,7 +19,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/sorella1.mp3", // TODO integrare con voce di Carcadena
+    src: "/assets/audio/sorella1.mp3",
     interrompe: "",
   },
   risposte: [
