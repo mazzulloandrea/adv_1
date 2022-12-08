@@ -23,6 +23,10 @@ const Intro = ({ onend }) => {
   useEffect(() => {
     const videoIntro = document.getElementById("intro");
     if (videoIntro) {
+      videoIntro.addEventListener("ended", () => {
+        console.log("onend");
+        setActual(0);
+      });
       videoIntro.onended = () => {
         console.log("onended");
         setActual(0);
