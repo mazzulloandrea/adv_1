@@ -20,7 +20,15 @@ const Intro = ({ onend }) => {
   ];
   const [actual, setActual] = useState(-1);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const videoIntro = document.getElementById("intro");
+    if (videoIntro) {
+      videoIntro.onended = () => {
+        console.log("onended");
+        setActual(0);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     if (actual === frasi.length - 1) {
