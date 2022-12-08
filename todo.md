@@ -49,8 +49,6 @@ sito internet
 - Principe
   \*/
 
-// TODO: finire rumoreMisterioso (inserire un rumore all'audio)
-
 /\*\*
 
 - info varie

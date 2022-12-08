@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ProgressBar = styled.div`
   position: absolute;
@@ -9,6 +9,5 @@ export const ProgressBar = styled.div`
   left: 0;
   margin: 0;
 
-  width: ${props => `${((props.step - 1) / (props.totalStep - 1)) * 100}%`
-  }
+  width: ${(props) => `${((props.step - 1) / (props.totalStep - 1)) * 100}%`};
 `;

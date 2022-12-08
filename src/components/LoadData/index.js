@@ -1,6 +1,6 @@
-import { h } from 'preact';
-import { html } from 'htm/preact';
-import style from './style.css';
+import { h } from "preact";
+import { html } from "htm/preact";
+import style from "./style.css";
 
 function LoadData({ yes, not }) {
   return html`

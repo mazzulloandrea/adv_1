@@ -1,6 +1,37 @@
-import { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno } from '/assets/icons/memory/combat'
-import { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu } from '/assets/icons/memory/run';
-import { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra } from '/assets/icons/memory/element';
+import {
+  spada,
+  scudo,
+  teschio,
+  elmo,
+  arco,
+  pirata,
+  fantasma,
+  ascia,
+  mago,
+  pugno,
+} from "/assets/icons/memory/combat";
+import {
+  corri,
+  salta,
+  stop,
+  zigzag,
+  indietro,
+  sinistra,
+  destra,
+  su,
+  giu,
+} from "/assets/icons/memory/run";
+import {
+  acqua,
+  aria,
+  elettricita,
+  fuoco,
+  ghiaccio,
+  natura,
+  sole,
+  luna,
+  terra,
+} from "/assets/icons/memory/element";
 import {
   albero,
   ancora,
@@ -14,96 +45,142 @@ import {
   pietra,
   ponte,
   sentiero,
-  tomba
-} from '/assets/icons/memory/nature';
-import { baffi, erba, falegnameria, foresta, granchio, grano, nave, pozioneCuore, ruota, veleno } from '/assets/icons/memory/vario';
-import { keyToSaveInStorage } from './config';
+  tomba,
+} from "/assets/icons/memory/nature";
+import {
+  baffi,
+  erba,
+  falegnameria,
+  foresta,
+  granchio,
+  grano,
+  nave,
+  pozioneCuore,
+  ruota,
+  veleno,
+} from "/assets/icons/memory/vario";
+import { keyToSaveInStorage } from "./config";
 
 const saveIntoStorage = (item) => {
   if (typeof window !== "undefined") {
     localStorage.setItem(keyToSaveInStorage, JSON.stringify(item));
   }
-}
+};
 
 const getFromStorage = () => {
   if (typeof window !== "undefined") {
     const res = localStorage.getItem(keyToSaveInStorage);
-    if (res && typeof res === 'string') {
+    if (res && typeof res === "string") {
       return JSON.parse(res);
     }
   }
-}
+};
 
 const determinateVictory = (successList) => {
-  if (
-    successList === 'undefined' ||
-    !successList ||
-    !successList.length
-  ) return false;
-  return successList.filter(el => el).length > (successList.length / 2);
-}
-
+  if (successList === "undefined" || !successList || !successList.length)
+    return false;
+  return successList.filter((el) => el).length > successList.length / 2;
+};
 
 const shuffle = (array) => {
-  let currentIndex = array.length, randomIndex;
+  let currentIndex = array.length,
+    randomIndex;
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
-
     // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
     // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
 
   return array;
-}
-
+};
 
 const rgbToHex = (rgb) => {
-  const hexDigits = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
+  const hexDigits = new Array(
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+  );
   // Function to convert rgb color to hex format
   function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    return `#${hex(rgb[1])}${hex(rgb[2])}${hex(rgb[3])}`;
   }
   function hex(x) {
-    return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+    return isNaN(x) ? "00" : hexDigits[(x - (x % 16)) / 16] + hexDigits[x % 16];
   }
   return rgb2hex(rgb);
-}
+};
 
 // sono usati valori Hex per il gioco9
 const paletteColors = {
-  nero: '#000000',
-  grigio: '#808080',
-  marrone: '#964b00',
-  viola: '#9f2b68',
-  red: '#ff0000',
-  arancione: '#ffa500',
-  rosa: '#ffb6c1',
-  azzurro: '#add8e6',
-  verde: '#008000'
-}
+  nero: "#000000",
+  grigio: "#808080",
+  marrone: "#964b00",
+  viola: "#9f2b68",
+  red: "#ff0000",
+  arancione: "#ffa500",
+  rosa: "#ffb6c1",
+  azzurro: "#add8e6",
+  verde: "#008000",
+};
 
 // sono usate le chiavi (mostrate nei cubi) per il gioco9
 const directionsDataset = {
-  N: 'Nord',
-  S: 'Sud',
-  O: 'Ovest',
-  E: 'Est',
-  NO: 'Nord-Ovest',
-  NE: 'Nord-Est',
-  SO: 'Sud-Ovest',
-  SE: 'Sud-Est',
-  X: 'S.O.S.'
-}
+  N: "Nord",
+  S: "Sud",
+  O: "Ovest",
+  E: "Est",
+  NO: "Nord-Ovest",
+  NE: "Nord-Est",
+  SO: "Sud-Ovest",
+  SE: "Sud-Est",
+  X: "S.O.S.",
+};
 
-const combatSet = { spada, scudo, teschio, elmo, arco, pirata, fantasma, ascia, mago, pugno };
+const combatSet = {
+  spada,
+  scudo,
+  teschio,
+  elmo,
+  arco,
+  pirata,
+  fantasma,
+  ascia,
+  mago,
+  pugno,
+};
 
-const runSet = { corri, salta, stop, zigzag, indietro, sinistra, destra, su, giu };
+const runSet = {
+  corri,
+  salta,
+  stop,
+  zigzag,
+  indietro,
+  sinistra,
+  destra,
+  su,
+  giu,
+};
 const natureSet = {
   albero,
   ancora,
@@ -117,10 +194,31 @@ const natureSet = {
   pietra,
   ponte,
   sentiero,
-  tomba
-}
-const elementSet = { acqua, aria, elettricita, fuoco, ghiaccio, natura, sole, luna, terra };
-const varioSet = { baffi, erba, falegnameria, foresta, granchio, grano, nave, pozioneCuore, ruota, veleno };
+  tomba,
+};
+const elementSet = {
+  acqua,
+  aria,
+  elettricita,
+  fuoco,
+  ghiaccio,
+  natura,
+  sole,
+  luna,
+  terra,
+};
+const varioSet = {
+  baffi,
+  erba,
+  falegnameria,
+  foresta,
+  granchio,
+  grano,
+  nave,
+  pozioneCuore,
+  ruota,
+  veleno,
+};
 
 const morteText = [
   "La tua vita e la tua missione finiscono qui",
@@ -134,23 +232,25 @@ const morteText = [
   "Ma come fai ad essere già morto?",
   "...ed eri un passo dalla fine...",
   "Puff, tutto finito!",
-  "Nella tua mente appare il ricordo di Carcadena"
-]
+  "Nella tua mente appare il ricordo di Carcadena",
+];
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
-const numbers = '0123456789';
+const numbers = "0123456789";
 
 function isIOS() {
-  return [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(navigator.platform)
+  return (
+    [
+      "iPad Simulator",
+      "iPhone Simulator",
+      "iPod Simulator",
+      "iPad",
+      "iPhone",
+      "iPod",
+    ].includes(navigator.platform) ||
     // iPad on iOS 13 detection
-    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  );
 }
 
 export {

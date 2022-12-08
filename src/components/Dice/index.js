@@ -1,8 +1,8 @@
-import { Fragment, h } from 'preact';
-import { html } from 'htm/preact';
-import { useEffect, useState } from 'preact/hooks';
-import TitleIcon from '../TitleIcon';
-import dice from '../../assets/icons/dice/dice.svg';
+import { Fragment, h } from "preact";
+import { html } from "htm/preact";
+import { useEffect, useState } from "preact/hooks";
+import TitleIcon from "../TitleIcon";
+import dice from "../../assets/icons/dice/dice.svg";
 
 import {
   Page,
@@ -15,18 +15,23 @@ import {
   Scene,
   Cube,
   RollContainer,
-  Face1, Face2, Face3, Face4, Face5, Face6,
+  Face1,
+  Face2,
+  Face3,
+  Face4,
+  Face5,
+  Face6,
   Tentativi,
   DiceRemaining,
   Risultato,
   ActualResult,
   Obiettivo,
   Prosegui,
-} from './styled';
+} from "./styled";
 
 function Dice({ data, caratteristiche, onend }) {
   const { corpo, mente, spirito } = caratteristiche;
-  const { successo, fallimento, abilita, obiettivo,lanci } = data;
+  const { successo, fallimento, abilita, obiettivo, lanci } = data;
   const [counter, setCounter] = useState(lanci);
   const [cube1, setCube1] = useState();
   const [diceValue1, setDiceValue1] = useState(1);
@@ -51,28 +56,28 @@ function Dice({ data, caratteristiche, onend }) {
     }
   }, []);
 
-  useEffect(() => { }, [counter]);
-  useEffect(() => { }, [diceValue1]);
-  useEffect(() => { }, [diceValue2]);
-  useEffect(() => { }, [diceValue3]);
+  useEffect(() => {}, [counter]);
+  useEffect(() => {}, [diceValue1]);
+  useEffect(() => {}, [diceValue2]);
+  useEffect(() => {}, [diceValue3]);
 
   useEffect(() => {
     if (cube1) {
       rollDice(1);
     }
-  }, [cube1]);
+  }, [cube1, rollDice]);
 
   useEffect(() => {
     if (cube2) {
       rollDice(2);
     }
-  }, [cube2]);
+  }, [cube2, rollDice]);
 
   useEffect(() => {
     if (cube3) {
       rollDice(3);
     }
-  }, [cube3]);
+  }, [cube3, rollDice]);
 
   function getRandomInt(min = 1, max = 7) {
     min = Math.ceil(min);
@@ -80,6 +85,7 @@ function Dice({ data, caratteristiche, onend }) {
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function rollDice(whichCube) {
     let randNum = getRandomInt(1, 7);
     let _cube;
@@ -101,7 +107,7 @@ function Dice({ data, caratteristiche, onend }) {
       if (randNum === diceValue3) rotationType = 7;
       setDiceValue3(randNum);
     }
-    console.log('rotazione', rotationType);
+    console.log("rotazione", rotationType);
     switch (rotationType) {
       case 1:
         _cube.style.transform = `rotateY(360deg) translateZ(0)`;
@@ -117,7 +123,7 @@ function Dice({ data, caratteristiche, onend }) {
         break;
       case 5:
         _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
-        
+
         break;
       case 6:
         _cube.style.transform = `rotateY(-180deg) translateZ(0)`;
@@ -125,14 +131,22 @@ function Dice({ data, caratteristiche, onend }) {
       default:
         // case same number
         // eslint-disable-next-line no-case-declarations
-        const isX = _cube.style.transform.split('X(');
+        const isX = _cube.style.transform.split("X(");
         if (isX.length === 2) {
+          // eslint-disable-next-line radix
           const newValue = parseInt(isX[1]) + 360;
+          // eslint-disable-next-line radix
           console.log(`oldValue ${parseInt(isX[1])}; newValue ${newValue}`);
           _cube.style.transform = `rotateX(${newValue}deg) translateZ(0)`;
         } else {
-          const newValue = parseInt(_cube.style.transform.split('Y(')[1]) + 360;
-          console.log(`oldValue ${parseInt(_cube.style.transform.split('Y(')[1])}; newValue ${newValue}`);
+          // eslint-disable-next-line radix
+          const newValue = parseInt(_cube.style.transform.split("Y(")[1]) + 360;
+          console.log(
+            // eslint-disable-next-line radix
+            `oldValue ${parseInt(
+              _cube.style.transform.split("Y(")[1]
+            )}; newValue ${newValue}`
+          );
           _cube.style.transform = `rotateY(${newValue}deg) translateZ(0)`;
         }
     }
@@ -141,30 +155,33 @@ function Dice({ data, caratteristiche, onend }) {
   function getCubeFace() {
     return html`
       <${Fragment}>
-        <${Face1}><${TitleIcon} type=${'dice1'} /></${Face1}>
-        <${Face2}><${TitleIcon} type=${'dice2'} /></${Face2}>
-        <${Face3}><${TitleIcon} type=${'dice3'} /></${Face3}>
-        <${Face4}><${TitleIcon} type=${'dice4'} /></${Face4}>
-        <${Face5}><${TitleIcon} type=${'dice5'} /></${Face5}>
-        <${Face6}><${TitleIcon} type=${'dice6'} /></${Face6}>
+        <${Face1}><${TitleIcon} type=${"dice1"} /></${Face1}>
+        <${Face2}><${TitleIcon} type=${"dice2"} /></${Face2}>
+        <${Face3}><${TitleIcon} type=${"dice3"} /></${Face3}>
+        <${Face4}><${TitleIcon} type=${"dice4"} /></${Face4}>
+        <${Face5}><${TitleIcon} type=${"dice5"} /></${Face5}>
+        <${Face6}><${TitleIcon} type=${"dice6"} /></${Face6}>
       </${Fragment}>
     `;
   }
-  
+
   function getCube(index) {
     return html`
       <${RollContainer}>
-        <${Cube} id=${`cube${index}`} isDisabled=${counter < 1} style=${{transform: 'rotateY(0deg)'}}
+        <${Cube}
+          id=${`cube${index}`}
+          isDisabled=${counter < 1}
+          style=${{ transform: "rotateY(0deg)" }}
           onClick=${(evt) => {
             setCounter(counter - 1);
             rollDice(index);
             evt.preventDefault();
             evt.stopPropagation();
-          }} 
+          }}
         >
           ${getCubeFace()}
-        </ />    
-      </ />
+        <//>
+      <//>
     `;
   }
 
@@ -175,21 +192,21 @@ function Dice({ data, caratteristiche, onend }) {
 
   function getResult() {
     let result = 0;
-    if (abilita.includes('corpo')) {
+    if (abilita.includes("corpo")) {
       result += corpo + diceValue1;
     }
-    if (abilita.includes('mente')) {
+    if (abilita.includes("mente")) {
       result += mente + diceValue2;
     }
-    if (abilita.includes('spirito')) {
+    if (abilita.includes("spirito")) {
       result += spirito + diceValue3;
     }
     return result;
   }
-  
+
   function prosegui() {
-    if(getResult() > obiettivo) return onend(successo, true);
-    else return onend(fallimento, false);
+    if (getResult() > obiettivo) return onend(successo, true);
+    return onend(fallimento, false);
   }
 
   return html`
@@ -199,17 +216,17 @@ function Dice({ data, caratteristiche, onend }) {
           Lanci rimasti ${getRemainingDice()}
         </${Tentativi}>
         <${DiceArea}>
-          <${AbilitaSection} disabled=${!abilita.includes('corpo')}>
+          <${AbilitaSection} disabled=${!abilita.includes("corpo")}>
             <${Type}>Corpo <${TitleIcon} type=${"corpo"} /></${Type}>
             <${Bonus}>${corpo}</${Bonus}>
             <${Scene}>${getCube(1)}</${Scene}>
           </${AbilitaSection}>
-          <${AbilitaSection} disabled=${!abilita.includes('mente')}>
+          <${AbilitaSection} disabled=${!abilita.includes("mente")}>
             <${Type}>Mente <${TitleIcon} type=${"mente"} /></${Type}>
             <${Bonus}>${mente}</${Bonus}>
             <${Scene}>${getCube(2)}</${Scene}>
           </${AbilitaSection}>
-          <${AbilitaSection} disabled=${!abilita.includes('spirito')}>
+          <${AbilitaSection} disabled=${!abilita.includes("spirito")}>
             <${Type}>Spirito <${TitleIcon} type=${"spirito"} /></${Type}>
             <${Bonus}>${spirito}</${Bonus}>
             <${Scene}>${getCube(3)}</${Scene}>
@@ -223,12 +240,15 @@ function Dice({ data, caratteristiche, onend }) {
             ${getResult()}
           </${ActualResult}>
           <${Obiettivo} valid=${getResult() > obiettivo}>
-            ${getResult() > obiettivo 
-              ? `Bravo! Hai raggiunto ${obiettivo +1}` 
-              : `Fai almeno ${obiettivo + 1}`}
+            ${
+              getResult() > obiettivo
+                ? `Bravo! Hai raggiunto ${obiettivo + 1}`
+                : `Fai almeno ${obiettivo + 1}`
+            }
           </${Obiettivo}>
         </${Risultato}>
-        <${Prosegui} valid=${getResult() > obiettivo} onClick=${() => prosegui()}>Prosegui<//>
+        <${Prosegui} valid=${getResult() > obiettivo} onClick=${() =>
+    prosegui()}>Prosegui<//>
       </${Area2}>
     </${Page}>
   `;

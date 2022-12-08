@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 const tablet = `(min-width: 500px)`;
-const desktop = `(min-width: 900px)`;
+// const desktop = `(min-width: 900px)`;
 
 export const Header = styled.div`
   position: absolute;
@@ -100,7 +100,7 @@ export const Right = styled.div`
 export const ObjectInZaino = styled.div`
   width: 10vw;
   height: 10vh;
-`
+`;
 
 export const Abilita = styled.div`
   width: 30vw;

@@ -1,12 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 // for portrait
-const l = '13';
+const l = "13";
 // const l = '75';
 const diceDimension = 50;
 
-export const Page = styled.div`
-`;
+export const Page = styled.div``;
 
 export const Area1 = styled.div`
   height: 38vh;
@@ -28,13 +27,15 @@ export const DiceArea = styled.div`
   height: 25vh;
   height: 200px;
   justify-content: space-between;
-`
+`;
 
 export const AbilitaSection = styled.div`
-  ${props => props.disabled && css`
-    opacity: 0.2;
-    pointer-events: none;
-  `}
+  ${(props) =>
+    props.disabled &&
+    css`
+      opacity: 0.2;
+      pointer-events: none;
+    `}
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +58,7 @@ export const Type = styled.div`
     margin-left: 10px;
 }
   }
-`
+`;
 
 export const Bonus = styled(Type)``;
 
@@ -79,9 +80,11 @@ export const Cube = styled.div`
   transform-style: preserve-3d;
   transition: transform 0.5s;
   position: relative;
-  ${props => props.isDisabled && css`
-    pointer-events: none;
-  `}
+  ${(props) =>
+    props.isDisabled &&
+    css`
+      pointer-events: none;
+    `}
 `;
 
 export const RollContainer = styled.div`
@@ -109,31 +112,29 @@ const Face = styled.div`
 `;
 
 export const Face1 = styled(Face)`
-// transform: rotateY(180deg) translateZ(-${l}vw);
-transform: rotateY(180deg) translateZ(-${diceDimension}px);
-`
+  // transform: rotateY(180deg) translateZ(-${l}vw);
+  transform: rotateY(180deg) translateZ(-${diceDimension}px);
+`;
 export const Face2 = styled(Face)`
-// transform: rotateX(90deg) translateZ(-${l}vw);
-transform: rotateX(90deg) translateZ(-${diceDimension}px);
-`
+  // transform: rotateX(90deg) translateZ(-${l}vw);
+  transform: rotateX(90deg) translateZ(-${diceDimension}px);
+`;
 export const Face3 = styled(Face)`
   // transform: rotateY(-90deg) translateZ(-${l}vw);
   transform: rotateY(-90deg) translateZ(-${diceDimension}px);
-`
+`;
 export const Face4 = styled(Face)`
   // transform: rotateY(90deg) translateZ(-${l}vw);
   transform: rotateY(90deg) translateZ(-${diceDimension}px);
-`
+`;
 export const Face5 = styled(Face)`
   // transform: rotateX(-90deg) translateZ(-${l}vw);
   transform: rotateX(-90deg) translateZ(-${diceDimension}px);
-  
-`
+`;
 export const Face6 = styled(Face)`
   // transform: rotateY(0deg) translateZ(-${l}vw);
   transform: rotateY(0deg) translateZ(-${diceDimension}px);
-  
-`
+`;
 
 export const Tentativi = styled.div`
   border-bottom: 2px solid black;
@@ -162,10 +163,9 @@ export const Risultato = styled.div`
   align-items: center;
 `;
 
-
 export const Obiettivo = styled.div`
   font-size: 1.5em;
-  color: ${props => props.valid ? 'green' : 'firebrick'};
+  color: ${(props) => (props.valid ? "green" : "firebrick")};
   font-weight: 500;
 `;
 
@@ -184,19 +184,18 @@ export const Prosegui = styled.button`
   align-items: center;
   font-size: 1.5em;
   padding: 4vh 2vw;
-  
-  ${props => props.valid
-    ? css`
-      background-color: green;
-      color: white;
-    `
-    : css`
-      background-color: burlywood;
-      color: black;
-    `
-  }
-`;
 
+  ${(props) =>
+    props.valid
+      ? css`
+          background-color: green;
+          color: white;
+        `
+      : css`
+          background-color: burlywood;
+          color: black;
+        `}
+`;
 
 export const CubeFace = styled.div`
   position: absolute;
@@ -211,9 +210,9 @@ export const CubeFace = styled.div`
   font-weight: bold;
   color: white;
   text-align: center;
-  background: black;  
+  background: black;
   opacity: 0.75;
-  `;
+`;
 
 export const CubeFace1 = styled(CubeFace)`
   transform: rotateY(0deg) translateZ(26vw);

@@ -1,6 +1,6 @@
-const initialcap = '_0';
+const initialcap = "_0";
 
-const keyToSaveInStorage = 'GV-1';
+const keyToSaveInStorage = "GV-1";
 
 const componentList = {
   audio: 0,
@@ -12,11 +12,14 @@ const componentList = {
   quiz: 6,
   gioco9: 7,
   dice: 8,
-}
+};
 
 const initialAbilita = {
   step: 1,
-  corpo: 0, mente: 0, spirito: 0, vita: 3,
+  corpo: 0,
+  mente: 0,
+  spirito: 0,
+  vita: 3,
   zaino: [], //["corda", "accetta", "razione", "chiave1"],
   borsello: 0,
   chiavi: 0,
@@ -27,8 +30,7 @@ const initialAbilita = {
   helpCount: 0,
   helpCountMax: 3,
   // zaino: ["corda", "accetta", "razione"],
-}
-
+};
 
 const tutorialConfig = {
   audio: {
@@ -39,61 +41,54 @@ const tutorialConfig = {
     active: true,
   },
   risposte: {
-    text: [
-      "Clicca su di una voce per proseguire",
-      "Scegli il tuo percorso"
-    ],
+    text: ["Clicca su di una voce per proseguire", "Scegli il tuo percorso"],
     active: true,
   },
   gioco9: {
     text: [
       "Memorizza le immagini che vengono mostrate",
-      "Hai una buona memoria ?"
+      "Hai una buona memoria ?",
     ],
     active: true,
   },
   text: {
-    text: [
-      "Sei stato attento?",
-      "Rispondi alla domanda"
-    ],
+    text: ["Sei stato attento?", "Rispondi alla domanda"],
     active: true,
   },
   dice: {
     text: [
       "Usa il Corpo, la Mente e lo Spirito",
-      "Lancia i dadi per superare la difficoltà "
+      "Lancia i dadi per superare la difficoltà ",
     ],
     active: true,
   },
   cassaforte: {
     text: [
       "Leggi bene la combinazione",
-      "Tappa sul lucchetto e conferma il codice"
+      "Tappa sul lucchetto e conferma il codice",
     ],
     active: true,
   },
   chiave: {
     text: [
       "Risolvendo i giochi in modo corretto guadagnerai 1 chiave",
-      "Quando arriverai a 3 chiavi potrai ottenere un premio"
+      "Quando arriverai a 3 chiavi potrai ottenere un premio",
     ],
     active: true,
   },
   chiavi: {
     text: [
       "Usa le chiavi per aprire i bauli",
-      "Se sarai fortunato potrai aumentare le tue abilità e recuperare vita"
+      "Se sarai fortunato potrai aumentare le tue abilità e recuperare vita",
     ],
     active: true,
   },
-}
-
+};
 
 export {
   componentList,
   keyToSaveInStorage,
   initialAbilita,
   initialcap,
-  tutorialConfig
-}
+  tutorialConfig,
+};

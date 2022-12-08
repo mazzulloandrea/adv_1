@@ -1,9 +1,9 @@
-import { h } from 'preact';
-import { html } from 'htm/preact';
-import Spezzato from '../../assets/icons/ferite/heartCrash.svg';
-import { initialAbilita } from '../config';
-import TitleIcon from '../TitleIcon';
-import StepProgressBar from '../StepProgressBar';
+import { h } from "preact";
+import { html } from "htm/preact";
+import Spezzato from "../../assets/icons/ferite/heartCrash.svg";
+import { initialAbilita } from "../config";
+import TitleIcon from "../TitleIcon";
+import StepProgressBar from "../StepProgressBar";
 import {
   Header,
   TopContainer,
@@ -16,7 +16,7 @@ import {
   Left,
   Center,
   Right,
-} from './styled.js';
+} from "./styled.js";
 
 const Intestazione = ({ step = 0, abilita = {} }) => {
   const { corpo, mente, spirito, vita, zaino, chiavi, borsello } = abilita;
@@ -42,30 +42,29 @@ const Intestazione = ({ step = 0, abilita = {} }) => {
         </${AbilitaIconContainer}>
         <${Value}>${spirito}</${Value}>
       </${Caratteristica}>
-    </${AbilitaContainer}>`
-  };
+    </${AbilitaContainer}>`;
+  }
 
   function getVita() {
     const total = new Array(initialAbilita.vita).fill(0);
     const vitaActual = new Array(vita).fill(0);
     return html`<${Cuori}>
-      ${vitaActual.map(() => html`
-       <${TitleIcon} type="cuore" />
-      `)}
-      ${total.slice(vitaActual.length).map(() => html`
-        <${Spezzato} />
-      `)}
+      ${vitaActual.map(() => html` <${TitleIcon} type="cuore" /> `)}
+      ${total.slice(vitaActual.length).map(() => html` <${Spezzato} /> `)}
     </${Cuori}>
     `;
   }
 
   function getZaino() {
     return html`
-      ${zaino.map((z, index) => index < initialAbilita.zainoMaxLength && html`<div>
-        <${TitleIcon} type=${z} />
-        </div>`
+      ${zaino.map(
+        (z, index) =>
+          index < initialAbilita.zainoMaxLength &&
+          html`<div>
+            <${TitleIcon} type=${z} />
+          </div>`
       )}
-    `
+    `;
   }
 
   // Layout functions Left, center e Right
@@ -77,21 +76,27 @@ const Intestazione = ({ step = 0, abilita = {} }) => {
         ${getAbilita()}
       </${Abilita}>
     </${Left}>
-    `
+    `;
   }
 
   function getCenter() {
     return html`
       <${Center}>
         <div>
-          ${chiavi > 0  && html`
+          ${
+            chiavi > 0 &&
+            html`
           <${TitleIcon} type=${"chiavi"} />
-          <${Value}>${chiavi}</${Value}>`}
+          <${Value}>${chiavi}</${Value}>`
+          }
         </div>
         <div>
-          ${borsello > 0  && html`
+          ${
+            borsello > 0 &&
+            html`
           <${TitleIcon} type=${"borsello"} />
-          <${Value}>${borsello}</${Value}>`}
+          <${Value}>${borsello}</${Value}>`
+          }
         </div>
       </${Center}>
     `;
@@ -100,13 +105,11 @@ const Intestazione = ({ step = 0, abilita = {} }) => {
   function getRight() {
     return html`
       <${Right}>
-        ${zaino.length > 0 && html`
-        <${TitleIcon} type=${"zaino"} />`}
+        ${zaino.length > 0 && html` <${TitleIcon} type=${"zaino"} />`}
         ${zaino.length > 0 && html`<div>${getZaino()}</div>`}
       </${Right}>
-    `
+    `;
   }
-
 
   return html`
       <${Header}>

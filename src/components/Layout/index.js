@@ -71,7 +71,7 @@ const Layout = () => {
   useEffect(() => {
     if (!actual) return;
     updateStorage();
-  }, [actual]);
+  }, [actual, updateStorage]);
 
   // useEffect(() => {
   // }, [timerValue]);
@@ -107,6 +107,7 @@ const Layout = () => {
 
   */
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateStorage = () => {
     let data = getFromStorage() || {};
     if (actual) {

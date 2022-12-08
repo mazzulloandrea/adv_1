@@ -55,7 +55,6 @@ function Audio({
     return html`<p>${el}</p>`;
   };
 
-  // console.log(helpCountMax, helpCount);
   return html`
     <div>
       ${step && html`<div class=${style.capitolo}>CAPITOLO ${step}</div>`}
@@ -92,7 +91,6 @@ function Audio({
           onplaying=${() => setPlay(true)}
         >
           <source src=${data.src} type="audio/mp3" />
-          <!-- <source src=${"/assets/audio/cap0.m4a"} type="audio/mp3" /> -->
           Your browser does not support the audio tag.
         </audio>
       </div>
