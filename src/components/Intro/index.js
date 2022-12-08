@@ -140,7 +140,7 @@ const Intro = ({ onend }) => {
               autoplay=${"autoplay"}
               playsinline
               onended=${() => {
-                // console.log("finito");
+                console.log("finito");
                 setActual(0);
               }}
             >
