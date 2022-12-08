@@ -68,6 +68,19 @@ const Layout = () => {
     });
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const updateStorage = useCallback(() => {
+    let data = getFromStorage() || {};
+    if (actual) {
+      data = Object.assign(data, { cap: actual.cap });
+    }
+    if (abilita) {
+      data = Object.assign(data, { abilita });
+    }
+    // console.log("dati che salvo per LOG", data);
+    saveIntoStorage(data);
+  }, [abilita, actual]);
+
   useEffect(() => {
     if (!actual) return;
     updateStorage();
@@ -106,19 +119,6 @@ const Layout = () => {
     },[timer])
 
   */
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const updateStorage = useCallback(() => {
-    let data = getFromStorage() || {};
-    if (actual) {
-      data = Object.assign(data, { cap: actual.cap });
-    }
-    if (abilita) {
-      data = Object.assign(data, { abilita });
-    }
-    // console.log("dati che salvo per LOG", data);
-    saveIntoStorage(data);
-  }, [abilita, actual]);
 
   const continueFromStorage = (accumulatedAchievement) => {
     setLoad(false);
