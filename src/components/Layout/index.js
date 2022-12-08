@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { html } from "htm/preact";
-import { useEffect, useState } from "preact/hooks";
+import { useCallback, useEffect, useState } from "preact/hooks";
 import ReactGA from "react-ga4";
 import { initialcap, initialAbilita, tutorialConfig } from "../config";
 import { saveIntoStorage, getFromStorage } from "../utils";
@@ -108,7 +108,7 @@ const Layout = () => {
   */
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const updateStorage = () => {
+  const updateStorage = useCallback(() => {
     let data = getFromStorage() || {};
     if (actual) {
       data = Object.assign(data, { cap: actual.cap });
@@ -118,7 +118,7 @@ const Layout = () => {
     }
     // console.log("dati che salvo per LOG", data);
     saveIntoStorage(data);
-  };
+  }, [abilita, actual]);
 
   const continueFromStorage = (accumulatedAchievement) => {
     setLoad(false);
