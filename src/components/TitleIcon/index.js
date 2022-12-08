@@ -3,6 +3,7 @@
 /* eslint-disable no-duplicate-imports */
 import { h } from "preact";
 import { html } from "htm/preact";
+import logo from "../../assets/icons/intro/logo.svg";
 import corpo from "../../assets/icons/intestazione/caratteristiche/corpo.svg";
 import mente from "../../assets/icons/intestazione/caratteristiche/mente.svg";
 import spirito from "../../assets/icons/intestazione/caratteristiche/spirito.svg";
@@ -59,6 +60,7 @@ import cornice from "../../assets/images/cornice.png";
 
 function TitleIcon({ type, onClick = () => {} }) {
   const allIconSvg = {
+    logo,
     corpo,
     mente,
     spirito,

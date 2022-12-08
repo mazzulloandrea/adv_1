@@ -30,6 +30,7 @@
   width: 100vw;
   height: 100vh;
   background-color: lightblue;
+  background-color: black;
 }
 
 .titleContainer {
@@ -58,8 +59,8 @@
 }
 
 .emerald img {
-  width: 50vw;
-  max-width: 50vh;
+  width: 45vw;
+  max-width: 45vh;
   height: auto;
 }
 
@@ -84,7 +85,7 @@
 
 .animationContainer {
   font-size: 3em;
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,4 +117,23 @@
   min-height: 100%;
   opacity: 0.3;
   z-index: 1;
+}
+
+.bkgVideoFull {
+  top: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  background-color: black;
+}
+
+.logo {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  animation: appear 2s;
 }

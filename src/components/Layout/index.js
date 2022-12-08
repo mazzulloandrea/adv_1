@@ -53,7 +53,7 @@ const Layout = () => {
       }
     });
     window.addEventListener("visibilitychange", (evt) => {
-      console.log("visibilitychange", evt);
+      // console.log("visibilitychange", evt);
       const audioLow = document.getElementById("audioBackgroundLow");
       const audioIntro = document.getElementById("soundtrack");
       if (evt.target.visibilityState === "visible") {
@@ -102,7 +102,7 @@ const Layout = () => {
     }, [tutorial]);
 
     useEffect(() => {
-      console.log(timer);
+      // console.log(timer);
     },[timer])
 
   */
@@ -116,7 +116,7 @@ const Layout = () => {
     if (abilita) {
       data = Object.assign(data, { abilita });
     }
-    console.log("dati che salvo per LOG", data);
+    // console.log("dati che salvo per LOG", data);
     saveIntoStorage(data);
   };
 
@@ -135,7 +135,7 @@ const Layout = () => {
       //   setTimerValue(Date.now());
       // }, 1000);
       // setTimer(interval);
-      console.log();
+      // eslint-disable-next-line no-lonely-if
       if (accumulatedAchievement) {
         setActual({ cap: initialcap });
         setAbilita(initialAbilita);
@@ -333,11 +333,11 @@ const Layout = () => {
 
   const whichComponent = () => {
     const actualCap = story[actual.cap];
-    console.log(`
-      actual cap = ${actual.cap}, 
-      component = ${actualComponent}
-      abilita = ${JSON.stringify(abilita)}
-    `);
+    // console.log(`
+    //   actual cap = ${actual.cap},
+    //   component = ${actualComponent}
+    //   abilita = ${JSON.stringify(abilita)}
+    // `);
     if (actualComponent === "achievement") {
       return html`<${Achievement}
         abilita=${abilita}

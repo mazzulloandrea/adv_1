@@ -64,17 +64,17 @@ function Cassaforte({ data, onend }) {
 
   useEffect(() => {
     if (!viewSand) verifica();
-  }, [viewSand]);
+  }, [verifica, viewSand]);
   useEffect(() => {
-    console.log("switchValue", switchValue);
+    // console.log("switchValue", switchValue);
   }, [switchValue]);
 
   useEffect(() => {
-    console.log("datetime", datetimeValue);
+    // console.log("datetime", datetimeValue);
   }, [datetimeValue]);
 
   useEffect(() => {
-    console.log("select", selectValue);
+    // console.log("select", selectValue);
   }, [selectValue]);
 
   const verifica = useCallback(
@@ -84,7 +84,7 @@ function Cassaforte({ data, onend }) {
           setRollerVisibile(false);
           roller.hide();
         }
-        console.log(roller);
+        // console.log(roller);
         if (date === combinazione) {
           return onend(successo, true);
         }

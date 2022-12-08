@@ -1,6 +1,6 @@
 import { Fragment, h } from "preact";
 import { html } from "htm/preact";
-import { useEffect, useState } from "preact/hooks";
+import { useCallback, useEffect, useState } from "preact/hooks";
 import TitleIcon from "../TitleIcon";
 import dice from "../../assets/icons/dice/dice.svg";
 
@@ -86,71 +86,75 @@ function Dice({ data, caratteristiche, onend }) {
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  function rollDice(whichCube) {
-    let randNum = getRandomInt(1, 7);
-    let _cube;
-    let rotationType = randNum;
-    // let oldValue;
-    if (whichCube === 1) {
-      // oldValue = diceValue1;
-      _cube = cube1;
-      if (randNum === diceValue1) rotationType = 7;
-      setDiceValue1(randNum);
-    } else if (whichCube === 2) {
-      // oldValue = diceValue1;
-      _cube = cube2;
-      if (randNum === diceValue2) rotationType = 7;
-      setDiceValue2(randNum);
-    } else {
-      // oldValue = diceValue1;
-      _cube = cube3;
-      if (randNum === diceValue3) rotationType = 7;
-      setDiceValue3(randNum);
-    }
-    console.log("rotazione", rotationType);
-    switch (rotationType) {
-      case 1:
-        _cube.style.transform = `rotateY(360deg) translateZ(0)`;
-        break;
-      case 2:
-        _cube.style.transform = `rotateX(90deg) translateZ(0)`;
-        break;
-      case 3:
-        _cube.style.transform = `rotateY(-90deg) translateZ(0)`;
-        break;
-      case 4:
-        _cube.style.transform = `rotateY(90deg) translateZ(0)`;
-        break;
-      case 5:
-        _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
+  const rollDice = useCallback(
+    (whichCube) => {
+      let randNum = getRandomInt(1, 7);
+      let _cube;
+      let rotationType = randNum;
+      // let oldValue;
+      if (whichCube === 1) {
+        // oldValue = diceValue1;
+        _cube = cube1;
+        if (randNum === diceValue1) rotationType = 7;
+        setDiceValue1(randNum);
+      } else if (whichCube === 2) {
+        // oldValue = diceValue1;
+        _cube = cube2;
+        if (randNum === diceValue2) rotationType = 7;
+        setDiceValue2(randNum);
+      } else {
+        // oldValue = diceValue1;
+        _cube = cube3;
+        if (randNum === diceValue3) rotationType = 7;
+        setDiceValue3(randNum);
+      }
+      // console.log("rotazione", rotationType);
+      switch (rotationType) {
+        case 1:
+          _cube.style.transform = `rotateY(360deg) translateZ(0)`;
+          break;
+        case 2:
+          _cube.style.transform = `rotateX(90deg) translateZ(0)`;
+          break;
+        case 3:
+          _cube.style.transform = `rotateY(-90deg) translateZ(0)`;
+          break;
+        case 4:
+          _cube.style.transform = `rotateY(90deg) translateZ(0)`;
+          break;
+        case 5:
+          _cube.style.transform = `rotateX(-90deg) translateZ(0)`;
 
-        break;
-      case 6:
-        _cube.style.transform = `rotateY(-180deg) translateZ(0)`;
-        break;
-      default:
-        // case same number
-        // eslint-disable-next-line no-case-declarations
-        const isX = _cube.style.transform.split("X(");
-        if (isX.length === 2) {
-          // eslint-disable-next-line radix
-          const newValue = parseInt(isX[1]) + 360;
-          // eslint-disable-next-line radix
-          console.log(`oldValue ${parseInt(isX[1])}; newValue ${newValue}`);
-          _cube.style.transform = `rotateX(${newValue}deg) translateZ(0)`;
-        } else {
-          // eslint-disable-next-line radix
-          const newValue = parseInt(_cube.style.transform.split("Y(")[1]) + 360;
-          console.log(
+          break;
+        case 6:
+          _cube.style.transform = `rotateY(-180deg) translateZ(0)`;
+          break;
+        default:
+          // case same number
+          // eslint-disable-next-line no-case-declarations
+          const isX = _cube.style.transform.split("X(");
+          if (isX.length === 2) {
             // eslint-disable-next-line radix
-            `oldValue ${parseInt(
-              _cube.style.transform.split("Y(")[1]
-            )}; newValue ${newValue}`
-          );
-          _cube.style.transform = `rotateY(${newValue}deg) translateZ(0)`;
-        }
-    }
-  }
+            const newValue = parseInt(isX[1]) + 360;
+            // eslint-disable-next-line radix
+            // console.log(`oldValue ${parseInt(isX[1])}; newValue ${newValue}`);
+            _cube.style.transform = `rotateX(${newValue}deg) translateZ(0)`;
+          } else {
+            // eslint-disable-next-line radix
+            const newValue =
+              parseInt(_cube.style.transform.split("Y(")[1]) + 360;
+            // console.log(
+            //   // eslint-disable-next-line radix
+            //   `oldValue ${parseInt(
+            //     _cube.style.transform.split("Y(")[1]
+            //   )}; newValue ${newValue}`
+            // );
+            _cube.style.transform = `rotateY(${newValue}deg) translateZ(0)`;
+          }
+      }
+    },
+    [cube1, cube2, cube3, diceValue1, diceValue2, diceValue3]
+  );
 
   function getCubeFace() {
     return html`

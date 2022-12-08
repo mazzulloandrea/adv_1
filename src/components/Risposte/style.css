@@ -59,6 +59,7 @@
 
 .iconContainer {
   background: transparent !important;
+  display: flex;
 }
 
 .iconContainer>svg {
