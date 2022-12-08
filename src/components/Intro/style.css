@@ -71,10 +71,9 @@
   width: 15vw;
   height: 15vw;
   border-radius: 50%;
-  background-color: greenyellow;
-  max-height: 15vh;
-  max-width: 15vh;
-  z-index: 10;
+  background-color: lightgreen;
+  border-width: 3px;
+  border: 3px solid lightgreen;
 }
 
 .saltaAnimation {
@@ -136,4 +135,8 @@
   margin: 0 auto;
   padding-bottom: 30px;
   animation: appear 2s;
+}
+
+.credits {
+  font-size: 20px;
 }

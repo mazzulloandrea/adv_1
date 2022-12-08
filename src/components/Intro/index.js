@@ -9,7 +9,8 @@ import allBkgVideo from "../../assets/video";
 
 const Intro = ({ onend }) => {
   const frasi = [
-    "",
+    "", // logo
+    "", // ringraziamenti
     "Prenditi 5 minuti",
     "C'è una storia dove TU sei il protagonista!",
     "La strada è lunga e piena di difficoltà",
@@ -26,15 +27,24 @@ const Intro = ({ onend }) => {
       const salta = document.getElementById("salta");
       salta.classList.add(style.saltaAnimation);
     }
+    // force change credits page
+    if (actual === 1) {
+      setTimeout(() => {
+        if (actual === 1) {
+          setActual(2);
+        }
+      }, 3500);
+    }
   }, [actual, frasi.length]);
 
   const changeFrase = () => {
+    console.log(actual);
     setActual(actual + 1);
   };
 
   return html`
     <div class=${style.fullPage} id="main">
-      ${actual > 0 &&
+      ${actual > 1 &&
       html`<div id="salta" class=${style.salta} onClick=${() => onend()}>
         <${next} />
       </div>`}
@@ -45,9 +55,9 @@ const Intro = ({ onend }) => {
           onClick=${() => {
             changeFrase();
             const audio = document.getElementById("soundtrack");
-            const video = document.getElementById("fiammaBackground");
+            // const video = document.getElementById("fiammaBackground");
             if (audio.paused) audio.play();
-            if (video.paused) video.play();
+            // if (video.paused) video.play();
           }}
         >
           <div class=${style.logo}>
@@ -58,12 +68,31 @@ const Intro = ({ onend }) => {
           </div>
         </div>`}
         ${actual === 1 &&
-        html`<div
-          class=${style.animation}
-          onanimationend=${() => changeFrase()}
-        >
-          ${frasi[actual]}
-        </div>`}
+        html`
+          <article id="credits" class=${style.credits}>
+            <article>
+              <p>
+                <div>Andrea Mazzullo</div>
+                <div>Edited in 2022</div>
+              </p>
+            </article>
+            <article>
+              <p>Video intro Creative Content</p>
+            </article>
+            <article>
+              <p>Audio Fire and Tunder, by Cjbeards</p>
+            </article>
+            <article>
+              <p>Graphics contents Pixelpollution</p>
+            </article>
+            <article>
+              <p>
+                Voices Sara Cattaneo, Paolo Giudici, Tommaso Mantegazza, Andrea
+                Mazzullo, Alberto Pejrano, Cristiano Soddu
+              </p>
+            </article>
+          </article>
+        `}
         ${actual === 2 &&
         html`<div
           class=${style.animation}
@@ -93,8 +122,16 @@ const Intro = ({ onend }) => {
           ${frasi[actual]}
         </div>`}
         ${actual === 6 &&
+        html`<div
+          class=${style.animation}
+          onanimationend=${() => changeFrase()}
+        >
+          ${frasi[actual]}
+        </div>`}
+        ${actual === 7 &&
         html`<div class=${style.auricolari}>${frasi[actual]}</div>`}
       </div>
+      <!-- multimedia files -->
       ${actual === -1
         ? html`
             <video
@@ -103,7 +140,7 @@ const Intro = ({ onend }) => {
               autoplay=${"autoplay"}
               playsinline
               onended=${() => {
-                console.log("finito");
+                // console.log("finito");
                 setActual(0);
               }}
             >
