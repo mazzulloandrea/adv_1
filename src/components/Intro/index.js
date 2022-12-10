@@ -22,17 +22,17 @@ const Intro = ({ onend }) => {
   // const [actual, setActual] = useState(3);
 
   useEffect(() => {
-    const videoIntro = document.getElementById("intro");
-    if (videoIntro) {
-      videoIntro.addEventListener("ended", () => {
-        console.log("onend");
-        setActual(0);
-      });
-      videoIntro.onended = () => {
-        console.log("onended");
-        setActual(0);
-      };
-    }
+    // const videoIntro = document.getElementById("intro");
+    // if (videoIntro) {
+    //   videoIntro.addEventListener("ended", () => {
+    //     // console.log("onend");
+    //     setActual(0);
+    //   });
+    //   videoIntro.onended = () => {
+    //     // console.log("onended");
+    //     setActual(0);
+    //   };
+    // }
   }, []);
 
   useEffect(() => {
@@ -40,18 +40,18 @@ const Intro = ({ onend }) => {
       const salta = document.getElementById("salta");
       salta.classList.add(style.saltaAnimation);
     }
-    // force change credits page
-    if (actual === 1) {
-      setTimeout(() => {
-        if (actual === 1) {
-          setActual(2);
-        }
-      }, 3500);
-    }
+    // // force change credits page
+    // if (actual === 1) {
+    //   setTimeout(() => {
+    //     if (actual === 1) {
+    //       setActual(2);
+    //     }
+    //   }, 3500);
+    // }
   }, [actual, frasi.length]);
 
   const changeFrase = () => {
-    console.log(actual);
+    // console.log(actual);
     setActual(actual + 1);
   };
 
@@ -82,7 +82,13 @@ const Intro = ({ onend }) => {
         </div>`}
         ${actual === 1 &&
         html`
-          <article id="credits" class=${style.credits}>
+          <article id="credits" 
+            class=${style.credits} 
+            onClick=${() => changeFrase()} 
+            onanimationend=${(event) => {
+              event.target.style.opacity = 0;
+              changeFrase();
+            }}>
             <article>
               <p>
                 <div>Andrea Mazzullo</div>
