@@ -16,46 +16,46 @@ const Tutorial = ({ onEnd }) => {
 
   if (isIOS()) {
     return html`
-      <div class=${style.fullPage}>
+      <div>
         ${actual === 1 &&
         html`<img
           class=${style.imgFullPage}
-          src=${Chrome1}
+          src=${IOS1}
           onClick=${() => setActual(2)}
         />`}
         ${actual === 2 &&
         html`<img
           class=${style.imgFullPage}
-          src=${Chrome2}
+          src=${IOS2}
           onClick=${() => setActual(3)}
         />`}
         ${actual === 3 &&
         html`<img
           class=${style.imgFullPage}
-          src=${Chrome3}
+          src=${IOS3}
           onClick=${() => onEnd()}
         />`}
       </div>
     `;
   }
   return html`
-    <div>
+    <div class=${style.fullPage}>
       ${actual === 1 &&
       html`<img
         class=${style.imgFullPage}
-        src=${IOS1}
+        src=${Chrome1}
         onClick=${() => setActual(2)}
       />`}
       ${actual === 2 &&
       html`<img
         class=${style.imgFullPage}
-        src=${IOS2}
+        src=${Chrome2}
         onClick=${() => setActual(3)}
       />`}
       ${actual === 3 &&
       html`<img
         class=${style.imgFullPage}
-        src=${IOS3}
+        src=${Chrome3}
         onClick=${() => onEnd()}
       />`}
     </div>
