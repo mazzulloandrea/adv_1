@@ -167,13 +167,15 @@ const Layout = () => {
       url: "https://adv-1.vercel.app/",
     };
     try {
-      await navigator.share(shareData);
-      setAbilita(
-        Object.assign(
-          { ...abilita },
-          { vita: abilita.vita + 1, helpCount: abilita.helpCount + 1 }
-        )
-      );
+      if (typeof window !== "undefined") {
+        await navigator.share(shareData);
+        setAbilita(
+          Object.assign(
+            { ...abilita },
+            { vita: abilita.vita + 1, helpCount: abilita.helpCount + 1 }
+          )
+        );
+      }
     } catch (err) {
       console.log("Sharing non  riuscito");
       console.log("sharing err", JSON.stringify(err));
