@@ -4,8 +4,9 @@ import { html } from "htm/preact";
 import emerald from "../../assets/icons/android-chrome-512x512.png";
 import TitleIcon from "../TitleIcon";
 import next from "../../assets/icons/intro/next.svg";
-import style from "./style.css";
 import allBkgVideo from "../../assets/video";
+import style from "./style.css";
+import Tutorial from "./Tutorial";
 
 const Intro = ({ onend }) => {
   const frasi = [
@@ -18,8 +19,9 @@ const Intro = ({ onend }) => {
     "Ce la farai ad arrivare alla fine?",
     "Metti gli auricolari per una miglior esperienza",
   ];
+  // const [actual, setActual] = useState(5);
   const [actual, setActual] = useState(-1);
-  // const [actual, setActual] = useState(3);
+  const [viewTutorial, setViewTutorial] = useState(true);
 
   useEffect(() => {
     // const videoIntro = document.getElementById("intro");
@@ -57,6 +59,7 @@ const Intro = ({ onend }) => {
 
   return html`
     <div class=${style.fullPage} id="main">
+      <!-- Salta button  -->
       ${actual > 1 &&
       html`<div id="salta" class=${style.salta} onClick=${() => onend()}>
         <${next} />
@@ -205,6 +208,10 @@ const Intro = ({ onend }) => {
               </video> -->
             </${Fragment}>
           `}
+      <!-- Tutorial -->
+      ${actual === -1 &&
+      viewTutorial &&
+      html`<${Tutorial} onEnd=${() => setViewTutorial(false)} />`}
     </div>
   `;
 };

@@ -7,7 +7,6 @@ export default {
 
     Avete gi occhi puntati addosso per tutto il tempo; è impossibile provare alcuna fuga.
   `,
-
   audio: {
     src: "/assets/audio/distrarreGuardia.mp3",
   },

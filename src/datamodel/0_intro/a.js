@@ -10,7 +10,7 @@ export default {
     L'atteggiamento irresponsabile di vostro fratellatro proprio non ti va giù...
     `,
   audio: {
-    src: "/assets/audio/a.mp3",
+    src: "/assets/audio/a.mp3", // TODO mettere audio
   },
   risposte: [
     {

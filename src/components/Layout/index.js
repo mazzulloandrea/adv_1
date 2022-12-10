@@ -189,7 +189,11 @@ const Layout = () => {
     } else if (actualCap.gioco) {
       setActualComponent(actualCap.gioco);
     } else if (actualCap.next) {
-      changeCap("audio", actualCap.next);
+      // const giochi = ["dice","gioco9","text","cassaforte"];
+      const giochi = ["dice"]; // SOLO dice per ora
+      if (giochi.includes(actualCap.next)) {
+        changeCap(actualCap.next);
+      } else changeCap("audio", actualCap.next);
     } else if (actualCap.fine) {
       // clearInterval(timer);
       setActualComponent("achievement");

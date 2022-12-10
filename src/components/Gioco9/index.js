@@ -6,11 +6,9 @@ import { useEffect, useState, useCallback } from "preact/hooks";
 import {
   shuffle,
   paletteColors,
-  // directionsDataset,
   alphabet,
   numbers,
   combatSet,
-  // runSet,
   elementSet,
   natureSet,
   varioSet,
