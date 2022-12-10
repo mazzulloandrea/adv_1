@@ -165,7 +165,7 @@ export const Risultato = styled.div`
 
 export const Obiettivo = styled.div`
   font-size: 1.5em;
-  color: ${(props) => (props.valid ? "green" : "firebrick")};
+  color: ${(props) => (props.valid ? "lightgreen" : "firebrick")};
   font-weight: 500;
 `;
 
