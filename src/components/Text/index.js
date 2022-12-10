@@ -13,12 +13,20 @@ function Text({ data, onend }) {
   const [viewSand, setViewSand] = useState(true);
   const [textValue, setTextValue] = useState("");
 
+  const verifica = useCallback(() => {
+    if (domanda === null) {
+      return;
+    }
+    const result = risposte[domanda].includes(risposta.toLowerCase());
+    onend(result ? successo : fallimento, result);
+  }, [domanda, fallimento, onend, risposta, risposte, successo]);
+
   useEffect(() => {
     if (!domanda) {
       const rand = Math.floor(Math.random() * domande.length);
       setDomanda(rand);
     }
-  }, []);
+  }, [domanda, domande.length]);
 
   useEffect(() => {}, [domanda]);
 
@@ -27,14 +35,6 @@ function Text({ data, onend }) {
   useEffect(() => {
     if (!viewSand) verifica();
   }, [verifica, viewSand]);
-
-  const verifica = useCallback(() => {
-    if (domanda === null) {
-      return;
-    }
-    const result = risposte[domanda].includes(risposta.toLowerCase());
-    onend(result ? successo : fallimento, result);
-  }, [domanda, fallimento, onend, risposta, risposte, successo]);
 
   return html`
     <div>
