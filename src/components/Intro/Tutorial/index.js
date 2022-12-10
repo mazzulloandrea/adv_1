@@ -16,7 +16,7 @@ const Tutorial = ({ onEnd }) => {
 
   if (isIOS()) {
     return html`
-      <div>
+      <div class=${style.fullPage}>
         ${actual === 1 &&
         html`<img
           class=${style.imgFullPage}
