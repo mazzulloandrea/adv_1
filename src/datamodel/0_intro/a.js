@@ -3,10 +3,11 @@ export default {
   step: 1,
   frase: `
     [rumore di accetta sulla legna] 
-    <<Bastardo! 
-    Te la farò pagare! ah si se te la farò pagare>> 
-    [rumore di accetta sulla legna].
-    Ti chiami Pantelion, hai 14 anni e sei infuriato con tuo fratellastro maggiore Denred
+    Ad Erbafolta l'autunno sta per finire ed é grazie a te Pantelion, e a tua sorella gemella Carcadena, se ancora non vi hanno espropriato la casa.
+    Della legna dovrebbe occuparsene Denred ma sicuramente sarà ad ubriacarsi all'osteria del Corvo Zoppo.
+    
+    Adesso che il vecchio è ammalato, come si fa a lasciare tutto nelle mani di 2 ragazzi di quattordici anni?
+    L'atteggiamento irresponsabile di vostro fratellatro proprio non ti va giù...
     `,
   audio: {
     src: "/assets/audio/a.mp3",
@@ -26,7 +27,7 @@ export default {
     fallimento: "a1",
     obiettivo: 14,
     abilita: ["corpo", "mente", "spirito"],
-    lanci: 6
+    lanci: 6,
   },
   gioco9: {
     successo: "a1",
@@ -35,5 +36,5 @@ export default {
     combinazione: ["acqua", "fuoco"],
     dataset: "element",
     livello: 1,
-  }
-}
+  },
+};

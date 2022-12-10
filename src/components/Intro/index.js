@@ -18,8 +18,8 @@ const Intro = ({ onend }) => {
     "Ce la farai ad arrivare alla fine?",
     "Metti gli auricolari per una miglior esperienza",
   ];
-  // const [actual, setActual] = useState(-1);
-  const [actual, setActual] = useState(3);
+  const [actual, setActual] = useState(-1);
+  // const [actual, setActual] = useState(3);
 
   useEffect(() => {
     const videoIntro = document.getElementById("intro");
@@ -94,6 +94,7 @@ const Intro = ({ onend }) => {
             </article>
             <article>
               <p>Audio Fire and Tunder, by Cjbeards</p>
+              <div>link https://www.youtube.com/watch?v=82hJffyJ5hY</div>
             </article>
             <article>
               <p>Graphics contents Pixelpollution</p>
