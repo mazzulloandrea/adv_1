@@ -154,23 +154,34 @@ const Intro = ({ onend }) => {
       <!-- multimedia files -->
       ${actual === -1
         ? html`
-            <video
-              id="intro"
-              class=${style.bkgVideoFull}
-              autoplay=${"autoplay"}
-              muted
-              playsinline
+            <div
               onClick=${() => {
-                console.log("click");
-                setActual(0);
-              }}
-              onended=${() => {
-                // console.log("finito");
-                setActual(0);
+                const intro = document.getElementById("intro");
+                if (!intro) return;
+                document.getElementById("tap").style.display = "none";
+                intro.play();
               }}
             >
-              <source src=${allBkgVideo.intro} type="video/mp4" />
-            </video>
+              <div id="tap" class=${style.finger}>
+                <${TitleIcon} type="tap" />
+              </div>
+
+              <video
+                id="intro"
+                class=${style.bkgVideoFull}
+                playsinline
+                onClick=${() => {
+                  console.log("click");
+                  setActual(0);
+                }}
+                onended=${() => {
+                  // console.log("finito");
+                  setActual(0);
+                }}
+              >
+                <source src=${allBkgVideo.intro} type="video/mp4" />
+              </video>
+            </div>
           `
         : html`
             <${Fragment}>
