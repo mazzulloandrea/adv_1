@@ -333,11 +333,11 @@ const Layout = () => {
 
   const whichComponent = () => {
     const actualCap = story[actual.cap];
-    // console.log(`
-    //   actual cap = ${actual.cap},
-    //   component = ${actualComponent}
-    //   abilita = ${JSON.stringify(abilita)}
-    // `);
+    console.log(`
+      actual cap = ${actual.cap},
+      component = ${actualComponent}
+      abilita = ${JSON.stringify(abilita)}
+    `);
     if (actualComponent === "achievement") {
       return html`<${Achievement}
         abilita=${abilita}
@@ -522,12 +522,7 @@ const Layout = () => {
       not=${() => reset(true)}
     />`}
     ${actual &&
-    html`<${Intestazione}
-      step=${abilita.step || 1}
-      abilita=${abilita}
-      title=${story[actual.cap].titolo || ""}
-      actualComponent=${actualComponent}
-    />`}
+    html`<${Intestazione} step=${abilita.step || 1} abilita=${abilita} />`}
     ${getComponent()}
   </div>`;
 };

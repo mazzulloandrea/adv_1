@@ -48,6 +48,35 @@ function Gioco9({ data, onend }) {
   const [hideMemory, setHideMemory] = useState(false);
   const [errors, setErrors] = useState([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const generateCombinazione = useCallback(
+    (numberOfGenerated) => {
+      let generated = [];
+      for (let i = 0; i < numberOfGenerated; i++) {
+        const index = Math.floor(Math.random() * Object.keys(svgSet).length);
+        generated = generated.concat(Object.keys(svgSet)[index]);
+      }
+      return generated;
+    },
+    [svgSet]
+  );
+
+  const verify = useCallback(() => {
+    let result = false;
+    if (["domanda", "numbers"].includes(type)) {
+      result = randomCombinazione === cubesClicked.join("");
+    } else if (type === "memory") {
+      result = randomCombinazione.join("") === cubesClicked.join("");
+    } else {
+      result = randomCombinazione.every((val, index) => {
+        if (!cubesClicked || !cubesClicked[index]) return false;
+        if (type === "directions") return val === cubesClicked[index].direction;
+        return paletteColors[val] === cubesClicked[index].palette;
+      });
+    }
+    onend(result ? successo : fallimento, result);
+  }, [cubesClicked, fallimento, onend, randomCombinazione, successo, type]);
+
   useEffect(() => {
     let howManyCubes = livello === 1 ? 3 : livello === 2 ? 6 : 9;
     setCubesClicked([]);
@@ -133,32 +162,6 @@ function Gioco9({ data, onend }) {
       verify();
     }
   }, [errors, livello, type, verify]);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const generateCombinazione = (numberOfGenerated) => {
-    let generated = [];
-    for (let i = 0; i < numberOfGenerated; i++) {
-      const index = Math.floor(Math.random() * Object.keys(svgSet).length);
-      generated = generated.concat(Object.keys(svgSet)[index]);
-    }
-    return generated;
-  };
-
-  const verify = useCallback(() => {
-    let result = false;
-    if (["domanda", "numbers"].includes(type)) {
-      result = randomCombinazione === cubesClicked.join("");
-    } else if (type === "memory") {
-      result = randomCombinazione.join("") === cubesClicked.join("");
-    } else {
-      result = randomCombinazione.every((val, index) => {
-        if (!cubesClicked || !cubesClicked[index]) return false;
-        if (type === "directions") return val === cubesClicked[index].direction;
-        return paletteColors[val] === cubesClicked[index].palette;
-      });
-    }
-    onend(result ? successo : fallimento, result);
-  }, [cubesClicked, fallimento, onend, randomCombinazione, successo, type]);
 
   const drawHeader = () => {
     return html`

@@ -23,7 +23,7 @@ function Audio({
 
   useEffect(() => {
     ReactGA.send({ hitType: "pageView", page: `/${capName}` });
-  }, []);
+  }, [capName]);
 
   useEffect(() => {}, [play]);
 

@@ -18,7 +18,8 @@ const Intro = ({ onend }) => {
     "Ce la farai ad arrivare alla fine?",
     "Metti gli auricolari per una miglior esperienza",
   ];
-  const [actual, setActual] = useState(-1);
+  // const [actual, setActual] = useState(-1);
+  const [actual, setActual] = useState(3);
 
   useEffect(() => {
     const videoIntro = document.getElementById("intro");
