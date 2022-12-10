@@ -158,13 +158,14 @@ const Intro = ({ onend }) => {
               id="intro"
               class=${style.bkgVideoFull}
               autoplay=${"autoplay"}
+              muted
               playsinline
               onClick=${() => {
                 console.log("click");
                 setActual(0);
               }}
               onended=${() => {
-                console.log("finito");
+                // console.log("finito");
                 setActual(0);
               }}
             >
