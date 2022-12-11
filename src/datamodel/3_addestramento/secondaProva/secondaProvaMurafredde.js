@@ -5,7 +5,7 @@ export default {
   `,
 
   audio: {
-    src: "/assets/audio/cap7.secondaProvaMurafredde",
+    src: "/assets/audio/secondaProvaMurafredde",
   },
   risposte: [
     {

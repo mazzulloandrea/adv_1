@@ -6,7 +6,7 @@ export default {
     Appena tutto tace ti rialzi, e, guardandoti attorno, noti un corridoio che prima non avevi visto; dell'aria fresca arriva da quella parte, per cui, senza tergiversare, ti incammini per la nuova strada.
   `,
   audio: {
-    src: "/assets/audio/capGrottaPipistrelli.mp3", // TODO manca audio
+    src: "/assets/audio/capGrottaPipistrelli.mp3",
   },
   next: "dice",
   dice: {

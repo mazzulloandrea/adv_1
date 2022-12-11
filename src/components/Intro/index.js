@@ -6,7 +6,6 @@ import TitleIcon from "../TitleIcon";
 import next from "../../assets/icons/intro/next.svg";
 import allBkgVideo from "../../assets/video";
 import style from "./style.css";
-// import Tutorial from "./Tutorial";
 
 import { isIOS } from "../utils";
 import Chrome1 from "../../assets/icons/intro/tutorial/android/tutorial1.jpg";
@@ -219,6 +218,7 @@ const Intro = ({ onend }) => {
       </div>
     `;
   };
+
   return html`
     ${actual === 0 ? getIntroVideo() : getBackgroundAudio()}
     ${actual === 1 && getLogo()} ${[2, 3, 4].includes(actual) && getTutorial()}
