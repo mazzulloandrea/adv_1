@@ -37,6 +37,10 @@
   background-color: black;
 }
 
+.fullPage img{
+  width: 100%;
+}
+
 .titleContainer {
   height: 100vh;
   width: 100vw;
@@ -56,17 +60,25 @@
   padding: 0 15px;
 }
 
+
+.logo {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  animation: appear 2s;
+}
+
 .emerald {
   opacity: 0;
   animation-name: emerald;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
 .emerald img {
-  width: 45vw;
-  max-width: 45vh;
+  width: 35vw;
+  max-width: 35vh;
   height: auto;
 }
 
@@ -96,6 +108,7 @@
   justify-content: center;
   padding: 0 10vw;
   height: 100%;
+  background-color: black;
 }
 
 .animation {
@@ -134,13 +147,6 @@
   opacity: 1;
   z-index: 1;
   background-color: black;
-}
-
-.logo {
-  width: 80%;
-  margin: 0 auto;
-  padding-bottom: 30px;
-  animation: appear 2s;
 }
 
 .credits {
