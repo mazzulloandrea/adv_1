@@ -164,6 +164,8 @@
   opacity: 1;
   z-index: 999;
   animation: emerald 2s infinite;
+  width: 35vw;
+  height: 35vw;
 }
 
 .finger img {
