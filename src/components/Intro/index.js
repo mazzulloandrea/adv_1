@@ -62,7 +62,7 @@ const Intro = ({ onend }) => {
         }}
       >
         <div id="tap" class=${style.finger}>
-          <${TitleIcon} type="logo" />
+          <img src=${emerald} />
         </div>
 
         <video
