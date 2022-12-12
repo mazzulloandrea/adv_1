@@ -1,4 +1,5 @@
-const initialcap = "_0";
+// const initialcap = "_0";
+const initialcap = "uccisoDaiSoldati";
 
 const keyToSaveInStorage = "GV-1";
 

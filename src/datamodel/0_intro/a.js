@@ -35,6 +35,6 @@ export default {
     type: "memory",
     combinazione: ["acqua", "fuoco"],
     dataset: "element",
-    livello: 3,
+    livello: 1,
   },
 };
