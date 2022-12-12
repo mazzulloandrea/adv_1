@@ -125,7 +125,7 @@ const Layout = () => {
     const parsed = getFromStorage();
     // fix close with Tesori screen
     if (parsed?.abilita?.chiavi === initialAbilita.chiaviMaxLength) {
-      parsed?.abilita?.chiavi = initialAbilita.chiaviMaxLength-1;
+      parsed.abilita.chiavi = initialAbilita.chiaviMaxLength - 1;
     }
     if (parsed.cap === "_0") {
       parsed.abilita.vita = initialAbilita.vita;
