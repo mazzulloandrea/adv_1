@@ -70,7 +70,6 @@ const Intro = ({ onend }) => {
           class=${style.bkgVideoFull}
           playsinline
           onClick=${() => {
-            // console.log("click");
             changeStep();
           }}
           onended=${() => {

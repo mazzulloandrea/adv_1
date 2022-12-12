@@ -173,3 +173,9 @@
   max-width: 35vh;
   height: auto;
 }
+
+
+.imgFullPage {
+  width: 100%;
+  height: calc(100% - env(safe-area-inset-bottom))
+}
