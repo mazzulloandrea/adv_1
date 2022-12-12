@@ -121,10 +121,11 @@ export const Caratteristica = styled.div`
 `;
 
 export const AbilitaIconContainer = styled.div`
-  width: 6vw;
-  height: 6vw;
+  width: 20px;
+  height: 20px;
   max-width: 40px;
   max-height: 40px;
+  margin-bottom: 5px;
 `;
 
 export const Value = styled.div`

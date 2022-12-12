@@ -22,6 +22,45 @@ function Cassaforte({ data, onend }) {
   const [roller, setRoller] = useState(null);
   const [rollerVisible, setRollerVisibile] = useState(false);
 
+  const verifica = useCallback(
+    (date) => {
+      if (type === "roll") {
+        if (rollerVisible) {
+          setRollerVisibile(false);
+          roller.hide();
+        }
+        // console.log(roller);
+        if (date === combinazione) {
+          return onend(successo, true);
+        }
+        return onend(fallimento, false);
+      }
+      // console.log(datetimeValue, selectValue, progress, switchValue);
+      if (
+        datetimeValue.split("-").reverse().join("-") ===
+          combinazione[0].giusto &&
+        selectValue === combinazione[1].giusto &&
+        progress === combinazione[2].giusto &&
+        switchValue === combinazione[3].giusto
+      )
+        return onend(successo, true);
+      return onend(fallimento, false);
+    },
+    [
+      combinazione,
+      datetimeValue,
+      fallimento,
+      onend,
+      progress,
+      roller,
+      rollerVisible,
+      selectValue,
+      successo,
+      switchValue,
+      type,
+    ]
+  );
+
   useEffect(() => {
     const rd = new Rolldate({
       el: "#date",
@@ -65,6 +104,7 @@ function Cassaforte({ data, onend }) {
   useEffect(() => {
     if (!viewSand) verifica();
   }, [verifica, viewSand]);
+
   useEffect(() => {
     // console.log("switchValue", switchValue);
   }, [switchValue]);
@@ -76,45 +116,6 @@ function Cassaforte({ data, onend }) {
   useEffect(() => {
     // console.log("select", selectValue);
   }, [selectValue]);
-
-  const verifica = useCallback(
-    (date) => {
-      if (type === "roll") {
-        if (rollerVisible) {
-          setRollerVisibile(false);
-          roller.hide();
-        }
-        // console.log(roller);
-        if (date === combinazione) {
-          return onend(successo, true);
-        }
-        return onend(fallimento, false);
-      }
-      // console.log(datetimeValue, selectValue, progress, switchValue);
-      if (
-        datetimeValue.split("-").reverse().join("-") ===
-          combinazione[0].giusto &&
-        selectValue === combinazione[1].giusto &&
-        progress === combinazione[2].giusto &&
-        switchValue === combinazione[3].giusto
-      )
-        return onend(successo, true);
-      return onend(fallimento, false);
-    },
-    [
-      combinazione,
-      datetimeValue,
-      fallimento,
-      onend,
-      progress,
-      roller,
-      rollerVisible,
-      selectValue,
-      successo,
-      switchValue,
-      type,
-    ]
-  );
 
   const getCombinazione = () =>
     combinazione.map((el) => el.giusto).join("    ");
