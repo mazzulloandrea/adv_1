@@ -1,7 +1,7 @@
 import { h } from "preact";
 import { html } from "htm/preact";
 import Clessidra from "../Clessidra";
-import { useEffect, useState, useCallback } from "preact/hooks";
+import { useCallback, useEffect, useState } from "preact/hooks";
 // import error from '/assets/icons/memory/error.svg';
 import {
   shuffle,
@@ -121,7 +121,19 @@ function Gioco9({ data, onend }) {
       //   },[])
     }
     setCubes(_cubes);
-  }, [combinazione, generateCombinazione, livello, svgSet, type]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [combinazione, generateCombinazione]);
+
+  useEffect(() => {
+    if (
+      ["memory", "domanda"].includes(type) &&
+      randomCombinazione.length > 0 &&
+      randomCombinazione.length === cubesClicked.length
+    ) {
+      verify();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cubesClicked, randomCombinazione]);
 
   useEffect(() => {
     if (!viewSand) {
@@ -135,20 +147,10 @@ function Gioco9({ data, onend }) {
         }
       }
     }
-  }, [type, verify, viewSand]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [viewSand]);
 
   useEffect(() => {}, [cubes]);
-
-  useEffect(() => {
-    if (
-      ["memory", "domanda"].includes(type) &&
-      randomCombinazione.length > 0 &&
-      randomCombinazione.length === cubesClicked.length
-    ) {
-      verify();
-    }
-  }, [cubesClicked, randomCombinazione.length, type, verify]);
-
   useEffect(() => {}, [hideMemory]);
 
   useEffect(() => {
@@ -159,7 +161,8 @@ function Gioco9({ data, onend }) {
     ) {
       verify();
     }
-  }, [errors, livello, type, verify]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [errors]);
 
   const drawHeader = () => {
     return html`
