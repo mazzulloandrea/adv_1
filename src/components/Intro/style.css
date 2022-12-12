@@ -175,7 +175,22 @@
 }
 
 
+.fullPageTutorial {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .imgFullPage {
-  width: 100%;
-  height: calc(100% - env(safe-area-inset-bottom))
+  width: 90%;
+  height: calc(95% - env(safe-area-inset-bottom));
+
 }

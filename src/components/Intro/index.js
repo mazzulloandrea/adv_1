@@ -132,7 +132,7 @@ const Intro = ({ onend }) => {
 
   const getTutorial = () => {
     return html`
-      <div class=${style.fullPage}>
+      <div class=${style.fullPageTutorial}>
         ${actual === 2 &&
         html`<img
           class=${style.imgFullPage}
