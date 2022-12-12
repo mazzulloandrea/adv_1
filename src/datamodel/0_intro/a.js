@@ -6,7 +6,7 @@ export default {
     Ad Erbafolta l'autunno sta per finire ed é grazie a te Pantelion, e a tua sorella gemella Carcadena, se ancora non vi hanno espropriato la casa.
     Della legna dovrebbe occuparsene Denred ma sicuramente sarà ad ubriacarsi all'osteria del Corvo Zoppo.
     
-    Adesso che il vecchio è ammalato, come si fa a lasciare tutto nelle mani di 2 ragazzi di quattordici anni?
+    Adesso che il vecchio è ammalato, come si fa a lasciare tutto nelle mani di due ragazzi di quattordici anni?
     L'atteggiamento irresponsabile di vostro fratellatro proprio non ti va giù...
     `,
   audio: {

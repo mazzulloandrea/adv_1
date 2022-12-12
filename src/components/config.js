@@ -1,5 +1,5 @@
-// const initialcap = "_0";
-const initialcap = "uccisoDaiSoldati";
+const initialcap = "_0";
+// const initialcap = "uccisoDaiSoldati";
 
 const keyToSaveInStorage = "GV-1";
 
@@ -20,7 +20,7 @@ const initialAbilita = {
   corpo: 0,
   mente: 0,
   spirito: 0,
-  vita: 3,
+  vita: 4,
   zaino: [], //["corda", "accetta", "razione", "chiave1"],
   borsello: 0,
   chiavi: 0,
