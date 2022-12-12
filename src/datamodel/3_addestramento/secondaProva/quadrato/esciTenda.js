@@ -1,9 +1,6 @@
 import nemico from "./nemico.js";
 
-const resp = nemico.risposte.concat(
-  { frase: "Se vuoi scappare", next: "scappareDarius" },
-  { frase: "Se vuoi arrenderti", next: "mortePerResa" }
-);
+const resp = nemico.risposte;
 
 export default {
   titolo: "",

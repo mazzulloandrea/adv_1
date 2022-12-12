@@ -11,6 +11,6 @@ export default {
   },
   risposte: [
     { frase: "Vai a sinistra", gioco: "latoSinistro" },
-    { frase: "Vai a destra", next: "latoDestro" },
+    { frase: "Vai a destra", next: "latoBasso" },
   ],
 };
