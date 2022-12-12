@@ -94,16 +94,6 @@ const Intro = ({ onend }) => {
         />
         Your browser does not support the audio tag.
       </audio>
-      <!-- <video
-        id="fumoBackground"
-        class=${style.bkgVideo}
-        loop
-        muted
-        autoplay=${"autoplay"}
-        playsinline
-      >
-        <source src=${allBkgVideo.fumo} type="video/mp4" />
-      </video> -->
     </${Fragment}>
   `;
   };

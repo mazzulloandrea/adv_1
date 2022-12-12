@@ -83,9 +83,9 @@ function Audio({
         <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
         <audio
           id="audio"
-          loop=${true}
-          autoplay=${true}
-          playsinline=${true}
+          loop
+          autoplay=${"autoplay"}
+          playsinline
           class=${style.play}
           onended=${(evt) => audioEnd(evt)}
           onplaying=${() => setPlay(true)}
