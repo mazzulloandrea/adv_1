@@ -5,6 +5,7 @@ import ReactGA from "react-ga4";
 import TitleIcon from "../TitleIcon";
 import style from "./style.css";
 import switchStyle from "./switch.css";
+import { isIOS } from "../utils";
 
 function Audio({
   data,
@@ -18,7 +19,7 @@ function Audio({
   visibility,
 }) {
   const { helpCount, helpCountMax } = caratteristiche;
-  const [mode, setMode] = useState(true);
+  const [mode, setMode] = useState(!isIOS());
   const [play, setPlay] = useState(false);
 
   useEffect(() => {
