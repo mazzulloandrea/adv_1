@@ -48,7 +48,7 @@ const tutorialConfig = {
   gioco9: {
     text: [
       "Memorizza le immagini che vengono mostrate",
-      "Trova quella che viene mostrata",
+      "Trova quella apparirà",
     ],
     active: true,
   },
