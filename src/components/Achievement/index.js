@@ -131,6 +131,7 @@ function Achievement({ abilita, onClick }) {
 
   useEffect(() => {
     setTimeout(() => startAnimation(), 500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {}, [totale]);
@@ -170,7 +171,7 @@ function Achievement({ abilita, onClick }) {
   };
 
   return html` <div class=${style.wrapper}>
-    <div id="resetButton" class=${style.reset} onClick=${() => onClick()}>
+    <div id="resetButton" class=${style.reset} onClick=${() => onClick(totale)}>
       <${TitleIcon} type="reset" />
     </div>
     <div class=${style.title}>

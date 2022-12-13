@@ -134,6 +134,7 @@ export const Value = styled.div`
 `;
 
 export const Cuori = styled.div`
+  height: 35%;
   svg {
     width: 5vw;
     margin-right: 1vw;

@@ -164,21 +164,27 @@ const Layout = () => {
     }
   };
 
-  const shareToHelp = async () => {
+  const shareToHelp = async (data, cb) => {
     const shareData = {
       title: "La gemma verde",
       text: "Aiutami a finirlo!!",
       url: "https://adv-1.vercel.app/",
     };
+    if (data && data.end) {
+      shareData.text = `Io l'ho finito con il punteggio di ${data.totale} %`;
+    }
+
     try {
       if (typeof window !== "undefined") {
         await navigator.share(shareData);
-        setAbilita(
-          Object.assign(
-            { ...abilita },
-            { vita: abilita.vita + 1, helpCount: abilita.helpCount + 1 }
-          )
-        );
+        if (cb) cb();
+        else
+          setAbilita(
+            Object.assign(
+              { ...abilita },
+              { vita: abilita.vita + 1, helpCount: abilita.helpCount + 1 }
+            )
+          );
       }
     } catch (err) {
       console.log("Sharing non  riuscito");
@@ -202,6 +208,7 @@ const Layout = () => {
       } else changeCap("audio", actualCap.next);
     } else if (actualCap.fine) {
       // clearInterval(timer);
+      setAbilita(Object.assign({ ...abilita }, { fine: true }));
       setActualComponent("achievement");
     }
   };
@@ -341,6 +348,95 @@ const Layout = () => {
     // console.log('transition end quella barre blu');
   };
 
+  const renderIntro = (storageCap) => {
+    return html`<${Intro}
+      onend=${() => {
+        if (storageCap) {
+          setLoad(true);
+        } else {
+          setActual({ cap: initialcap });
+          setActualComponent("risposte");
+        }
+      }}
+    />`;
+  };
+
+  const renderZaino = () => {
+    return html`<${Zaino}
+      abilita=${abilita}
+      onClick=${(z) => {
+        let start = abilita.zaino.indexOf(z);
+        let zainoCp = abilita.zaino.slice();
+        zainoCp.splice(start, 1);
+        setAbilita(Object.assign({ ...abilita }, { zaino: zainoCp }));
+      }}
+    />`;
+  };
+
+  const renderTutorial = () => {
+    return html`
+      <${Tutorial}
+        type=${actualComponent}
+        dismiss=${() => {
+          delete tutorials[actualComponent];
+          setTutorials(Object.assign({}, tutorials));
+        }}
+      />
+    `;
+  };
+
+  const renderChiavi = () => {
+    return html`
+      <${Tutorial}
+        type=${"chiavi"}
+        dismiss=${() => {
+          delete tutorials.chiavi;
+          setTutorials(Object.assign({}, tutorials));
+        }}
+      />
+    `;
+  };
+
+  const renderTesori = () => {
+    return html`
+      <${Tesori}
+        onEnd=${(result) => {
+          let newAbilita = Object.assign(abilita);
+          result.forEach((r) => {
+            if (
+              (r === "vita" && abilita.vita < initialAbilita.vitaMaxLength) ||
+              ["corpo", "spirito", "mente"].includes(r)
+            ) {
+              newAbilita[r] = newAbilita[r] + 1;
+            }
+          });
+          startAnimationFinestre();
+          setTimeout(
+            () => setAbilita(Object.assign({ ...newAbilita }, { chiavi: 0 })),
+            2000
+          );
+        }}
+      />
+    `;
+  };
+
+  const renderAchievement = () => {
+    return html`<${Achievement}
+      abilita=${abilita}
+      onClick=${(totale) => {
+        if (abilita.fine) {
+          shareToHelp({ end: true, totale }, reset);
+        } else reset();
+      }}
+    />`;
+  };
+
+  const renderMorte = () => {
+    return html`<${Morte}
+      onClick=${() => setActualComponent("achievement")}
+    />`;
+  };
+
   const whichComponent = () => {
     const actualCap = story[actual.cap];
     console.log(`
@@ -349,16 +445,11 @@ const Layout = () => {
       abilita = ${JSON.stringify(abilita)}
     `);
     if (actualComponent === "achievement") {
-      return html`<${Achievement}
-        abilita=${abilita}
-        onClick=${() => reset()}
-      />`;
+      return renderAchievement();
     }
     const data = actualCap[actualComponent];
     if (abilita && abilita.vita <= 0) {
-      return html`<${Morte}
-        onClick=${() => setActualComponent("achievement")}
-      />`;
+      return renderMorte();
     }
 
     const componentProps = {
@@ -431,82 +522,30 @@ const Layout = () => {
 
   const getComponent = () => {
     const storageCap = getFromStorage();
+    // introduzione
     if (!actual) {
-      // introduzione
-      return html`<${Intro}
-        onend=${() => {
-          if (storageCap) {
-            setLoad(true);
-          } else {
-            setActual({ cap: initialcap });
-            setActualComponent("risposte");
-          }
-        }}
-      />`;
+      return renderIntro(storageCap);
     }
+    // gestione zaino
     if (abilita.zaino.length > initialAbilita.zainoMaxLength) {
-      // gestione zaino
-      return html`<${Zaino}
-        abilita=${abilita}
-        onClick=${(z) => {
-          let start = abilita.zaino.indexOf(z);
-          let zainoCp = abilita.zaino.slice();
-          zainoCp.splice(start, 1);
-          setAbilita(Object.assign({ ...abilita }, { zaino: zainoCp }));
-        }}
-      />`;
+      return renderZaino();
     }
+    // tutorial
     if (
       tutorials &&
       tutorials[actualComponent] &&
       tutorials[actualComponent].active
     ) {
-      // tutorial
-      return html`
-        <${Tutorial}
-          type=${actualComponent}
-          dismiss=${() => {
-            delete tutorials[actualComponent];
-            setTutorials(Object.assign({}, tutorials));
-          }}
-        />
-      `;
+      return renderTutorial();
     }
     if (abilita.chiavi === initialAbilita.chiaviMaxLength) {
       if (tutorials && tutorials.chiavi && tutorials.chiavi.active) {
-        return html`
-          <${Tutorial}
-            type=${"chiavi"}
-            dismiss=${() => {
-              delete tutorials.chiavi;
-              setTutorials(Object.assign({}, tutorials));
-            }}
-          />
-        `;
+        return renderChiavi();
       }
-      return html`
-        <${Tesori}
-          onEnd=${(result) => {
-            let newAbilita = Object.assign(abilita);
-            result.forEach((r) => {
-              if (
-                (r === "vita" && abilita.vita < initialAbilita.vitaMaxLength) ||
-                ["corpo", "spirito", "mente"].includes(r)
-              ) {
-                newAbilita[r] = newAbilita[r] + 1;
-              }
-            });
-            startAnimationFinestre();
-            setTimeout(
-              () => setAbilita(Object.assign({ ...newAbilita }, { chiavi: 0 })),
-              2000
-            );
-          }}
-        />
-      `;
+      return renderTesori();
     }
     // altri componenti come risposte, giochi, audio
-    return html` <div class=${style.wrapper}>${whichComponent()}</div> `;
+    return html`<div class=${style.wrapper}>${whichComponent()}</div> `;
   };
 
   return html` <div
