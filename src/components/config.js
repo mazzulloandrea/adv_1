@@ -36,24 +36,24 @@ const initialAbilita = {
 const tutorialConfig = {
   audio: {
     text: [
-      "In alto a sinistra puoi disabilitare l'audio",
-      "A destra, invece, puoi chiedere aiuto ai tuoi contatti",
+      "Tappa per continuare. Apparirà il testo...",
+      "Potrai disabilitare l'audio e chiedere aiuto ai tuoi contatti",
     ],
     active: true,
   },
   risposte: {
-    text: ["Clicca su di una voce per proseguire", "Scegli il tuo percorso"],
+    text: ["Appariranno diversi percorsi", "Scegli il tuo per proseguire"],
     active: true,
   },
   gioco9: {
     text: [
       "Memorizza le immagini che vengono mostrate",
-      "Hai una buona memoria ?",
+      "Trova quella che viene mostrata",
     ],
     active: true,
   },
   text: {
-    text: ["Sei stato attento?", "Rispondi alla domanda"],
+    text: ["Sei stato attento?", "Rispondi alla domanda e premi conferma"],
     active: true,
   },
   dice: {
