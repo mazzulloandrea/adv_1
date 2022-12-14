@@ -15,7 +15,7 @@ function Audio({
   morte,
   step,
   onend,
-  shareToHelp,
+  share,
   visibility,
 }) {
   const { helpCount, helpCountMax } = caratteristiche;
@@ -23,7 +23,8 @@ function Audio({
   const [play, setPlay] = useState(false);
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageView", page: `/${capName}` });
+    window.ra = ReactGA;
+    ReactGA.send({ hitType: "pageview", page: `/${capName}` });
   }, [capName]);
 
   useEffect(() => {}, [play]);
@@ -67,7 +68,7 @@ function Audio({
           class=${helpCount < helpCountMax
             ? switchStyle.shareToHelp
             : switchStyle.shareToHelpDisabled}
-          onClick=${() => shareToHelp()}
+          onClick=${() => share()}
         >
           <${TitleIcon} type=${"cuoreAiuto"} />
           <span>${helpCountMax - helpCount}</span>

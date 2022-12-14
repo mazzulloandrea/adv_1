@@ -164,16 +164,13 @@ const Layout = () => {
     }
   };
 
-  const shareToHelp = async (data, cb) => {
+  const share = async (totale, cb) => {
     const shareData = {
       title: "La gemma verde",
       text: "Aiutami a finirlo!!",
       url: "https://adv-1.vercel.app/",
     };
-    if (data && data.end) {
-      shareData.text = `Io l'ho finito con il punteggio di ${data.totale} %`;
-    }
-
+    shareData.text = `${totale} %, battimi se ci riesci!!`;
     try {
       if (typeof window !== "undefined") {
         await navigator.share(shareData);
@@ -424,9 +421,7 @@ const Layout = () => {
     return html`<${Achievement}
       abilita=${abilita}
       onClick=${(totale) => {
-        if (abilita.fine) {
-          shareToHelp({ end: true, totale }, reset);
-        } else reset();
+        share(totale, reset);
       }}
     />`;
   };
@@ -463,13 +458,20 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
+        // send Analitics for PageView
+        // ReactGA.send({ hitType: "pageView", page: "/openApp" });
+        // window.RA = ReactGA;
+        // ReactGA.event({
+        //   event_name: "page",
+        //   cap: actual.cap,
+        // });
         return html`<${Audio}
           ...${componentProps}
           frase=${actualCap.frase}
           morte=${actualCap.morte}
           step=${actualCap.step}
           onend=${() => onEndAudio()}
-          shareToHelp=${shareToHelp}
+          share=${share}
         />`;
       case "risposte":
         return html`<${Risposte}
