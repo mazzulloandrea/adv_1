@@ -459,12 +459,12 @@ const Layout = () => {
     switch (actualComponent) {
       case "audio":
         // send Analitics for PageView
-        // ReactGA.send({ hitType: "pageView", page: "/openApp" });
+        ReactGA.send({ hitType: "pageview", page: "/openApp" });
         // window.RA = ReactGA;
-        // ReactGA.event({
-        //   event_name: "page",
-        //   cap: actual.cap,
-        // });
+        window.RA.event({
+          category: "event",
+          action: actual.cap,
+        });
         return html`<${Audio}
           ...${componentProps}
           frase=${actualCap.frase}

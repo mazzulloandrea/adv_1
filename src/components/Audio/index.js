@@ -1,7 +1,6 @@
 import { h } from "preact";
 import { html } from "htm/preact";
 import { useState, useEffect } from "preact/hooks";
-import ReactGA from "react-ga4";
 import TitleIcon from "../TitleIcon";
 import style from "./style.css";
 import switchStyle from "./switch.css";
@@ -22,19 +21,7 @@ function Audio({
   const [mode, setMode] = useState(!isIOS());
   const [play, setPlay] = useState(false);
 
-  useEffect(() => {
-    window.ra = ReactGA;
-    ReactGA.send({ hitType: "pageview", page: `/${capName}` });
-    ReactGA.event({
-      category: "init",
-      action: "openApp",
-      event_name: "page",
-      event: "page",
-      data: `/${capName}`,
-      page: `/${capName}`,
-      name: "page",
-    });
-  }, [capName]);
+  useEffect(() => {}, [capName]);
 
   useEffect(() => {}, [play]);
 
