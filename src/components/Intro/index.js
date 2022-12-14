@@ -69,11 +69,7 @@ const Intro = ({ onend }) => {
           id="intro"
           class=${style.bkgVideoFull}
           playsinline
-          onClick=${() => {
-            changeStep();
-          }}
           onended=${() => {
-            // console.log("finito");
             if (actual === 0) changeStep();
           }}
         >
@@ -150,7 +146,6 @@ const Intro = ({ onend }) => {
       <div class=${style.animationContainer}>
         <article id="credits" 
         class=${style.credits} 
-        onClick=${() => changeStep()} 
         onanimationend=${(event) => {
           event.target.style.opacity = 0;
           changeStep();

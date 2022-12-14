@@ -25,6 +25,15 @@ function Audio({
   useEffect(() => {
     window.ra = ReactGA;
     ReactGA.send({ hitType: "pageview", page: `/${capName}` });
+    ReactGA.event({
+      category: "init",
+      action: "openApp",
+      event_name: "page",
+      event: "page",
+      data: `/${capName}`,
+      page: `/${capName}`,
+      name: "page",
+    });
   }, [capName]);
 
   useEffect(() => {}, [play]);
