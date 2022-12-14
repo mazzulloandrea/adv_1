@@ -186,6 +186,9 @@ const Layout = () => {
     } catch (err) {
       console.log("Sharing non  riuscito");
       console.log("sharing err", JSON.stringify(err));
+      if (totale) {
+        reset();
+      }
     }
   };
 
