@@ -461,10 +461,8 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
-        // send Analitics for PageView
-        ReactGA.send({ hitType: "pageview", page: "/openApp" });
         // window.RA = ReactGA;
-        window.RA.event({
+        ReactGA.event({
           category: "event",
           action: actual.cap,
         });
