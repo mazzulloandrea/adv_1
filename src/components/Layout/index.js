@@ -39,7 +39,7 @@ const Layout = () => {
 
   useEffect(() => {
     ReactGA.initialize("G-CKF93XL3FW");
-    // ReactGA.send({ hitType: "pageView", page: "/openApp" });
+    // window.ra = ReactGA;
     ReactGA.event({
       category: "init",
       action: "openApp",
@@ -291,8 +291,15 @@ const Layout = () => {
     setAbilita(updated);
   };
 
-  const onGameEnd = (nextCap, feedback) =>
-    changeCap("audio", nextCap, feedback);
+  const onGameEnd = (nextCap, feedback) => {
+    // quali informazioni è inetressante registrare ?
+    ReactGA.event({
+      category: "game",
+      action: nextCap,
+      feedback,
+    });
+    return changeCap("audio", nextCap, feedback);
+  };
 
   const changeCap = (gioco = "audio", nextCap, feedback) => {
     setActualComponent(null);
@@ -362,6 +369,7 @@ const Layout = () => {
   };
 
   const renderZaino = () => {
+    ReactGA.send({ hitType: "pageview", page: "Zaino" });
     return html`<${Zaino}
       abilita=${abilita}
       onClick=${(z) => {
@@ -398,6 +406,7 @@ const Layout = () => {
   };
 
   const renderTesori = () => {
+    ReactGA.send({ hitType: "pageview", page: "Tesori" });
     return html`
       <${Tesori}
         onEnd=${(result) => {
@@ -430,6 +439,7 @@ const Layout = () => {
   };
 
   const renderMorte = () => {
+    ReactGA.send({ hitType: "pageview", page: "Morte" });
     return html`<${Morte}
       onClick=${() => setActualComponent("achievement")}
     />`;
@@ -461,11 +471,7 @@ const Layout = () => {
 
     switch (actualComponent) {
       case "audio":
-        // window.RA = ReactGA;
-        ReactGA.event({
-          category: "event",
-          action: actual.cap,
-        });
+        ReactGA.send({ hitType: "pageview", page: actual.cap });
         return html`<${Audio}
           ...${componentProps}
           frase=${actualCap.frase}
