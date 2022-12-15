@@ -18,7 +18,8 @@ function Text({ data, onend }) {
       return;
     }
     const result = risposte[domanda].includes(risposta.toLowerCase());
-    onend(result ? successo : fallimento, result);
+    onend(result ? successo : fallimento, result, data.durata, "text");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [domanda, fallimento, onend, risposta, risposte, successo]);
 
   useEffect(() => {

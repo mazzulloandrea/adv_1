@@ -72,7 +72,8 @@ function Gioco9({ data, onend }) {
         return paletteColors[val] === cubesClicked[index].palette;
       });
     }
-    onend(result ? successo : fallimento, result);
+    onend(result ? successo : fallimento, result, data.livello, "gioco9");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cubesClicked, fallimento, onend, randomCombinazione, successo, type]);
 
   useEffect(() => {

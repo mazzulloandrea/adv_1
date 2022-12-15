@@ -39,7 +39,7 @@ const Layout = () => {
 
   useEffect(() => {
     ReactGA.initialize("G-CKF93XL3FW");
-    // window.ra = ReactGA;
+    window.ra = ReactGA;
     ReactGA.event({
       category: "init",
       action: "openApp",
@@ -291,13 +291,16 @@ const Layout = () => {
     setAbilita(updated);
   };
 
-  const onGameEnd = (nextCap, feedback) => {
-    // quali informazioni è inetressante registrare ?
-    ReactGA.event({
-      category: "game",
-      action: nextCap,
-      feedback,
-    });
+  const onGameEnd = (nextCap, feedback, difficolta, nomeGioco) => {
+    const props = {
+      category: "click",
+      action: nomeGioco,
+      label: `${feedback}`,
+      value: difficolta,
+    };
+
+    // quali informazioni è interessante registrare ?
+    ReactGA.event(props);
     return changeCap("audio", nextCap, feedback);
   };
 
@@ -462,7 +465,8 @@ const Layout = () => {
 
     const componentProps = {
       data,
-      onend: (nextCap, feedback) => onGameEnd(nextCap, feedback),
+      onend: (nextCap, feedback, difficolta) =>
+        onGameEnd(nextCap, feedback, difficolta),
       orientation,
       caratteristiche: abilita,
       capName: actual.cap,

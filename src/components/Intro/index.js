@@ -186,7 +186,6 @@ const Intro = ({ onend }) => {
       <div
         class=${style.animation}
         onanimationend=${() => {
-          console.log("adsfdg");
           changeStep();
         }}
       >
