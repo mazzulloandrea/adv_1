@@ -31,9 +31,9 @@ function Cassaforte({ data, onend }) {
         }
         // console.log(roller);
         if (date === combinazione) {
-          return onend(successo, true);
+          return onend(successo, true, 1, "cassaforte");
         }
-        return onend(fallimento, false);
+        return onend(fallimento, false, 1, "cassaforte");
       }
       // console.log(datetimeValue, selectValue, progress, switchValue);
       if (
