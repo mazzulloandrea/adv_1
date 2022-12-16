@@ -207,8 +207,8 @@ function Dice({ data, caratteristiche, onend }) {
 
   function prosegui() {
     if (getResult() > obiettivo)
-      return onend(successo, true, data.abilita.join(","), "dice");
-    return onend(fallimento, false, data.abilita.join(","), "dice");
+      return onend(successo, true, data.abilita.length, "dice");
+    return onend(fallimento, false, data.abilita.length, "dice");
   }
 
   return html`
