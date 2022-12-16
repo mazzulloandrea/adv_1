@@ -296,7 +296,7 @@ const Layout = () => {
       category: "click",
       action: nomeGioco,
       label: `${feedback}`,
-      value: difficolta,
+      // value: Number(difficolta),
     };
 
     // quali informazioni è interessante registrare ?
