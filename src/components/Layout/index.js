@@ -95,7 +95,7 @@ const Layout = () => {
     }, [abilita]);
     
     useEffect(() => {
-      console.log(load);
+      // console.log(load);
     }, [load]);
 
     useEffect(() => {
@@ -450,11 +450,11 @@ const Layout = () => {
 
   const whichComponent = () => {
     const actualCap = story[actual.cap];
-    console.log(`
-      actual cap = ${actual.cap},
-      component = ${actualComponent}
-      abilita = ${JSON.stringify(abilita)}
-    `);
+    // console.log(`
+    //   actual cap = ${actual.cap},
+    //   component = ${actualComponent}
+    //   abilita = ${JSON.stringify(abilita)}
+    // `);
     if (actualComponent === "achievement") {
       return renderAchievement();
     }
