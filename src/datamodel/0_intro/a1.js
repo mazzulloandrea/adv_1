@@ -24,7 +24,7 @@ export default {
     domande: [
       "Come ti chiami?",
       "Come si chiama tua sorella?",
-      "Come si chiama tuo fratello?",
+      "Come si chiama tuo fratellastro?",
       "Quanti anni ha tua sorella?",
       "Quanti anni hai tu?",
     ],
