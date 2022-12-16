@@ -465,8 +465,8 @@ const Layout = () => {
 
     const componentProps = {
       data,
-      onend: (nextCap, feedback, difficolta) =>
-        onGameEnd(nextCap, feedback, difficolta),
+      onend: (nextCap, feedback, difficolta, gameName) =>
+        onGameEnd(nextCap, feedback, difficolta, gameName),
       orientation,
       caratteristiche: abilita,
       capName: actual.cap,
