@@ -10,7 +10,7 @@ export default {
   },
   gioco: "gioco9",
   gioco9: {
-    success: "velenoAnnullato",
+    successo: "velenoAnnullato",
     fallimento: "morteAvvelenato",
     livello: 3,
     type: "memory",
