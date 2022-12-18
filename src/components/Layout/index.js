@@ -170,7 +170,7 @@ const Layout = () => {
       text: "Aiutami a finirlo!!",
       url: "https://adv-1.vercel.app/",
     };
-    shareData.text = `${totale} %, battimi se ci riesci!!`;
+    shareData.text = `Ho ottenuto il ${totale} %; battimi se ci riesci!!`;
     try {
       if (typeof window !== "undefined") {
         await navigator.share(shareData);

@@ -1,7 +1,7 @@
 import nemico from "./nemico.js";
 
 const resp = nemico.risposte.concat({
-  frase: "Vuoi scappare cambiando riparo",
+  frase: "Vuoi cambiare riparo",
   next: "scappareDarius",
 });
 
