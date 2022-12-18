@@ -18,7 +18,7 @@ export default {
       next: "cap61",
     },
     {
-      frase: "Pensi che gli alberi al fiume siano la scelta migliore",
+      frase: "Pensi che il fiume siano la scelta migliore",
       next: "cap70",
     },
   ],
