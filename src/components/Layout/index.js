@@ -482,6 +482,7 @@ const Layout = () => {
           frase=${actualCap.frase}
           morte=${actualCap.morte}
           step=${actualCap.step}
+          fine=${actualCap.fine}
           onend=${() => onEndAudio()}
           share=${share}
         />`;

@@ -14,6 +14,7 @@ function Audio({
   morte,
   step,
   onend,
+  fine,
   share,
   visibility,
 }) {
@@ -77,6 +78,10 @@ function Audio({
           <div class=${style.teschio}>
             <${TitleIcon} type=${"teschio"} />
           </div>
+        </div>`}
+        ${fine &&
+        html`<div class=${"style.fine"}>
+          Congratulazioni!!! Hai terminato il primo volume de "La Gemma Verde".
         </div>`}
         <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
         <audio
