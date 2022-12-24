@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { html } from "htm/preact";
 import { useState, useEffect } from "preact/hooks";
+import ReactGA from "react-ga4";
 import TitleIcon from "../TitleIcon";
 import style from "./style.css";
 import switchStyle from "./switch.css";
@@ -25,6 +26,11 @@ function Audio({
   useEffect(() => {}, [capName]);
 
   useEffect(() => {}, [play]);
+
+  useEffect(() => {
+    window.ga = ReactGA;
+    ReactGA.send({ hitType: "pageview", page: `capitolo_${step}` });
+  }, [step]);
 
   useEffect(() => {
     if (!visibility) {
