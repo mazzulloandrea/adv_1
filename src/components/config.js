@@ -65,7 +65,7 @@ const tutorialConfig = {
   },
   cassaforte: {
     text: [
-      "Leggi bene la combinazione",
+      "Leggi bene la doppia combinazione",
       "Tappa sul lucchetto e conferma il codice",
     ],
     active: true,

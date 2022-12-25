@@ -25,8 +25,8 @@ export default {
       "Come ti chiami?",
       "Come si chiama tua sorella?",
       "Come si chiama tuo fratellastro?",
-      "Quanti anni ha tua sorella?",
-      "Quanti anni hai tu?",
+      "Quanti anni ha tua sorella? (in cifre)",
+      "Quanti anni hai tu? (in cifre)",
     ],
     risposte: [
       ["pantelion", "phantelion"],

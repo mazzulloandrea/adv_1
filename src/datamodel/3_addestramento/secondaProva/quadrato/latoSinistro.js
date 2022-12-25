@@ -18,7 +18,7 @@ export default {
   dice: {
     successo: "brecciaOk",
     fallimento: "brecciaKo",
-    obiettivo: 8, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["mente"], // quelle che non si devono usare devono essere escluse
     lanci: 3, // quanti lanci col dado
   },

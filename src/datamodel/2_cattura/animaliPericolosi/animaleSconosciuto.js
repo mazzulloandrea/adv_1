@@ -24,16 +24,16 @@ export default {
   dice: {
     successo: "piroliscoIgnora",
     fallimento: "piroliscoMorte",
-    obiettivo: 16, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 15, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 3, // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
   dice2: {
     successo: "piroliscoSconfitta",
     fallimento: "piroliscoMorte2",
-    obiettivo: 17,
+    obiettivo: 16,
     abilita: ["corpo", "mente", "spirito"],
-    lanci: 3,
+    lanci: 4,
   },
   gioco9: {
     successo: "tornareIndietro",

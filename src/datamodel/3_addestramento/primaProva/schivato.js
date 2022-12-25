@@ -16,9 +16,9 @@ export default {
   dice: {
     successo: "rialzato",
     fallimento: "sconfitta",
-    obiettivo: 8, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
   gioco9: {
     successo: "cadeIlRosso",

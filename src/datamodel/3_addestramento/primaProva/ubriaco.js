@@ -25,9 +25,9 @@ export default {
   dice: {
     successo: "parato",
     fallimento: "colpito",
-    obiettivo: 11, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 10, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 3, // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
   gioco9: {
     successo: "schivato",

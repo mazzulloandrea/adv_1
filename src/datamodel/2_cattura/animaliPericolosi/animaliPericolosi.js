@@ -12,6 +12,6 @@ export default {
     fallimento: "animaleSconosciuto",
     obiettivo: 6, // numero da raggiungere con il lancio dei dadi
     abilita: ["mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 3, // quanti lanci col dado
   },
 };

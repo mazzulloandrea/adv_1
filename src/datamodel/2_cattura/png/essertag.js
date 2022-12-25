@@ -29,6 +29,6 @@ export default {
     fallimento: "distrarreGuardia",
     obiettivo: 5, // numero da raggiungere con il lancio dei dadi
     abilita: ["spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 3, // quanti lanci col dado
   },
 };

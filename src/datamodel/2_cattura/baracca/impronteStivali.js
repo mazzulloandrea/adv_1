@@ -23,9 +23,9 @@ export default {
   dice: {
     successo: "baraccaSinistra",
     fallimento: "baraccaSinistra",
-    obiettivo: 16, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 15, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 3, // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
   text: {
     successo: "baraccaDestra",

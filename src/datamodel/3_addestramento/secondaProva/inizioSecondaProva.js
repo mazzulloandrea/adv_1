@@ -38,6 +38,6 @@ export default {
     fallimento: "scavalcatoKo",
     obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 4, // quanti lanci col dado
   },
 };

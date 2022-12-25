@@ -29,9 +29,9 @@ export default {
   dice: {
     successo: "carica",
     fallimento: "sconfitta2",
-    obiettivo: 22, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 19, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 3, // quanti lanci col dado
+    lanci: 6, // quanti lanci col dado
   },
   gioco9: {
     successo: "attesa",

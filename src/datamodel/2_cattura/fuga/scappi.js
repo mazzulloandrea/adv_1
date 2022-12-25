@@ -14,7 +14,7 @@ export default {
   dice: {
     successo: "scappi2",
     fallimento: "nonScappi",
-    obiettivo: 11, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 10, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente"], // quelle che non si devono usare devono essere escluse
     lanci: 3, // quanti lanci col dado
   },

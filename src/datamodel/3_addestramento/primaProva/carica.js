@@ -18,22 +18,22 @@ export default {
   dice: {
     successo: "vittoria",
     fallimento: "sconfitta5",
-    obiettivo: 9, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 3, // quanti lanci col dado
   },
   dice2: {
     successo: "vittoria",
     fallimento: "sconfitta5",
-    obiettivo: 8, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 7, // numero da raggiungere con il lancio dei dadi
     abilita: ["mente"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 3, // quanti lanci col dado
   },
   dice3: {
     successo: "vittoria",
     fallimento: "sconfitta5",
-    obiettivo: 8, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 6, // numero da raggiungere con il lancio dei dadi
     abilita: ["spirito"], // quelle che non si devono usare devono essere escluse
-    lanci: 2, // quanti lanci col dado
+    lanci: 3, // quanti lanci col dado
   },
 };

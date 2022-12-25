@@ -18,14 +18,14 @@ export default {
   dice: {
     successo: "cordaRaggiunta",
     fallimento: "serpenteAttacca",
-    obiettivo: 17, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 16, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
     lanci: 4, // quanti lanci col dado
   },
   dice2: {
     successo: "serpenteAttacca",
     fallimento: "serpenteAttacca",
-    obiettivo: 20, // numero da raggiungere con il lancio dei dadi
+    obiettivo: 19, // numero da raggiungere con il lancio dei dadi
     abilita: ["corpo", "mente", "spirito"], // quelle che non si devono usare devono essere escluse
     lanci: 4, // quanti lanci col dado
   },
