@@ -175,6 +175,11 @@ const Layout = () => {
     try {
       if (typeof window !== "undefined") {
         await navigator.share(shareData);
+        const props = {
+          category: "click",
+          action: "share",
+        };
+        ReactGA.event(props);
         if (cb) cb();
         else
           setAbilita(
@@ -210,6 +215,7 @@ const Layout = () => {
     } else if (actualCap.fine) {
       // clearInterval(timer);
       setAbilita(Object.assign({ ...abilita }, { fine: true }));
+      ReactGA.send({ hitType: "pageview", page: "fine la gemma verde - 1" });
       setActualComponent("achievement");
     }
   };
