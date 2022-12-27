@@ -153,12 +153,17 @@ const Layout = () => {
   };
 
   const reset = (force) => {
+    debugger;
     setLoad(false);
     if (force) {
       if (window.localStorage) {
         localStorage.removeItem("GV-1");
       }
-      window.location.reload();
+      // window.location.reload();
+      //
+      setAbilita(initialAbilita);
+      setActual({ cap: initialcap });
+      setActualComponent("risposte");
     } else {
       continueFromStorage(true);
     }
@@ -170,8 +175,12 @@ const Layout = () => {
       text: "Aiutami a finirlo!!",
       url: "https://adv-1.vercel.app/",
     };
-    if (totale >= 0)
-      shareData.text = `Ho ottenuto il ${totale} %; battimi se ci riesci!!`;
+    if (totale >= 0) {
+      shareData.text = `Ho ottenuto il ${totale}%; battimi se ci riesci!!`;
+    }
+    if (abilita.fine) {
+      shareData.text = `Ho finito "La Gemma Verde - 1 con il punteggio di ${totale}%; battimi se ci riesci!!`;
+    }
     try {
       if (typeof window !== "undefined") {
         await navigator.share(shareData);

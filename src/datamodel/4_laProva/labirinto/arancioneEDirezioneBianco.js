@@ -9,7 +9,7 @@ export default {
   },
   risposte: [
     {
-      frase: "Svolti l'ngolo a sinistra, la via bianca",
+      frase: "Svolti l'angolo a sinistra, la via bianca",
       next: "biancoNDirezioneBlu",
     },
     {
