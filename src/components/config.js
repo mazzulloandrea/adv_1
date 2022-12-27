@@ -1,5 +1,5 @@
-//const initialcap = "_0";
-const initialcap = "svieni";
+const initialcap = "_0";
+// const initialcap = "svieni";
 
 const keyToSaveInStorage = "GV-1";
 

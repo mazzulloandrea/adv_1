@@ -5,7 +5,6 @@ import ReactGA from "react-ga4";
 import TitleIcon from "../TitleIcon";
 import style from "./style.css";
 import switchStyle from "./switch.css";
-import { isIOS } from "../utils";
 
 function Audio({
   data,
@@ -18,9 +17,10 @@ function Audio({
   fine,
   share,
   visibility,
+  mode,
+  setMode,
 }) {
   const { helpCount, helpCountMax } = caratteristiche;
-  const [mode, setMode] = useState(!isIOS());
   const [play, setPlay] = useState(false);
 
   useEffect(() => {}, [capName]);
@@ -36,7 +36,7 @@ function Audio({
     if (!visibility) {
       setMode(false);
     }
-  }, [visibility]);
+  }, [visibility, setMode]);
 
   useEffect(() => {
     const audio = document.getElementById("audio");
@@ -86,8 +86,13 @@ function Audio({
           </div>
         </div>`}
         ${fine &&
-        html`<div class=${"style.fine"}>
+        html` <div class=${"style.fine"}>
+          <br />
+          <br />
           Congratulazioni!!! Hai terminato il primo volume de "La Gemma Verde".
+          <br />
+          <br />
+          <br />
         </div>`}
         <div class=${style.continueBtn} onClick=${() => onend()}>Continua</div>
         <audio

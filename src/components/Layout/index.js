@@ -3,7 +3,7 @@ import { html } from "htm/preact";
 import { useCallback, useEffect, useState } from "preact/hooks";
 import ReactGA from "react-ga4";
 import { initialcap, initialAbilita, tutorialConfig } from "../config";
-import { saveIntoStorage, getFromStorage } from "../utils";
+import { saveIntoStorage, getFromStorage, isIOS } from "../utils";
 import Storia from "../../datamodel";
 import LoadData from "../LoadData";
 import Intestazione from "../Intestazione";
@@ -36,6 +36,7 @@ const Layout = () => {
   const [abilita, setAbilita] = useState(initialAbilita);
   const [tutorials, setTutorials] = useState(tutorialConfig);
   const [visibility, setVisibility] = useState(true);
+  const [mode, setMode] = useState(!isIOS());
 
   useEffect(() => {
     ReactGA.initialize("G-CKF93XL3FW");
@@ -85,6 +86,11 @@ const Layout = () => {
     if (!actual) return;
     updateStorage();
   }, [actual, updateStorage]);
+
+  useEffect(() => {
+    setAbilita(Object.assign({ ...abilita }, mode));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode]);
 
   // useEffect(() => {
   // }, [timerValue]);
@@ -153,7 +159,6 @@ const Layout = () => {
   };
 
   const reset = (force) => {
-    debugger;
     setLoad(false);
     if (force) {
       if (window.localStorage) {
@@ -176,10 +181,10 @@ const Layout = () => {
       url: "https://adv-1.vercel.app/",
     };
     if (totale >= 0) {
-      shareData.text = `Ho ottenuto il ${totale}%; battimi se ci riesci!!`;
+      shareData.text = `Sono arrivato al capitolo ${abilita.step} con il ${totale}% degli obiettivi. Battimi se ci riesci!!`;
     }
     if (abilita.fine) {
-      shareData.text = `Ho finito "La Gemma Verde - 1 con il punteggio di ${totale}%; battimi se ci riesci!!`;
+      shareData.text = `Ho finito 'La Gemma Verde - 1' con il punteggio di ${totale}%. Battimi se ci riesci!!`;
     }
     try {
       if (typeof window !== "undefined") {
@@ -500,6 +505,8 @@ const Layout = () => {
           fine=${actualCap.fine}
           onend=${() => onEndAudio()}
           share=${share}
+          mode=${mode}
+          setMode=${setMode}
         />`;
       case "risposte":
         return html`<${Risposte}

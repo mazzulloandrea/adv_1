@@ -37,7 +37,7 @@ export default {
     ],
     risposte: [
       ["berdask", "berdasc"],
-      ["blik", "blic"],
+      ["blik", "blic", "blick"],
       ["rosso", "rubino", "scarlatto", "fuoco"],
     ],
   },
